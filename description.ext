@@ -1,0 +1,48 @@
+respawn = 3;
+respawndelay = 5;
+disabledAI = true;
+
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+
+loadScreen="jld.paa";
+onLoadMission = $STR_MISSION_TITLE;
+author = "[GREUH]Zbug,[GREUH]McKeewa,[JLD]Niveatt,[JLD]Saky";
+onLoadName = $STR_MISSION_TITLE;
+
+joinUnassigned = 0;
+
+class Header
+{
+	gameType = CTI;
+	minPlayers = 1;
+	maxPlayers = 41;
+};
+
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "ui\liberation_interface.hpp"
+#include "ui\liberation_notifications.hpp"
+#include "ui\mission_params.hpp"
+#include "jld\squadInfo.ext"
+#include "VAM\VAM_comm_menu.hpp"
+#include "artyCalc\defines.hpp"
+#include "artyCalc\dialog.hpp"
+#include "ctmenu\dialogs.hpp"
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title =	$STR_SORRY;
+		subtitle = "";
+		description = $STR_COMMANDER_NOT_AUTHORIZED;
+		pictureBackground = "";
+	};
+	class End2
+	{
+		title =	"비인가 DLC 감지됨";
+		subtitle = "Global Mobilization DLC";
+		description = "Global Mobilization DLC를 해제하고 다시 접속해주시기 바랍니다.";
+		pictureBackground = "jld.paa";
+	};
+};

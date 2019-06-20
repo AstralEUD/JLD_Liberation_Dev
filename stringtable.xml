@@ -1,0 +1,3074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="Liberation">
+    <Package name="Liberation">
+        <Key ID="STR_MISSION_TITLE">
+            <Original>Jeonlado_Liberation_V_0.946M</Original>
+            <Korean>전라도_리버레이션_V_0.946M</Korean>
+        </Key>
+        <Key ID="STR_MISSION_VERSION">
+            <Original>v0.946M</Original>
+            <Korean>v0.946M</Korean>
+        </Key>
+        <Key ID="STR_MISSION_DESCRIPTION">
+            <Original>With the power of Freedom and Democracy and a little international support you shall Liberate Tanoa from Syndikat and CSAT oppression.</Original>
+            <Korean>자유와 민주주의의 힘, 그리고 국제공조를 통해 말덴 주민을 억압하는 괴뢰군연합을 물리치고 해방하라.</Korean>
+            <French>Avec le pouvoir de la Liberté et de la Démocratie votre mission est de libérer Tanoa de l'oppression de Syndikat et CSAT.</French>
+            <German>Befreie Altis von der OPFOR-Unterdrückung mit der Kraft von Freiheit und Demokratie</German>
+            <Spanish>Con el poder de la Libertad y la Democracia, debes liberar Altis de la opresión del OPFOR</Spanish>
+            <Russian>С помощью сил "свободы" и "демократии" вы должны освободить Altis от угнетения OPFOR.</Russian>
+        </Key>
+        <Key ID="STR_Deploy_OnPoint">
+            <Original>Deploy</Original>
+            <Korean>배치하기</Korean>
+            <French>Déploiement</French>
+            <German>Bereitstellen</German>
+            <Spanish>Despliegue</Spanish>
+            <Russian>Развёртывание</Russian>
+        </Key>
+        <Key ID="STR_Deploy_InProgress">
+            <Original>Deployment in progress ...</Original>
+            <Korean>배치중...</Korean>
+            <French>Déploiement en cours ...</French>
+            <German>Bereitstellung in Arbeit</German>
+            <Spanish>Despliegue en curso ...</Spanish>
+            <Russian>Развёртывание в процессе ...</Russian>
+        </Key>
+        <Key ID="STR_CLOSE">
+            <Original>Close</Original>
+            <Korean>닫기</Korean>
+            <French>Fermer</French>
+            <German>Schliessen</German>
+            <Spanish>Cerca</Spanish>
+            <Russian>Закрыть</Russian>
+        </Key>
+        <Key ID="STR_FAR_Need_Medic1">
+            <Original>I need a medic!</Original>
+            <Korean>의무병이 필요하다!</Korean>
+            <French>J'ai besoin d'un medic!</French>
+            <German>Ich brauche einen Sanitäter!</German>
+            <Spanish>¡Necesito un médico!</Spanish>
+            <Russian>Мне нужен медик!</Russian>
+        </Key>
+        <Key ID="STR_FAR_Need_Medic2">
+            <Original>I'm hit! Medic!</Original>
+            <Korean>의무벼어어어엉!!!!!</Korean>
+            <French>Je suis touché! Medic!</French>
+            <German>Wurde getroffen! Sanitäter!</German>
+            <Spanish>Herido! Médico!</Spanish>
+            <Russian>Меня подстрелили! Медик!</Russian>
+        </Key>
+        <Key ID="STR_FAR_Need_Medic3">
+            <Original>I'm down! Medic!</Original>
+            <Korean>으악! 의무병!!</Korean>
+            <French>Je suis à terre! Medic!</French>
+            <German>Ich bin gefallen! Sanitäter!</German>
+            <Spanish>Estoy abatido! Médico!</Spanish>
+            <Russian>Я ранен! Медик!</Russian>
+        </Key>
+        <Key ID="STR_REVIVE_LABEL">
+            <Original>YOU ARE WOUNDED</Original>
+            <Korean>다리에 힘이 풀린다...</Korean>
+            <French>VOUS ETES BLESSE</French>
+            <German>DU BIST VERWUNDET</German>
+            <Spanish>ESTAS HERIDO</Spanish>
+            <Russian>ВЫ БЕЗ СОЗНАНИЯ</Russian>
+        </Key>
+        <Key ID="STR_BUILD_ACTION">
+            <Original>-- BUILD --</Original>
+            <Korean>-- 건설 --</Korean>
+            <French>-- CONSTRUIRE --</French>
+            <German>-- BAUEN --</German>
+            <Spanish>-- CONSTRUIR --</Spanish>
+            <Russian>-- ОБЕСПЕЧЕНИЕ --</Russian>
+        </Key>
+        <Key ID="STR_BUILD_TITLE">
+            <Original>BUILD MENU</Original>
+            <Korean>-- 건설 메뉴 --</Korean>
+            <French>CONSTRUCTION</French>
+            <German>BAUMENUE</German>
+            <Spanish>MENU DE CONSTRUCCIÓN</Spanish>
+            <Russian>ОБЕСПЕЧЕНИЕ</Russian>
+        </Key>
+        <Key ID="STR_BUILD_BUTTON">
+            <Original>Build</Original>
+            <Korean>건설</Korean>
+            <French>Construire</French>
+            <German>Bauen</German>
+            <Spanish>Construir</Spanish>
+            <Russian>Построить</Russian>
+        </Key>
+        <Key ID="STR_MANPOWER">
+            <Original>Manpower</Original>
+            <Korean>인력</Korean>
+            <French>Effectifs</French>
+            <German>Besatzung</German>
+            <Spanish>Efectivos</Spanish>
+            <Russian>Персонал</Russian>
+        </Key>
+        <Key ID="STR_AMMO">
+            <Original>Ammunition</Original>
+            <Korean>탄약</Korean>
+            <French>Munitions</French>
+            <German>Munition</German>
+            <Spanish>Munición</Spanish>
+            <Russian>Вооружение</Russian>
+        </Key>
+        <Key ID="STR_FUEL">
+            <Original>Fuel</Original>
+            <Korean>연료</Korean>
+            <French>Carburant</French>
+            <German>Treibstoff</German>
+            <Spanish>Combustible</Spanish>
+            <Russian>Топливо</Russian>
+        </Key>
+        <Key ID="STR_BLEEDOUT_MESSAGE">
+            <Original>Bleedout in %1 seconds.</Original>
+            <Korean>%1 초 후에 사망합니다.</Korean>
+            <French>Mort dans %1 secondes.</French>
+            <German>Ausbluten in %1 Sekunden.</German>
+            <Spanish>Desangrado en %1 segundos.</Spanish>
+            <Russian>Вы умрёте через %1 секунд.</Russian>
+        </Key>
+        <Key ID="STR_BLEEDOUT_STABILIZED">
+            <Original>Stabilized</Original>
+            <Korean>안정을 되찾았습니다.</Korean>
+            <French>Stabilisé</French>
+            <German>Stabilisiert</German>
+            <Spanish>Estabilizado</Spanish>
+            <Russian>Стабильно</Russian>
+        </Key>
+        <Key ID="STR_ROTATION">
+            <Original>-- Rotation</Original>
+            <Korean>-- 회전하기</Korean>
+            <French>-- Rotation</French>
+            <German>-- Rotieren</German>
+            <Spanish>-- Rotación</Spanish>
+            <Russian>-- Вращать</Russian>
+        </Key>
+        <Key ID="STR_PLACEMENT">
+            <Original>-- Build</Original>
+            <Korean>-- 건설</Korean>
+            <French>-- Construire</French>
+            <German>-- Bauen</German>
+            <Spanish>-- Construir</Spanish>
+            <Russian>-- Поставить</Russian>
+        </Key>
+        <Key ID="STR_PLACEMENT_BIS">
+            <Original>-- Build and Repeat</Original>
+            <Korean>-- 반복 건설</Korean>
+            <French>-- Construire et Répéter</French>
+            <German>-- Bauen und Wiederholen</German>
+            <Spanish>-- Construir y repetir</Spanish>
+            <Russian>-- Поставить и повторить</Russian>
+        </Key>
+        <Key ID="STR_CANCEL">
+            <Original>-- Cancel</Original>
+            <Korean>-- 취소</Korean>
+            <French>-- Annuler</French>
+            <German>-- Abbrechen</German>
+            <Spanish>-- Cancelar</Spanish>
+            <Russian>-- Отмена</Russian>
+        </Key>
+        <Key ID="STR_CANCEL_HINT">
+            <Original>Building canceled.</Original>
+            <Korean>건설이 취소되었습니다.</Korean>
+            <French>Construction annulée.</French>
+            <German>Bauen abgebrochen.</German>
+            <Spanish>Construcción cancelada</Spanish>
+            <Russian>Постройка отменена</Russian>
+        </Key>
+        <Key ID="STR_CONFIRM_HINT">
+            <Original>Building confirmed.</Original>
+            <Korean>건설 되었습니다.</Korean>
+            <French>Construction confirmée.</French>
+            <German>Bauen bestaetigt.</German>
+            <Spanish>Construcción confirmada.</Spanish>
+            <Russian>Постройка подтверждена</Russian>
+        </Key>
+        <Key ID="STR_PLACEMENT_IMPOSSIBLE">
+            <Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
+            <Korean>이곳에 건설할 수 없습니다. %1개의 물체가 %2m 안에 있습니다.</Korean>
+            <French>Impossible de placer ici : il y a %1 objet(s) dans les %2 mètres de la position voulue.</French>
+            <German>Kann hier nicht platziert werden: %1 Objekt(e) innerhalb von %2 Meter der Position</German>
+            <Spanish>Imposible de colocar aqui: hay 1% objeto(s) a %2 metros de la posición del objeto</Spanish>
+            <Russian>Нельзя разместить здесь: в %2 метрах есть 1% объект(а).</Russian>
+        </Key>
+        <Key ID="STR_PLACEMENT_POSSIBLE">
+            <Original>This position is valid.</Original>
+            <Korean>이곳에 건설할 수 있습니다.</Korean>
+            <French>Cette position est valide.</French>
+            <German>Diese Position ist gültig.</German>
+            <Spanish>Esta posición es válida</Spanish>
+            <Russian>Это место подходит.</Russian>
+        </Key>
+        <Key ID="STR_ARSENAL_ACTION">
+            <Original>-- ARSENAL --</Original>
+            <Korean>-- 병기 창고 --</Korean>
+            <French>-- ARSENAL --</French>
+            <German>-- ARSENAL --</German>
+            <Spanish>-- ARSENAL --</Spanish>
+            <Russian>-- АРСЕНАЛ --</Russian>
+        </Key>
+        <Key ID="STR_ACTION_LOAD_BOX">
+            <Original>-- LOAD AMMO BOX</Original>
+            <Korean>-- 화물 적재</Korean>
+            <French>-- CHARGER MUNITIONS</French>
+            <German>-- MUNITIONSKISTE AUFLADEN</German>
+            <Spanish>-- CARGAR CAJA DE MUNICIÓN</Spanish>
+            <Russian>-- ЗАГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
+        </Key>
+        <Key ID="STR_ACTION_UNLOAD_BOX">
+            <Original>-- UNLOAD AMMO BOXES</Original>
+            <Korean>-- 화물 하역</Korean>
+            <French>-- DECHARGER MUNITIONS</French>
+            <German>-- MUNITIONSKISTE ABLADEN</German>
+            <Spanish>-- DESCARGAR CAJA DE MUNICIÓN</Spanish>
+            <Russian>-- ВЫГРУЗИТЬ ЯЩИК С БОЕПРИПАСАМИ</Russian>
+        </Key>
+        <Key ID="STR_BOX_LOADED">
+            <Original>Ammo box successfully loaded on the transport vehicle.</Original>
+            <Korean>화물이 적재되었습니다.</Korean>
+            <French>La caisse de munitions a été chargée sur le véhicule de transport.</French>
+            <German>Munitionskiste erfolgreich auf das Transportfahrzeug aufgeladen.</German>
+            <Spanish>Caja de munición cargada correctamente en el vehículo de transporte</Spanish>
+            <Russian>Ящик с боеприпасами загружен в транспортное средство</Russian>
+        </Key>
+        <Key ID="STR_BOX_UNLOADED">
+            <Original>Ammo box successfully unloaded from the transport vehicle.</Original>
+            <Korean>화물이 하역되었습니다.</Korean>
+            <French>La caisse de munitions a été déchargée du véhicule de transport.</French>
+            <German>Munitionskiste erfolgreich vom Transportfahrzeug abgeladen.</German>
+            <Spanish>Caja de munición descargada correctamente del vehículo de transporte</Spanish>
+            <Russian>Ящик с боеприпасами выгружен из транспортного средства</Russian>
+        </Key>
+        <Key ID="STR_BOX_CANTLOAD">
+            <Original>There is no nearby vehicle capable of carrying the ammo box.</Original>
+            <Korean>화물을 적재할 차량이 충분히 가깝지 않습니다.</Korean>
+            <French>Aucun véhicule à proximité capable de charger la caisse de munitions.</French>
+            <German>Kein Fahrzeug in der Nähe, das die Munitionskiste tragen kann.</German>
+            <Spanish>No hay ningún vehículo cercano capaz de cagar la caja de munición</Spanish>
+            <Russian>Рядом нет техники способной перевозить ящики с боеприпасами.</Russian>
+        </Key>
+        <Key ID="STR_FOB_ACTION">
+            <Original>-- DEPLOY FOB --</Original>
+            <Korean>-- 전방작전기지 건설하기</Korean>
+            <French>-- DEPLOYER FOB --</French>
+            <German>-- FOB Bereitstellen --</German>
+            <Spanish>-- DESPLEGAR FOB --</Spanish>
+            <Russian>-- РАЗВЕРНУТЬ FOB --</Russian>
+        </Key>
+        <Key ID="STR_FOB_BUILDING_IMPOSSIBLE">
+            <Original>Can't deploy a new FOB here, you must be at least %1 meters away from every other FOB. Nearest FOB is %2 meters away.</Original>
+            <Korean>다른 전방작전기지와 최소한 %1m 떨어진 곳에만 전방작전기지를 건설할 수 있습니다. 가장 가까운 전방작전기지는 %2m 떨어진 곳에 있습니다.</Korean>
+            <French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les autres FOB. La FOB la plus proche est à %2 mètres d'ici.</French>
+            <German>Kann hier keine FOB platzieren, du musst min. %1 Meter von der anderen FOB entfernt sein. Das naechste FOB ist %2 Meter entfernt.</German>
+            <Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a 1% metros de cualquier otra FOB. La FOB más cercana está a %2 metros.</Spanish>
+            <Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от другой FOB. Ближайшая FOB в %2 метрах.</Russian>
+        </Key>
+        <Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
+            <Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
+            <Korean>점령구역과 최소한 %1m 떨어진 곳에만 전방작전기지를 건설할 수 있습니다. 가장 가까운 점령구역은 %2m 떨어진 곳에 있습니다.</Korean>
+            <French>Impossible de déployer une nouvelle FOB ici, vous devez être à au moins %1 mètres de toutes les zones capturables. La zone la plus proche est à %2 mètres d'ici.</French>
+            <German>Kann hier keine FOB platzieren, du musst min. %1 Meter von Kontrollzonen entfernt sein. Die naechste Zone ist %2 Meter entfernt.</German>
+            <Spanish>Imposible desplegar una nueva FOB aquí, debes estar al menos a %1 metros de cualquier zona capturable. La zona más cercana está a %2 metros</Spanish>
+            <Russian>Нельзя развернуть FOB здесь, вы должны находится в %1 метрах от захваченной зоны. Ближайшиая зона в %2 метрах.</Russian>
+        </Key>
+        <Key ID="STR_BUILD_ERROR_WATER">
+            <Original>Can't build on water.</Original>
+            <Korean>물 위에 건설할 수 없습니다.</Korean>
+            <French>Impossible de construire sur l'eau.</French>
+            <German>Kann nicht auf Wasser gebaut werden.</German>
+            <Spanish>Imposible construir sobre el agua.</Spanish>
+            <Russian>Нельзя построить в воде.</Russian>
+        </Key>
+        <Key ID="STR_BUILD_ERROR_DISTANCE">
+            <Original>Can't build further than %1 meters away from the FOB.</Original>
+            <Korean>전방작전기지와 %1m 이상 떨어진 곳에 건설할 수 없습니다.</Korean>
+            <French>Impossible de construire à plus de %1 mètres de la FOB.</French>
+            <German>Kann nicht weiter als %1 Meter von der FOB entfernt sein.</German>
+            <Spanish>Imposible construir más lejos de %1 metros de la FOB</Spanish>
+            <Russian>Нельзя построить дальше чем в %1 метрах от FOB.</Russian>
+        </Key>
+        <Key ID="STR_FOBBOX">
+            <Original>FOB Container</Original>
+            <Korean>전방작전기지 컨테이너</Korean>
+            <French>Container FOB</French>
+            <German>FOB Container</German>
+            <Spanish>Contenedor de FOB</Spanish>
+            <Russian>FOB контейнер</Russian>
+        </Key>
+        <Key ID="STR_FOBTRUCK">
+            <Original>FOB Truck</Original>
+            <Korean>전방작전기지 트럭</Korean>
+            <French>Camion FOB</French>
+            <German>FOB Lastwagen</German>
+            <Spanish>Camión de FOB</Spanish>
+            <Russian>FOB грузовик </Russian>
+        </Key>
+        <Key ID="STR_RESPAWN_TRUCK">
+            <Original>Mobile Respawn</Original>
+            <Korean>이동식 리스폰 차량</Korean>
+            <French>Respawn mobile</French>
+            <German>Mobiler Respawn</German>
+            <Spanish>Respawn móvil</Spanish>
+            <Russian>Мобильная КШМ</Russian>
+        </Key>
+        <Key ID="STR_ARSENAL_BOX">
+            <Original>Arsenal Box</Original>
+            <Korean>무기 상자</Korean>
+            <French>Caisse à arsenal</French>
+            <German>Arsenalkiste</German>
+            <Spanish>Caja de Arsenal</Spanish>
+            <Russian>Ящик с арсеналом</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_TITLE">
+            <Original>DEPLOYMENT</Original>
+            <Korean>배치</Korean>
+            <French>DEPLOIEMENT</French>
+            <German>EINSATZ</German>
+            <Spanish>DESPLIEGUE</Spanish>
+            <Russian>ДИСЛОКАЦИЯ</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_BUTTON">
+            <Original>Deploy</Original>
+            <Korean>배치하기</Korean>
+            <French>Déploiment</French>
+            <German>Einsetzen</German>
+            <Spanish>Desplegar</Spanish>
+            <Russian>РАЗМЕСТИТЬ</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_ACTION">
+            <Original>-- REDEPLOY --</Original>
+            <Korean>-- 재배치 --</Korean>
+            <French>-- REDEPLOIEMENT --</French>
+            <German>-- NEU EINSETZEN --</German>
+            <Spanish>-- REDESPLEGAR --</Spanish>
+            <Russian>-- ПЕРЕМЕСТИТЬСЯ --</Russian>
+        </Key>
+        <Key ID="STR_BUILD_CREW">
+            <Original>Build (Crew)</Original>
+            <Korean>건설 (승무원)</Korean>
+            <French>Construire (Equipage)</French>
+            <German>Bauen (Besatzung)</German>
+            <Spanish>Construir (Equipo)</Spanish>
+            <Russian>Создать (Экипаж)</Russian>
+        </Key>
+        <Key ID="STR_LIGHT_RIFLE_SQUAD">
+            <Original>Light Rifle Squad</Original>
+            <Korean>경기관총 분대</Korean>
+            <French>Escouade Fusiliers Légère</French>
+            <German>Leichter Waffentrupp</German>
+            <Spanish>Escuadra de fusileros ligeros</Spanish>
+            <Russian>Легкий Стрелковый Отряд</Russian>
+
+        </Key>
+        <Key ID="STR_RIFLE_SQUAD">
+            <Original>Heavy Rifle Squad</Original>
+            <Korean>중기관총 분대</Korean>
+            <French>Escouade Fusiliers Lourde</French>
+            <German>Schwerer Waffentrupp</German>
+            <Spanish>Escuadra de fusileros pesados</Spanish>
+            <Russian>Тяжёлый Стрелковый Отряд</Russian>
+        </Key>
+        <Key ID="STR_AT_SQUAD">
+            <Original>AT Squad</Original>
+            <Korean>대전차 분대</Korean>
+            <French>Escouade AT</French>
+            <German>Panzerbekaempfungstrupp</German>
+            <Spanish>Escuadra Antitanque</Spanish>
+            <Russian>Отряд ПТ</Russian>
+        </Key>
+        <Key ID="STR_AA_SQUAD">
+            <Original>AA Squad</Original>
+            <Korean>대공 분대</Korean>
+            <French>Escouade AA</French>
+            <German>Luftabwehrtrupp</German>
+            <Spanish>Escuadra Antiaérea</Spanish>
+            <Russian>Отряд ПВО</Russian>
+        </Key>
+        <Key ID="STR_RECON_SQUAD">
+            <Original>Recon Squad</Original>
+            <Korean>정찰 분대</Korean>
+            <French>Escouade Recon</French>
+            <German>Aufklaerungstrupp</German>
+            <Spanish>Escuadra de reconocimiento</Spanish>
+            <Russian>Отряд Разведчиков</Russian>
+        </Key>
+        <Key ID="STR_PARA_SQUAD">
+            <Original>Paratroopers Squad</Original>
+            <Korean>공수 분대</Korean>
+            <French>Escouade Parachutistes</French>
+            <German>Fallschirmjaegertrupp</German>
+            <Spanish>Escuadra de paracaidistas</Spanish>
+            <Russian>Отряд Десантников</Russian>
+        </Key>
+        <Key ID="STR_UNITCAP">
+            <Original>Unit cap</Original>
+            <Korean>유닛 제한</Korean>
+            <French>Limite</French>
+            <German>Einheitenbegrenzung</German>
+            <Spanish>Límite de unidades</Spanish>
+            <Russian>Мобилизованных</Russian>
+        </Key>
+        <Key ID="STR_WIPE_TITLE">
+            <Original>Wipe savegame?:</Original>
+            <Korean>게임을 초기화합니까?</Korean>
+            <French>Effacer la sauvegarde:</French>
+            <German>Spielstand loeschen:</German>
+            <Spanish>Borrar partida guardada:</Spanish>
+            <Russian>Удалить сохранённый прогресс:</Russian>
+        </Key>
+        <Key ID="STR_WIPE_TITLE_2">
+            <Original>Confirm : Wipe savegame?:</Original>
+            <Korean>재확인 : 게임을 초기화합니까?</Korean>
+            <French>Confirmer : effacer la sauvegarde:</French>
+            <German>Bestätige : Spielstand loeschen:</German>
+            <Spanish>Confirmar : Borrar partida guardada:</Spanish>
+            <Russian>Подтвердить : Удалить сохранённый прогресс</Russian>
+        </Key>
+        <Key ID="STR_WIPE_NO">
+            <Original>No</Original>
+            <Korean>아니오</Korean>
+            <French>Non</French>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Russian>Нет</Russian>
+        </Key>
+        <Key ID="STR_WIPE_YES">
+            <Original>!! THE SAVEGAME WILL BE WIPED, NO RECOVERY POSSIBLE !!</Original>
+            <Korean>!! 저장된 게임이 초기화됩니다. 복구할 수 없습니다. !!</Korean>
+            <French>!! LA SAUVEGARDE SERA EFFACEE SANS RECUPERATION POSSIBLE !!</French>
+            <German>!! SPIELSTAND WIRD GELOESCHT, KEIN WIEDERHERSTELLEN MOEGLICH !!</German>
+            <Spanish>!! LA PARTIDA GUARDADA SERÁ BORRADA, SIN RECUPERACIÓN POSIBLE !!</Spanish>
+            <Russian>!! СОХРАНЁННЫЙ ПРОГРЕСС БУДЕТ УДАЛЕН, ВОССТАНОВИТЬ БУДЕТ НЕВОЗМОЖНО !!</Russian>
+        </Key>
+        <Key ID="STR_UNFLIP">
+            <Original>-- UNFLIP</Original>
+            <Korean>-- 뒤집기</Korean>
+            <French>-- UNFLIP</French>
+            <German>-- UMDREHEN</German>
+            <Spanish>-- RECOLOCAR VEHÍCULO</Spanish>
+            <Russian>-- ПЕРЕВЕРНУТЬ</Russian>
+        </Key>
+        <Key ID="STR_GRID">
+            <Original>-- Grid mode</Original>
+            <Korean>-- 격자모드</Korean>
+            <French>-- Mode grille</French>
+            <German>-- Rastermodus</German>
+            <Spanish>-- Modo rejilla</Spanish>
+            <Russian>-- Режим сетки</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_CAPTURE">
+            <Original>-- CAPTURE</Original>
+            <Korean>-- 포박 하기</Korean>
+            <French>-- CAPTURER</French>
+            <German>-- GEFANGENNEHMEN</German>
+            <Spanish>-- CAPTURAR</Spanish>
+            <Russian>-- ЗАХВАТИТЬ</Russian>
+        </Key>
+        <Key ID="STR_SQUAD_MEMBER">
+            <Original>Squad member</Original>
+            <Korean>분대원</Korean>
+            <French>Membre d'escouade</French>
+            <German>Truppenmitglieder</German>
+            <Spanish>Miembro de escuadra</Spanish>
+            <Russian>Член отряда</Russian>
+        </Key>
+        <Key ID="STR_SPAWN_NEAR">
+            <Original>Near</Original>
+            <Korean>근처</Korean>
+            <French>Près de</French>
+            <German>Nah</German>
+            <Spanish>Cerca</Spanish>
+            <Russian>Рядом</Russian>
+        </Key>
+        <Key ID="STR_RECYCLE">
+            <Original>-- RECYCLE</Original>
+            <Korean>-- 재활용</Korean>
+            <French>-- RECYCLER</French>
+            <German>-- WIEDERVERWERTEN</German>
+            <Spanish>-- RECICLAR</Spanish>
+            <Russian>-- УТИЛИЗИРОВАТЬ</Russian>
+        </Key>
+        <Key ID="STR_RECYCLING">
+            <Original>Recycling</Original>
+            <Korean>재활용중</Korean>
+            <French>Recyclage</French>
+            <German>Wiederverwerten</German>
+            <Spanish>Reciclando</Spanish>
+            <Russian>Утилизация</Russian>
+        </Key>
+        <Key ID="STR_RECYCLING_YIELD">
+            <Original>Recycling this %1 will yield:</Original>
+            <Korean>재활용하면 %1의 자원을 얻게 됩니다.</Korean>
+            <French>Le recyclage de %1 rapportera :</French>
+            <German>Das Wiederverwerten wird dir %1 erstatten:</German>
+            <Spanish>Reciclando este %1 obtienes:</Spanish>
+            <Russian>Утилизируя %1 получим </Russian>
+        </Key>
+        <Key ID="STR_RECYCLING_PROCEED">
+            <Original>Recycle</Original>
+            <Korean>재활용</Korean>
+            <French>Recycler</French>
+            <German>Wiederverwerten</German>
+            <Spanish>Reciclar</Spanish>
+            <Russian>Утилизировать</Russian>
+
+        </Key>
+        <Key ID="STR_RECYCLING_CANCEL">
+            <Original>Cancel</Original>
+            <Korean>취소</Korean>
+            <French>Annuler</French>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Russian>Отмена</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORCAPTURED_TITLE">
+            <Original>SECTOR CAPTURED</Original>
+            <Korean>지역 점령</Korean>
+            <French>SECTEUR CAPTURE</French>
+            <German>SEKTOR EINGENOMMEN</German>
+            <Spanish>SECTOR CAPTURADO</Spanish>
+            <Russian>ЗОНА ЗАХВАЧЕНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORCAPTURED_TEXT">
+            <Original>Our forces have captured %1.</Original>
+            <Korean>아군이 %1 지역을 점령하였습니다.</Korean>
+            <French>Nos forces ont capturé %1.</French>
+            <German>Unsere Truppen haben %1 eingenommen.</German>
+            <Spanish>Nuestras fuerzas han capturado %1</Spanish>
+            <Russian>Наши войска захватили %1.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORATTACKED_TITLE">
+            <Original>SECTOR ATTACKED</Original>
+            <Korean>공격받는 중</Korean>
+            <French>SECTEUR ATTAQUE</French>
+            <German>SEKTOR ANGEGRIFFEN</German>
+            <Spanish>SECTOR ATACADO</Spanish>
+            <Russian>ЗОНА АТАКОВАНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORATTACKED_TEXT">
+            <Original>Hostiles forces are attacking %1!</Original>
+            <Korean>적군이 %1 지역을 공격중입니다!</Korean>
+            <French>Des forces hostiles attaquent %1!</French>
+            <German>Gegnerische Truppen greifen %1 an!</German>
+            <Spanish>Fuerzas hostiles están atacando %1</Spanish>
+            <Russian>Вражеские силы атакуют %1!</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORLOST_TITLE">
+            <Original>SECTOR LOST</Original>
+            <Korean>지역 손실</Korean>
+            <French>SECTEUR LOST</French>
+            <German>SEKTOR VERLOREN</German>
+            <Spanish>SECTOR PERDIDO</Spanish>
+            <Russian>ЗОНА ПОТЕРЯНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORLOST_TEXT">
+            <Original>We have lost control over %1!</Original>
+            <Korean>아군이 %1 지역에 대한 통제권을 상실하였습니다.</Korean>
+            <French>Nous avons perdu le contrôle de %1!</French>
+            <German>Wir haben die Kontrolle ueber %1 verloren!</German>
+            <Spanish>Hemos perdido el control sobre %1!</Spanish>
+            <Russian>Мы потеряли контроль над %1!</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORSAFE_TITLE">
+            <Original>SECTOR SAFE</Original>
+            <Korean>지역 안전</Korean>
+            <French>SECTEUR SECURISE</French>
+            <German>SEKTOR SICHER</German>
+            <Spanish>SECTOR SEGURO</Spanish>
+            <Russian>ЗОНА В БЕЗОПАСНОСТИ</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECTORSAFE_TEXT">
+            <Original>%1 is no longer under threat.</Original>
+            <Korean>%1 지역은 이제 안전합니다.</Korean>
+            <French>%1 n'est plus menacé(e).</French>
+            <German>%1 ist ausser Gefahr.</German>
+            <Spanish>%1 ya no está bajo amenaza.</Spanish>
+            <Russian>%1 больше не под угрозой.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBBUILT_TITLE">
+            <Original>NEW FOB BUILT</Original>
+            <Korean>새로운 전방작전기지가 건설되었습니다.</Korean>
+            <French>NOUVELLE FOB</French>
+            <German>NEUE FOB GEBAUT</German>
+            <Spanish>NUEVA FOB CONSTRUIDA</Spanish>
+            <Russian>НОВАЯ FOB ПОСТРОЕНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBBUILT_TEXT">
+            <Original>FOB %1 is now operational.</Original>
+            <Korean>이제 전방작전기지 %1를 사용할 수 있습니다.</Korean>
+            <French>La FOB %1 est opérationnelle.</French>
+            <German>FOB %1 nun funktionsfähig.</German>
+            <Spanish>La FOB %1 es operacional</Spanish>
+            <Russian>FOB %1 сейчас действует.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBSAFE_TITLE">
+            <Original>FOB SAFE</Original>
+            <Korean>전방작전기지가 안전합니다</Korean>
+            <French>FOB SECURISEE</French>
+            <German>FOB SICHER</German>
+            <Spanish>FOB SEGURA</Spanish>
+            <Russian>FOB В БЕЗОПАСНОСТИ</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBSAFE_TEXT">
+            <Original>FOB %1 is no longer under threat.</Original>
+            <Korean>전방작전기지 %1은 이제 안전합니다.</Korean>
+            <French>La FOB %1 n'est plus menacée.</French>
+            <German>FOB %1 ist ausser Gefahr.</German>
+            <Spanish>FOB %1 ya no está bajo amenaza</Spanish>
+            <Russian>FOB %1 больше не находится под угрозой.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBATTACKED_TITLE">
+            <Original>FOB ATTACKED</Original>
+            <Korean>전방작전기지가 공격받는 중</Korean>
+            <French>FOB ATTAQUEE</French>
+            <German>FOB ANGEGRIFFEN</German>
+            <Spanish>FOB ATACADA</Spanish>
+            <Russian>FOB АТАКОВАНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBATTACKED_TEXT">
+            <Original>FOB %1 is under attack!</Original>
+            <Korean>전방작전기지 %1 이 공격받고 있습니다!</Korean>
+            <French>La FOB %1 est attaquée !</French>
+            <German>FOB %1 wird angegriffen !</German>
+            <Spanish>FOB %1 está bajo ataque!</Spanish>
+            <Russian>FOB %1 атакована!</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBLOST_TITLE">
+            <Original>FOB DESTROYED</Original>
+            <Korean>전방작전기지가 파괴됨</Korean>
+            <French>FOB DETRUITE</French>
+            <German>FOB ZERSTOERT</German>
+            <Spanish>FOB DESTRUIDA</Spanish>
+            <Russian>FOB УНИЧТОЖЕНА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOBLOST_TEXT">
+            <Original>FOB %1 has been destroyed!</Original>
+            <Korean>전방작전기지 %1이 파괴되었습니다.</Korean>
+            <French>La FOB %1 a été détruite !</French>
+            <German>FOB %1 wurde zerstoert!</German>
+            <Spanish>La FOB %1 ha sido destruida!</Spanish>
+            <Russian>FOB %1 была уничтожена!</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_BATTLEGROUP_TITLE">
+            <Original>HOSTILE FORCES INCOMING</Original>
+            <Korean>적군 접근중</Korean>
+            <French>FORCES HOSTILES EN APPROCHE</French>
+            <German>GEGNERISCHE TRUPPEN TREFFEN EIN</German>
+            <Spanish>FUERZAS HOSTILES ACERCÁNDOSE</Spanish>
+            <Russian>ПОДХОДЯТ ВРАЖЕСКИЕ СИЛЫ</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_BATTLEGROUP_TEXT">
+            <Original>Hostile forces spotted near %1.</Original>
+            <Korean>대규모의 적군이 %1 근처에서 포착되었습니다.</Korean>
+            <French>Forces hostiles repérées près de %1.</French>
+            <German>Gegnerische Truppen nahe %1 gesichtet.</German>
+            <Spanish>Fuerzas hosstiles avistadas cerca de %1</Spanish>
+            <Russian>Вражеские силы замечены рядом с %1.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_INTEL_TITLE">
+            <Original>NEW INTELLIGENCE</Original>
+            <Korean>새로운 정보</Korean>
+            <French>NOUVEAUX RENSEIGNEMENTS</French>
+            <German>NEUE INFORMATIONEN</German>
+            <Spanish>NUEVA INTELIGENCIA</Spanish>
+            <Russian>НОВЫЕ РАЗВЕДДАННЫЕ</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_FOB_TEXT">
+            <Original>Hostile FOB near %1.</Original>
+            <Korean>적군의 전방작전기지가 %1 근처에서 포착되었습니다.</Korean>
+            <French>FOB hostile près de %1.</French>
+            <German>Gegnerische FOB nahe %1.</German>
+            <Spanish>FOB hostil cerca de %1.</Spanish>
+            <Russian>Вражеская FOB рядом %1.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_PRISONER_TEXT">
+            <Original>We have interrogated a prisoner.</Original>
+            <Korean>포로를 확보했습니다.</Korean>
+            <French>Nous avons interroger un prisonnier.</French>
+            <German>Wir haben einen Gefangenen verhört.</German>
+            <Spanish>Hemos interrogado a un prisionero.</Spanish>
+            <Russian>Мы можем допросить пленного.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_DOCUMENT_TEXT">
+            <Original>We have found secret documents.</Original>
+            <Korean>비밀문서를 발견했습니다.</Korean>
+            <French>Nous avons trouvé des documents secrets</French>
+            <German>Wir haben geheime Dokumente gefunden.</German>
+            <Spanish>Hemos encontrado documentos secretos.</Spanish>
+            <Russian>Мы нашли секретные документы.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECONDARY_TITLE">
+            <Original>SECONDARY OBJECTIVE</Original>
+            <Korean>특수 임무</Korean>
+            <French>OBJECTIF SECONDAIRE</French>
+            <German>SEKUNDAERZIEL</German>
+            <Spanish>OBJETIVO SECUNDARIO</Spanish>
+            <Russian>ДОПОЛНИТЕЛЬНАЯ ЗАДАЧА</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
+            <Original>Hostile FOB destroyed.</Original>
+            <Korean>적군의 전방작전기지가 파괴되었습니다.</Korean>
+            <French>FOB hostile détruite.</French>
+            <German>Gegnerische FOB zerstoert.</German>
+            <Spanish>FOB hostil destruída.</Spanish>
+            <Russian>Вражеская FOB уничтожена.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_REINFORCEMENTS_TITLE">
+            <Original>HOSTILE REINFORCEMENTS</Original>
+            <Korean>적군 증원</Korean>
+            <French>RENFORTS HOSTILES</French>
+            <German>GEGNERISCHER NACHSCHUB</German>
+            <Spanish>REFUERZOS HOSTILES</Spanish>
+            <Russian>ВРАЖЕСКОЕ ПОДКРЕПЛЕНИЕ</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_REINFORCEMENTS_TEXT">
+            <Original>Hostile forces reinforcing %1.</Original>
+            <Korean>적군이 %1 지역에 증원병력을 파견하였습니다.</Korean>
+            <French>Forces hostiles en renfort à %1.</French>
+            <German>Gegnerische Truppen verstaerken %1.</German>
+            <Spanish>Fuerzas hostiles reforzando %1</Spanish>
+            <Russian>Вражеские подкрепления подходят в %1.</Russian>
+        </Key>
+        <Key ID="STR_VICTORY_TITLE">
+            <Original>VICTORY</Original>
+            <Korean>승 리</Korean>
+            <French>VICTOIRE BLUFOR</French>
+            <German>BLUFOR SIEGREICH</German>
+            <Spanish>VICTORIA DE BLUFOR</Spanish>
+            <Russian>СИНИЕ ПОБЕДИЛИ</Russian>
+        </Key>
+        <Key ID="STR_VICTORY_TEXT">
+            <Original>You have Liberated the region from the enemy oppression!</Original>
+            <Korean>이 지역을 적군의 압제로부터 해방시키는데 성공하였습니다.</Korean>
+            <French>Vous avez libéré Tanoa de l'oppression de l'OPFOR.</French>
+            <German>Du hast Tanoa von der OPFOR Besatzung befreit.</German>
+            <Spanish>Has liberado a Tanoa de la opresión del OPFOR.</Spanish>
+            <Russian>Вы освободили Tanoa от оккупации OPFOR.</Russian>
+        </Key>
+        <Key ID="STR_STATS_DAY">
+            <Original>days</Original>
+            <Korean>일</Korean>
+            <French>jours</French>
+            <German>Tage</German>
+            <Spanish>días</Spanish>
+            <Russian>дней</Russian>
+        </Key>
+        <Key ID="STR_STATS_HOURS">
+            <Original>hours</Original>
+            <Korean>시간</Korean>
+            <French>heures</French>
+            <German>Stunden</German>
+            <Spanish>horas</Spanish>
+            <Russian>часов</Russian>
+        </Key>
+        <Key ID="STR_STATS_MINUTES">
+            <Original>minutes</Original>
+            <Korean>분</Korean>
+            <French>minutes</French>
+            <German>Minuten</German>
+            <Spanish>minutos</Spanish>
+            <Russian>минут</Russian>
+        </Key>
+        <Key ID="STR_STATS_SECONDS">
+            <Original>seconds</Original>
+            <Korean>초</Korean>
+            <French>secondes</French>
+            <German>Sekunden</German>
+            <Spanish>segundos</Spanish>
+            <Russian>секунд</Russian>
+        </Key>
+        <Key ID="STR_STATS_PLAYTIME">
+            <Original>Playtime:</Original>
+            <Korean>플레이 시간:</Korean>
+            <French>Temps de jeu :</French>
+            <German>Spielzeit:</German>
+            <Spanish>Tiempo de juego:</Spanish>
+            <Russian>Игрового времени:</Russian>
+        </Key>
+        <Key ID="STR_STATS_1">
+            <Original>Enemy infantry killed:</Original>
+            <Korean>적군 사망자 수:</Korean>
+            <French>Infanterie OPFOR tuée :</French>
+            <German>OPFOR Einheit getoetet:</German>
+            <Spanish>Infantería OPFOR eliminada:</Spanish>
+            <Russian>OPFOR пехоты убито:</Russian>
+        </Key>
+        <Key ID="STR_STATS_2">
+            <Original>Enemy infantry killed by players:</Original>
+            <Korean>플레이어가 사살한 적군 수:</Korean>
+            <French>Infanterie OPFOR tuée par les joueurs :</French>
+            <German>OPFOR Infanterie von Spielern getoetet:</German>
+            <Spanish>Infantería OPFOR eliminada por jugadores:</Spanish>
+            <Russian>OPFOR пехоты убито игроками:</Russian>
+        </Key>
+        <Key ID="STR_STATS_3">
+            <Original>Friendly infantry killed:</Original>
+            <Korean>아군 사망자 수:</Korean>
+            <French>Infanterie BLUFOR tuée :</French>
+            <German>BLUFOR Einheiten getoetet:</German>
+            <Spanish>Infantería BLUFOR eliminada:</Spanish>
+            <Russian>BLUFOR пехоты убито:</Russian>
+        </Key>
+        <Key ID="STR_STATS_4">
+            <Original>Civilians killed:</Original>
+            <Korean>민간인 사망자 수:</Korean>
+            <French>Civils tués :</French>
+            <German>Zivilisten getoetet:</German>
+            <Spanish>Civiles asesinados:</Spanish>
+            <Russian>Гражданских убито:</Russian>
+        </Key>
+        <Key ID="STR_STATS_5">
+            <Original>Civilians killed by players:</Original>
+            <Korean>플레이어가 사살한 민간인 수:</Korean>
+            <French>Civils tués par les joueurs :</French>
+            <German>Zivilisten von Spielern getoetet:</German>
+            <Spanish>Civiles asesinados por jugadores:</Spanish>
+            <Russian>Гражданских убито игроками:</Russian>
+        </Key>
+        <Key ID="STR_STATS_6">
+            <Original>Friendly fire incidents:</Original>
+            <Korean>아군 오사 횟수:</Korean>
+            <French>Tirs fratricides BLUFOR :</French>
+            <German>BLUFOR Verbuendetenbeschuss Faelle:</German>
+            <Spanish>Incidentes de fuego amigo en BLUFOR:</Spanish>
+            <Russian>BLUFOR дружественный огонь:</Russian>
+        </Key>
+        <Key ID="STR_STATS_7">
+            <Original>Enemy vehicles destroyed:</Original>
+            <Korean>파괴된 적 장비 수:</Korean>
+            <French>Vehicules OPFOR détruits :</French>
+            <German>OPFOR Fahrzeuge zerstoert:</German>
+            <Spanish>Vehículos OPFOR destruídos:</Spanish>
+            <Russian>OPFOR техники уничтожено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_8">
+            <Original>Enemy vehicles destroyed by players:</Original>
+            <Korean>플레이어가 파괴한 적 장비 수:</Korean>
+            <French>Vehicules OPFOR détruits par les joueurs :</French>
+            <German>OPFOR Fahrzeuge von Spielern zerstoert:</German>
+            <Spanish>Vehículos OPFOR destruídos por jugadores:</Spanish>
+            <Russian>OPFOR техники уничтожено игроками:</Russian>
+        </Key>
+        <Key ID="STR_STATS_9">
+            <Original>Friendly vehicles destroyed:</Original>
+            <Korean>파괴된 아군 장비 수:</Korean>
+            <French>Vehicules BLUFOR détruits :</French>
+            <German>BLUFOR Fahrzeuge zerstoert:</German>
+            <Spanish>Vehículos BLUFOR destruídos:</Spanish>
+            <Russian>BLUFOR техники уничтожено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_10">
+            <Original>Friendly vehicles built:</Original>
+            <Korean>건설된 장비 수:</Korean>
+            <French>Vehicules BLUFOR construits :</French>
+            <German>BLUFOR Fahrzeuge gebaut:</German>
+            <Spanish>Vehículos BLUFOR construidos:</Spanish>
+            <Russian>BLUFOR техники построено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_11">
+            <Original>Vehicles recycled:</Original>
+            <Korean>재활용된 장비 수:</Korean>
+            <French>Vehicules recyclés :</French>
+            <German>Fahrzeuge wiederaufbereitet:</German>
+            <Spanish>Vehículos reciclados:</Spanish>
+            <Russian>Техники утилизировано:</Russian>
+        </Key>
+        <Key ID="STR_STATS_12">
+            <Original>Ammunition units spent:</Original>
+            <Korean>소모된 탄약량:</Korean>
+            <French>Unités de munitions dépensées :</French>
+            <German>Munitionseinheiten verbraucht:</German>
+            <Spanish>Unidades de munición gastadas:</Spanish>
+            <Russian>Единиц боеприпасов потрачено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_13">
+            <Original>Sectors liberated:</Original>
+            <Korean>해방시킨 지역 수:</Korean>
+            <French>Secteurs libérés, delivrés :</French>
+            <German>Sektoren befreit:</German>
+            <Spanish>Sectores liberados:</Spanish>
+            <Russian>Зон освобождено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_14">
+            <Original>Sectors lost:</Original>
+            <Korean>잃은 지역 수:</Korean>
+            <French>Secteurs perdus :</French>
+            <German>Sektoren verloren:</German>
+            <Spanish>Sectores perdidos:</Spanish>
+            <Russian>Зон потеряно:</Russian>
+
+        </Key>
+        <Key ID="STR_STATS_15">
+            <Original>FOBs built:</Original>
+            <Korean>건설된 전방작전기지 갯수:</Korean>
+            <French>FOBs construites :</French>
+            <German>FOBs gebaut:</German>
+            <Spanish>FOBs construídas:</Spanish>
+            <Russian>FOB построено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_16">
+            <Original>FOBs lost:</Original>
+            <Korean>파괴된 전방작전기지 갯수:</Korean>
+            <French>FOBs perdues :</French>
+            <German>FOBs verloren:</German>
+            <Spanish>FOB perdidas:</Spanish>
+            <Russian>FOB потеряно:</Russian>
+        </Key>
+        <Key ID="STR_STATS_17">
+            <Original>Secondary objectives accomplished:</Original>
+            <Korean>성공한 특수임무 수:</Korean>
+            <French>Objectifs secondaires accomplis :</French>
+            <German>Sekundaerziele erreicht:</German>
+            <Spanish>Objetivos secundarios conseguidos:</Spanish>
+            <Russian>Вторичных заданий выполнено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_18">
+            <Original>Prisonners captured:</Original>
+            <Korean>확보한 포로 수:</Korean>
+            <French>Prisonniers capturés:</French>
+            <German>Gefangene gefasst:</German>
+            <Spanish>Prisioneros capturados:</Spanish>
+            <Russian>Пленных захвачено:</Russian>
+        </Key>
+        <Key ID="STR_STATS_19">
+            <Original>Hostile battlegroups called:</Original>
+            <Korean>적 병력 호출 횟수:</Korean>
+            <French>Battlegroups hostiles appelés:</French>
+            <German>Gegnerische Truppen gerufen:</German>
+            <Spanish>Grupos hostiles de combate llamados:</Spanish>
+            <Russian>Вражеских боевых групп вызвано:</Russian>
+
+        </Key>
+        <Key ID="STR_STATS_20">
+            <Original>Hostile reinforcements called:</Original>
+            <Korean>적 증원 횟수:</Korean>
+            <French>Renforts hostiles appelés:</French>
+            <German>Gegnerischen Nachschub gerufen:</German>
+            <Spanish>Refuerzos hostiles llamados:</Spanish>
+            <Russian>Враждебных подкреплений вызвано:</Russian>
+        </Key>
+        <Key ID="STR_STATS_21">
+            <Original>Total combat readiness raised:</Original>
+            <Korean>상승된 위협도:</Korean>
+            <French>Augmentation totale du niveau d'alerte:</French>
+            <German>Gesamte Kampfbereitschaft erhoeht:</German>
+            <Spanish>Disposición de combate total recaudada:</Spanish>
+            <Russian>Всего войск поднято по тревоге:</Russian>
+        </Key>
+        <Key ID="STR_STATS_22">
+            <Original>IEDs detonated:</Original>
+            <Korean>폭파시킨 IED 수:</Korean>
+            <French>Explosions d'IED:</French>
+            <German>IEDs zur Explosion gebracht:</German>
+            <Spanish>IEDs detonados:</Spanish>
+            <Russian>Фугасов взорвано:</Russian>
+        </Key>
+        <Key ID="STR_STATS_23">
+            <Original>Number of Spartan 01 losses:</Original>
+            <Korean>손실된 스파르탄 01 수:</Korean>
+            <French>Pertes de Spartan 01:</French>
+            <German>Hoehe der Spartan 01 Verluste:</German>
+            <Spanish>Número de pérdidas de Spartan 01:</Spanish>
+            <Russian>Количество потерянных Spartan 01:</Russian>
+        </Key>
+        <Key ID="STR_STATS_24">
+            <Original>Player deaths:</Original>
+            <Korean>플레이어 사망 수:</Korean>
+            <French>Joueurs morts:</French>
+            <German>Spielertode:</German>
+            <Spanish>Muertes del jugador:</Spanish>
+            <Russian>Смертей игрока:</Russian>
+        </Key>
+        <Key ID="STR_STATS_25">
+            <Original>Rabbits killed:</Original>
+            <Korean>(전라도서버는 해방후 매번 토끼위령제를 실시)타계하신 토끼 수:</Korean>
+            <French>Lapins tués:</French>
+            <German>Hasen getoetet:</German>
+            <Spanish>Conejos asesinados:</Spanish>
+            <Russian>Кроликов убито:</Russian>
+        </Key>
+        <Key ID="STR_STATS_26">
+            <Original>Many thanks for playing LIBERATION!</Original>
+            <Korean>리버레이션을 플레이해주셔서 대단히 감사드립니다!</Korean>
+            <French>Merci beaucoup d'avoir joué à LIBERATION!</French>
+            <German>Vielen Dank fuers spielen von LIBERATION!</German>
+            <Spanish>¡Muchas gracias por jugar LIBERATION!</Spanish>
+            <Russian>Большое спасибо за то что играли в LIBERATION!</Russian>
+        </Key>
+        <Key ID="STR_STATS_27">
+            <Original>Friendly soldiers recruited:</Original>
+            <Korean>모병된 아군 수:</Korean>
+            <French>Soldats BLUFOR recrutés:</French>
+            <German>BLUFOR Soldaten rekrutiert:</German>
+            <Spanish>Soldados BLUFOR reclutados:</Spanish>
+            <Russian>BLUFOR солдат призвано:</Russian>
+        </Key>
+        <Key ID="STR_STATS_28">
+            <Original>We hope you enjoyed playing it, as much as we enjoyed making it.</Original>
+            <Korean>저희가 리버레이션을 만들때 느낀만큼의 재미를 느끼셨길 바랍니다.</Korean>
+            <French>Nous espérons que vous avez pris autant de plaisir à y jouer, que nous à la créer.</French>
+            <German>Wir hoffen du hast es genossen zu spielen, wie wir genossen haben zu entwickeln.</German>
+            <Spanish>Esperamos que hayas disfrutado tanto jugándola, como nosotros creándola.</Spanish>
+            <Russian>Мы надеемся, что вы насладились игрой в эту миссию так же, как и мы, когда создавали её.</Russian>
+        </Key>
+        <Key ID="STR_STATS_29">
+            <Original>(Press ESC to exit)</Original>
+            <Korean>(ESC를 눌러 나갑니다.)</Korean>
+            <French>(Appuyez sur Echap pour quitter)</French>
+            <German>(Drücke ESC zum Abbrechen)</German>
+            <Spanish>(Pulsa ESC para salir)</Spanish>
+            <Russian>(Нажмите клавишу ESC, чтобы выйти)</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_MISSIONOPTIONS">
+            <Original>== MISSION OPTIONS ==</Original>
+            <Korean>== 미션 설정 ==</Korean>
+            <French>== OPTIONS DE MISSION ==</French>
+            <German>== Missionseinstellungen ==</German>
+            <Spanish>== OPCIONES DE MISIÓN ==</Spanish>
+            <Russian>== ОПЦИИ МИССИИ ==</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_TECHNICALOPTIONS">
+            <Original>== TECHNICAL OPTIONS ==</Original>
+            <Korean>== 기술 설정 ==</Korean>
+            <French>== OPTIONS TECHNIQUES ==</French>
+            <German>== Technische Einstellungen</German>
+            <Spanish>== OPCIONES TÉCNICAS ==</Spanish>
+            <Russian>== ТЕХНИЧЕСКИЕ ОПЦИИ ==</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DAYDURATION">
+            <Original>Day duration (hours):</Original>
+            <Korean>낮의 길이 (시간):</Korean>
+            <French>Durée du jour (heures):</French>
+            <German>Länge eines Tages (Stunden):</German>
+            <Spanish>Duración del día (horas):</Spanish>
+            <Russian>Продолжительность дня (часов):</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY">
+            <Original>Difficulty:</Original>
+            <Korean>난이도:</Korean>
+            <French>Difficulté:</French>
+            <German>Schwierigkeit:</German>
+            <Spanish>Dificultad:</Spanish>
+            <Russian>Сложность:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY1">
+            <Original>Tourist</Original>
+            <Korean>하나투어</Korean>
+            <French>Touriste</French>
+            <German>Tourist</German>
+            <Spanish>Turista</Spanish>
+            <Russian>Турист</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY2">
+            <Original>Easy</Original>
+            <Korean>쉬움</Korean>
+            <French>Facile</French>
+            <German>Einfach</German>
+            <Spanish>Fácil</Spanish>
+            <Russian>Легко</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY3">
+            <Original>Normal</Original>
+            <Korean>보통</Korean>
+            <French>Normal</French>
+            <German>Normal</German>
+            <Spanish>Normal</Spanish>
+            <Russian>Нормально</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY4">
+            <Original>Moderate</Original>
+            <Korean>약간 어려움</Korean>
+            <French>Modérée</French>
+            <German>Moderat</German>
+            <Spanish>Moderado</Spanish>
+            <Russian>Посложнее</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY5">
+            <Original>Hard</Original>
+            <Korean>꽤 어려움</Korean>
+            <French>Difficile</French>
+            <German>Schwer</German>
+            <Spanish>Difícil</Spanish>
+            <Russian>Сложно</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY6">
+            <Original>Extreme</Original>
+            <Korean>존나 어려움</Korean>
+            <French>Extrême</French>
+            <German>Schwer</German>
+            <Spanish>Extremo</Spanish>
+            <Russian>Экстремально</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY7">
+            <Original>Ludicrous</Original>
+            <Korean>개미친 어려움</Korean>
+            <French>Affolante</French>
+            <German>grotesk</German>
+            <Spanish>Ridículo</Spanish>
+            <Russian>Весело</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DIFFICULTY8">
+            <Original>Oh god oh god we're all gonna die</Original>
+            <Korean>죽는다아아아</Korean>
+            <French>Oh mon dieu on va tous mourir</French>
+            <German>Mein Gott, wir werden alle sterben!</German>
+            <Spanish>Oh dios mío, vamos a morir!</Spanish>
+            <Russian>Боже мой, мы все умрём!</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_RESOURCESMULTIPLIER">
+            <Original>Resources multiplier:</Original>
+            <Korean>자원 배수:</Korean>
+            <French>Multiplicateur de resources:</French>
+            <German>Ressourcenmultiplikator:</German>
+            <Spanish>Multiplicador de recursos:</Spanish>
+            <Russian>Множитель ресурсов:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FATIGUE">
+            <Original>Stamina:</Original>
+            <Korean>스테미너:</Korean>
+            <French>Stamina:</French>
+            <German>Ausdauer:</German>
+            <Spanish>Estamina:</Spanish>
+            <Russian>Усталость:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FATIGUE1">
+            <Original>Reduced - 4 times more stamina</Original>
+            <Korean>4배</Korean>
+            <French>Réduits - 4 fois plus de stamina</French>
+            <German>Reduziert - 4-mal mehr Ausdauer</German>
+            <Spanish>Reducido - 4 veces más estamina</Spanish>
+            <Russian>Понизить - в 4 раза усталость</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FATIGUE2">
+            <Original>Reduced - 3 times more stamina</Original>
+            <Korean>3배</Korean>
+            <French>Réduits - 3 fois plus de stamina</French>
+            <German>Reduziert - 3-mal mehr Ausdauer</German>
+            <Spanish>Reducido - 3 veces más estamina</Spanish>
+            <Russian>Понизить - в 3 раза усталость</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FATIGUE3">
+            <Original>Reduced - 2 times more stamina</Original>
+            <Korean>2배</Korean>
+            <French>Réduits - 2 fois plus de stamina</French>
+            <German>Reduziert - 2-mal mehr Ausdauer</German>
+            <Spanish>Reducido - 2 veces más estamina</Spanish>
+            <Russian>Понизить - в 2 раза усталость</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FATIGUE4">
+            <Original>Reduced - 1.5 times more stamina</Original>
+            <Korean>1.5배</Korean>
+            <French>Réduits - 1,5 fois plus de stamina</French>
+            <German>Reduziert - 1,5-mal mehr Ausdauer</German>
+            <Spanish>Reducido - 1,5 veces más estamina</Spanish>
+            <Russian>Понизить - в 1.5 раза усталость</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_REVIVE">
+            <Original>FAR Revive:</Original>
+            <Korean>FAR 리바이브</Korean>
+            <German>FAR Revive (Wiederbelebungen):</German>
+            <Spanish>FAR Revive:</Spanish>
+            <Russian>FAR Возрождение:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_REVIVE1">
+            <Original>Enabled - Only medics can revive</Original>
+            <Korean>활성화 - 의무병만 부활시킬 수 있습니다</Korean>
+            <French>Activé - Seuls les medics peuvent revive</French>
+            <German>Aktiv - Nur Sanitäter können wiederbeleben</German>
+            <Spanish>Activado - Sólo los médicos pueden revivir</Spanish>
+            <Russian>Включено - Только медики могут возрождать</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_REVIVE2">
+            <Original>Enabled - Everyone can revive using a FAK</Original>
+            <Korean>활성화 - 응급키트를 사용해 부활시킬 수 있습니다</Korean>
+            <French>Activé - Tout le monde peut revive avec un kit premiers soins</French>
+            <German>Aktiv - Jeder mit einem Erste-Hilfe-Kasten kann wiederbeleben</German>
+            <Spanish>Activado - Cualquiera puede revivir usando un Kit de primeros auxilios</Spanish>
+            <Russian>Включено - Любой может возродить с помощью пакета первой помощи</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_REVIVE3">
+            <Original>Enabled - Everyone can revive using a MedKit</Original>
+            <Korean>활성화 - 메딕킷을 사용해 부활시킬 수 있습니다.</Korean>
+            <French>Activé - Tout le monde peut revive avec un kit médical</French>
+            <German>Jeder mit einem Verbandskasten kann wiederbeleben</German>
+            <Spanish>Activado - Cualquiera puede revivir usando un Botiquín</Spanish>
+            <Russian>Включено - Любой может возродить используя медицинскую аптечку</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_INTRO">
+            <Original>Introduction:</Original>
+            <Korean>소개:</Korean>
+            <French>Introduction:</French>
+            <German>Einführung:</German>
+            <Spanish>Introducción:</Spanish>
+            <Russian>Введение:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DEPLOYMENTCAMERA">
+            <Original>Deployment Cinematic:</Original>
+            <Korean>배치 영상:</Korean>
+            <French>Cinématique de déploiement:</French>
+            <German>Zwischensequenz bei Einsatz:</German>
+            <Spanish>Cinemática de comienzo:</Spanish>
+            <Russian>Кино во время размещения:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_ENABLED">
+            <Original>Enabled</Original>
+            <Korean>활성화</Korean>
+            <French>Activé</French>
+            <German>Aktiviert</German>
+            <Spanish>Activado</Spanish>
+            <Russian>Вкл</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_DISABLED">
+            <Original>Disabled</Original>
+            <Korean>비활성화</Korean>
+            <French>Désactivé</French>
+            <German>Deaktiviert</German>
+            <Spanish>Desactivado</Spanish>
+            <Russian>Выкл</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_FIRSTFOB">
+            <Original>Start the campaign with the first FOB already built:</Original>
+            <Korean>첫번쨰 FOB가 건설된 상태로 시작</Korean>
+            <French>Commencer la campagne avec une première FOB déjà construite:</French>
+            <German>Starte die Kampagne mit einer bereits gebauten FOB:</German>
+            <Spanish>Comenzar la campaña con la primera FOB ya construída:</Spanish>
+            <Russian>Начать кампанию, когда первая FOB размещена:</Russian>
+        </Key>
+        <Key ID="STR_YES">
+            <Original>Yes</Original>
+            <Korean>예</Korean>
+            <French>Oui</French>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
+            <Russian>Да</Russian>
+        </Key>
+        <Key ID="STR_NO">
+            <Original>No</Original>
+            <Korean>아니오</Korean>
+            <French>Non</French>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Russian>Нет</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP">
+            <Original>Maximum amount of AI units:</Original>
+            <Korean>분대당 최대 AI유닛 수</Korean>
+            <French>Quantité maximum d'unités IA:</French>
+            <German>Maximale Anzahl KI-Einheiten:</German>
+            <Spanish>Cantidad máxima de unidades de IA:</Spanish>
+            <Russian>Максимальное количество единиц AI:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP1">
+            <Original>50% - Recommended for local hosting</Original>
+            <Korean>50% - 로컬 서버에 적합</Korean>
+            <French>50% - Recommandé pour un hébergement local</French>
+            <German>50 % - Empfohlen für lokal gehostete Spiele</German>
+            <Spanish>50% - Recomendado para host local</Spanish>
+            <Russian>50% - Рекомендуется для локального хостинга</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP2">
+            <Original>75% - Dedicated server recommended</Original>
+            <Korean>75% - 데디케이티드 서버에 적합</Korean>
+            <French>75% - Serveur dédié recommandé</French>
+            <German>75 % - Dezidierter Server empfohlen</German>
+            <Spanish>75% - Recomendado para servidor dedicado</Spanish>
+            <Russian>75% - Выделенный сервер рекомендуется</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP3">
+            <Original>100% - Dedicated server recommended</Original>
+            <Korean>100% - 데디케이티드 서버에 적합</Korean>
+            <French>100% - Serveur dédié recommandé</French>
+            <German>100 % - Dezidierter Server empfohlen</German>
+            <Spanish>100% - Recomendado para servidor dedicado</Spanish>
+            <Russian>100% - Выделенный сервер рекомендуется</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP4">
+            <Original>125% - Dedicated server with headless client recommended</Original>
+            <Korean>125% - HC를 사용하는 서버에 적합</Korean>
+            <French>125% - Serveur dédié avec headless client recommandé</French>
+            <German>125 % - Dezidierter Server mit Headless Client empfohlen</German>
+            <Spanish>125% - Recomendado para servidor dedicado con cliente descabezado</Spanish>
+            <Russian>125% - Выделенный сервер вместе с headless client рекомендуется</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP5">
+            <Original>150% - Dedicated server with multiple headless clients recommended</Original>
+            <Korean>150% - 다수의 HC를 사용하는 서버에 적합</Korean>
+            <French>150% - Serveur dédié avec clients headless multiples recommandé</French>
+            <German>150 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+            <Spanish>150% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
+            <Russian>150% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_UNITCAP6">
+            <Original>200% - Dedicated server with multiple headless clients recommended</Original>
+            <Korean>200% - 다수의 HC를 사용하는 서버에 적합</Korean>
+            <French>200% - Serveur dédié avec clients headless multiples recommandés</French>
+            <German>200 % - Dezidierter Server mit mehreren Headless Clients empfohlen</German>
+            <Spanish>200% - Recomendado para servidor dedicado con múltiples clientes descabezados</Spanish>
+            <Russian>200% - Выделенный сервер вместе с несколькими headless client рекомендуется</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_CIVILIANS">
+            <Original>Civilian activity:</Original>
+            <Korean>시민 활동:</Korean>
+            <French>Activité civile:</French>
+            <German>Zivile Aktivität:</German>
+            <Spanish>Actividad civil:</Spanish>
+            <Russian>Гражданская активность:</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_CIVILIANS1">
+            <Original>None</Original>
+            <Korean>없음</Korean>
+            <French>Aucune</French>
+            <German>Keine</German>
+            <Spanish>Ninguna</Spanish>
+            <Russian>Нету</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_CIVILIANS2">
+            <Original>Reduced</Original>
+            <Korean>적음</Korean>
+            <French>Réduite</French>
+            <German>Reduziert</German>
+            <Spanish>Reducida</Spanish>
+            <Russian>Снижена</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_CIVILIANS3">
+            <Original>Normal</Original>
+            <Korean>보통</Korean>
+            <French>Normale</French>
+            <German>Normal</German>
+            <Spanish>Normal</Spanish>
+            <Russian>Нормальная</Russian>
+        </Key>
+        <Key ID="STR_PARAMS_CIVILIANS4">
+            <Original>Increased</Original>
+            <Korean>많음</Korean>
+            <French>Augmentée</French>
+            <German>Erhöht</German>
+            <Spanish>Aumentada</Spanish>
+            <Russian>Увеличенная</Russian>
+        </Key>
+        <Key ID="STR_FRIENDLY_FIRE">
+            <Original>Warning: friendly fire</Original>
+            <Korean>경고: 아군 오사</Korean>
+            <French>Attention: tirs alliés</French>
+            <German>Achtung: Eigenbeschuss</German>
+            <Spanish>Atención: fuego amigo</Spanish>
+            <Russian>Предупреждение: дружественный огонь</Russian>
+        </Key>
+        <Key ID="STR_PARAM_TEAMKILL_PENALTY">
+            <Original>Teamkill penalty:</Original>
+            <Korean>팀킬 패널티:</Korean>
+            <French>Pénalité pour tirs alliés:</French>
+            <German>Strafe für das Töten von Verbündeten:</German>
+            <Spanish>Penalización por fuego amigo:</Spanish>
+            <Russian>Штраф за убийство своего:</Russian>
+        </Key>
+        <Key ID="STR_PARAM_ADAPT_TO_PLAYERCOUNT">
+            <Original>Hostile presence adapts to player count:</Original>
+            <Korean>플레이어 수에 따라 적군 수 조절:</Korean>
+            <French>La présence hostile s'adapte au nombre de joueurs:</French>
+            <German>Feindpräsenz passt sich der Spielerzahl an:</German>
+            <Spanish>Adaptar presencia hostil según la cantidad de jugadores:</Spanish>
+            <Russian>Вражеские силы адаптируются к количеству игроков:</Russian>
+        </Key>
+        <Key ID="STR_PARAM_PASSIVE_INCOME">
+            <Original>Replace ammo boxes spawns with passive income:</Original>
+            <Korean>탄약 자동 수집:</Korean>
+            <French>Remplacer les caisses de munitions par un revenu passif:</French>
+            <German>Ersetzt Munitionskisten durch passives Einkommen:</German>
+            <Spanish>Reemplazar cajas de munición por ingresos pasivos:</Spanish>
+            <Russian>Заменяет ящики с боеприпасами пассивным доходом:</Russian>
+        </Key>
+        <Key ID="STR_BUILD1">
+            <Original>Infantry Units</Original>
+            <Korean>보병</Korean>
+            <French>Unités d'infanterie</French>
+            <German>Infanterie</German>
+            <Spanish>Unidades de infantería</Spanish>
+            <Russian>Пехотинцы</Russian>
+        </Key>
+        <Key ID="STR_BUILD2">
+            <Original>Light Vehicles</Original>
+            <Korean>경장갑 차량</Korean>
+            <French>Véhicules légers</French>
+            <German>Leichte Fahrzeuge</German>
+            <Spanish>Vehículos ligeros</Spanish>
+            <Russian>Легкая техника</Russian>
+        </Key>
+        <Key ID="STR_BUILD3">
+            <Original>Armored Vehicles</Original>
+            <Korean>중장갑 차량</Korean>
+            <French>Vehicules blindés</French>
+            <German>Gepanzerte Fahrzeuge</German>
+            <Spanish>Vehículos blindados</Spanish>
+            <Russian>Бронетехника</Russian>
+        </Key>
+        <Key ID="STR_BUILD4">
+            <Original>Air Vehicles</Original>
+            <Korean>항공 장비</Korean>
+            <French>Véhicules aériens</French>
+            <German>Luftfahrzeuge</German>
+            <Spanish>Vehículos aéreos</Spanish>
+            <Russian>Авиационная техника</Russian>
+        </Key>
+        <Key ID="STR_BUILD5">
+            <Original>Static Defenses</Original>
+            <Korean>고정 화기</Korean>
+            <French>Defenses statiques</French>
+            <German>Statische Verteidigung</German>
+            <Spanish>Defensas estáticas</Spanish>
+            <Russian>Стационары</Russian>
+        </Key>
+        <Key ID="STR_BUILD6">
+            <Original>Buildings</Original>
+            <Korean>구조물</Korean>
+            <French>Batiments</French>
+            <German>Gebäude</German>
+            <Spanish>Edificios</Spanish>
+            <Russian>Постройки</Russian>
+        </Key>
+        <Key ID="STR_BUILD7">
+            <Original>Logistics</Original>
+            <Korean>물류</Korean>
+            <French>Logistique</French>
+            <German>Logistik</German>
+            <Spanish>Logística</Spanish>
+            <Russian>Снабжение</Russian>
+        </Key>
+        <Key ID="STR_BUILD8">
+            <Original>Infantry squads</Original>
+            <Korean>보병 분대</Korean>
+            <French>Escouades d'infanterie</French>
+            <German>Infanteriegruppen</German>
+            <Spanish>Escuadras de infantería</Spanish>
+            <Russian>Пехотные отделения</Russian>
+        </Key>
+        <Key ID="STR_ACTIVE_SECTORS">
+            <Original>Active Sectors:</Original>
+            <Korean>활성화된 구역:</Korean>
+            <French>Secteurs Actifs:</French>
+            <German>Aktive Sektoren:</German>
+            <Spanish>Sectores activos:</Spanish>
+            <Russian>Активные Зоны:</Russian>
+        </Key>
+        <Key ID="STR_OVERLOAD_HINT">
+            <Original>The unitcap setting has been exceeded and further sector activation is temporarily halted. You can now see the list of currently active sectors where you shall concentrate your efforts.</Original>
+            <Korean>유닛제한이 초과되어 지역 활성화가 중지되었습니다. 아래의 지역을 우선 처리하십시오.</Korean>
+            <French>La limite d'unités actives a été dépassée et l'activation de nouveaux secteurs est temporairement stoppée. Vous pouvez maintenant voir la liste des sectors déjà actifs sur lesquels vous pouvez concentrer vos efforts.</French>
+            <German>Maximale Anzahl KI-Einheiten erreicht. Es können keine weitere Zonen aktiviert werden. Du kannst nun die Liste der aktiven Gebiete sehen, auf die du deine Kraft fokussieren solltest.</German>
+            <Spanish>El límite de unidades activas se ha excedido, por lo que la activación de sectores queda temporalmente paralizada. Ahora puedes ver la lista de sectores activos donde concentrar tus esfuerzos</Spanish>
+            <Russian>Превышено ограничение по количеству ботов в настройках миссии и активация зон временно приостановлена. Теперь вы можете увидеть список активных в данный момент зон, где вы должны сконцентрировать свои усилия.</Russian>
+        </Key>
+        <Key ID="STR_VEHICLE_LOCKED">
+            <Original>LOCKED BY</Original>
+            <Korean>장비 잠금</Korean>
+            <French>VEROUILLE PAR</French>
+            <German>VERSCHLOSSEN VON</German>
+            <Spanish>BLOQUEADO POR</Spanish>
+            <Russian>ЗАБЛОКИРОВАНО</Russian>
+        </Key>
+        <Key ID="STR_VEHICLE_UNLOCKED">
+            <Original>UNLOCKED BY</Original>
+            <Korean>잠금 해제</Korean>
+            <French>DEVEROUILLE PAR</French>
+            <German>GEÖFFNET VON</German>
+            <Spanish>DESBLOQUEADO POR</Spanish>
+            <Russian>РАЗБЛОКИРОВАНО</Russian>
+        </Key>
+        <Key ID="STR_SQUAD_MANAGEMENT">
+            <Original>SQUAD MANAGEMENT</Original>
+            <Korean>분대 관리</Korean>
+            <French>GESTION D'ESCOUADE</French>
+            <German>GRUPPENVERWALTUNG</German>
+            <Spanish>GESTIÓN DE ESCUADRA</Spanish>
+            <Russian>УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
+        </Key>
+        <Key ID="STR_SQUAD_MANAGEMENT_ACTION">
+            <Original>-- SQUAD MANAGEMENT</Original>
+            <Korean>-- 분대 관리</Korean>
+            <French>-- GESTION D'ESCOUADE</French>
+            <German>-- GRUPPENVERWALTUNG</German>
+            <Spanish>-- GESTIÓN DE ESCUADRA</Spanish>
+            <Russian>-- УПРАВЛЕНИЕ СОСТАВОМ ГРУПП</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_ON_MEMBER">
+            <Original>Replace</Original>
+            <Korean>교대하기</Korean>
+            <French>Remplacer</French>
+            <German>Ersetzen</German>
+            <Spanish>Reemplazar</Spanish>
+            <Russian>Заменить</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
+            <Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
+            <Korean>현재 상태로 아군 분대원 위치에 배치합니다.</Korean>
+            <French>Vous allez vous déployer à la place du member d'escouade selectionné tout en conservant votre équipement actuel.</French>
+            <German>Du wirst das ausgewählte Gruppenmitglied ersetzen, während du deine Ausrüstung behältst.</German>
+            <Spanish>Reaparecerás en el miembro de la escuadra seleccionado, manteniendo tu equipación actual</Spanish>
+            <Russian>Вы будете развёрнуты на выбранном AI-солдате группы, и замените его, сохранив текущее снаряжение.</Russian>
+        </Key>
+        <Key ID="STR_REMOVE_MEMBER">
+            <Original>Remove</Original>
+            <Korean>쫓아내기</Korean>
+            <French>Supprimer</French>
+            <German>Entfernen</German>
+            <Spanish>Suprimir</Spanish>
+            <Russian>Удалить</Russian>
+        </Key>
+        <Key ID="STR_REMOVE_MEMBER_TOOLTIP">
+            <Original>The selected squad member will be deleted.</Original>
+            <Korean>선택된 분대원을 쫓아냅니다.</Korean>
+            <French>Le membre d'escouade sélectionné sera supprimé.</French>
+            <German>Das ausgewählte Gruppenmitglied löschen.</German>
+            <Spanish>El miembro de la escuadra seleccionado será eliminado</Spanish>
+            <Russian>Выбранный член группы будет удалён.</Russian>
+        </Key>
+        <Key ID="STR_RESUPPLY">
+            <Original>Resupply</Original>
+            <Korean>재보급</Korean>
+            <French>Réapprovisionner</French>
+            <German>Versorgen</German>
+            <Spanish>Reabastecer</Spanish>
+            <Russian>Переснарядить</Russian>
+        </Key>
+        <Key ID="STR_RESUPPLY_TOOLTIP">
+            <Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
+            <Korean>분대원이 재보급 가능한 지점에 가까이 있을 떄 신상으로 재보급받습니다.</Korean>
+            <French>Si le membre d'escouade sélectionné est assez près d'un point d'approvisionnement (spawn mobile ou FOB) il recevra un nouvel équipement complet.</French>
+            <German>Wenn das gewählte Gruppenmitglied nahe genug bei einem Versorgungspunkt (mobiler Spawn oder FOB), erhalten sie eine brandneue, vollständige Ausrüstung</German>
+            <Spanish>Si el miembro de la escuadra se encuentra cerca de un punto de abastecimiento (spawn móvil o FOB) obtendrá el equipamiento completo nuevo</Spanish>
+            <Russian>Если выбранный член группы находится достаточно близко от точки пополнения запасов (мобильный КШМ или FOB), он будет заменён новым, полностью снаряжённым.</Russian>
+        </Key>
+        <Key ID="STR_CONFIRM">
+            <Original>Confirm</Original>
+            <Korean>확인</Korean>
+            <French>Confirmer</French>
+            <German>Bestätigen</German>
+            <Spanish>Confirmar</Spanish>
+            <Russian>Подтвердить</Russian>
+        </Key>
+        <Key ID="STR_HEALTH">
+            <Original>Health:</Original>
+            <Korean>체력:</Korean>
+            <French>Santé :</French>
+            <German>Leben:</German>
+            <Spanish>Salud:</Spanish>
+            <Russian>Здоровье:</Russian>
+        </Key>
+        <Key ID="STR_DISTANCE">
+            <Original>Distance:</Original>
+            <Korean>거리:</Korean>
+            <French>Distance :</French>
+            <German>Distanz:</German>
+            <Spanish>Distancia:</Spanish>
+            <Russian>Дистанция:</Russian>
+        </Key>
+        <Key ID="STR_PRIMARY_WEAPON">
+            <Original>Primary</Original>
+            <Korean>주무장:</Korean>
+            <French>Principale</French>
+            <German>Primär</German>
+            <Spanish>Principal</Spanish>
+            <Russian>Главный</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_WEAPON">
+            <Original>Secondary</Original>
+            <Korean>부무장:</Korean>
+            <French>Secondaire</French>
+            <German>Sekundär</German>
+            <Spanish>Secundaria</Spanish>
+            <Russian>Подчинённый</Russian>
+        </Key>
+        <Key ID="STR_NONE">
+            <Original>None</Original>
+            <Korean>없음</Korean>
+            <French>Aucune</French>
+            <German>Keine</German>
+            <Spanish>Ninguno</Spanish>
+            <Russian>Никто</Russian>
+        </Key>
+        <Key ID="STR_DRIVER">
+            <Original>Driver</Original>
+            <Korean>운전수</Korean>
+            <French>Conducteur</French>
+            <German>Fahrer</German>
+            <Spanish>Conductor</Spanish>
+            <Russian>Водитель</Russian>
+        </Key>
+        <Key ID="STR_GUNNER">
+            <Original>Gunner</Original>
+            <Korean>사수</Korean>
+            <French>Tireur</French>
+            <German>Schütze</German>
+            <Spanish>Artillero</Spanish>
+            <Russian>Стрелок</Russian>
+        </Key>
+        <Key ID="STR_COMMANDER">
+            <Original>Commander</Original>
+            <Korean>전차장</Korean>
+            <French>Commandant</French>
+            <German>Kommandant</German>
+            <Spanish>Comandante</Spanish>
+            <Russian>Командир</Russian>
+        </Key>
+        <Key ID="STR_PASSENGER">
+            <Original>Passenger</Original>
+            <Korean>승객</Korean>
+            <French>Passager</French>
+            <German>Passagier</German>
+            <Spanish>Pasajero</Spanish>
+            <Russian>Пассажир</Russian>
+        </Key>
+        <Key ID="STR_SQUAD_DEPLOY">
+            <Original>Squad deploy</Original>
+            <Korean>분대 배치</Korean>
+            <French>Déploiement d'escouade</French>
+            <German>Gruppeneinsatz</German>
+            <Spanish>Despliegue de escuadra</Spanish>
+            <Russian>Мобилизовать отряд</Russian>
+        </Key>
+        <Key ID="STR_REMOVE_OK">
+            <Original>You have deleted the selected squad member.</Original>
+            <Korean>선택된 분대원을 쫓아내었습니다.</Korean>
+            <French>Vous avez supprimé le membre de l'escouade sélectionné.</French>
+            <German>Du hast das ausgewählte Gruppenmitglied gelöscht.</German>
+            <Spanish>Has eliminado al miebro de la escuadra.</Spanish>
+            <Russian>Вы демобилизовали выбранного члена группы.</Russian>
+        </Key>
+        <Key ID="STR_RESUPPLY_OK">
+            <Original>The selected squad member has been resupplied.</Original>
+            <Korean>선택된 분대원이 재보급하였습니다.</Korean>
+            <French>Le membre de l'escouade sélectionné a été réapprovisionné.</French>
+            <German>Das ausgewählte Gruppenmitglied wurde versorgt.</German>
+            <Spanish>El miembro seleccionado de la escuadra ha sido reamunicionado</Spanish>
+            <Russian>Выбранный член группы был переснаряжён</Russian>
+        </Key>
+        <Key ID="STR_RESUPPLY_KO">
+            <Original>The selected squad member isn't close enough to an FOB or mobile spawn.</Original>
+            <Korean>선택된 분대원이 FOB나 모바일 스폰차량에 가까이 있지 않습니다.</Korean>
+            <French>Le membre de l'escouade sélectionné n'est pas assez proche d'une FOB ou d'un spawn mobile.</French>
+            <German>Das ausgewählte Gruppenmitglied ist nicht nahe genug an einer FOB oder an einem mobilen Spawn.</German>
+            <Spanish>El miembro seleccionado de la escuadra no está suficientemente cerca de una FOB o spawn móvil.</Spanish>
+            <Russian>Выбранный член группы находится далеко от КШМ и FOB</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TITLE">
+            <Original>PERMISSIONS MANAGEMENT</Original>
+            <Korean>권한 관리</Korean>
+            <French>GESTION DES PERMISSIONS</French>
+            <German>Rechteverwaltung</German>
+            <Spanish>GESTIÓN DE PERMISOS</Spanish>
+            <Russian>УПРАВЛЕНИЕ РАЗРЕШЕНИЯМИ</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_LIGHT">
+            <Original>Light Vehicles</Original>
+            <Korean>경장갑 차량</Korean>
+            <French>Véhicules légers</French>
+            <German>Leichte Fahrzeuge</German>
+            <Spanish>Vehículos ligeros</Spanish>
+            <Russian>Лёгкая техника</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_ARMORED">
+            <Original>Armored Vehicles</Original>
+            <Korean>중장갑 차량</Korean>
+            <French>Véhicules blindés</French>
+            <German>Gepanzerte Fahrzeuge</German>
+            <Spanish>Vehículos blindados</Spanish>
+            <Russian>Бронированная техника</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_AIR">
+            <Original>Air Vehicles</Original>
+            <Korean>공중 장비</Korean>
+            <French>Véhicules aériens</French>
+            <German>Luftfahrzeuge</German>
+            <Spanish>Vehículos aéreos</Spanish>
+            <Russian>Авиация</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_CONSTRUCTION">
+            <Original>Construction</Original>
+            <Korean>건설</Korean>
+            <French>Construction</French>
+            <German>Konstruktionen</German>
+            <Spanish>Construcción</Spanish>
+            <Russian>Постройка</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_RECYCLING">
+            <Original>Recycling</Original>
+            <Korean>재활용</Korean>
+            <French>Recyclage</French>
+            <German>Wiederverwerten</German>
+            <Spanish>Reciclar</Spanish>
+            <Russian>Утилизация</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_MISC">
+            <Original>Others</Original>
+            <Korean>기타</Korean>
+            <French>Autres</French>
+            <German>Andere</German>
+            <Spanish>Otros</Spanish>
+            <Russian>Остальное</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_ALL">
+            <Original>All</Original>
+            <Korean>전부선택</Korean>
+            <French>Toutes</French>
+            <German>Alle</German>
+            <Spanish>Todos</Spanish>
+            <Russian>Всё</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_NONE">
+            <Original>None</Original>
+            <Korean>전부해제</Korean>
+            <French>Aucune</French>
+            <German>Keine</German>
+            <Spanish>Ninguno</Spanish>
+            <Russian>Ничего</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_LIGHT">
+            <Original>Allows the player to operate light vehicles as driver and gunner.</Original>
+            <Korean>플레이어에게 경장갑 차량의 운전수와 사수 권한을 부여합니다.</Korean>
+            <French>Autorise le joueur à utiliser les véhicules légers en tant que conducteur ou tireur.</French>
+            <German>Erlaubt es dem Spieler leichte Fahrzeuge als Fahrer und Schütze zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos ligeros como conductor y artillero</Spanish>
+            <Russian>Позволить игроку быть водителем и стрелком лёгкой техники.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_ARMORED">
+            <Original>Allows the player to operate armored vehicles as driver, gunner and commander.</Original>
+            <Korean>플레이어에게 중장갑 차량의 운전수와 사수, 지휘관 권한을 부여합니다.</Korean>
+            <French>Autorise le joueur à utiliser les véhicules blindés en tant que conducteur, tireur ou commandant.</French>
+            <German>Erlaubt es dem Spieler gepanzerte Fahrzeuge als Fahrer, Schütze und Kommandant zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos blindados como conductor, artillero y comandante</Spanish>
+            <Russian>Позволить игроку быть командиром, водителем и стрелком бронированной техники.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_AIR">
+            <Original>Allows the player to operate air vehicles as driver and gunner.</Original>
+            <Korean>플레이어에게 항공장비의 조종수와 사수 권한을 부여합니다.</Korean>
+            <French>Autorise le joueur à utiliser les véhicules aériens en tant que conducteur ou tireur.</French>
+            <German>Erlaubt es dem Spieler Luftfahrzeuge als Pilot und Schütze zu bedienen.</German>
+            <Spanish>Permite al jugador utilizar vehículos aéreos como conductor y artillero</Spanish>
+            <Russian>Позволить игроку быть пилотом и стрелком авиации.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_CONSTRUCTION">
+            <Original>Allows the player to use the BUILD menu.</Original>
+            <Korean>플레이어에게 건설권한을 부여합니다.</Korean>
+            <French>Autorise le joueur à utiliser le menu CONSTRUCTION.</French>
+            <German>Erlaubt es dem Spieler das Baumenü zu benutzen.</German>
+            <Spanish>Permite al jugador utilizar el menú de CONSTRUCCIÓN</Spanish>
+            <Russian>Позволить игроку использовать меню постройки.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_RECYCLING">
+            <Original>Allows the player to use the RECYCLE action.</Original>
+            <Korean>플레이어에게 재활용 권한을 부여합니다.</Korean>
+            <French>Autorise le joueur à utiliser l'action RECYCLER.</French>
+            <German>Erlaubt es dem Spieler die "WIEDERVERWERTEN"-Aktion zu benutzen.</German>
+            <Spanish>Permite al jugador utilizar la acción de RECICLAR</Spanish>
+            <Russian>Позволить игроку утилизировать постройки и технику.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_MISC">
+            <Original>Allows the player to use other actions: unflip, ammo box manipulation, prisoners capture, etc.</Original>
+            <Korean>플레이어가 뒤집기, 화물 적재/하역, 포로 포박등의 기능을 사용할 수 있게 합니다.</Korean>
+            <French>Autorise le joueur à utiliser les autres actions : retournement de véhicule, manipulation des boites de munition, capture de prisoniers, etc.</French>
+            <German>Erlaubt es dem Spieler andere Aktionen durchzuführen: Umdrehen, Interaktion mit Munitionskisten, Gefangennahme, usw.</German>
+            <Spanish>Permite al jugador usar otras acciones: Recolocar vehículo, manipulación de cajas de munición, captura de prisioneros, etc.</Spanish>
+            <Russian>Позволить игроку остальные действия: перевернуть, манипуляции с ящиками боеприпасов, захват пленных, итп.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_ALL">
+            <Original>Gives all permissions to the player.</Original>
+            <Korean>플레이어에게 모든 권한을 부여합니다.</Korean>
+            <French>Donne toutes les permissions au joueur.</French>
+            <German>Gibt dem Spieler alle Rechte</German>
+            <Spanish>Darle todos los permisos al jugador</Spanish>
+            <Russian>Разрешить всё игроку.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_TOOLTIP_NONE">
+            <Original>Removes all permissions from the player.</Original>
+            <Korean>플레이어에게서 모든 권한을 회수합니다.</Korean>
+            <French>Supprime toutes les permissions du joueur.</French>
+            <German>Nimmt dem Spieler alle Rechte weg.</German>
+            <Spanish>Quitar todos los permisos al jugador</Spanish>
+            <Russian>Запретить всё игроку.</Russian>
+        </Key>
+        <Key ID="STR_COMMANDER_ACTION">
+            <Original>-- PERMISSIONS</Original>
+            <Korean>-- 권한 설정</Korean>
+            <French>-- PERMISSIONS</French>
+            <German>-- RECHTE</German>
+            <Spanish>-- PERMISOS</Spanish>
+            <Russian>-- РАЗРЕШЕНИЯ</Russian>
+        </Key>
+        <Key ID="STR_SAVE_CHANGES">
+            <Original>Save Changes</Original>
+            <Korean>저장</Korean>
+            <French>Sauvegarder</French>
+            <German>Änderungen speichern</German>
+            <Spanish>Guardar cambios</Spanish>
+            <Russian>Сохранить Изменения</Russian>
+        </Key>
+        <Key ID="STR_PERMISSIONS_PARAM">
+            <Original>Permissions Management</Original>
+            <Korean>권한 관리</Korean>
+            <French>Gestion des Permissions</French>
+            <German>Rechteverwaltung</German>
+            <Spanish>Gestión de permisos</Spanish>
+            <Russian>Управление Разрешениями</Russian>
+        </Key>
+        <Key ID="STR_PERMISSION_NO_LIGHT">
+            <Original>You don't have permission from the commander to use light vehicles.</Original>
+            <Korean>경장갑 차량을 운용할 수 있는 권한이 없습니다.</Korean>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules légers.</French>
+            <German>Du hast keine Rechte zur Nutzung leichter Fahrzeuge.</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos ligeros.</Spanish>
+            <Russian>У тебя нет разрешения от командира использовать легкую технику.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSION_NO_ARMOR">
+            <Original>You don't have permission from the commander to use armored vehicles.</Original>
+            <Korean>중장갑 차량을 운용할 수 있는 권한이 없습니다.</Korean>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules blindés.</French>
+            <German>Du hast keine Rechte zur Nutzung gepanzerter Fahrzeuge.</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos blindados.</Spanish>
+            <Russian>У тебя нет разрешения от командира использовать бронированную технику.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSION_NO_AIR">
+            <Original>You don't have permission from the commander to use air vehicles.</Original>
+            <Korean>항공장비를 운용할 수 있는 권한이 없습니다.</Korean>
+            <French>Vous n'avez pas la permission du commandant pour utiliser les véhicules aériens.</French>
+            <German>Du hast keine Rechte zur Nutzung von Luftfahrzeugen.</German>
+            <Spanish>No tienes permiso del comandante para usar vehículos aéreos.</Spanish>
+            <Russian>У тебя нет разрешения от командира использовать авиацию.</Russian>
+        </Key>
+        <Key ID="STR_PERMISSION_WARNING">
+            <Original>No permissions have been set. The commander must setup the permissions to allow player actions and vehicle usage. Alternatively, the permission system can be disabled from the mission options.</Original>
+            <Korean>모든 권한이 해제되어있습니다. 지휘관이 권한을 설정해 주어야 합니다.</Korean>
+            <French>Aucune permission n'a été définie. Le commandant doit configurer les permissions pour permettre aux joueurs d'effectuer des actions et d'utiliser les véhicules. Sinon, le système de permissions peut être désactivé dans les options de mission.</French>
+            <German>Keine Rechte wurden vergeben. Der Kommandant muss die Rechte verwalten um Spielern Aktionen und die Nutzung von Fahrzeugen zu erlaubne. Alternativ kann das Rechtesystem in den Missionsoptionen deaktiviert werden.</German>
+            <Spanish>No hay permisos definidos. El comandante debe asignar los permisos para permitir a los jugadores el uso de los vehículos y acciones. Alternativamente, puede desactivarse el sistema de permisos desde las opciones de misión</Spanish>
+            <Russian>Разрешения не были даны. Командир должен настроить разрешения, чтобы позволить игроку действия и использование техники. Кроме того, система разрешений может быть отключена в настройках миссии.</Russian>
+        </Key>
+        <Key ID="STR_ARSENAL_TITLE">
+            <Original>ARSENAL</Original>
+            <Korean>아스널</Korean>
+            <French>ARSENAL</French>
+            <German>ARSENAL</German>
+            <Spanish>ARSENAL</Spanish>
+            <Russian>АРСЕНАЛ</Russian>
+        </Key>
+        <Key ID="STR_EDIT_LOADOUT">
+            <Original>Edit loadout</Original>
+            <Korean>로드아웃 편집</Korean>
+            <French>Modifier équipement</French>
+            <German>Ausrüstung bearbeiten</German>
+            <Spanish>Modificar equipamiento</Spanish>
+            <Russian>Редактировать</Russian>
+        </Key>
+        <Key ID="STR_LOAD_LOADOUT">
+            <Original>Take loadout</Original>
+            <Korean>로드아웃 불러오기</Korean>
+            <French>Charger l'équipement</French>
+            <German>Ausrüstung laden</German>
+            <Spanish>Coger equipamiento</Spanish>
+            <Russian>Загрузить</Russian>
+        </Key>
+        <Key ID="STR_DEFAULT">
+            <Original>Default</Original>
+            <Korean>기본</Korean>
+            <French>Par défaut</French>
+            <German>Standart</German>
+            <Spanish>Por defecto</Spanish>
+            <Russian>Стандартно</Russian>
+        </Key>
+        <Key ID="STR_FOB_REPACKAGE">
+            <Original>-- REPACKAGE FOB --</Original>
+            <Korean>-- 전방작전기지 해체 --</Korean>
+            <French>-- REPLIER FOB --</French>
+            <German>-- FOB EINPACKEN --</German>
+            <Spanish>-- EMPAQUETAR FOB --</Spanish>
+            <Russian>-- СВЕРНУТЬ FOB --</Russian>
+        </Key>
+        <Key ID="STR_FOB_REPACKAGE_TITLE">
+            <Original>REPACKAGE FOB</Original>
+            <Korean>전방작전기지 해체</Korean>
+            <French>REPLIER FOB</French>
+            <German>FOB EINPACKEN</German>
+            <Spanish>EMPAQUETAR FOB</Spanish>
+            <Russian>СВЕРНУТЬ FOB</Russian>
+        </Key>
+        <Key ID="STR_FOB_REPACKAGE_CONFIRM">
+            <Original>Are you sure you want to repackage this FOB?</Original>
+            <Korean>전방작전기지를 해체할까요?</Korean>
+            <French>Etes-vous sur de vouloir replier cette fob?</French>
+            <German>Bist du dir sicher dass du deine FOB einpacken willst?</German>
+            <Spanish>¿Estas seguro de querer reempaquetar esta FOB?</Spanish>
+            <Russian>Ты уверен что хочешь свернуть эту FOB?</Russian>
+        </Key>
+        <Key ID="STR_FOB_REPACKAGE_HINT">
+            <Original>FOB repackaged.</Original>
+            <Korean>전방작전기지가 해체되었습니다.</Korean>
+            <French>FOB repliée.</French>
+            <German>FOB eingepackt.</German>
+            <Spanish>FOB reempaquetada</Spanish>
+            <Russian>FOB свёрнута</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM">
+            <Original>HALO Jump:</Original>
+            <Korean>공수강하[비용:10]</Korean>
+            <French>Saut HALO:</French>
+            <German>HALO-Sprung:</German>
+            <Spanish>Salto HALO:</Spanish>
+            <Russian>HALO прыжок:</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM1">
+            <Original>Enabled - No cooldown</Original>
+            <Korean>활성화 - 쿨타임 없음</Korean>
+            <French>Activé - Pas de cooldown</French>
+            <German>Aktiviert - Keine Abklingzeit</German>
+            <Spanish>Activado - Sin tiempo de espera</Spanish>
+            <Russian>Вкл - без перерыва</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM2">
+            <Original>Enabled - 5 minutes cooldown</Original>
+            <Korean>활성화 - 5분에 한번씩</Korean>
+            <French>Activé - Cooldown de 5 minutes</French>
+            <German>Aktiviert - 5 Minuten Abklingzeit</German>
+            <Spanish>Activado - 5 minutos de espera</Spanish>
+            <Russian>Вкл - 5 минут перерыв</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM3">
+            <Original>Enabled - 10 minutes cooldown</Original>
+            <Korean>활성화 - 10분에 한번씩</Korean>
+            <French>Activé - Cooldown de 10 minutes</French>
+            <German>Aktiviert - 10 Minuten Abklingzeit</German>
+            <Spanish>Activado - 10 minutos de espera</Spanish>
+            <Russian>Вкл - 10 минут перерыв</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM4">
+            <Original>Enabled - 15 minutes cooldown</Original>
+            <Korean>활성화 - 15분에 한번씩</Korean>
+            <French>Activé - Cooldown de 15 minutes</French>
+            <German>Aktiviert - 15 Minuten Abklingzeit</German>
+            <Spanish>Activado - 15 minutos de espera</Spanish>
+            <Russian>Вкл - 15 минут перерыв</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM5">
+            <Original>Enabled - 20 minutes cooldown</Original>
+            <Korean>활성화 - 20분에 한번씩</Korean>
+            <French>Activé - Cooldown de 20 minutes</French>
+            <German>Aktiviert - 20 Minuten Abklingzeit</German>
+            <Spanish>Activado - 20 minutos de espera</Spanish>
+            <Russian>Вкл - 20 минут перерыв</Russian>
+        </Key>
+        <Key ID="STR_HALO_PARAM6">
+            <Original>Enabled - 30 minutes cooldown</Original>
+            <Korean>활성화 - 30분에 한번씩</Korean>
+            <French>Activé - Cooldown de 30 minutes</French>
+            <German>Aktiviert - 30 Minuten Abklingzeut</German>
+            <Spanish>Activado - 30 minutos de espera</Spanish>
+            <Russian>Вкл - 30 минут перерыв</Russian>
+        </Key>
+        <Key ID="STR_HALO_DENIED_COOLDOWN">
+            <Original>Can't perform HALO jump, you are on cooldown for %1 more minute(s).</Original>
+            <Korean>공수강하 할 수 없습니다. %1분 후에 가능합니다.</Korean>
+            <French>Impossible d'effectuer un suat HALO, vous êtes en cooldown pour encore %1 minute(s).</French>
+            <German>HALO Sprung noch nicht möglich. Verbleibende Abklingzeit von %1 Minuten.</German>
+            <Spanish>No puedes saltar en HALO, te quedan %1 minuto(s) de espera.</Spanish>
+            <Russian>HALO прыжок недоступен, подождите %1 минут</Russian>
+        </Key>
+        <Key ID="STR_HALO_ACTION">
+            <Original>-- HALO JUMP</Original>
+            <Korean>-- 공수 강하</Korean>
+            <French>-- SAUT HALO</French>
+            <German>-- HALO-SPRUNG</German>
+            <Spanish>-- SALTO HALO</Spanish>
+            <Russian>-- HALO прыжок</Russian>
+        </Key>
+        <Key ID="STR_HALO_TITLE">
+            <Original>HALO JUMP</Original>
+            <Korean>공수 강하</Korean>
+            <French>SAUT HALO</French>
+            <German>HALO-SPRUNG</German>
+            <Spanish>SALTO HALO</Spanish>
+            <Russian>HALO ПРЫЖОК</Russian>
+        </Key>
+        <Key ID="STR_DEPLOY_IN_PROGRESS">
+            <Original>Deployment in progress...</Original>
+            <Korean>낙하지점으로 이동중...</Korean>
+            <French>Déploiement en cours...</French>
+            <German>Verlegung im Gange</German>
+            <Spanish>Despliegue en curso...</Spanish>
+            <Russian>В процессе выполнения ...</Russian>
+        </Key>
+        <Key ID="STR_WHITELIST_PARAM">
+            <Original>Commander Whitelist:</Original>
+            <Korean>지휘관 화이트리스트:</Korean>
+            <French>Utiliser la whitelist pour le commandant</French>
+            <German>Nutze die Whitelist für den Kommandanten</German>
+            <Spanish>Utilizar la lista blanca para Comandantes</Spanish>
+            <Russian>Использование "белого" списка командиров</Russian>
+        </Key>
+        <Key ID="STR_WHITELIST_ENABLED">
+            <Original>Enabled - Only use if you have modified your whitelist.sqf!</Original>
+            <Korean>활성화 - whitelist.sqf를 작성한 경우에만 사용</Korean>
+            <French>Activé - A n'utiliser que si vous avez modifié votre whitelist.sqf !</French>
+            <Spanish>Activado - ¡Sólo utilizar si has modificado tu whitelist.sqf</Spanish>
+            <Russian>Вкл - Использовать только если вы редактировали файл whitelist.sqf!</Russian>
+        </Key>
+        <Key ID="STR_BUILD_ENEMIES_NEARBY">
+            <Original>Cannot build: hostile forces nearby.</Original>
+            <Korean>건설할 수 없습니다. 주변에 적이 있습니다.</Korean>
+            <French>Impossible de construire: forces hostiles à proximité.</French>
+            <German>Kann nicht gebaut werden: Feindkräfte in der Nähe.</German>
+            <Spanish>No se puede construir: fuerzas hostiles cercanas.</Spanish>
+            <Russian>Постройка невозможна: враги рядом.</Russian>
+        </Key>
+        <Key ID="STR_CLEANUP_PARAM">
+            <Original>Cleanup abandoned vehicles outside of FOB:</Original>
+            <Korean>전방작전기지 밖에 버려진 장비 제거:</Korean>
+            <French>Nettoyer les véhicules abandonnés loin d'une FOB</French>
+            <German>Räumt verlassene Fahrzeuge auserhalb von FOBs weg</German>
+            <Spanish>Limpieza de vehículos abandonados fuera de FOBs</Spanish>
+            <Russian>Удаление брошенной техники вне FOB.</Russian>
+        </Key>
+        <Key ID="STR_CLEANUP_PARAM1">
+            <Original>Enabled - 1 hour delay</Original>
+            <Korean>활성화 - 1시간마다</Korean>
+            <French>Activé - 1 heure de délai</French>
+            <German>Aktiv - 1 Stunde Verzögerung</German>
+            <Spanish>Activado- abandonados durante 1 hora</Spanish>
+            <Russian>Вкл - задержка 1 час</Russian>
+        </Key>
+        <Key ID="STR_CLEANUP_PARAM2">
+            <Original>Enabled - 2 hours delay</Original>
+            <Korean>활성화 - 2시간마다</Korean>
+            <French>Activé - 2 heures de délai</French>
+            <German>Aktiv - 2 Stunde Verzögerung</German>
+            <Spanish>Activado - abandonados durante 2 horas</Spanish>
+            <Russian>Вкл - задержка 2 часа</Russian>
+        </Key>
+        <Key ID="STR_CLEANUP_PARAM3">
+            <Original>Enabled - 4 hours delay</Original>
+            <Korean>활성화 - 4시간마다</Korean>
+            <French>Activé - 4 heures de délai</French>
+            <German>Aktiv - 4 Stunden Verzögerung</German>
+            <Spanish>Activado - abandonados durante 4 horas</Spanish>
+            <Russian>Вкл - задержка 4 часа</Russian>
+        </Key>
+        <Key ID="STR_SORRY">
+            <Original>Sorry!</Original>
+            <Korean>쏘리!</Korean>
+            <French>Désolé !</French>
+            <German>Entschuldigung!</German>
+            <Spanish>Lo siento!</Spanish>
+            <Russian>Извини!</Russian>
+        </Key>
+        <Key ID="STR_COMMANDER_NOT_AUTHORIZED">
+            <Original>You are not authorized to use the commander slot on this server.</Original>
+            <Korean>당신은 지휘관의 자격이 없습니다.</Korean>
+            <French>Vous n'êtes pas authorizé à utiliser la place de commandant sur ce serveur.</French>
+            <German>Du bist auf diesem Server nicht als Kommandant autorisiert.</German>
+            <Spanish>No estás autorizado para usar el slot de comandante en este servidor.</Spanish>
+            <Russian>Вы не авторизованы, чтобы использовать слот коммандира на этом сервере.</Russian>
+        </Key>
+        <Key ID="STR_MAKE_RESPAWN_LOADOUT">
+            <Original>Save respawn loadout</Original>
+            <Korean>리스폰 로드아웃 저장</Korean>
+            <French>Equipement de respawn</French>
+            <German>Ausrüstung bei Respawn festlegen</German>
+            <Spanish>Guardar el equipamiento para respawn</Spanish>
+            <Russian>Всегда загружать</Russian>
+        </Key>
+        <Key ID="STR_MAKE_RESPAWN_LOADOUT_HINT">
+            <Original>Your current loadout will be restored on every respawn.</Original>
+            <Korean>현재 로드아웃으로 리스폰합니다.</Korean>
+            <French>Votre equipement actuel sera restauré à chaque respawn.</French>
+            <German>Deine Ausrüstung wird bei jedem Respwan wiederhergestellt.</German>
+            <Spanish>Tu actual equipamiento seá mantenido en cada respawn.</Spanish>
+            <Russian>Ваше текущее снаряжение будет загружаться после каждого возраждения</Russian>
+        </Key>
+        <Key ID="STR_LOAD_PLAYER_LOADOUT">
+            <Original>Load from player</Original>
+            <Korean>다른 플레이어의 로드아웃 불러오기</Korean>
+            <French>Charger depuis joueur</French>
+            <German>Von Spieler laden</German>
+            <Spanish>Cargar desde jugador</Spanish>
+            <Russian>Из игрока</Russian>
+        </Key>
+        <Key ID="STR_LOAD_PLAYER_LOADOUT_HINT">
+            <Original>Successful loadout transfer from %1.</Original>
+            <Korean>%1를 따라했습니다!</Korean>
+            <French>Transfer d'équipement réussi depuis %1.</French>
+            <German>Erfolgreich Ausrüstung von %1 übertragen.</German>
+            <Spanish>Transferencia de equipamiento de %1 terminada.</Spanish>
+            <Russian>Успешная загрузка снаряжения игрока %1</Russian>
+        </Key>
+        <Key ID="STR_LOADOUT">
+            <Original>Loadout:</Original>
+            <Korean>로드아웃:</Korean>
+            <French>Equipement:</French>
+            <German>Ausrüstung:</German>
+            <Spanish>Equipamiento:</Spanish>
+            <Russian>Снаряжение:</Russian>
+        </Key>
+        <Key ID="STR_SPAWN_POINT">
+            <Original>Deployment location:</Original>
+            <Korean>배치 장소:</Korean>
+            <French>Lieu de déploiement:</French>
+            <German>Einsatzposition:</German>
+            <Spanish>Lugar para el despliegue:</Spanish>
+            <Russian>Позиция размешения:</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM">
+            <Original>Enemy aggressivity:</Original>
+            <Korean>적군 공격성:</Korean>
+            <French>Aggressivité de l'OPFOR:</French>
+            <German>OPFOR Aggressivität:</German>
+            <Spanish>Agresividad del OPFOR:</Spanish>
+            <Russian>Уровень обеспокоенности OPFOR:</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM0">
+            <Original>Anemic</Original>
+            <Korean>비폭력주의</Korean>
+            <French>Anémique</French>
+            <German>Mutlos</German>
+            <Spanish>Anémica</Spanish>
+            <Russian>Вяло</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM1">
+            <Original>Weak</Original>
+            <Korean>약함</Korean>
+            <French>Faible</French>
+            <German>Schwacht</German>
+            <Spanish>Floja</Spanish>
+            <Russian>Слабо</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM2">
+            <Original>Normal</Original>
+            <Korean>보통</Korean>
+            <French>Normale</French>
+            <German>Normal</German>
+            <Spanish>Normal</Spanish>
+            <Russian>Нормально</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM3">
+            <Original>Strong</Original>
+            <Korean>강함</Korean>
+            <French>Forte</French>
+            <German>Stark</German>
+            <Spanish>Fuerte</Spanish>
+            <Russian>Сильно</Russian>
+        </Key>
+        <Key ID="STR_AGGRESSIVITY_PARAM4">
+            <Original>Extreme</Original>
+            <Korean>BE폭력주의</Korean>
+            <French>Extreme</French>
+            <German>Extrem</German>
+            <Spanish>Extrema</Spanish>
+            <Russian>Очень сильно</Russian>
+        </Key>
+        <Key ID="STR_WEATHER_PARAM">
+            <Original>Weather conditions:</Original>
+            <Korean>날씨 설정:</Korean>
+            <French>Meteo:</French>
+            <German>Wetter:</German>
+            <Spanish>Clima:</Spanish>
+            <Russian>Погода:</Russian>
+        </Key>
+        <Key ID="STR_WEATHER_PARAM1">
+            <Original>Always sunny</Original>
+            <Korean>언제나 빵끗</Korean>
+            <French>Soleil permanent</French>
+            <German>Immer sonnig</German>
+            <Spanish>Siempre soleado</Spanish>
+            <Russian>Всегда солнечно</Russian>
+        </Key>
+        <Key ID="STR_WEATHER_PARAM2">
+            <Original>Random, without rain</Original>
+            <Korean>무작위, 비는 안옴</Korean>
+            <French>Aléatoire sans pluie</French>
+            <German>Zufällig ohne Regen</German>
+            <Spanish>Aleatorio sin lluvia</Spanish>
+            <Russian>Случайно, без дождя</Russian>
+        </Key>
+        <Key ID="STR_WEATHER_PARAM3">
+            <Original>Random</Original>
+            <Korean>무작위</Korean>
+            <French>Aléatoire</French>
+            <German>Zufällig</German>
+            <Spanish>Aleatorio</Spanish>
+            <Russian>Случайно</Russian>
+        </Key>
+        <Key ID="STR_SHORTER_NIGHTS_PARAM">
+            <Original>Shorter nights:</Original>
+            <Korean>저녁 시간 단축:</Korean>
+            <French>Nuits plus courtes:</French>
+            <German>Kürzere Nächte:</German>
+            <Spanish>Noches más cortas:</Spanish>
+            <Russian>Короткие ночи:</Russian>
+        </Key>
+        <Key ID="STR_REPAIRING">
+            <Original>Repairing</Original>
+            <Korean>수리중</Korean>
+            <French>Réparation</French>
+            <German>Repariert</German>
+            <Spanish>Reparando</Spanish>
+            <Russian>Ремонт</Russian>
+        </Key>
+        <Key ID="STR_REARMING">
+            <Original>Rearming in %1s</Original>
+            <Korean>%1초후에 수리완료</Korean>
+            <French>Réarmement dans %1s</French>
+            <German>Aufmunitioniert in %1s</German>
+            <Spanish>Rearmando en %1s</Spanish>
+            <Russian>Перезарядка за %1с</Russian>
+        </Key>
+        <Key ID="STR_REFUELING">
+            <Original>Refueling</Original>
+            <Korean>급유중</Korean>
+            <French>Ravitaillement</French>
+            <German>Auftanken</German>
+            <Spanish>Repostando</Spanish>
+            <Russian>Заправка</Russian>
+        </Key>
+        <Key ID="STR_INTEL">
+            <Original>-- TAKE INTEL</Original>
+            <Korean>-- 정보 확보</Korean>
+            <French>-- PRENDRE INTEL</French>
+            <German>-- GEHEIMDIENSTINFORMATIONEN AUFNEHMEN</German>
+            <Spanish>-- COGER INTELIGENCIA</Spanish>
+            <Russian>-- ПОЛУЧИТЬ РАЗВЕДДАННЫЕ</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_OBJECTIVES">
+            <Original>--SECONDARY OBJECTIVES</Original>
+            <Korean>-- 특수 임무</Korean>
+            <French>--OBJECTIFS SECONDAIRES</French>
+            <German>--SEKUNDÄRE ZIELE</German>
+            <Spanish>--OBJETIVOS SECUNDARIOS</Spanish>
+            <Russian>--ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
+        </Key>
+        <Key ID="STR_AMMO_BOUNTIES">
+            <Original>Ammunition bounties:</Original>
+            <Korean>현상금:</Korean>
+            <French>Primes de munitions:</French>
+            <German>Munition als Kopfgelder:</German>
+            <Spanish>Recompensas de munición:</Spanish>
+            <Russian>Вознаграждение за уничтожение техники ВООРУЖЕНИЕ</Russian>
+        </Key>
+        <Key ID="STR_BOUNTY_MESSAGE">
+            <Original>Bounty of %1 for a %2 destroyed by %3.</Original>
+            <Korean>%3가 %2를 격파하여 %1의 탄약이 지급되었습니다.</Korean>
+            <French>Prime de %1 pour un %2 détruit par %3.</French>
+            <German>Kopfgeld von %1 für die Zerstörung von %2 durch %3.</German>
+            <Spanish>Premio de %1 por un %2 destruido por %3.</Spanish>
+            <Russian>+%1 едениц ВООРУЖЕНИЯ за %2 уничтоженный игроком %3.</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_OBJECTIVES_TITLE">
+            <Original>SECONDARY OBJECTIVES</Original>
+            <Korean>특수 임무</Korean>
+            <French>OBJECTIFS SECONDAIRES</French>
+            <German>SEKUNDÄRE ZIELE</German>
+            <Spanish>OBJETIVOS SECUNDARIOS</Spanish>
+            <Russian>ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_OBJECTIVES_START">
+            <Original>Start</Original>
+            <Korean>시작</Korean>
+            <French>Commencer</French>
+            <German>Beginnen</German>
+            <Spanish>Empezar</Spanish>
+            <Russian>Старт</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_INTEL">
+            <Original>Current intel: %1</Original>
+            <Korean>현재 정보량: %1</Korean>
+            <French>Intel actuelle : %1</French>
+            <German>Aktuelle Geheimdienstinformationen: %1</German>
+            <Spanish>Inteligencia actual: %1</Spanish>
+            <Russian>Разведданные: %1</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_NOT_ENOUGH_INTEL">
+            <Original>Insufficient Intel Points.</Original>
+            <Korean>정보량이 부족합니다.</Korean>
+            <French>Points d'intel insuffisants</French>
+            <German>Zu wenig Geheimdienstinformationen</German>
+            <Spanish>Puntos de inteligencia insuficientes</Spanish>
+            <Russian>Недостаточно информации</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_IN_PROGRESS">
+            <Original>Secondary Objective already in progress!</Original>
+            <Korean>이미 다른 특수임무가 진행중입니다.</Korean>
+            <French>Mission secondaire déjà en cours</French>
+            <German>Sekundäre Mission läuft bereits</German>
+            <Spanish>Misión secundaria ya en curso</Spanish>
+            <Russian>Дополнительная задача уже есть</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_INCOMING_TEXT">
+            <Original>Hostile forces are heading towards %1.</Original>
+            <Korean>적군이 %1로 향하고 있습니다.</Korean>
+            <French>Les forces hostiles se dirigent vers %1.</French>
+            <German>Feindliche Streitkräfte bewegen sich auf %1 zu.</German>
+            <Russian>Замечена вражеская группа рядом с %1</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_CSAT_CONVOY">
+            <Original>Enemy Convoy</Original>
+            <Korean>적군 호송대</Korean>
+            <French>Convoi OPFOR</French>
+            <German>OPFOR Konvoi</German>
+            <Russian>Конвой OPFOR</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_CSAT_CONVOY_WP">
+            <Original>Waypoint</Original>
+            <Korean>경유지</Korean>
+            <French>Point de passage</French>
+            <German>Wegpunkt</German>
+            <Russian>Путевая точка</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_CONVOY_DESTROYED_TEXT">
+            <Original>Enemy Convoy neutralized.</Original>
+            <Korean>적군의 호송대가 무력화되었습니다.</Korean>
+            <French>Convoi OPFOR neutralisé.</French>
+            <German>OPFOR Konvoi neutralisiert.</German>
+            <Russian>Конвой OPFOR нейтрализован.</Russian>
+        </Key>
+        <Key ID="STR_NOTIFICATION_CONVOY_SPOTTED_TEXT">
+            <Original>Enemy Convoy near %1.</Original>
+            <Korean>적군의 호송대가 %1 근처에서 포착되었습니다.</Korean>
+            <French>Convoi OPFOR près de %1.</French>
+            <German>OPFOR Konvoi nahe %1.</German>
+            <Russian>Конвой OPFOR рядом с %1.</Russian>
+        </Key>
+        <Key ID="STR_TUTO_GOTIT">
+            <Original>Got it!</Original>
+            <Korean>알겠습니다!</Korean>
+            <French>J'ai pigé !</French>
+            <German>Verstanden</German>
+            <Spanish>Lo tengo!</Spanish>
+            <Russian>Вас понял!</Russian>
+        </Key>
+        <Key ID="STR_TUTO_ACTION">
+            <Original>-- TUTORIAL</Original>
+            <Korean>-- 튜토리얼</Korean>
+            <French>-- TUTORIAL</French>
+            <German>-- TUTORIAL</German>
+            <Spanish>-- TUTORIAL</Spanish>
+            <Russian>-- РУКОВОДСТВО</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE">
+            <Original>TUTORIAL</Original>
+            <Korean>튜토리얼</Korean>
+            <French>TUTORIAL</French>
+            <German>TUTORIAL</German>
+            <Spanish>TUTORIAL</Spanish>
+            <Russian>РУКОВОДСТВО</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE1">
+            <Original>1. Introduction</Original>
+            <Korean>1. 소개</Korean>
+            <French>1. Introduction</French>
+            <German>1. Einführung</German>
+            <Spanish>1. Introducción</Spanish>
+            <Russian>1. Введение</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT1">
+            <Original>
+                &lt;br/&gt; Ladies, welcome to Liberation!&lt;br/&gt; &lt;br/&gt; The enemy forces have surprised us with a brutal and overwhelming offensive. They now control the entire island but thanks to your efforts, it won't last long.&lt;br/&gt; &lt;br/&gt; Our objective is simple: liberate the region.&lt;br/&gt; &lt;br/&gt; The road to victory will be long and dangerous. You will have to conquer multiple sectors and acquire the necessary resources to improve the quantity and quality of friendly forces engaged in this campaign.&lt;br/&gt; &lt;br/&gt; Moreover, enemy forces will most certainly react to our advance. You will have to complete Secondary Objectives to weaken a foe that fights with higher numbers and better equipment than you do.&lt;br/&gt; &lt;br/&gt; In your efforts you will need the support of the local population, so always make sure to double-check what you're shooting at.&lt;br/&gt; &lt;br/&gt; Questions?&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 전라도 리버레이션 서버에 오신것을 환영합니다. &lt;br/&gt; &lt;br/&gt; 리버레이션 서버는 알티스 전역에 펼쳐진 구역을 모두 점령해나가는 서버입니다. 서버의 규칙에 따라 장비를 사용할 수 있고, 보병으로 플레이할 수 있습니다. &lt;br/&gt; &lt;br/&gt; 장비를 사용하기 위해서는 U키를 눌러 알맞은 분대에 가입한 상태로 사용할 수 있습니다. &lt;br/&gt; &lt;br/&gt; 플레이하기 전에 반드시 서버 규칙을 확인해주시기 바랍니다. 서버 규칙은 맵 좌측 상단 파란 깃발을 클릭하거나, 디스코드, 네이버 카페에서 확인할 수 있습니다. &lt;br/&gt; &lt;br/&gt; 규정 미숙지시 킥, 밴될 수 있음을 유의해 주시기 바랍니다. &lt;br/&gt; &lt;br/&gt; 저희 서버를 찾아주셔서 감사드리며 즐거운 플레이 되시길 바랍니다. &lt;br/&gt;</Korean>
+            <French>
+                &lt;br/&gt; Bonjour messieurs, et bienvenue sur Altis.&lt;br/&gt; &lt;br/&gt; Les forces de l'OPFOR nous ont pris de court avec une offensive aussi brutale que surprenante. L’île est maintenant sous leur emprise, mais grâce à vous, cela ne va pas durer.&lt;br/gt; &lt;br/&gt; L’objectif est simple : libérer Altis.&lt;br/&gt; &lt;br/&gt; La route vers la victoire sera longue et semée d’embûches. Il vous faudra conquérir de multiples secteurs pour acquérir les ressources nécessaires au développement en nombre et en qualité des forces de l’OTAN engagées dans cette opération.&lt;br/&gt; &lt;br/&gt; De plus, les forces de l'OPFOR ne manqueront pas de réagir à notre avancée. Il faudra veiller à effectuer des opérations annexes pour affaiblir un ennemi bien plus nombreux et mieux équipé que nous.&lt;br/&gt; &lt;br/&gt; Dans vos efforts, le soutien de la population locale sera primordial, alors soyez toujours sûrs de toujours savoir sur quoi vous tirez.&lt;br/&gt; &lt;br/&gt; Des questions ?&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>
+                &lt;br/&gt; Guten Tag meine Herren und willkommen im Operationsgebiet.&lt;br/&gt; Die OPFOR Streitkräfte haben uns mit einer brutalen und überwältigenden Offensive überrascht. Sie kontrollieren nun das gesamte Gebiet. Aber Dank Ihrer kommenden Bemühungen wird dies nicht lange anhalten.&lt;br/&gt; Ihre Aufgabe ist einfach: Erobern Sie das Operationsgebiet zurück.&lt;br/&gt; &lt;br/&gt; Der Weg zum Sieg wird lang und gefährlich. Sie werden verschiedene Sektoren erobern und alle nötigen Ressourcen zusammentragen müssen, um die Quantität und Qualität der BLUFOR Streitkräfte in dieser Operation zu verbessern.&lt;br/&gt; &lt;br/&gt; Zusätzlich werden die OPFOR Streitkräfte definitiv auf Ihre Vorstöße reagieren. Sie werden sekundäre Ziele erfüllen müssen, um den besser ausgerüsteten und in der Überzahl befindlichen Feind zu schwächen.&lt;br/&gt; &lt;br/&gt; Bei Ihren Anstrengungen werden Sie die Hilfe der lokalen Bevölkerung benötigen. Vergewissern Sie sich also immer worauf Sie schießen.&lt;br/&gt; &lt;br/&gt; Fragen?&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>
+                &lt;br/&gt; Buenos días señores, y bienvenidos a Altis: Las fuerzas del OPFOR nos han sorprendido con una brutal y fuerte ofensiva. Actualmente controlan toda la isla, pero gracias a tus esfuerzos, eso no será así por mucho tiempo.&lt;br/&gt; &lt;br/&gt; Nuestro objetivo es sencillo: liberar Altis.&lt;br/&gt; &lt;br/&gt; El camino hacia la victoria será largo y peligroso. Tendrás que conquistar múltiples sectores y obtener los recursos necesarios para mejorar la calidad y cantidad de las fuerzas BLUFOR involucradas en esta campaña.&lt;br/&gt; &lt;br/&gt; Es más, las fuerzas del OPFOR reaccionarán ante tu avance. Deberás involucrarte en operaciones secundarias para debilitar a un enemigo que lucha con mayores números y mejor equipamiento que tú.&lt;br/&gt; &lt;br/&gt; Durante tus esfuerzos necesitarás el apoyo de la población local, asegúrate de comprobar siempre a quien estás disparando. &lt;br/&gt; &lt;br/&gt; ¿Preguntas?&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>
+                &lt;br/&gt; Приветствую вас господа, и добро пожаловать на остров Altis. &lt;br/&gt; &lt;br/&gt; Силы OPFOR внезапно напали на остров и жестоко подавили все очаги сопротивления. Они теперь контролируют весь остров, но благодаря вашим усилиям, это продлится недолго. &lt;br/&gt; &lt;br/&gt; Ваша задача проста: освободить Altis. &lt;br/&gt; &lt;br/&gt; Путь к победе будет долгим и опасным. Вы должны будете захватить множество секторов и приобрести необходимые ресурсы для улучшения количества и качества сил BLUFOR, участвующих в этой кампании. &lt;br/&gt; &lt;br/&gt; Кроме того, силы OPFOR наверняка будут быстро реагировать на ваше продвижение. Вам придется заниматься диверсионной деятельностью, чтобы ослабить врага, который превосходит нас в численности и лучше вооружён. &lt;br/&gt; &lt;br/&gt; Вы будете нуждаться в поддержке местного населения, поэтому всегда убеждайтесь, и дважды проверяйте, в кого собираетесь стрелять. &lt;br/&gt; &lt;br/&gt; Вопросы есть? &lt;br/&gt; &lt;br/&gt;
+            </Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE2">
+            <Original>2. Starting the Campaign</Original>
+            <Korean>2.미션 시작하기</Korean>
+			<French>2. Débuter la Campagne</French>
+			<German>2. Starten der Kampagne</German>
+			<Spanish>2. Comenzando la Campaña</Spanish>
+			<Russian>2. С чего начать</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT2">
+            <Original>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; You begin the campaign in a safe zone that the enemy won't dare to attack. Your first choice is to choose where you want to deploy. At the beginning you can only deploy at Chimera but as you progress, more options will become available such as forward operation bases (FOBs) and mobile respawns.&lt;br/&gt; &lt;br/&gt; At your starting location you can choose your equipment from the Virtual Arsenal. You will also find your first FOB packaged inside a container, a slingloading-capable helicopter and a few other transport choices.&lt;br/&gt; &lt;br/&gt; You will have to ferry that container with the helicopter (unless you have chosen to start with the first FOB already built) and you can deploy this first FOB wherever you want, so it's up to you to choose the right place to start your campaign.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; 당신은 적군이 공격하지 않는 안전구역에서 게임을 시작하게 됩니다. 당신이 첫번째로 해야 할 일은 시작지점을 선택하는 것입니다. 처음에는 키메라에서만 시작할 수 있지만, 게임을 진행할수록 전방작전기지와 모바일 리스폰을 통해 선택의 여지가 늘어날 것입니다.&lt;br/&gt; &lt;br/&gt; 시작지점에서는 가상 무기고를 사용해 장비를 고를 수 있습니다. 당신은 또한 FOB 컨테이너와 시작 장비를 보게 될 것입니다.&lt;br/&gt; &lt;br/&gt; 별다른 설정을 하지 않았다면 슬링로드를 이용해 첫번쨰 FOB를 전개할 수 있습니다. 전개 장소는 당신이 선택할 수 있습니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; Vous démarrez cette campagne dans un lieu sûr que l'OPFOR n’osera pas attaquer. Votre premier choix sera de savoir où vous voulez vous déployer. Au premier lancement, vous n’aurez que la base de départ. A mesure que vous progresserez, davantage d’options seront disponibles : bases avancées, respawn mobile, etc.&lt;br/&gt; &lt;br/&gt; A votre point de départ vous avez la possibilité de choisir vos armes avec un Arsenal complet. Vous trouverez également à proximité une FOB empaquetée, le Huron SPARTAN-01 quelques hélicoptères de transport.&lt;br/&gt; &lt;br/&gt; Vous devrez emmener le container en utilisant le Huron ou le Ghosthawk à votre disposition (sauf si vous avez fait le choix de démarrer avec une première FOB). Vous pouvez déployer cette première FOB où bon vous semble, alors à vous de choisir le bon endroit pour débuter la campagne.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; Sie beginnen ihre Kampagne in einer sicheren Zone, welche sich OPFOR nicht wagen würde anzugreifen. Ihre erste Entscheidung ist die Wahl des Ortes von dem aus Sie ihre Operation starten. Am Anfang können Sie lediglich an der Startbasis eingesetzt werden. Doch umso weiter Sie in der Operation voranschreiten, umso mehr Möglichkeiten, wie vorgeschobene Operationsbasen (FOBs) und mobile Respawns, werden Sie besitzen.&lt;br/&gt; &lt;br/&gt; An Ihrer Startposition können Sie Ihre Ausrüstung aus einem kompletten Arsenal wählen. Sie werden außerdem ihre erste FOB in einen Container verpackt vorfinden. Weiterhin stehen Ihnen der Spartan-01 Huron und einige weitere Transporthelikopter zur verfügung.&lt;br/&gt; &lt;br/&gt; Sie werden den FOB Container mit einem Huron oder Ghosthawk in das Operationsgebiet bringen müssen (außer Sie haben ausgewählt dass die erste FOB bereits gebaut sein soll). Sie können Ihre erste FOB bauen wo immer Sie möchten. Also liegt es an Ihnen einen geeigneten Ort zu finden von dem aus Sie die Operation starten wollen.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; La campaña comienza en una zona segura que el OPFOR no se atreverá a atacar. Tu primera elección es donde desplegar la primera base. Al principio solo puedes reaparecer en la primera base, pero según progreses más opciones tendrás, como bases de operaciones avanzadas (FOBs) y respawns móviles.&lt;br/&gt; &lt;br/&gt; Al comenzar, podrás equiparte con un Arsenal completo. Encontrarás la primera FOB empaquetada en un contenedor, el Huron Spartan-01 y algunos helicópteros más de transporte.&lt;br/&gt; &lt;br/&gt; Deberás transportar el contenedor con el Huron o el Ghosthawk (salvo que hayas elegido empezar con la primera FOB ya desplegada). Puedes desplegar esta primera FOB donde quieras, así que es tarea tuya elegir donde quieres comenzar la campaña.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\fob.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; Вы начинаете кампанию в безопасной зоне BASE CHIMERA, её OPFOR не решатся атаковать. Ваш первая задача: выбрать место развёртывания. В начале вы можете развёртывать свои войска только в начальной базе, но, по мере продвижения, вам будут доступны больше вариантов, таких как передовые оперативные базы (FOB) и мобильные КШМ.&lt;br/&gt; &lt;br/&gt; В месте развёртывания вы можете выбрать снаряжение в Арсенале. Там же вы найдете вашу первую FOB, упакованную внутри контейнера, Spartan-01 Huron и несколько других транспортных вертолётов.&lt;br/&gt; &lt;br/&gt; Вы должны будете переправить этот контейнер при помощи Huron или Ghosthawk (если вы не выбрали в параметрах, что первая FOB уже развёрнута). Вы можете развернуть эту первую FOB там, где пожелаете, так что от вас зависит выбор правильного места, для началя своей кампании.&lt;br/&gt; &lt;br/&gt;
+            </Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE3">
+            <Original>3. Objective</Original>
+            <Korean>3. 목표</Korean>
+            <French>3. Objectif</French>
+            <German>3. Ziele</German>
+            <Spanish>3. Objetivo</Spanish>
+            <Russian>3. Цели и задачи</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT3">
+            <Original>&lt;br/&gt; The main objective of the campaign is to kick the enemy out. To achieve this, you will have to liberate all the Major Cities on the map. This is the only victory condition for the campaign.&lt;br/&gt; &lt;br/&gt; But those cities are tough nuts to crack with only limited resources and a well established enemy force. &lt;br/&gt; &lt;br/&gt; To succeed, you will have to capture large numbers of different sectors, each with their own use.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 미션의 주된 목표는 적군을 격퇴하는 것입니다. 승리하기 위해선 맵상의 모든 대도시를 점령해야 합니다. 이것이 유일한 승리 조건입니다.&lt;br/&gt; &lt;br/&gt; 하지만 대도시에는 잘 정비된 적군이 있고 적은 자원을 가지고는 점령하기 어려울 것입니다.&lt;br/&gt; &lt;br/&gt; 대도시를 점령하기 위해서는 다수의 다른 지역을 점령해야 합니다. 각각의 지역은 쓰임새가 다릅니다.&lt;br/&gt; &lt;br/&gt;</Korean>
+            <French>&lt;br/&gt; L’objectif premier de la campagne est de bouter l'OPFOR hors d'Altis. Pour cela, vous devez libérer les 7 villes principales : Kavala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros et Molos. C’est l’unique condition de victoire de cette campagne.&lt;br/&gt; &lt;br/&gt; Mais ces villes sont bien difficile à attaquer avec des ressources limitées et une OPFOR bien établie. Pour arriver à vos fins, vous devrez donc capturer un grand nombre de secteurs, avec chacun leur propre utilité.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Das Primärziel der Operation ist es die OPFOR Streitkräfte aus dem Gebiet zu vertreiben. Um dies zu erreichen werden Sie die folgenden 7 Hauptstädte erobern müssen: Kavala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros und Molos. Dies ist die einzige Bedingung für unseren Sieg in dieser Operation.&lt;br/&gt; &lt;br/&gt; Allerdings sind diese Städte eine wirklich harte Nuss, da es Ihnen an Ressourcen mangeln wird und die OPFOR Streitkräfte genug Zeit hatten sich dort einzugraben.&lt;br/&gt; &lt;br/&gt; Um Erfolg zu haben, werden Sie eine große Anzahl weiterer Sektoren erobern müssen. Alle mit ihrer eigenen Nützlichkeit.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt; El objetivo principal de la campaña es expulsar al OPFOR de Altis. Para cconseguirlo, deberás liberar las 7 poblaciones principales de la isla: Kavala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros y Molos. Esta es la única condición de victoria para completar la campaña.&lt;br/&gt; &lt;br/&gt; Pero estas ciudades serás bastante dificiles de atacar con los recursos limitados que disponemos y el OPFOR esta fuertemente afianzado en la zona.&lt;br/&gt; &lt;br/&gt; Para lograrlo, deberas capturar un gran numero de sectores diferentes, cada uno con sus propios usos.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; Основная задача, выбить OPFOR из Альтиса. Чтобы добиться этого, вам придется освободить семь самых больших населённых пунктов на острове: Кавала, Атира, Пиргос, Агиос Дионисиос, Зарос, Парос и Молос. Это единственное условие для победы в кампании.&lt;br/&gt; &lt;br/&gt; Но эти города будут для вас крепкими орешками, их получится раскусить только ограничив поступление в них подкреплений, силы OPFOR в них очень хорошо организованы.&lt;br/&gt; &lt;br/&gt; Чтобы добиться успеха, вам придется захватить большое количество различных зон, каждая из которых принесёт свой определённый бонус.&lt;br/&gt; &lt;br/&gt;
+            </Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE4">
+            <Original>4. Sectors</Original>
+            <Korean>4. 구역</Korean>
+            <French>4. Secteurs</French>
+            <German>4. Sektoren</German>
+            <Spanish>4. Sectores</Spanish>
+            <Russian>4. Зоны</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT4">
+            <Original>&lt;br/&gt; Sectors are split into 5 different types:&lt;br/&gt; &lt;br/&gt; - Points of Interest: Generally small to medium towns, each point of interest you control will raise your troop recruitment capacity.&lt;br/&gt; &lt;br/&gt; - Military Bases: Full of enemy personnel, the bases will also yield large quantities of Ammunition that will be useful to upgrade your firepower. However these installations are heavily defended and will require large and well coordinated assaults.&lt;br/&gt; &lt;br/&gt; - Factories: Factories will give you the fuel you need to deploy more vehicles.&lt;br/&gt; &lt;br/&gt; - Radio Towers: When under enemy control, radio towers will be used to call in reinforcements when a nearby sector is attacked. The reaction time will depend on the distance between the tower and the sector. When under friendly control, the towers will give useful information on hostile troop movements in the vicinity by using their radio communications.&lt;br/&gt; &lt;br/&gt; - Major Cities: When all of the cities are under friendly control, you win!&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 구역의 종류는 다섯가지로 나늽니다.&lt;br/&gt; &lt;br/&gt; - 점령지: 일반적으로 소규모에서 중규모의 도시입니다. 이 지역을 점령하면 인력자원이 증가합니다.&lt;br/&gt; &lt;br/&gt; - 군사 기지: 적군이 매우 많은 지역입니다. 또한 장비를 건설하는데 사용되는 탄약자원이 많이 나옵니다. 점령하기 어렵습니다.&lt;br/&gt; &lt;br/&gt; - 공장: 공장은 장비를 건설하는데 사용되는 연료를 제공합니다.&lt;br/&gt; &lt;br/&gt; - 통신탑: 적군이 점령하고 있을땐 주변 지역이 공격받을 때 증원병력을 호출합니다. 반응시간은 지역과 통신탑의 거리에 관계되어 있습니다. 아군이 점령하면 주변 적군의 움직임에 대한 정보를 제공합니다.&lt;br/&gt; &lt;br/&gt; - 대도시: 모든 대도시를 점령하면 승리하게 됩니다!&lt;br/&gt; &lt;br/&gt;</Korean>
+            <French>&lt;br/&gt; Les secteurs se répartissent en 5 types différents :&lt;br/&gt; &lt;br/&gt; - Les points d’interêts : généralement des villes de taille petite à moyenne, chaque point d'intérêt contrôlé augmentera votre capacité à recruter des troupes.&lt;br/&gt; &lt;br/&gt; - Les bases militaires : habitées exclusivement par du personnel militaire de l'OPFOR, les bases sont riches en munitions qui vous permettront de déployer des véhicules puissants. Ces installations sont cependant lourdement défendues et nécessiteront des offensives conséquences et bien préparées.&lt;br/&gt; &lt;br/&gt; - Les usines : les usines vous fourniront le carburant nécessaire pour déployer davantage de véhicules.&lt;br/&gt; &lt;br/&gt; - Les tours radio : contrôlées par l'e 'OPFOR, les tours radio permettent de donner l'alerte et d'appeler des renforts si un secteur a proximité est attaqué. La vitesse de réaction des renforts dépendra de la distance entre la tour de radio et le secteur en question. Contrôlées par l'OTAN, les tours de radio permettront d'avoir des informations sur les mouvements hostiles à proximité en utilisant leurs communications radio.&lt;br/&gt; &lt;br/&gt; - Les villes majeures : il y en a 7 à capturer, Kevala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros et Molos. Une fois toutes ces villes sous le contrôle de l'OTAN, vous gagnez la partie.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Die Sektoren sind in 5 verschiedene Arten unterteilt:&lt;br/&gt; &lt;br/&gt; - Interessante Orte: Normalerweise kleine oder mittlere Dörfer. Jeder dieser Orte wird bei einer Eroberung Ihre Kapazitäten für die Truppenrekrutierung erhöhen.&lt;br/&gt; &lt;br/&gt; - Militärbasen: Beherbergt eine große Anzahl von OPFOR Truppen. Allerdings auch eine Menge an Munition, welche nützlich dafür wären Ihre Feuerkraft zu erhöhen. Jedenfalls werden diese Orte stark verteidigt und benötigen eine große und gut koordinierte Offensive.&lt;br/&gt; &lt;br/&gt; - Fabriken: Fabriken versorgen Sie mit dem nötigen Kraftstoff, welchen Sie brauchen um mehr Fahrzeuge bereitzustellen.&lt;br/&gt; &lt;br/&gt; - Funktürme: Sind diese unter OPFOR Kontrolle, werden Funktürme genutzt um Verstärkung zu rufen sobald ein Sektor in der Nähe angegriffen wird. Die Reaktionszeit hängt von der Distanz zwischen Funkturm und Sektor ab. Ist der Funkturm unter NATO Kontrolle, erhalten Sie hilfreiche Informationen über feindliche Truppenbewegungen im Umkreis des Funkturms.&lt;br/&gt; &lt;br/&gt; - Hauptstädte: Es gibt sieben Hauptstädte: Kavala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros und Molos. Wenn alle diese Hauptstädte unter NATO Kontrolle gebracht wurden, haben Sie gewonnen.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt; Los sectores se encuentran repartidos en 5 tipos diferentes:&lt;br/&gt; &lt;br/&gt; -Puntos de interés: Generalmente pueblos pequeños y medianos, cada punto que controles aumenta tu capacidad de reclutamiento de tropas.&lt;br/&gt; &lt;br/&gt; -Bases militares: Llenas de personal del OPFOR, las bases proveen grandes cantidades de munición que te será útil para aumentar tu capacidad ofensiva. Pero estas instalaciones estarán fuertemente defendidas y requieren asaltos potentes y bien coordinados.&lt;br/&gt; &lt;br/&gt; -Fábricas: Las fábricas te darán el combustible que necesitas para poder desplegar más vehículos.&lt;br/&gt; &lt;br/&gt; -Torres de radio: Cuando están bajo el control del OPFOR, las utilizan para pedir refuerzos siempre que un sector cercano es atacado. El tiempo de reacción dependerá de la distancia entre la torre y el sector. Cuando están bajo el control de la OTAN, las torres entregan información relativa al movimiento de tropas hostiles en las proximidades. &lt;br/&gt; &lt;br/&gt; -Ciudades grandes: Son siete ciudades: Kavala, Athira, Pyrgos, Agios Dionysios, Zaros, Paros y Molos. Cuando todas las ciudades esten bajo el control de la OTAN, habrás ganado.
+            </Spanish>
+            <Russian>&lt;br/&gt; Зоны поделены на 5 различных типов:&lt;br/&gt; &lt;br/&gt; - Точки интереса: в общем это маленькие и средние населённые пункты, каждая точка интереса, контролируемая вами, увеличивает ваши возможности набора войск.&lt;br/&gt; &lt;br/&gt; - Военные базы: полные персонала OPFOR, базы будут приносить большое количество боеприпасов которые будут полезны для обновления огневой мощи. Однако эти сооружения в значительной степени защищены и потребуют больших и хорошо скоординированных усилий.&lt;br/&gt; &lt;br/&gt; - Заводы: заводы дадут вам ресурсы, необходимые чтобы производить больше техники.&lt;br/&gt; &lt;br/&gt; - Радиовышки: под контролем OPFOR они используются для вызова подкрепления в ближайший атакованный сектор. Время подхода подкрепления зависит от дистанции между вышкой и зоной. Когда радиовышки под контролем НАТО, они дают вам полезную информацию, если в непосредственной близости от вышек враг использует для радиопереговоров радиосвязь.&lt;br/&gt; &lt;br/&gt; - Главные населённые пункты: всего их семь: Кавала, Атира, Пиргос, Агиос Дионисиос, Зарос, Парос и Молос. Когда все эти населённые пункты будут под контролем НАТО, вы выиграете.&lt;br/&gt; &lt;br/&gt;
+            </Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE5">
+            <Original>5. Resources</Original>
+            <Korean>5. 자원</Korean>
+            <French>5. Ressources</French>
+            <German>5. Ressourcen</German>
+            <Spanish>5. Recursos</Spanish>
+            <Russian>5. Ресурсы</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT5">
+            <Original>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; In this campaign you have to manage three types of resources:&lt;br/&gt; &lt;br/&gt; - &lt;t color='#00ff00'&gt;MANPOWER:&lt;/t&gt; Manpower is linked to the number of points of interest you control. A larger amount of Manpower allows you to raise the quality and quantity of your ground troops. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ff0000'&gt;AMMO:&lt;/t&gt; Ammunition is used to deploy armed vehicles, tanks and elite soldiers. It can be stocked forever and used only when necessary. Ammunition is contained in boxes that can be retrieved from military bases, or Secondary Objectives. Those crates have to be moved back to an FOB by truck or slingload, then recycled to increase your ammunition stockpile.&lt;br/&gt; &lt;br/&gt; - &lt;t color='#ffff00'&gt;FUEL:&lt;/t&gt; Fuel is used by every vehicle, some being more thirsty than others. The fuel levels depends on how many factories are controlled by friendly forces.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; 이 미션에서는 다양한 종류의 자원이 사용됩니다.:&lt;br/&gt; &lt;br/&gt; - &lt;t color='#00ff00'&gt;인력:&lt;/t&gt; 인력은 점령지의 갯수와 관계있습니다. 더 많은 인력을 통해 아군의 화력과 수를 늘릴 수 있습니다. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ff0000'&gt;탄약:&lt;/t&gt; 탄약은 숙련병과 각종 장비를 건설하는데 필요합니다. 탄약은 사용하지 않으면 계속 쌓이며, 탄약상자나 FOB미션, 특수임무를 통해 얻을 수 있습니다. 탄약을 늘리기 위해선 탄약상자를 FOB에 가져와서 재활용 해야 합니다.&lt;br/&gt; &lt;br/&gt; - &lt;t color='#ffff00'&gt;연료:&lt;/t&gt; 연료는 모든 장비에 사용됩니다. 특정 장비는 더 많은 연료를 소모합니다. 공장을 점령하면 늘어납니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; Dans cette mission vous aurez à gérer trois types de ressources : &lt;br/&gt; &lt;br/&gt; - &lt;t color='#00ff00'&gt;MANPOWER&lt;/t&gt; : La réquisition permet de déployer des unités d'infanterie en plus grand nombre et de meilleure qualité. Elle évolue en fonction du nombre de points d'intérêt que vous contrôlez. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ff0000'&gt;AMMO&lt;/t&gt; : Les munitions servent à armer véhicules, tanks et soldats d'élite. Elle peut être stockée sans limite et consommée quand c'est nécessaire. Les munitions sont contenues dans des caisses qui peuvent être -récupérées dans l'enceinte des bases militaires. Ces caisses doivent être amenées à une FOB par la voie terrestre ou aérienne pour augmenter votre stock de munitions. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ffff00'&gt;FUEL&lt;/t&gt; : Le carburant sert à motoriser tous les véhicules, certains étant plus gourmands que d'autre. Le niveau de carburant dépend du nombre d'usines sous le contrôle de l'OTAN. &lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; Während dieser Operation haben Sie mit drei Arten von Ressourcne zu haushalten:&lt;br/&gt; &lt;br/&gt; - &lt;t color='#00ff00'&gt;MANNSTÄRKE:&lt;/t&gt; Die Höhe der Mannstärke ist abhängig von den von Ihnen kontrollierten Dörfern. Eine größere Mannstärke ermöglicht es Ihnen die Quantität und Qualität Ihrer Bodentruppen zu erhöhen. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ff0000'&gt;MUNITION:&lt;/t&gt; Munition ist notwendig um bewaffnete Fahrzeuge, Panzer und Elitesoldaten anzufordern. Sie kann für immer gelagert werden und wird nur dann genutzt wenn notwendig. Munition ist in Kisten verstaut, welche von Militärbasen bereitgestellt werden. Diese Kisten müssen zu Ihrer FOB, per Truck oder Helikopter, gebracht werden. Dort müssen sie Wiederverwertet werden, um Ihren Munitionsvorrat aufzufüllen.&lt;br/&gt; &lt;br/&gt; - &lt;t color='#ffff00'&gt;KRAFTSTOFF:&lt;/t&gt; Kraftstoff wird von jedem Fahrzeug benötigt, wobei einige mehr und andere weniger verbrauchen. Die Höhe Ihres Kraftstoffvorrats bemisst sich an der Anzahl der von der NATO kontrollierten Fabriken.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; En esta campaña tendrás que manejar tres tipos de recursos:&lt;br/&gt; &lt;br/&gt; - &lt;t color='#00ff00'&gt;EFECTIVOS HUMANOS:&lt;/t&gt; Va unido al número de puntos de interés bajo tu control. Un mayor número de efectivos te permite aumentar la calidad y cantidad de tus tropas de tierra. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ff0000'&gt;MUNICIÓN:&lt;/t&gt; La munición sirve para desplegar vehículos blindados, tanques y tropas de élite. Puede ser almacenada y usarse cuando sea necesario. La munición se encuentra en cajas que pueden ser sacadas de bases militares. Estas cajas deberán llevarse a una FOB mediante camiones o las eslingas del helicóptero. Una vez allí, hay que reciclarla para conseguir la munición. &lt;br/&gt; &lt;br/&gt; - &lt;t color='#ffff00'&gt;COMBUSTIBLE:&lt;/t&gt; El combustible es consumido por todos los vehículos, en diferente cantidad. El nivel de combustible disponible depende de la cantidad de fábricas que se encuentren bajo el control de la OTAN. &lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\tuto\ress.jpg'/&gt;&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; В этой кампании вы должны управлять тремя типами ресурсов:&lt;br/&gt;&lt;br/&gt; - &lt;t color='#00ff00'&gt;ПЕРСОНАЛ:&lt;/t&gt; связан с количеством точек интереса, которые вы контролируете. Больше ресурса позволяет повысить качество и количество ваших наземных войск. &lt;br/&gt;&lt;br/&gt; - &lt;t color='#ff0000'&gt;ВООРУЖЕНИЕ:&lt;/t&gt; используется для развертывания вооруженных транспортных средств, танков и элитных солдат. Ресурс содержится в ящиках, которые могут быть найдены на военных базах. Эти ящики должны быть перемещены в FOB NATO при помощи наземной и аввиатехники, потом их надо утилизировать, чтобы ваш ресурс пополнился.&lt;br/&gt;&lt;br/&gt; - &lt;t color='#ffff00'&gt;ТОПЛИВО:&lt;/t&gt; используется при создании всех транспортных средств, причём некоторые из них требуют больше ресурса, чем другие. Уровень ресурса зависит от того, сколько заводов контролируются силами НАТО.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE6">
+            <Original>6. Alert Level</Original>
+            <Korean>6. 경계수위</Korean>
+            <French>6. Niveau d'alerte</French>
+            <German>6. Alarmstatus</German>
+            <Spanish>6. Nivel de alerta</Spanish>
+            <Russian>6. Уровень тревоги</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT6">
+            <Original>&lt;br/&gt; The enemy won't let you liberate all of their brand new territories without reacting badly. When you begin the campaign, hostile forces will only be composed of the garrisons inside military bases. However as you become more threatening by liberating more and more sectors, the enemy will start calling in more reinforcements, armour and equipment to counter you.&lt;br/&gt; &lt;br/&gt; To limit the enemies operational capabilities, you will have to tread carefully and complete Secondary Objectives where available. This is not required to win the campaign but if you ignore the Alert Level for too long, you're in for quite a lot of trouble.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 적군은 당신이 지역을 점령하는것을 가만히 앉아서 보고만 있지 않을겁니다. 처음에 적군들은 모두 건물안에 있거나, 군사기지에만 존재합니다. 하지만 당신이 점령한 구역이 늘어날 때마다 적군의 증원과 무장이 늘어날 것입니다.&lt;br/&gt; &lt;br/&gt; 적군의 활동을 약화시키기 위해서 특수임무를 수행할 수 있습니다. 이는 승리에 반드시 필요하진 않지만 경계수위에 신경을 쓰지 않는다면 문제가 생길 것입니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt; L'OPFOR ne vous laissera pas reprendre son tout nouveau territoire sans réagir. En début de campagne les forces hostiles se limiteront aux garnisons des différentes bases militaires, mais plus vous deviendrez menaçants en libérant de nouveaux secteurs, et plus l' OPFOR fera venir de renforts en hommes et en matériel pour vous contrer. &lt;br/&gt; &lt;br/&gt; Pour limiter la capacité de réaction du OPFOR, vous devrez veiller à effectuer des opérations annexes qui constitueront par exemple à détruire leurs bases de ravitaillement. Ce n'est pas une obligation pour réussir cette campagne, mais si vous ignorez le niveau d'alerte trop longtemps, attendez vous à des ennuis. &lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; OPFOR wird es Ihnen nicht gestatten das gesamte Gebiet zu erobern, ohne dabei zu reagieren. Wenn Sie Ihre Operation beginnen, werden die feindlichen Streitkräfte in erster Linie innerhalb der Militärbasen versammelt sein. Wenn Sie allerdings, durch die Einnahme von Sektoren, zu einer größeren Gefahr werden, werden die OPFOR Streitkräfte anfangen mehr Verstärkung, Männer und Ausrüstung in Bewegung setzen um Ihnen gegenüberzutreten.&lt;br/&gt; &lt;br/&gt; Um die Operationsmöglichkeiten der OPFOR Streitkräfte zu verringern, müssen Sie sekundäre Ziele erfüllen wie z.B. die Zerstörung ihrer logistischen Standorte. Dies ist nicht zwingend notwendig um die Operation erfolgreich zu beenden, doch wenn Sie den Alarmstatus zu lange ignorieren werden Sie in große Schwierigkeiten geraten.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt; El OPFOR no permitirá ser expulsado de los terriotrios sin ofrecer resistencia. Al comienzo de la campaña, las fuerzas hostiles sólo están compuestas por tropas aguarnicionadas en bases militares. Según vayas creciendo como amenaza y liberando sectores, el OPFOR irá solicitando más refuerzos en forma de hombres y recursos para contrarrestar. &lt;br/&gt; &lt;br/&gt; Para limitar la capacidad operativa del OPFOR, tendrás que completar objetivos secundarios, los cuales consisten en destruir sus bases logísticas, y otra serie de objetivos auxiliares. Esto no es un requerimiento para ganar la campaña, pero ignorar el nivel de alerta por mucho tiempo, supondrá un aumento significativo en la cantidad de efectivos enemigos desplegados. &lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; OPFOR не будут сидеть сложа руки, пока вы будете освобождать все зоны, они будут реагировать на ваши действия. Когда вы начнёте кампанию, враждебные силы будут состоять только из гарнизонов внутри военных баз. Однако, как только вы начнёте овобождать больше и больше зон, OPFOR начнёт вызывать больше подкреплений, отряды и технику для борьбы с вами.&lt;br/&gt; &lt;br/&gt; Чтобы ограничить оперативные возможности OPFOR, вы должны будете выполнять дополнительные задачи, которые будут состоять в уничтожении баз снабжения врага. Это не обязательно, для того, чтобы выиграть кампанию, но если вы будете игнорировать уровень тревоги слишком долго, у вас могут быть большие неприятности.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE7">
+            <Original>7. Construction</Original>
+            <Korean>7. 건설</Korean>
+            <French>7. Construction</French>
+            <German>7. Konstruktion</German>
+            <Spanish>7. Construcción</Spanish>
+            <Russian>7. Строительство</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT7">
+            <Original>&lt;br/&gt; To help you succeed in your endeavours, you have the "BUILD" capability that allows you to deploy units, vehicles, defences, fortifications and so on. Depending on your resources of course.&lt;br/&gt; &lt;br/&gt; The construction system will be available when you are within 100 meters of a FOB headquarters. A contextual "BUILD" option will appear then in your scroll menus.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 성공적인 작전 수행을 위해 자원을 사용해 유닛을 배치하거나 장비, 고정화기, 건축물을 건설할 수 있습니다.&lt;br/&gt; &lt;br/&gt; 건설은 FOB 반경 100m 안에서만 가능합니다. 범위 안에서 건설옵션을 선택해 건설할 수 있습니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt; Pour mener à bien vos objectifs vous disposez d'une capacité de construction qui vous permet de déployer des unités, des véhicules, des défenses pour vos FOB, des fortifications et autres. En fonction de vos ressources, bien sur. &lt;br/&gt; &lt;br/&gt; Pour utilisez le système de construction de la mission, vous devez vous trouver dans les 100 mètres du QG d'une FOB. Une option de construction apparaîtra alors. &lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Um Ihre Bemühungen zu unterstützen haben Sie die Baumöglichkeiten die Ihnen erlauben Einheiten, Fahrzeuge, Verteidigungen, Befestigungen und weiteres zu platzieren. Dies ist natürlich abhängig von Ihren Ressourcen.&lt;br/&gt; &lt;br/&gt; Das Konstruktionssystem ist verfübar, wenn Sie sich innerhalb von 100 Metern um Ihre FOB befinden. Eine Mausradmenü Option wird in dem Fall erscheinen.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>
+                Para ayudarte a conseguir los objetivos, se dispone de la capacidad de construcción que permite desplegar unidades, vehiculos, defensas, fortificaciones... dependiendo de los recursos disponibles que tengas, claro. &lt;br/&gt; &lt;br/&gt; El sistema de construcción está disponible siempre que te sitúes a menos de 100 metros de una FOB. Aparece en forma de opción en el menú contextual.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; Чтобы помочь вам добиться успеха в ваших начинаниях, у вас есть возможность строительства, что позволит вам развернуть личный состав, транспортные средства, защитные укрепления, и так далее. В зависимости от ваших ресурсов, конечно.&lt;br/&gt; &lt;br/&gt; Система строительство будет доступна, когда вы находитесь в 100 метров от штаба FOB. Тогда у вас появится контекстное меню строительства.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE8">
+            <Original>8. Deploying another FOB</Original>
+            <Korean>8. 전방작전기지 건설하기</Korean>
+            <French>8. Déployer une autre FOB</French>
+            <German>8. Errichtung einer weiteren FOB</German>
+            <Spanish>8. Desplegar otra FOB</Spanish>
+            <Russian>8. Развёртывание новой FOB</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT8">
+            <Original>&lt;br/&gt; To build a brand new FOB go to the construction menu, under the logistics tab, build an FOB container or FOB truck.&lt;br/&gt; &lt;br/&gt; Then you can move the FOB container/drive the FOB truck where you want to deploy your shiny new FOB. However be aware that you can't build an FOB within an existing sector, or within 2km of any other FOB.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 새로운 FOB를 건설하기 위해서는 물류탭의 FOB컨테이너나 FOB트럭을 건설해야 합니다.&lt;br/&gt; &lt;br/&gt; 그리고 FOB컨테이너/트럭을 새로운 FOB를 건설할 지점에 이동시키면 됩니다. 하지만 FOB는 점령지 내부나 다른 FOB와 2km이내에 건설할 수 없습니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt; Pour déployer une nouvelle FOB, rendez vous dans le menu de construction, onglet logistique, et choisissez de construire un container de FOB ou un camion FOB (la même chose, avec des roues).&lt;br/&gt; &lt;br/&gt; Vous pourrez ensuite déplacer le container où vous voudrez déployer la nouvelle FOB. Attention, vous ne pourrez pas construire votre FOB à l'intérieur d'un secteur contrôlable, ou à moins de 2 kilomètres d'une autre FOB.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Um eine brandneue FOB zu bauen, gehen Sie in das Konstruktionsmenü und baue im Logistikreiter einen FOB Container oder FOB Truck (Gleichgestellt, nur eben auf Rädern).&lt;br/&gt; &lt;br/&gt; Im Anschluss können Sie den FOB Container dorthin bringen wohin Sie möchten und Ihre neue FOB errichten. Bedenken Sie allerdings, dass sie eine FOB nicht innerhalb eines Sektors oder innerhalb von 2km um eine andere FOB herum bauen können.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt; Para construir una nueva FOB, es necesario ir al menú de construcción, pestaña de logística, y construir un contenedor FOB o un camión FOB (lo mismo, pero con ruedas).&lt;br/&gt; &lt;br/&gt; Entonces podrás mover el contenedor donde quieras y desplegar tu nueva FOB. Hay que tener en cuenta que no es posible construir una FOB dentro de un sector de control, o a menos de 2km de otra FOB.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; Чтобы развернуть новую FOB, перейдите в меню строительства, на вкладку снабжения, и постройте контейнер с FOB или грузовик с FOB (то же самое, только с колесами).&lt;br/&gt; &lt;br/&gt; Затем вы можете переместить этот контейнер или грузовик туда, где вы хотите развернуть новую FOB. Однако следует знать, что вы не можете построить FOB внутри зон, и дальше чем в 2 км от любой другой FOB.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE9">
+            <Original>9. Secondary Objectives</Original>
+            <Korean>9. 특수임무</Korean>
+            <French>9. Missions secondaires</French>
+            <German>9. Sekundäre Ziele</German>
+            <Spanish>9. Objetivos secundarios</Spanish>
+            <Russian>9. Дополнительные задания</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT9">
+            <Original>&lt;br/&gt; When you capture sectors, sometimes the few hostiles forces left will surrender. You can then capture these prisoners and take them to a nearby FOB to be interrogated automatically.&lt;br/&gt; &lt;br/&gt; That interrogatory, executed in the utmost respect of the Geneva conventions, will allow you to obtain more Intel points which you can then spend on a Secondary Objective.&lt;br/&gt; &lt;br/&gt; Completing these Secondary Objectives will reward you with different advantages such as more Ammunition, more Intel or even decreasing the enemy Alert Level.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 구역을 점령하면, 가끔씩 적군이 투항하는 경우가 있습니다. 투항한 적군을 포박하여 FOB로 데려오면 정보를 얻을 수 있습니다.&lt;br/&gt; &lt;br/&gt; 심문은 제네바 협정에 따라 이루어집니다. 얻어진 정보 점수를 이용해 특수임무를 수행할 수 있습니다.&lt;br/&gt; &lt;br/&gt; 특수임무에 성공하면 탄약자원을 얻거나 더 많은 정보를 얻거나 적의 경계 수위를 낮출 수 있습니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt; Lors de la capture d'un secteur, les dernières forces hostile sur place se rendront. Vous pourrez alors capturer des prisonniers qui devront être emmenés à une FOB pour y être interrogés.&lt;br/&gt; &lt;br/&gt; Cet interrogatoire mené dans le plus grand respect des conventions de Geneviève vous permettra d'obtenir des informations plus ou moins précises sur l'emplacement d'une base de ravitaillement de l'OPFOR.&lt;br/&gt; &lt;br/&gt; En vous rendant sur place vous devrez trouver l'emplacement exact de votre cible et y détruire tout véhicule ou container utile au ravitaillement des forces OPFOR. Remplir cet objectif provoquera une réduction importante du niveau d'alerte, et donc de l'efficacité des forces hostiles.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Wenn Sie Sektoren erobern, könnte es passieren dass sich feindliche Kräfte ergeben. Sie können dann Gefangene nehmen und müssen diese zu einer FOB bringen, damit diese dort verhört werden können.&lt;br/&gt; &lt;br/&gt; Dieses Verhör, natürlich mit großen Respekt gegenüber den Genver Konventionen, wird Ihnen eine gewisse Menge an Geheimdienstinformationen über die Position von logistischen Standorten der OPFOR Streitkräfte einbringen.&lt;br/&gt; &lt;br/&gt; Wenn Sie in das Gebiet eines solchen Standortes eindringen, werden Sie die genaue Position ausmachen müssen. Im Anschluss ist es erforderlich alle Fahrzeuge und Container vor Ort, welche den OPFOR Streitkräften im Bezug auf Nachschub nützlich sein könnten, mit Sprengstoff oder anderweitig zu zerstören. Ein erfolgreicher Abschluss dieser Aufgabe wird den Alarmstatus der OPFOR Streitkräfte und damit einhergehend ihre Effizienz verringern.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>
+                Cuando capturas sectores, en ocasiones algunos enemigos se rendirán. Esto te permitira capturar prisioneros y llevarlos a una FOB cercana para ser interrogados.&lt;br/&gt; &lt;br/&gt; Dicho interrogatorio, efectuado bajo el máximo respeto a las reglas de las convenciones de Ginebra, te permitirá obtener información mas o menos precisa sobre la posición de una base logística del OPFOR.&lt;br/&gt; &lt;br/&gt; Deberás encontrar por la zona la posición exacta de dicho objetivo, y usar cualquier medio a tu disposición para destruir cualquier vehículo o container que pudiera abastecer a las fuerzas del OPFOR. El exito de esta tarea supondrá reducir el nivel de alerta enemigo, y con ello, la eficiencia de las fuerzas hostiles.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; Когда вы захватите вражескую зону, иногда несколько вражеских солдат могут сдаться в плен. Вы можете захватить пленных, они должны быть переправлены в любую из FOB на допрос.&lt;br/&gt; &lt;br/&gt; Этот допрос, выполненный в соответствии с Женевской конвенцией, позволит вам получить более или менее точную информацию о положении баз снабжения OPFOR.&lt;br/&gt; &lt;br/&gt; Добравшись туда, вы должны будете отискать их точное положение, а затем использовать любые средства в вашем распоряжении, чтобы уничтожить каждое транспортное средство или контейнер, который может быть полезен, чтобы пополнить силы врага. Успех в решении этой задачи позволит снизить уровень тревоги OPFOR, следовательно и эффективность всех враждебных сил.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE10">
+            <Original>10. Commanding</Original>
+            <Korean>10. 지휘</Korean>
+            <French>10. Commandement</French>
+            <German>10. Oberkommando</German>
+            <Spanish>10. Comandancia</Spanish>
+            <Russian>10. Командование</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TEXT10">
+            <Original>&lt;br/&gt; When a player uses the Commander slot (the last slot of the list), they get access to a Zeus interface by pressing the corresponding key (U by default). This interface allows you to command NATO forces in 3D view or map view.&lt;br/&gt; &lt;br/&gt; Moreover the Commander gets additional build options that will allow them to obtain crewed vehicles or entire pre-made squads, as well as an infinite support system, this is simply for cinematic uses and can be utilised as a bonus feature.&lt;br/&gt; &lt;br/&gt; This role is not mandatory but strongly recommended for smaller groups of players.&lt;br/&gt; &lt;br/&gt;
+            </Original>
+            <Korean>&lt;br/&gt; 플레이어가 지휘관석을 사용하면 제우스를 사용할 수 있습니다. 제우스를 이용해 NATO 병력을 3D화면이나 지도를 통해 지휘할 수 있습니다.&lt;br/&gt; &lt;br/&gt; 추가로 지휘관은 장비에 AI가 있는 채로 건설하거나 AI분대를 건설할 수 있습니다. 이 기능은 무한정의 보급이나 게임을 더욱 흥미롭게 만드는데 사용될 수 있습니다.&lt;br/&gt; &lt;br/&gt; 이 역할은 필수가 아니지만 플레이어가 적을땐 강력하게 추천됩니다.&lt;br/&gt; &lt;br/&gt;
+            </Korean>
+            <French>&lt;br/&gt; Lorsqu'un joueur prend le rôle de commandant (en dernière position de la liste des rôles), il a accès à une interface Zeus en appuyant sur la touche correspondante (par défaut U).&lt;br/&gt; &lt;br/&gt; Cette interface permet de commander les troupes de l'OTAN en vue 3d ou en vue carte.&lt;br/&gt; &lt;br/&gt; Le commandant dispose par ailleurs d'options de construction supplémentaires pour obtenir des véhicules avec équipage ou des escouades entières pré-définies.&lt;br/&gt; &lt;br/&gt; Ce rôle n'est pas obligatoire, mais fortement recommandé pour les petits groupes de joueurs.&lt;br/&gt; &lt;br/&gt;
+            </French>
+            <German>&lt;br/&gt; Wenn ein Spieler den Commander Slot (der letzte Slot in der Lobby) besetzt, dann bekommt dieser Zugang zur Zeus Oberfläche durch drücken der entsprechenden Taste (normalerweise Z).&lt;br/&gt; &lt;br/&gt; Diese Oberfläche erlaubt es die NATO Truppen auf einer 3D Ansicht oder der Karte zu kommandieren.&lt;br/&gt; &lt;br/&gt; Zusätzlich erhält der Commander weitere Bauoptionen, welche es ihm erlauben bemannte Fahrzeuge oder komplette Infanteriegruppen anzufordern.&lt;br/&gt; &lt;br/&gt; Dieser Posten ist nicht zwingend notwendig, allerdings ist es sehr empfohlen ihn zu besetzen.&lt;br/&gt; &lt;br/&gt;
+            </German>
+            <Spanish>&lt;br/&gt; Cuando un jugador usa el slot de Comandante (el último de la lista), se tiene acceso a una interfaz Zeus pulsando la tecla correspondiente (tecla U por defecto).&lt;br/&gt; &lt;br/&gt; Esta interfaz te permite comandar a las fuerzas de la OTAN desde un punto de vista en 3D o desde el mapa.&lt;br/&gt; &lt;br/&gt; Es más, el Comandante obtiene opciones adicionales de construcción que le permiten obtener vehículos con tripulación o escuadras enteras predefinidas.&lt;br/&gt; &lt;br/&gt; Este rol no es obligatorio, pero si muy recomendado en el caso de grupos reducidos de jugadores.&lt;br/&gt; &lt;br/&gt;
+            </Spanish>
+            <Russian>&lt;br/&gt; Когда игрок займёт слот командира (последний слот списка), он получит доступ к интерфейсу Зевса, нажав соответствующую клавишу (Y по умолчанию).&lt;br/&gt; &lt;br/&gt; Этот интерфейс позволяет командовать силами НАТО в 3d и при помощи карты.&lt;br/&gt; &lt;br/&gt; Кроме того, командир получает дополнительные опции строительства, что позволит ему мобилизовывать транспортные средства с экипажем или целые готовые отряды.&lt;br/&gt; &lt;br/&gt; Эта роль не является обязательной, но настоятельно рекомендуется если вы играете небольшой группой игроков.&lt;br/&gt; &lt;br/&gt;</Russian>
+        </Key>
+        <Key ID="STR_TUTO_TITLE11">
+            <Original>
+			== 서 버 규 칙 ==
+			</Original>
+        </Key>
+        <Key ID="STR_TUTO_TEXT11">
+            <Original>
+			&lt;br/&gt; 
+			
+			서버규칙 샘플 
+			&lt;br/&gt; &lt;br/&gt;
+			1.어쩌구			
+			&lt;br/&gt; &lt;br/&gt;
+			2.저쩌구
+			&lt;br/&gt; &lt;br/&gt;
+			3.얼씨구			
+			
+			&lt;br/&gt; &lt;br/&gt;
+            </Original>
+		</Key>
+        <Key ID="STR_SECONDARY_MISSION0">
+            <Original>FOB Hunting</Original>
+            <Korean>전방작전기지 파괴</Korean>
+            <French>Chasse à la FOB</French>
+            <German>FOB Jagd</German>
+            <Spanish>Caza de FOB</Spanish>
+            <Russian>Охота за вражескими FOB</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING0">
+            <Original>
+                &lt;t size='1.3' color='#ffa000'&gt;FOB HUNTING&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Hostile forces use an array of small logistic bases situated behind the front lines. Destroying those assets would greatly disrupt the enemy supply lines and impair their capacity to react to our actions.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Your mission is to destroy all supply assets (trucks and containers) at the objective by any means at your disposal. Unfortunately our intelligence is not able to provide you with a precise position for the base, you will have to locate the objective in the red zone on your map.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: Enemy alert level reduced by 40%&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </Original>
+            <Korean>
+                &lt;t size='1.3' color='#ffa000'&gt;FOB 파괴&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 적군은 후방에 여러 보급기지를 운용합니다. 그러한 기지를 파괴하면 적군의 보급을 끊을 수 있고 적군의 대응능력을 크게 낮출 수 있습니다.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 당신의 임무는 모든 보급품을 파괴하는 것입니다. 아쉽게도 정확한 위치는 파악이 되질 않아 지도상의 붉은색 구역에서 직접 FOB를 색적해야 합니다.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;필요 정보량: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;보상: 적군의 경계수위가 40% 감소됩니다.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
+            <French>
+                &lt;t size='1.3' color='#ffa000'&gt;CHASSE A LA FOB&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Les forces de l'OPFOR utilisent des bases logistiques situées derrière la ligne de front. Détruire ces objectifs pertubera les lignes d'approvisionnement de l'OPFOR et les empêchera de réagir efficacement à nos actions.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Votre mission est de détruire tous les équipements logistiques (camions, containers) présents sur l'objectif. Malheureusement nos renseignements ne permettent pas de vous donner la position précise de la base, vous devrez la chercher dans la zone rouge visible sur votre carte.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Coût: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Récompense: niveau d'alerte de l'OPFOR réduit de 40%&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </French>
+            <German>
+                &lt;t size='1.3' color='#ffa000'&gt;FOB JAGD&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Die OPFOR Streitkräfte benutzen ein Netzwerk von kleineren Nachschubbasen hinter den Frontlinien. Diese zu zerstören würden die OPFOR Nachschublinien und ihre Reaktionsmöglichkeiten stark einschränken.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Ihr Auftrag ist es alle Nachschubkapazitäten (Container und Trucks) zu zerstören. Leider ist unser Geheimdienst nicht in der Lage Ihnen die genaue Position des Ortes mitzuteilen. Sie werden das Ziel innerhalb der makierten roten Zone auf der Karte suchen müssen.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Kosten: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Belohnung: OPFOR Alarmstatus wird um 40% reduziert&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </German>
+            <Spanish>
+                &lt;t size='1.3' color='#ffa000'&gt;CAZA DE FOB&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Las fuerzas del OPFOR utilizan una red de bases logísticas situadas tras las líneas enemigas. Destruir estos recursos interrunpira las líneas de abastecimiento del enemigo y entorpecerán su capacidad para responder a tus acciones.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Tu misión consiste en destruir todos los recursos (camiones, containers) en el objetivo por cualquier medio que esté en tus manos. Desafortunadamente nuestra inteligencia no permite obtener una localización precisa de la base, deberás encontrarla dentro de la zona marcada en rojo en el mapa.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Recompensa: nivel de alerta del OPFOR reducido en un 40%&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </Spanish>
+            <Russian>
+                &lt;t size='1.3' color='#ffa000'&gt;ОХОТА ЗА FOB&lt;/t&gt; &lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Силы OPFOR используют небольшие базы снабжения, расположенные за линией фронта. Уничтожение материальных средств этих баз значительно нарушит связи снабжения OPFOR и ухудшит их способность реагировать на ваши действия.&lt;/t&gt;&lt;br/&gt; &lt;t size='1'&gt; Ваша миссия состоит в том, чтобы уничтожить на базах все средства снабжения (грузовики, контейнеры) любыми средствами, находящимися в вашем распоряжении. К сожалению, наша разведка не в состоянии предоставить вам точное положение этих баз, вам придется найти их самостоятельно. Ищите базы снабжения в районе красной зоны, отмеченной на вашей карте.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Требуется: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень тревоги OPFOR уменьшится на 40%&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_MISSION1">
+            <Original>Convoy Hijack</Original>
+            <Korean>보급차량 습격</Korean>
+            <French>Interception de convoi</French>
+            <German>Konvoi Hinterhalt</German>
+            <Russian>Налёт на конвой врага</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING1">
+            <Original>
+                &lt;t size='1.3' color='#ffa000'&gt;CONVOY HIJACK&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Enemy forces use road convoys to resupply their defensive positions. Intercepting one of these convoys would effectively disrupt their supply lines and we could use the occasion to retrieve a hefty amount of ammunition.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Your mission is to stop the enemy convoy by any means necessary. You can destroy it, or hijack it to retrieve all the ammunition you can grab. The target will be spotted on your map.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: Enemy Alert level reduced by 15%&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Bonus: All the ammunition you can retrieve.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+            </Original>
+            <Korean>
+                &lt;t size='1.3' color='#ffa000'&gt;보급차량 습격&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 
+				적군들은 지역 방어를 위해 차량 보급대를 운용합니다.
+				이 호송대를 급습하면 그들의 보급망을 끊을 수 있을뿐만 아니라 그들이 운송중이던 탄약자원을 빼앗을 수 도 있습니다.
+				&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 
+				당신의 임무는 적군의 보급행렬을 어떤 방법을 사용해서든 멈추게 만드는 것입니다.
+				그러고 나서 파괴해도 되고, 가져올 수 있을만한 자원은 뺏어올 수 도 있습니다.
+				목표물은 지도상에 바로 표기될 것입니다.
+				&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;
+				보상: 적군의 경계도 15% 하락
+				&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;
+				보너스: 회수한 탄약자원
+				&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+            </Korean>
+            <French>
+                &lt;t size='1.3' color='#ffa000'&gt;INTERCEPTION DE CONVOI&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Les forces de l'OPFOR utilisent des convois routiers pour réaprovisionner leurs positions. Intercepter un de ces convois pertuberait leurs lignes d'approvisionnement, et nous pourrions utiliser l'occasion pour récupérer une grande quantité de munitions.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Votre mission est de stopper le convoi de l'OPFOR par tous les moyens nécessaires. Vous pouvez le détruire, ou le stopper pour récupérer un maximum de munitions. La cible sera marquée sur votre carte.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Coût: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Récompense: niveau d'alerte de l'OPFOR réduit de 15%&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Récompense secondaire: toutes les munitions que vous pourrez récupérer.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+            </French>
+            <German>
+                &lt;t size='1.3' color='#ffa000'&gt;KONVOI HINTERHALT&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Die OPFOR Streitkräfte benutzen Straßenkonvois um ihre Verteidigungspositionen zu versorgen. Diese Konvois abzufangen würden ihre Nachschublinien effektiv unterbrechen und außerdem könnten wir die Möglichkeit nutzen um selbst eine große Menge an Munition zu erbeuten.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Ihr Auftrag ist es den OPFOR Konvoi auf jede erdenkliche Weise zu stoppen. Sie können ihn zerstören oder übernehmen, um soviel Munition wie möglich zu erbeuten. Das Ziel wird auf Ihrer Karte aufgeklärt.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Kosten: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Belohnung: OPFOR Alarmstatus wird um 15% reduziert&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Seiten Belohnung: Soviel Munition wie Sie erbeuten können.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;
+            </German>
+            <Russian>&lt;t size='1.3' color='#ffa000'&gt;НАЛЁТ НА КОНВОЙ&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Силы OPFOR используют автоколонны для снабжения своих оборонительных позиций. Перехват одного из этих конвоев эффективно нарушил бы их связи снабжения, и мы могли бы использовать эту возможность для получения большого количество вооружения.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Ваша задача состоит в том, чтобы остановить конвой OPFOR любой ценой. Вы можете уничтожить его, или захватить его для получения ресурса вооружения. Цель будет отмечена на вашей карте.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Стоимость: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Награда: уровень тревоги OPFOR уменьшится на 15%&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Вторичная награда: Всё вооружение, которое можно получить за утилизацию груза конвоя.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Russian>
+        </Key>
+
+
+        <!-- Added in v0.922 -->
+        <Key ID="STR_PARAM_BLUFOR_DEFENDERS">
+            <Original>Friendly defenders in owned sectors:</Original>
+            <Korean>Friendly defenders in owned sectors:</Korean>
+            <French>Défenseurs BLUFOR dans les secteurs capturés:</French>
+            <German>BLUFOR Verteidiger in besetzten Sektoren:</German>
+            <Russian>BLUFOR защитники в захваченных зонах:</Russian>
+        </Key>
+        <Key ID="STR_PARAM_AUTODANGER">
+            <Original>Auto-danger behaviour on friendly forces:</Original>
+            <Korean>Auto-danger behaviour on friendly forces:</Korean>
+            <French>Comportement 'danger' automatique sur les forces BLUFOR:</French>
+            <German>Auto-Gefahr Verhalten bei BLUFOR Kräften:</German>
+            <Russian>Авто-опасность для сил BLUFOR:</Russian>
+        </Key>
+        <Key ID="STR_PARAM_FOBS_COUNT">
+            <Original>Maximum number of FOBs allowed:</Original>
+            <Korean>허용된 최대 전방작전기지 갯수:</Korean>
+            <French>Nombre maximal de FOBs autorisé:</French>
+            <German>Maximale Anzahl an erlaubten FOBs:</German>
+            <Russian>Максимальное количество FOB:</Russian>
+        </Key>
+        <Key ID="STR_HINT_FOBS_EXCEEDED">
+            <Original>You are not allowed to deploy more than %1 FOBs at the same time.</Original>
+            <Korean>동시에 %1개 이상의 FOB를 건설할 수 없습니다.</Korean>
+            <French>Vous n'êtes pas autorisé à déployer plus de %1 FOBs en même temps.</French>
+            <German>Sie haben nicht die Erlaubnis mehr als %1 FOBs zur selben Zeit zu errichten.</German>
+            <Russian>Вам не разрешено развертывать более %1 FOB одновременно.</Russian>
+        </Key>
+        <Key ID="STR_HINT_LOADOUT_LOADED">
+            <Original>%1 loadout successfully loaded.</Original>
+            <Korean>%1이 성공적으로 불러와졌습니다.</Korean>
+            <French>Equipement %1 chargé avec succès.</French>
+            <German>Ausrüstungsset %1 erfolgreich geladen.</German>
+            <Russian>Снаряжение %1 успешно загружено.</Russian>
+        </Key>
+        <Key ID="STR_SECONDARY_MISSION2">
+            <Original>Search and Rescue</Original>
+            <Korean>수색구출임무</Korean>
+            <French>Recherche et Sauvetage</French>
+            <German>Suchen und Zerstören</German>
+        </Key>
+        <Key ID="STR_SECONDARY_BRIEFING2">
+            <Original>
+                &lt;t size='1.3' color='#ffa000'&gt;SEARCH AND RESCUE&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; We have lost contact with a recon helicopter on mission behind the enemy lines. We believe the chopper was shot down by hostile forces.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; The helicopter may have crashlanded anywhere in a large zone around its last known position. Your mission is to retrieve the chopper crew and their precious intel. Hostile forces may have found them first, so you must be quick, careful, as well as ready to engage.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 Intel points (10 for each crew alive).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </Original>
+            <Korean>
+                &lt;t size='1.3' color='#ffa000'&gt;수색구출임무&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 적진 후방에서 정찰중인 헬기와 통신이 두절됬다. 분명히 적군에게 격추당했을 것이다.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 마지막으로 확인된 위치에서 멀지 않은곳에 비상착륙 했을지도 모른다. 귀관들의 임무는 중요한 정보를 알고있는 조종사들을 무사히 구출해내는 것이다. 이미 적들이 발견했을지도 모르니 신속하고 신중하게 교전에 대비하도록.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;보상: 정보력 20 (승무원 한명당 10).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </Korean>
+            <French>
+                &lt;t size='1.3' color='#ffa000'&gt;RECHERCHE ET SAUVETAGE&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Nous avons perdu le contact avec un helicoptère de reconnaissance en mission derrière les lignes ennemies. Il a probablement été abattu par les forces hostiles.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; L'hélicopter a pu finir sa course dans une large zone autour de sa dernière position connue. Votre mission est de retrouver l'équipage et sa précieuse intel. Les forces hostiles les auront peut-être déjà retrouvés, votre action doit donc être rapide et décisive.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cout: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Récompense: 20 points d'intel (10 pour chaque équipage vivant).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </French>
+            <German>
+                &lt;t size='1.3' color='#ffa000'&gt;SUCHEN UND ZERSTÖREN&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Wir haben den Kontakt mit einem Aufklärungshelikopter, der auf einer Mission hinter feindlichen Linien war, verloren. Wir vermuten, dass der Helikotper von feindlichen Kräften abgeschossen wurde.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; Der Helikopter muss irgendwo in einem größeren Bereich um seine letzte bekannte Position notgelandet sein. Ihr Auftrag ist es die Besatzung zu finden und deren Aufklärungsbericht zu beschaffen. Feindliche Kräfte könnten sie bereits gefunden haben, also müssen sie schnell, vorsichtig und auf alles vorbereitet sein.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 intel points (10 for each crew alive).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+            </German>
+        </Key>
+
+        <!-- Added in v0.924 -->
+        <Key ID="STR_CIV_PENALTIES">
+            <Original>Penalty for killing civilians:</Original>
+            <Korean>민간인 사살 패널티:</Korean>
+            <French>Pénalité pour les pertes civiles:</French>
+            <German>Strafe für zivile Verluste:</German>
+        </Key>
+        <Key ID="STR_CIV_PENALTY_MESSAGE">
+            <Original>Penalty of %1 for killing of civilian named %2 by %3.</Original>
+            <Korean>%3이 %2를 사살하여 %1의 패널티가 부과되었습니다.</Korean>
+            <French>Penalty de %1 pour avoir tué le civil %2 par %3.</French>
+            <German>Strafe von %1 für die Ermordung des Zivilisten %2 durch %3.</German>
+        </Key>
+        <Key ID="STR_PARAM_SQUAD_SIZE">
+            <Original>AI recruitment limit per squad:</Original>
+            <Korean>분대당 건설할 수 있는 최대 AI 수:</Korean>
+            <French>Limite de recrutement d'IA par escouade:</French>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SAR_STARTED">
+            <Original>Crashed helicopter near %1.</Original>
+            <Korean>%1 근처에 헬기가 추락했습니다.</Korean>
+            <French>Helicopter crashé près de %1.</French>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SAR_FAILED">
+            <Original>SAR mission failed, both crew are KIA.</Original>
+            <Korean>수색구출임무에 실패했습니다. 승무원이 모두 전사하였습니다.</Korean>
+            <French>Mission SAR échouée, les deux équipages sont morts.</French>
+        </Key>
+        <Key ID="STR_NOTIFICATION_SAR_SUCCESS">
+            <Original>SAR mission succeeded.</Original>
+            <Korean>수색구출임무에 성공했습니다.</Korean>
+            <French>Mission SAR réussie.</French>
+        </Key>
+    </Package>
+</Project>
+
+<Project name="NRE Earplugs">
+	<Package name="NREEarplugs">
+		<Key ID="STR_NREEP_IN_HINT">
+			<Original>You have insert the earplugs!</Original>
+			<Korean>소음차단 귀마개를 장착했습니다!</Korean>
+			<English>You have insert the earplugs!</English>
+			<Russian>Беруши вставлены!</Russian>
+			<German>Du hast die Ohrstoepsel eingesteckt!</German>
+			<Spanish>¡Te has puesto los tapones!</Spanish>
+		</Key>
+		<Key ID="STR_NREEP_OUT_HINT">
+			<Original>You have removed the earplugs!</Original>
+			<Korean>소음차단 귀마개를 벗었습니다!</Korean>
+			<English>You have removed the earplugs!</English>
+			<Russian>Беруши вытащены!</Russian>
+			<German>Du hast die Ohrstoepsel rausgenommen!</German>
+			<Spanish>¡Te has quitado los tapones!</Spanish>
+		</Key>
+		<Key ID="STR_NREEP_IN_ACTION">
+			<Original>Insert earplugs</Original>
+			<Korean>소음차단 귀마개 설정</Korean>
+			<English>Insert earplugs</English>
+			<Russian>Вставить беруши</Russian>
+			<German>Ohrstoepsel einstecken</German>
+			<Spanish>Ponerte los tapones</Spanish>
+		</Key>
+		<Key ID="STR_NREEP_OUT_ACTION">
+			<Original>Remove earplugs</Original>
+			<Korean>소음차단 귀마개 해제</Korean>
+			<English>Remove earplugs</English>
+			<Russian>Вытащить беруши!</Russian>
+			<German>Ohrstoepsel rausnehmen</German>
+			<Spanish>Quitarte los tapones</Spanish>
+		</Key>
+	</Package>
+</Project>
+
+<Project name="Vehicle Appearance Manager">
+	<Package name="Vehicle Appearance Manager">
+<!-- VAM LINE START -->
+<!-- Function/기능부 -->
+			<Key ID="STR_VAM_INITIALIZED">
+				<Original>Vehicle Appearance Manager initialized</Original>
+				<Korean>차량 형상 관리자 불러오기 및 초기화 완료</Korean>
+			</Key>
+			<Key ID="STR_VAM_MAIN_MENU_NAME">
+				<Original>Vehicle Appearance Manager</Original>
+				<Korean>차량 형상 관리자</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_OPTIONS">
+				<Original>Options</Original>
+				<Korean>옵션</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_CHANGE_CAMOUFLAGE">
+				<Original>Change camouflage</Original>
+				<Korean>위장 변경</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_CHANGE_COMPONENT">
+				<Original>Change component</Original>
+				<Korean>구성품 변경</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_RESET_VEHICLE">
+				<Original>Reset Vehicle</Original>
+				<Korean>차량 초기화</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_BACK">
+				<Original>Back</Original>
+				<Korean>뒤로</Korean>
+			</Key>
+			<Key ID="STR_VAM_CLOSE_MENU">
+				<Original>Close menu</Original>
+				<Korean>메뉴 닫기</Korean>
+			</Key>
+			<Key ID="STR_VAM_FOB_CONDITION_CHECK_FAILED">
+				<Original>You should be in %1m from FOB.)</Original>
+				<Korean>FOB에서 %1m 안에 있어야 합니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_NOT_DRIVER_CAMOUFLAGE">
+				<Original>To change camouflage, you must be on driver seat.</Original>
+				<Korean>위장을 변경하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_NOT_DRIVER_COMPONENT">
+				<Original>To change component, you must be on driver seat.</Original>
+				<Korean>구성품을 변경하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_NOT_DRIVER_RESET">
+				<Original>To reset vehicle appearance, you must be on driver seat.</Original>
+				<Korean>차량을 초기화하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_COMPLETE_RESET">
+				<Original>Reset complete</Original>
+				<Korean>초기화 완료</Korean>
+			</Key>
+			<Key ID="STR_VAM_NOT_SUPPPORT_OR_NO_OPTION_CAMOUFLAGE">
+				<Original>This vehicle is not supported.\nOR\nThere is no camouflage option\nfor this vehicle.</Original>
+				<Korean>이 차량은 지원하지 않습니다.\n또는\n변경할 위장이 없습니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_NOT_SUPPPORT_OR_NO_OPTION_COMPONENT">
+				<Original>This vehicle is not supported.\nOR\nThere is no component option\nfor this vehicle.</Original>
+				<Korean>이 차량은 지원하지 않습니다.\n또는\n변경할 구성품이 없습니다.</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_CAMOUFLAGE">
+				<Original>Camoufluge</Original>
+				<Korean>위장</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_COMPONENT">
+				<Original>Component</Original>
+				<Korean>구성품</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_CAMOUFLAGE_APPLIED">
+				<Original>Camouflage applied</Original>
+				<Korean>위장 적용됨</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_COMPONENT_APPLIED">
+				<Original>Component applied</Original>
+				<Korean>구성품 적용됨</Korean>
+			</Key>
+			<Key ID="STR_VAM_SUB_COMPONENT_APPLIED_WARNING">
+				<Original>Component applied\n But using old Marid isn't recommended.\n Please contact with your server admin.</Original>
+				<Korean>구성품 적용됨\n 예전 마리드를 사용하는 것은 권장되지 않습니다.\n 해당 서버 관리자와 연락하길 바랍니다.</Korean>
+			</Key>
+<!-- Camouflage/위장 -->
+			<Key ID="STR_VAM_AAF_CAMO">
+				<Original>AAF</Original>
+				<Korean>AAF</Korean>
+			</Key>
+			<Key ID="STR_VAM_AAF_JUNGLE_CAMONET_CAMO">
+				<Original>AAF (Jungle Camo Net)</Original>
+				<Korean>AAF (정글 위장망)</Korean>
+			</Key>
+			<Key ID="STR_VAM_AAF_DESERT_CAMONET_CAMO">
+				<Original>AAF (Desert Camo Net)</Original>
+				<Korean>AAF (사막 위장망)</Korean>
+			</Key>
+			<Key ID="STR_VAM_GUERILLA_OLIVE_WHITE_CAMO">
+				<Original>Guerilla (Olive, White Stripe)</Original>
+				<Korean>게릴라 (올리브색, 하얀 무늬)</Korean>
+			</Key>
+			<Key ID="STR_VAM_GUERILLA_GREEN_BLACK_CAMO">
+				<Original>Guerilla (Green, Black Stripe)</Original>
+				<Korean>게릴라 (녹색, 검은 무늬)</Korean>
+			</Key>
+			<Key ID="STR_VAM_GUERILLA_DESERT_CAMO">
+				<Original>Guerilla (Desert)</Original>
+				<Korean>게릴라 (사막색)</Korean>
+			</Key>
+			<Key ID="STR_VAM_HEX_ARID_CAMO">
+				<Original>Hex</Original>
+				<Korean>육각</Korean>
+			</Key>
+			<Key ID="STR_VAM_GREEN_HEX_CAMO">
+				<Original>Green Hex</Original>
+				<Korean>녹색 육각</Korean>
+			</Key>
+			<Key ID="STR_VAM_SAND_CAMO">
+				<Original>Sand</Original>
+				<Korean>모래색</Korean>
+			</Key>
+			<Key ID="STR_VAM_OLIVE_CAMO">
+				<Original>Olive</Original>
+				<Korean>올리브색</Korean>
+			</Key>
+			<Key ID="STR_VAM_DAZZLE_CAMO">
+				<Original>Dazzle</Original>
+				<Korean>위장 도장</Korean>
+			</Key>
+			<Key ID="STR_VAM_BLACK_CAMO">
+				<Original>Black</Original>
+				<Korean>검정색</Korean>
+			</Key>
+			<Key ID="STR_VAM_GREY_CAMO">
+				<Original>Grey</Original>
+				<Korean>회색</Korean>
+			</Key>
+			<Key ID="STR_VAM_GREEN_CAMO">
+				<Original>Green</Original>
+				<Korean>녹색</Korean>
+			</Key>
+			<Key ID="STR_VAM_JUNGLE_CAMO">
+				<Original>Jungle</Original>
+				<Korean>정글</Korean>
+			</Key>
+			<Key ID="STR_VAM_BLUFOR_CAMO">
+				<Original>BLUFOR (Sand)</Original>
+				<Korean>청군 (모래색)</Korean>
+			</Key>
+			<Key ID="STR_VAM_OPFOR_CAMO">
+				<Original>OPFOR (Hex)</Original>
+				<Korean>적군 (육각)</Korean>
+			</Key>
+			<Key ID="STR_VAM_DIGI_GREEN_CAMO">
+				<Original>Digital Green</Original>
+				<Korean>디지털 녹색</Korean>
+			</Key>
+			<Key ID="STR_VAM_DIGI_GREY_CAMO">
+				<Original>Digital Grey</Original>
+				<Korean>디지털 회색</Korean>
+			</Key>
+			<Key ID="STR_VAM_IDAP_CAMO">
+				<Original>IDAP</Original>
+				<Korean>IDAP</Korean>
+			</Key>
+			<Key ID="STR_VAM_ION_CAMO">
+				<Original>ION</Original>
+				<Korean>ION</Korean>
+			</Key>
+			<Key ID="STR_VAM_DAHOMAN_CAMO">
+				<Original>Dahoman</Original>
+				<Korean>Dahoman</Korean>
+			</Key>
+			<Key ID="STR_VAM_BLACK_CUSTOM_CAMO">
+				<Original>Black Custom</Original>
+				<Korean>검정 특별도장</Korean>
+			</Key>
+			<Key ID="STR_VAM_BLUE_CAMO">
+				<Original>Blue</Original>
+				<Korean>파란색</Korean>
+			</Key>
+			<Key ID="STR_VAM_DARK_GREY_CAMO">
+				<Original>Dark Grey</Original>
+				<Korean>어두운 회색</Korean>
+			</Key>
+			<Key ID="STR_VAM_DARK_GREY_C_CAMO">
+				<Original>Dark Grey [Camo]</Original>
+				<Korean>어두운 회색 [위장]</Korean>
+			</Key>
+			<Key ID="STR_VAM_DARK_GREEN_CAMO">
+				<Original>Dark Green</Original>
+				<Korean>어두운 녹색</Korean>
+			</Key>
+<!-- Component/구성품 -->
+			<Key ID="STR_VAM_NONE_COMP">
+				<Original>None</Original>
+				<Korean>전체 해제</Korean>
+			</Key>
+			<Key ID="STR_VAM_CAMONET_HULL_COMP">
+				<Original>Camouflage Net (Hull)</Original>
+				<Korean>위장망 (차체)</Korean>
+			</Key>
+			<Key ID="STR_VAM_CAMONET_TURRET_COMP">
+				<Original>Camouflage Net (Turret)</Original>
+				<Korean>위장망 (포탑)</Korean>
+			</Key>
+			<Key ID="STR_VAM_EXTERNAL_BAG_1_COMP">
+				<Original>External Bags 1</Original>
+				<Korean>외부 군장 1</Korean>
+			</Key>
+			<Key ID="STR_VAM_EXTERNAL_BAG_2_COMP">
+				<Original>External Bags 2</Original>
+				<Korean>외부 군장 2</Korean>
+			</Key>
+			<Key ID="STR_VAM_CANVAS_COVER_COMP">
+				<Original>Canvas Cover (Hull)</Original>
+				<Korean>캔버스 커버 (차체)</Korean>
+			</Key>
+			<Key ID="STR_VAM_AMMO_BOXES_COMP">
+				<Original>Ammo Boxes</Original>
+				<Korean>탄통</Korean>
+			</Key>
+			<Key ID="STR_VAM_CANISTERS_COMP">
+				<Original>Canisters</Original>
+				<Korean>유관</Korean>
+			</Key>
+			<Key ID="STR_VAM_EXTRA_TRACK_COMP">
+				<Original>Extra Tracks, Road Wheel</Original>
+				<Korean>예비 궤도, 보기륜</Korean>
+			</Key>
+			<Key ID="STR_VAM_EXTRA_WHEELS_COMP">
+				<Original>Extra Road Wheels</Original>
+				<Korean>예비 보기륜</Korean>
+			</Key>
+			<Key ID="STR_VAM_TOOLS_COMP">
+				<Original>Tools</Original>
+				<Korean>외부 공구</Korean>
+			</Key>
+			<Key ID="STR_VAM_WOOD_LOG_COMP">
+				<Original>Wood Log</Original>
+				<Korean>통나무</Korean>
+			</Key>
+			<Key ID="STR_VAM_DOOR_1_COMP">
+				<Original>Door 1</Original>
+				<Korean>문 1번</Korean>
+			</Key>
+			<Key ID="STR_VAM_DOOR_2_COMP">
+				<Original>Door 2</Original>
+				<Korean>문 2번</Korean>
+			</Key>
+			<Key ID="STR_VAM_DOOR_3_COMP">
+				<Original>Door 3</Original>
+				<Korean>문 3번</Korean>
+			</Key>
+			<Key ID="STR_VAM_DOOR_4_COMP">
+				<Original>Door 4</Original>
+				<Korean>문 4번</Korean>
+			</Key>
+			<Key ID="STR_VAM_DOOR_COMP">
+				<Original>Door</Original>
+				<Korean>문</Korean>
+			</Key>
+			<Key ID="STR_VAM_ADD_ARMOR_HULL_COMP">
+				<Original>Additonal Armor (Hull)</Original>
+				<Korean>추가 장갑 (차체)</Korean>
+			</Key>
+			<Key ID="STR_VAM_ADD_ARMOR_TURRET_COMP">
+				<Original>Additonal Armor (Turret)</Original>
+				<Korean>추가 장갑 (포탑)</Korean>
+			</Key>
+			<Key ID="STR_VAM_SLAT_ARMOR_HULL_COMP">
+				<Original>Slat Armor (Hull)</Original>
+				<Korean>슬랫 아머 (차체)</Korean>
+			</Key>
+			<Key ID="STR_VAM_SLAT_ARMOR_TURRET_COMP">
+				<Original>Slat Armor (Turret)</Original>
+				<Korean>슬랫 아머 (포탑)</Korean>
+			</Key>
+			<Key ID="STR_VAM_EVERYTHING_COMP">
+				<Original>Apply everyting</Original>
+				<Korean>모두 적용</Korean>
+			</Key>
+<!-- VAM LINE END -->
+	</Package>
+</Project>

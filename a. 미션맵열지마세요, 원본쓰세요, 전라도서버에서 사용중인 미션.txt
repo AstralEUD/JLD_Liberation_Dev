@@ -1,0 +1,10 @@
+이 미션맵파일은 왜 압축해제해서 여셨나요?
+원본 미션맵 파일을 쓰십시오
+
+
+전라도 서버(JLD)에서 사용중인 미션맵 파일입니다
+
+출처 : https://github.com/GreuhZbug
+원저작자 : [GREUH]Zbug,[GREUH]McKeewa,
+
+수정(modify) : [JLD]Niveatt,[JLD]Saky
