@@ -62,8 +62,8 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		_spawncivs = true;
 
 		_building_ai_max = round (50 * _popfactor) ;
-		_building_range = 250;
-		_local_capture_size = _local_capture_size * 1.4;
+		_building_range = 500;
+		_local_capture_size = _local_capture_size * 1.7;
 		_iedcount = (2 + (floor (random 4))) * GRLIB_difficulty_modifier;
 		if ( _iedcount > 10 ) then { _iedcount = 10 };
 	};
@@ -75,7 +75,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > (33 / GRLIB_difficulty_modifier)) then { _vehtospawn pushback (militia_vehicles call BIS_fnc_selectRandom); };
 		_spawncivs = true;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
-		_building_range = 150;
+		_building_range = 250;
 		_iedcount = (floor (random 4)) * GRLIB_difficulty_modifier;
 		if ( _iedcount > 7 ) then { _iedcount = 7 };
 	};
@@ -95,7 +95,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > (66 / GRLIB_difficulty_modifier)) then { _vehtospawn pushback ( [] call F_getAdaptiveVehicle ); };
 		_spawncivs = false;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 4 )))) * _popfactor);
-		_building_range = 150;
+		_building_range = 200;
 	};
 	if ( _sector in sectors_factory ) then {
 		_vehtospawn = [];
@@ -108,7 +108,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 		if((random 100) > 33) then { _vehtospawn pushback (militia_vehicles call BIS_fnc_selectRandom); };
 		_spawncivs = false;
 		_building_ai_max = round ((floor (18 + (round (combat_readiness / 10 )))) * _popfactor);
-		_building_range = 150;
+		_building_range = 200;
 		_iedcount = (floor (random 3)) * GRLIB_difficulty_modifier;
 		if ( _iedcount > 5 ) then { _iedcount = 5 };
 	};

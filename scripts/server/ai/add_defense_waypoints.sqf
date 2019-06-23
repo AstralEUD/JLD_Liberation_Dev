@@ -7,31 +7,42 @@ if ( vehicle (leader _grp) == (leader _grp) ) then { _is_infantry = true };
 sleep 5;
 while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
 sleep 1;
-{_x doFollow leader _grp} foreach units _grp;
+{
+	_x doFollow leader _grp;
+	_x enableIRLasers true;
+	
+	if ( (typeof _x) in militia_squad ) then {
+		if ( random 100 < 20 ) then {
+			_x addPrimaryWeaponItem "acc_flashlight";
+			_x enableGunLights "Auto";
+		};
+	};
+	
+} foreach units _grp;
 sleep 1;
 
-if ( _is_infantry ) then {
-	_waypoint = _grp addWaypoint [_flagpos, 150];
+if ( _is_infantry ) then {	
+	_waypoint = _grp addWaypoint [_flagpos, 200];
 	_waypoint setWaypointType "MOVE";
-	_waypoint setWaypointBehaviour "AWARE";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointBehaviour "SAFE";
+	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointSpeed "LIMITED";
-	_waypoint setWaypointCompletionRadius 10;
+	_waypoint setWaypointCompletionRadius 20;
 
-	_waypoint = _grp addWaypoint [_flagpos,150];
+	_waypoint = _grp addWaypoint [_flagpos,200];
 	_waypoint setWaypointType "MOVE";
-	_waypoint = _grp addWaypoint [_flagpos, 150];
+	_waypoint = _grp addWaypoint [_flagpos, 200];
 	_waypoint setWaypointType "MOVE";
-	_waypoint = _grp addWaypoint [_flagpos, 150];
+	_waypoint = _grp addWaypoint [_flagpos, 200];
 	_waypoint setWaypointType "MOVE";
 
-	_waypoint = _grp addWaypoint [_flagpos, 150];
+	_waypoint = _grp addWaypoint [_flagpos, 200];
 	_waypoint setWaypointType "CYCLE";
 } else {
 	_waypoint = _grp addWaypoint [_basepos, 1];
 	_waypoint setWaypointType "MOVE";
-	_waypoint setWaypointBehaviour "SAFE";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointBehaviour "COMBAT";
+	_waypoint setWaypointCombatMode "YELLOW";
 	_waypoint setWaypointSpeed "LIMITED";
 	_waypoint setWaypointCompletionRadius 30;
 };
@@ -48,18 +59,18 @@ if ( { alive _x } count (units _grp) > 0 ) then {
 	sleep 1;
 	{_x doFollow leader _grp} foreach units _grp;
 	sleep 1;
-	_waypoint = _grp addWaypoint [_basepos, 150];
+	_waypoint = _grp addWaypoint [_basepos, 200];
 	_waypoint setWaypointType "SAD";
 	_waypoint setWaypointBehaviour "COMBAT";
-	_waypoint setWaypointCombatMode "GREEN";
+	_waypoint setWaypointCombatMode "WHITE";
 	_waypoint setWaypointSpeed "LIMITED";
-	_waypoint = _grp addWaypoint [_basepos, 150];
+	_waypoint = _grp addWaypoint [_basepos, 200];
 	_waypoint setWaypointType "SAD";
-	_waypoint = _grp addWaypoint [_basepos, 150];
+	_waypoint = _grp addWaypoint [_basepos, 200];
 	_waypoint setWaypointType "SAD";
-	_waypoint = _grp addWaypoint [_basepos, 150];
+	_waypoint = _grp addWaypoint [_basepos, 200];
 	_waypoint setWaypointType "SAD";
-	_waypoint = _grp addWaypoint [_basepos, 150];
+	_waypoint = _grp addWaypoint [_basepos, 200];
 	_waypoint setWaypointType "CYCLE";
 	_grp setCurrentWaypoint [_grp, 0];
 };

@@ -43,8 +43,9 @@ _idxposit = 0;
 	if ( _infsquad == "militia" ) then {
 		if ( (typeof _nextunit) in original_resistance ) then {
 			[ _nextunit ] spawn ( militia_standard_squad call BIS_fnc_selectRandom );
-			if ( random 100 < 40 ) then {
+			if ( random 100 < 50 ) then {
 				_nextunit addPrimaryWeaponItem "acc_flashlight";
+				_nextunit enableGunLights "Auto";
 			};
 		};
 	};

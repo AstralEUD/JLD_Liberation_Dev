@@ -144,4 +144,31 @@ player addEventHandler["SeatSwitchedMan", {
 }
 ];
 
+PilotRestriction = { 
+	params ["_rnum"];
+	private ["_player","_grps"]; 
+	_grps=0; 
+	while{true}do{
+		sleep 5;
+		{ 
+			_type = -1;  
+			_group = _x; 
+			{if (groupId _group find _x != -1) then {_type = groupTags find _x};}foreach groupTags; 
+			if (_type in [0,1,2,3,4,5,6]) then {_grps=_grps+1}; 
+		}foreach allGroups; 
+		if(_grps<=_rnum)then{
+			if(vehicle player == player) then {
+				endMission "End3";
+			}else{
+				hint "현재 지상분대수가 부족하여 하차후에 자동으로 로비로 나갑니다. 지상군으로 플레이 해주시기 바랍니다.";
+			};
+		};
+	};
+	_grps 
+};
+
+{
+	if(player == _x) then {[_forEachIndex+1] spawn pilotRestriction;};
+	}forEach [pilot1,pilot2,pilot3,pilot4,pilot5,pilot6,pilot7,pilot8]
+
 systemChat "분대별 장비잠금 스크립트 활성화";

@@ -1,3 +1,5 @@
+//client weather
+
 waitUntil { !isNil "chosen_weather" };
 
 while { true } do {
@@ -7,4 +9,5 @@ while { true } do {
 	if ( overcast >= 0.95 ) then { //2 setRain 0.15 }; // Removed heavy rain due to severe fps issues
 	3 setRain chosen_rain;
 	sleep 5;
+	systemChat "cls weather";
 };
