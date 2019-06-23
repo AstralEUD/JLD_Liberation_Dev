@@ -20,6 +20,9 @@ for "_i" from 1 to 5 do {_unit addItemToBackpack "150Rnd_762x54_Box_Tracer";};
 _unit addHeadgear "H_Watchcap_khk";
 _unit addGoggles "G_Balaclava_lowprofile";
 _unit addWeapon "LMG_Zafir_F";
+_unit addPrimaryWeaponItem "acc_flashlight";
+
+
 _unit addWeapon "hgun_P07_F";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

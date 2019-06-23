@@ -23,6 +23,9 @@ _unit addGoggles "G_Bandanna_oli";
 
 _unit addWeapon "arifle_Mk20_F";
 _unit addPrimaryWeaponItem "optic_MRCO";
+_unit addPrimaryWeaponItem "acc_flashlight";
+
+
 _unit addWeapon "hgun_P07_F";
 _unit addWeapon "Rangefinder";
 

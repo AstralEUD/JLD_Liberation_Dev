@@ -21,6 +21,7 @@ _unit addGoggles "G_Balaclava_lowprofile";
 _unit addWeapon "srifle_DMR_03_woodland_F";
 _unit addPrimaryWeaponItem "optic_Hamr";
 _unit addPrimaryWeaponItem "bipod_03_F_oli";
+
 _unit addWeapon "hgun_P07_F";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

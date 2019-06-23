@@ -8,10 +8,10 @@ FAR_Player_Actions =
 	if (alive player && player isKindOf "Man") then
 	{
 		// addAction args: title, filename, (arguments, priority, showWindow, hideOnUse, shortcut, condition, positionInModel, radius, radiusView, showIn3D, available, textDefault, textToolTip)
-		player addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive"];
-		player addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize"];
-		player addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide"];
-		player addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging"];
+		player addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",1];
+		player addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",1];
+		player addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",1];
+		player addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",1];
 	};
 };
 
@@ -296,7 +296,7 @@ FAR_Drag =
 	// Add release action and save its id so it can be removed
 	_id = player addAction ["<t color=""#C90000"">" + "내려놓기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_release"], 10, true, true, "", "true"];
 
-	hint "Press 'C' if you can't move.";
+	hint "움직이지 않는 경우에는 'C'를 누르세요.";
 
 	// Wait until release action is used
 	waitUntil
@@ -349,7 +349,7 @@ FAR_public_EH =
 
 		if (isPlayer _killed) then
 		{
-			systemChat format["%1 님이 %2 에게 사살되었습니다.", name _killed, name _killer];
+			systemChat format["%1 님이 %2 에 의해 사망하였습니다.", name _killed, name _killer];
 		};
 	};
 };
