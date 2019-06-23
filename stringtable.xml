@@ -1446,7 +1446,7 @@
         </Key>
         <Key ID="STR_ACTIVE_SECTORS">
             <Original>Active Sectors:</Original>
-            <Korean>아래 구역을 우선 처리하십시오:</Korean>
+            <Korean>활성화된 구역:</Korean>
             <French>Secteurs Actifs:</French>
             <German>Aktive Sektoren:</German>
             <Spanish>Sectores activos:</Spanish>

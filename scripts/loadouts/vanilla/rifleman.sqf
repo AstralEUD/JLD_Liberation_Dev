@@ -20,8 +20,6 @@ _unit addGoggles "G_Balaclava_oli";
 
 _unit addWeapon "srifle_DMR_06_camo_F";
 _unit addPrimaryWeaponItem "optic_ACO_grn";
-_unit addPrimaryWeaponItem "acc_flashlight";
-
 _unit addWeapon "hgun_P07_F";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

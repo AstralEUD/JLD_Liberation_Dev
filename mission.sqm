@@ -8,18 +8,14 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=1324;
-	};
-	class MarkerIDProvider
-	{
-		nextID=1;
+		nextID=1276;
 	};
 	class Camera
 	{
-		pos[]={9520.9297,70.502853,7001.1284};
-		dir[]={0.081455678,-0.70933396,0.70015073};
-		up[]={0.081971206,0.70487219,0.70458192};
-		aside[]={0.9933005,-2.8521754e-009,-0.1155608};
+		pos[]={7894.771,372.43793,8311.2285};
+		dir[]={0.079156145,-0.46719268,0.88062257};
+		up[]={0.04182392,0.88416481,0.46530262};
+		aside[]={0.99600059,1.5981204e-006,-0.089527585};
 	};
 };
 binarizationWanted=0;
@@ -180,7 +176,6 @@ class AddonsMetaData
 };
 class DynamicSimulation
 {
-	saturateByObjectDistance=0;
 	class EnableRadiuses
 	{
 		Vehicle=600;
@@ -197,12 +192,10 @@ class ScenarioData
 	author="SAKYamoney";
 	disabledAI=1;
 	wreckManagerMode=1;
-	wreckLimit=5;
 	wreckRemovalMinTime=60.000004;
 	wreckRemovalMaxTime=300;
 	corpseManagerMode=1;
-	corpseLimit=5;
-	corpseRemovalMinTime=40.630531;
+	corpseRemovalMinTime=60.000004;
 	corpseRemovalMaxTime=300;
 };
 class CustomAttributes
@@ -281,25 +274,25 @@ class Mission
 	{
 		briefingName="@STR_MISSION_TITLE";
 		overviewText="@STR_MISSION_DESCRIPTION";
-		timeOfChanges=28800;
-		startWeather=0;
-		startWind=0;
-		forecastWeather=0;
-		forecastWind=0;
-		forecastWaves=0;
-		year=2030;
-		month=12;
-		day=9;
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
 		hour=12;
-		minute=-23;
-		startFogBase=-1000;
-		forecastFogBase=-1000;
-		startFogDecay=0;
-		forecastFogDecay=0;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=360;
+		items=357;
 		class Item0
 		{
 			dataType="Marker";
@@ -324,7 +317,7 @@ class Mission
 		class Item2
 		{
 			dataType="Marker";
-			position[]={8244.6807,21.97677,3204.9617};
+			position[]={8227.2881,22.016001,3165.665};
 			name="bigtown6";
 			text="Le Port";
 			type="n_service";
@@ -333,6 +326,7 @@ class Mission
 			b=1.55;
 			angle=90;
 			id=287;
+			atlOffset=0.43162537;
 		};
 		class Item3
 		{
@@ -434,7 +428,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9987.7197,17.883739,2252.281};
+				position[]={9987.7207,17.883888,2252.2808};
 			};
 			side="Empty";
 			class Attributes
@@ -445,7 +439,7 @@ class Mission
 			};
 			id=327;
 			type="Land_HelipadCircle_F";
-			atlOffset=0.43700027;
+			atlOffset=0.43712234;
 		};
 		class Item10
 		{
@@ -1304,13 +1298,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=9;
+				items=10;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9990.3135,17.360752,2223.2};
+						position[]={9990.3125,17.360804,2223.1997};
 						angles[]={0,3.8292351,0};
 					};
 					side="West";
@@ -1323,7 +1317,7 @@ class Mission
 					};
 					id=380;
 					type="B_officer_F";
-					atlOffset=1.1130009;
+					atlOffset=1.1130657;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1430,7 +1424,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9935.8379,21.198442,2276.3958};
-						angles[]={0.091741994,1.1519175,6.1629682};
+						angles[]={0.091741994,3.1590459,6.1629682};
 					};
 					side="West";
 					flags=4;
@@ -1547,6 +1541,88 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+						position[]={9976.9434,13.633444,2195.7358};
+						angles[]={6.1756024,0.042010076,6.2152901};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setUnitPos ""UP""; this allowdamage false; this disableAI ""MOVE"";";
+						name="cv";
+						disableSimulation=1;
+					};
+					id=388;
+					type="B_Captain_Pettka_F";
+					atlOffset=8.0108643e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
 						position[]={10000.25,12.955297,2207.8857};
 						angles[]={6.0567369,0.60501838,0.11390495};
 					};
@@ -1565,7 +1641,7 @@ class Mission
 			{
 			};
 			id=379;
-			atlOffset=1.1130009;
+			atlOffset=1.1130657;
 		};
 		class Item58
 		{
@@ -5600,7 +5676,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=22;
+				items=16;
 				class Item0
 				{
 					dataType="Object";
@@ -5614,11 +5690,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1295;
-					type="B_Soldier_F";
+					id=1125;
+					type="B_Soldier_SL_F";
 					atlOffset=4.7683716e-007;
 				};
 				class Item1
@@ -5634,11 +5709,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1296;
-					type="B_Soldier_F";
+					id=1126;
+					type="B_Soldier_SL_F";
 					atlOffset=4.7683716e-007;
 				};
 				class Item2
@@ -5646,7 +5720,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9528.9492,5.4177523,7045.2559};
+						position[]={9528.9492,5.4177527,7045.2559};
 						angles[]={0.063912325,5.4105206,0.0023920804};
 					};
 					side="West";
@@ -5654,12 +5728,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1297;
-					type="B_Soldier_F";
-					atlOffset=-4.7683716e-007;
+					id=1127;
+					type="B_Soldier_SL_F";
 				};
 				class Item3
 				{
@@ -5674,11 +5746,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1298;
-					type="B_Soldier_F";
+					id=1128;
+					type="B_Soldier_SL_F";
 				};
 				class Item4
 				{
@@ -5693,11 +5764,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1299;
-					type="B_Soldier_F";
+					id=1129;
+					type="B_Soldier_SL_F";
 					atlOffset=4.7683716e-007;
 				};
 				class Item5
@@ -5713,11 +5783,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1300;
-					type="B_Soldier_F";
+					id=1130;
+					type="B_Soldier_SL_F";
 					atlOffset=9.5367432e-007;
 				};
 				class Item6
@@ -5725,7 +5794,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9536.4336,5.8387647,7045.4453};
+						position[]={9536.4336,5.8387642,7045.4453};
 						angles[]={0.0032018756,5.4105206,0.063115984};
 					};
 					side="West";
@@ -5733,12 +5802,11 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1301;
-					type="B_Soldier_F";
-					atlOffset=9.5367432e-007;
+					id=1131;
+					type="B_Soldier_SL_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item7
 				{
@@ -5753,11 +5821,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1302;
-					type="B_Soldier_F";
+					id=1132;
+					type="B_Soldier_SL_F";
 					atlOffset=4.7683716e-007;
 				};
 				class Item8
@@ -5773,11 +5840,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1303;
-					type="B_Soldier_F";
+					id=1133;
+					type="B_Soldier_TL_F";
 				};
 				class Item9
 				{
@@ -5792,11 +5858,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1304;
-					type="B_Soldier_F";
+					id=1134;
+					type="B_Soldier_TL_F";
 				};
 				class Item10
 				{
@@ -5811,11 +5876,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1305;
-					type="B_Soldier_F";
+					id=1135;
+					type="B_Soldier_TL_F";
 				};
 				class Item11
 				{
@@ -5830,11 +5894,10 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1306;
-					type="B_Soldier_F";
+					id=1136;
+					type="B_Soldier_TL_F";
 					atlOffset=4.7683716e-007;
 				};
 				class Item12
@@ -5842,7 +5905,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9532.8262,5.6180668,7043.1719};
+						position[]={9532.8262,5.6180673,7043.1719};
 						angles[]={0.0032018756,5.4105206,0.063115984};
 					};
 					side="West";
@@ -5850,19 +5913,18 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1307;
-					type="B_Soldier_F";
-					atlOffset=4.7683716e-007;
+					id=1137;
+					type="B_Soldier_TL_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item13
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9534.6113,5.7751675,7043.1719};
+						position[]={9534.6113,5.7751679,7043.1719};
 						angles[]={0.0032018756,5.4105206,0.063115984};
 					};
 					side="West";
@@ -5870,19 +5932,18 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1308;
-					type="B_Soldier_F";
-					atlOffset=0.04431963;
+					id=1138;
+					type="B_Soldier_TL_F";
+					atlOffset=0.044320107;
 				};
 				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9536.5117,5.8950343,7043.2461};
+						position[]={9536.5117,5.8950338,7043.2461};
 						angles[]={0.0032018756,5.4105206,0.063115984};
 					};
 					side="West";
@@ -5890,19 +5951,18 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1309;
-					type="B_Soldier_F";
-					atlOffset=0.044313431;
+					id=1139;
+					type="B_Soldier_TL_F";
+					atlOffset=0.044312954;
 				};
 				class Item15
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9538.4512,5.8920226,7043.2129};
+						position[]={9538.4512,5.8920221,7043.2129};
 						angles[]={0.0032018756,5.4105206,6.2607903};
 					};
 					side="West";
@@ -5910,27 +5970,40 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
-					id=1310;
-					type="B_Soldier_F";
-					atlOffset=9.5367432e-007;
+					id=1140;
+					type="B_Soldier_TL_F";
+					atlOffset=4.7683716e-007;
 				};
-				class Item16
+			};
+			class Attributes
+			{
+			};
+			id=1124;
+			atlOffset=4.7683716e-007;
+		};
+		class Item283
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=16;
+				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9525.457,5.6829557,7040.981};
-						angles[]={0.063913956,5.4105206,0.0023911009};
+						position[]={9525.457,5.6830044,7040.9805};
+						angles[]={0.063912325,5.4105206,0.0023920804};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
+						description="1: 소총수";
 						isPlayable=1;
 					};
 					id=1142;
@@ -5978,7 +6051,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item17
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5991,14 +6064,13 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
 					id=1143;
 					type="B_Soldier_F";
 					atlOffset=4.7683716e-007;
 				};
-				class Item18
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -6011,14 +6083,13 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
 					id=1144;
 					type="B_Soldier_F";
 					atlOffset=4.7683716e-007;
 				};
-				class Item19
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -6031,13 +6102,12 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
 					id=1145;
 					type="B_Soldier_F";
 				};
-				class Item20
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -6050,14 +6120,13 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
 					id=1146;
 					type="B_Soldier_F";
 					atlOffset=4.7683716e-007;
 				};
-				class Item21
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -6070,65 +6139,180 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="소총수";
 						isPlayable=1;
 					};
 					id=1147;
 					type="B_Soldier_F";
 					atlOffset=9.5367432e-007;
 				};
-			};
-			class Attributes
-			{
-			};
-			id=1124;
-			atlOffset=4.7683716e-007;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="_this setGroupID [_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="소총수";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item283
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=10;
-				class Item0
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9536.8145,5.8763895,7041.207};
-						angles[]={0.0031939524,5.4105206,0.063111104};
+						position[]={9525.457,5.8109832,7038.9805};
+						angles[]={0.063912325,5.4105206,0.0023920804};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot1";
-						description="조종사[지상분대 1분대 부터 사용가능]";
+						isPlayable=1;
+					};
+					id=1148;
+					type="B_Soldier_F";
+					atlOffset=4.7683716e-007;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9527.3516,5.8181667,7038.9395};
+						angles[]={0.063912325,5.4105206,0.0023920804};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						isPlayable=1;
+					};
+					id=1149;
+					type="B_Soldier_F";
+					atlOffset=4.7683716e-007;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9529.3301,5.8178849,7039.0176};
+						angles[]={0.063912325,5.4105206,0.0023920804};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						isPlayable=1;
+					};
+					id=1150;
+					type="B_Soldier_F";
+					atlOffset=4.7683716e-007;
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9531.1523,5.8222589,7039.0176};
+						angles[]={0.063912325,5.4105206,0.0023920804};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						isPlayable=1;
+					};
+					id=1151;
+					type="B_Soldier_F";
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9533.1309,5.8196344,7039.1328};
+						angles[]={0.063912325,5.4105206,0.0023920804};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						isPlayable=1;
+					};
+					id=1152;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9534.916,5.8239188,7039.1328};
+						angles[]={0.063912325,5.4105206,0.0023920804};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						isPlayable=1;
+					};
+					id=1153;
+					type="B_Soldier_F";
+					atlOffset=4.7683716e-007;
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9536.8145,5.8763895,7041.207};
+						angles[]={0.0032018756,5.4105206,0.063115984};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
+						description="13: 조종사";
 						isPlayable=1;
 					};
 					id=1154;
@@ -6176,509 +6360,66 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item1
+				class Item13
 				{
 					dataType="Object";
 					class PositionInfo
 					{
 						position[]={9538.7559,5.8917074,7041.1758};
-						angles[]={0.0031939524,5.4105206,6.2607927};
+						angles[]={0.0032018756,5.4105206,6.2607903};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot2";
-						description="조종사[지상분대 2분대 부터 사용가능]";
 						isPlayable=1;
 					};
 					id=1155;
 					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male02ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=2;
-					};
 				};
-				class Item2
+				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9536.8145,5.8827806,7039.209};
-						angles[]={0.0031939524,5.4105206,0.063111104};
+						position[]={9536.8145,5.882781,7039.209};
+						angles[]={0.0032018756,5.4105206,0.063115984};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot3";
-						description="조종사[지상분대 3분대 부터 사용가능]";
 						isPlayable=1;
 					};
 					id=1156;
 					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=2;
-					};
+					atlOffset=4.7683716e-007;
 				};
-				class Item3
+				class Item15
 				{
 					dataType="Object";
 					class PositionInfo
 					{
 						position[]={9538.7559,5.8981061,7039.1758};
-						angles[]={0.0031939524,5.4105206,6.2607927};
+						angles[]={0.0032018756,5.4105206,6.2607903};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot4";
-						description="조종사[지상분대 4분대 부터 사용가능]";
 						isPlayable=1;
 					};
 					id=1157;
 					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9529.3301,5.8178844,7039.0176};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot5";
-						description="조종사[지상분대 5분대 부터 사용가능]";
-						isPlayable=1;
-					};
-					id=1311;
-					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9531.1523,5.8222589,7039.0176};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot6";
-						description="조종사[지상분대 6분대 부터 사용가능]";
-						isPlayable=1;
-					};
-					id=1312;
-					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male10ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9533.1309,5.8196344,7039.1328};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot7";
-						description="조종사[지상분대 7분대 부터 사용가능]";
-						isPlayable=1;
-					};
-					id=1313;
-					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.05;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9534.916,5.8239183,7039.1328};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						name="pilot8";
-						description="조종사[지상분대 8분대 부터 사용가능]";
-						isPlayable=1;
-					};
-					id=1314;
-					type="B_Pilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male10ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9525.457,5.8109832,7038.9805};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="무인장비 운용병";
-						isPlayable=1;
-					};
-					id=1315;
-					type="B_soldier_UAV_F";
-					atlOffset=4.7683716e-007;
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9527.3516,5.8181672,7038.9395};
-						angles[]={0.063913956,5.4105206,0.0023911009};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-						init="removeallWeapons this; removebackpack this;" \n "showHud true;";
-						description="무인장비 운용병";
-						isPlayable=1;
-					};
-					id=1316;
-					type="B_soldier_UAV_F";
-					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=1141;
-			atlOffset=9.5367432e-007;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="_this setGroupID [_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="조종사";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 		class Item284
 		{
@@ -6700,7 +6441,7 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
+						description="1: 공병 - 장비 수리 및 폭발물 해체 가능 (툴킷 필요)";
 						isPlayable=1;
 					};
 					id=1159;
@@ -6762,7 +6503,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1160;
@@ -6782,7 +6522,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1161;
@@ -6802,7 +6541,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1162;
@@ -6822,7 +6560,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1163;
@@ -6842,7 +6579,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1164;
@@ -6862,7 +6598,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1165;
@@ -6882,7 +6617,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1166;
@@ -6901,7 +6635,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1167;
@@ -6921,7 +6654,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1168;
@@ -6941,7 +6673,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1169;
@@ -6960,7 +6691,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1170;
@@ -6980,7 +6710,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1171;
@@ -7000,7 +6729,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1172;
@@ -7020,7 +6748,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1173;
@@ -7040,7 +6767,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;" \n "";
-						description="공병";
 						isPlayable=1;
 					};
 					id=1174;
@@ -7053,29 +6779,6 @@ class Mission
 			};
 			id=1158;
 			atlOffset=0.016991138;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="_this setGroupID [_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="공병";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 		class Item285
 		{
@@ -7097,7 +6800,7 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
+						description="1: 전투의무병 - 완벽 치료 가능 (메딕킷 필요)";
 						isPlayable=1;
 					};
 					id=1176;
@@ -7159,7 +6862,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1177;
@@ -7179,7 +6881,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1178;
@@ -7198,7 +6899,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1179;
@@ -7218,7 +6918,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1180;
@@ -7238,7 +6937,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1181;
@@ -7258,7 +6956,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1182;
@@ -7277,7 +6974,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1183;
@@ -7297,7 +6993,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1184;
@@ -7317,7 +7012,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1185;
@@ -7336,7 +7030,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1186;
@@ -7355,7 +7048,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1187;
@@ -7375,7 +7067,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1188;
@@ -7395,7 +7086,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1189;
@@ -7415,7 +7105,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1190;
@@ -7435,7 +7124,6 @@ class Mission
 					class Attributes
 					{
 						init="removeallWeapons this; removebackpack this;";
-						description="전투의무병";
 						isPlayable=1;
 					};
 					id=1191;
@@ -7447,29 +7135,6 @@ class Mission
 			};
 			id=1175;
 			atlOffset=0.10798693;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="_this setGroupID [_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="전투의무병";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 		class Item286
 		{
@@ -7483,8 +7148,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9531.668,5.5317903,7047.2598};
-						angles[]={0.0031939524,5.3542337,0.063111104};
+						position[]={9531.668,5.5317907,7047.2598};
+						angles[]={0.0032018756,5.3542337,0.063115984};
 					};
 					side="West";
 					flags=6;
@@ -7494,12 +7159,13 @@ class Mission
 						rank="COLONEL";
 						init="removeallWeapons this; removebackpack this;";
 						name="commandant";
-						description="FOB이전 및 권한설정용으로만 사용";
+						description="1: 지휘관 - FOB이전 및 권한설정용으로만 사용";
 						isPlayer=1;
 						isPlayable=1;
 					};
 					id=1193;
 					type="B_officer_F";
+					atlOffset=4.7683716e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7548,6 +7214,7 @@ class Mission
 			{
 			};
 			id=1192;
+			atlOffset=4.7683716e-007;
 		};
 		class Item287
 		{
@@ -9340,39 +9007,6 @@ class Mission
 			id=1275;
 			atlOffset=13.471275;
 		};
-		class Item357
-		{
-			dataType="Marker";
-			position[]={5422.0151,-234.27237,10058.192};
-			name="tower_1_1_7_1_32";
-			text="Radio Tower";
-			type="loc_Transmitter";
-			colorName="ColorEAST";
-			id=1282;
-			atlOffset=-370.37024;
-		};
-		class Item358
-		{
-			dataType="Marker";
-			position[]={7858.2148,199.814,7526.52};
-			name="capture_13_1_2_39";
-			text="Sawmill";
-			type="n_art";
-			colorName="ColorEAST";
-			id=1283;
-			atlOffset=-7.6293945e-005;
-		};
-		class Item359
-		{
-			dataType="Marker";
-			position[]={7654.3711,-344.8862,3674.3264};
-			name="tower_1_1_7_1_33";
-			text="Radio Tower";
-			type="loc_Transmitter";
-			colorName="ColorEAST";
-			id=1285;
-			atlOffset=-370.37024;
-		};
 	};
 	class Connections
 	{
@@ -9476,7 +9110,7 @@ class Mission
 			class Item9
 			{
 				linkID=9;
-				item0=1316;
+				item0=1149;
 				item1=1147;
 				class CustomData
 				{
@@ -9486,7 +9120,7 @@ class Mission
 			class Item10
 			{
 				linkID=10;
-				item0=1311;
+				item0=1150;
 				item1=1147;
 				class CustomData
 				{
@@ -9496,7 +9130,7 @@ class Mission
 			class Item11
 			{
 				linkID=11;
-				item0=1315;
+				item0=1148;
 				item1=1147;
 				class CustomData
 				{

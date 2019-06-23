@@ -45,11 +45,4 @@ class CfgDebriefing
 		description = "Global Mobilization DLC를 해제하고 다시 접속해주시기 바랍니다.";
 		pictureBackground = "jld.paa";
 	};
-	class End3
-	{
-		title =	"인원 부족";
-		subtitle = "조종사 인원이 초과하였습니다.";
-		description = "최대 항공장비 조작인원수는 지상분대 수의 합을 넘을 수 없습니다.";
-		pictureBackground = "jld.paa";
-	};
 };

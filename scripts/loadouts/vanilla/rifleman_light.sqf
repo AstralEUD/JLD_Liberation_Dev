@@ -20,6 +20,5 @@ _unit addGoggles "G_Bandanna_beast";
 
 _unit addWeapon "arifle_Mk20C_F";
 _unit addWeapon "hgun_P07_F";
-
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
