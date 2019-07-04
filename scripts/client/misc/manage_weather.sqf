@@ -1,5 +1,11 @@
 //client weather
 
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+
 waitUntil { !isNil "chosen_weather" };
 
 while { true } do {
@@ -11,3 +17,10 @@ while { true } do {
 	sleep 5;
 	systemChat "cls weather";
 };
+
+
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!
+//no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!no use!!!!

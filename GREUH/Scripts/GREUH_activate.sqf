@@ -5,11 +5,11 @@ waitUntil { alive player };
 desiredviewdistance_inf = viewDistance;
 desiredviewdistance_veh = viewDistance;
 desiredviewdistance_obj = 75;
-desired_fps = 0;
-show_teammates = false;
-show_nametags = false;
-show_platoon = false;
-desired_vehvolume = 100;
+desired_fps = 50;
+show_teammates = true;
+show_nametags = true;
+show_platoon = true;
+desired_vehvolume = 10;
 
 greuh_options_profile = profileNamespace getVariable "GREUH_OPTIONS_PROFILE";
 if ( !isNil "greuh_options_profile" ) then {
@@ -21,19 +21,19 @@ if ( !isNil "greuh_options_profile" ) then {
 	if ( count greuh_options_profile > 5 ) then {
 		desired_vehvolume = greuh_options_profile select 5;
 		if ( isNil "desired_vehvolume" ) then {
-			desired_vehvolume = 100;
+			desired_vehvolume = 10;
 		};
 	};
 	if ( count greuh_options_profile > 6 ) then {
 		show_nametags = greuh_options_profile select 6;
 		if ( isNil "show_nametags" ) then {
-			show_nametags = false;
+			show_nametags = true;
 		};
 	};
 	if ( count greuh_options_profile > 7) then {
 		desired_fps = greuh_options_profile select 7;
 		if ( isNil "desired_fps" ) then {
-			desired_fps = 0;
+			desired_fps = 50;
 		};
 	};
 };

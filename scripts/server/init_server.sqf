@@ -77,3 +77,11 @@ wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\se
 		deleteVehicle _x;
 	};
 } foreach allUnits;
+
+[] spawn {
+	while{true}do{
+		waitUntil{DateToNumber Date > DateToNumber [2035,7,11,12,00] || DateToNumber Date < DateToNumber [2035,7,9,12,00]};
+		//systemChat "현재 시각은 낮 12시입니다.";
+		setDate [2035,7,9,12,00];
+	};
+};

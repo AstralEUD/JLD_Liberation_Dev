@@ -142,7 +142,7 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 		GRLIB_player_scores = greuh_liberation_savegame select 15;
 	};
 
-	setDate [ 2045, 6, 6, time_of_day, 0];
+	setDate [ 2035, 7, 10, time_of_day, 0];
 
 	_correct_fobs = [];
 	{

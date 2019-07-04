@@ -622,7 +622,7 @@ class GREUH_Menu {
 		h = 0.03 * safezoneH;
 		colorBackground[] = COLOR_NOALPHA;
 		sizeEx = 0.018 * safezoneH;
-		text = "설정된 프레임 고정";
+		text = "최소 FPS 설정(높을수록 프레임증가, 낮을수록 가시거리증가)";
 	};
 	class GREUH_FPSEdit {
 		idc = 960;
@@ -652,7 +652,7 @@ class GREUH_Menu {
 	class GREUH_WorldQuality : GREUH_Label {
 		idc = 810;
 		y = ((BASE_Y + 0.66) * safezoneH) + safezoneY;
-		text = "세분화된 지형그래픽 설정";
+		text = "수풀 및 지형 디테일";
 	};
 	class GREUH_ButtonWorld : GREUH_ButtonGeneric {
 		w = ((0.2 * safezoneW) / 4) - BORDERSIZE;
@@ -751,7 +751,7 @@ class GREUH_Menu {
 	class GREUH_VehSound : GREUH_Label {
 		idc = 1101;
 		y = ((BASE_Y + 0.74) * safezoneH) + safezoneY;
-		text = "이어플러그 볼륨 조절[단축키 : 행동 1 취하기]";
+		text = "이어플러그 볼륨 조절[착용: Window 버튼]";
 	};
 	class GREUH_SliderVehSound {
 		idc = 1102;

@@ -1,6 +1,8 @@
 _nodamage = []; 
 {_nodamage pushBack (_x select 0);}forEach buildings;
 
+waitUntil{!isNil "GRLIB_all_fobs"};
+
 while{true}do{
 	{ 
 		_pos = _x; 

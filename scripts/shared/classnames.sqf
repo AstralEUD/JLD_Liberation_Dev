@@ -22,7 +22,7 @@ then {
 };
 if (isNil "Respawn_truck_typename")
 then {
-	Respawn_truck_typename = "B_Truck_01_box_F";
+	Respawn_truck_typename = "B_T_VTOL_01_vehicle_F";
 };
 if (isNil "huron_typename")
 then {
@@ -165,7 +165,8 @@ air_vehicles = [
 ["B_Plane_Fighter_01_Cluster_F", 0, 250, 250],
 ["B_Plane_Fighter_01_F", 0, 300, 250],
 ["B_T_VTOL_01_infantry_F", 0, 30, 300],
-["B_T_VTOL_01_vehicle_F", 0, 30, 300],
+[Respawn_truck_typename, 100, 250, 300],
+//["B_T_VTOL_01_vehicle_F", 0, 30, 300],
 ["B_T_VTOL_01_armed_F", 0, 500, 300],
 ["B_UAV_06_F", 200, 10, 10],
 ["B_UAV_01_F", 200, 50, 20],
@@ -220,7 +221,8 @@ else {
 	static_vehicles = static_vehicles + static_vehicles_extension;
 };
 
-buildings = [["Windsock_01_F",0,0,0],
+buildings = [
+["Windsock_01_F",0,0,0],
 ["PortableHelipadLight_01_blue_F",0,0,0],
 ["MapBoard_altis_F",0,0,0],
 ["Land_Workbench_01_F",0,0,0],
@@ -286,9 +288,9 @@ else {
 
 support_vehicles = [
 [Arsenal_typename, 100, 250, 0],
-//[Respawn_truck_typename, 100, 250, 0],
 [FOB_box_typename, 0, 500, 0],
 [FOB_truck_typename, 50, 500, 0],
+//[Respawn_truck_typename, 100, 250, 50],
 ["B_APC_Tracked_01_CRV_F", 150, 500, 0],
 ["B_Slingload_01_Medevac_F", 50, 100, 50],
 ["B_Slingload_01_Repair_F", 50, 100, 50],

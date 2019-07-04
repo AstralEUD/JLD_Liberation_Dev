@@ -5,7 +5,10 @@ Test_Menu_Add = {
 	_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyDown", {
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
 		if(_key==0xDB) then {
-			if(isNull(findDisplay 100))then{createDialog "Ctme"};
+			if(isNull(findDisplay 100))then{
+				if(!visibleMap)then{setMousePosition [0.5,0.5]};
+				createDialog "Ctme";
+			};
 		}
 	}
 	];
@@ -13,12 +16,12 @@ Test_Menu_Add = {
 
 Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp",{
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
-		if(_key==0xDB) then {closeDialog 100;call Test_Menu_Add;setMousePosition [0.5,0.5];};	
+		if(_key==0xDB) then {closeDialog 100;};	
 	}]
 };
 
 Test_Earplug = {
-	if(soundVolume!=( desired_vehvolume / 100.0 ))then{1 fadeSound ( desired_vehvolume / 100.0 )}else{1 fadeSound 1};
+	if(soundVolume!=( desired_vehvolume / 100.0 ))then{1 fadeSound ( desired_vehvolume / 100.0 );systemChat "귀마개를 착용하였습니다!";}else{1 fadeSound 1;systemChat "귀마개를 해제하였습니다!";};
 };
 
 Test_PlayAnim = {
@@ -41,7 +44,6 @@ Test_PlayAnim = {
 	};
 };
 
-systemChat "윈도우키 메뉴 스크립트 준비중!3";
 waitUntil{!isNull findDisplay 46};
 
 uiSleep 3;

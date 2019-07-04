@@ -71,7 +71,7 @@ do {
 		};
 	};
 
-	if ((_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && GRLIB_halo_param > 0 && resources_ammo > 50 )
+	if ((_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && GRLIB_halo_param > 0 && resources_ammo > 50 && !(player call groupType in [-1,3]))
 	then {
 		if (_idact_halo == -1)
 		then {

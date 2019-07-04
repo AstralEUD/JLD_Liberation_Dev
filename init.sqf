@@ -30,7 +30,7 @@ if (!isDedicated && hasInterface) then {
 	waitUntil { alive player };
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
-	setViewDistance 1500;
+	setViewDistance 1300;
 };
 
 //ADV_zeus(zeus moddule name = adminZeus)
@@ -66,16 +66,23 @@ null=[]execVM"CRS\init.sqf";
 //lgi load
 [] execVM "IgiLoad\IgiLoadInit.sqf";
 
-//VAM
-[] execVM "VAM\VAM_init.sqf";
-
-
 //Saky scripts
-if(hasInterface)then{[] execVM "jld\itemblackList.sqf";};
-[] execVM "ctmenu\ctmenu.sqf";
-[] call compileFinal preprocessFileLineNumbers "jld\rule_enforcer.sqf";
-[] call compileFinal preprocessFileLineNumbers "artyCalc\artyCalc.sqf";
-[] call compileFinal preprocessFileLineNumbers "jld\loadMortar.sqf";
+if(hasInterface)then{
+	[] execVM "jld\itemblackList.sqf";	
+	[] execVM "jld\rule_enforcer.sqf";
+	[] execVM "jld\loadMortar.sqf";
+	[] execVM "ctmenu\ctmenu.sqf";
+	[] execVM "artyCalc\artyCalc.sqf";
+	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
+	[] execVM "jld\tankboy.sqf";
+};
+[] execVM "jld\radioChannels.sqf";
+
+player addEventHandler ["Respawn", {
+	params ["_unit", "_corpse"];
+	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
+	[] execVM "jld\tankboy.sqf";
+}];
 
 //FFE
 nul = [] execVM "RYD_FFE\FFE.sqf";

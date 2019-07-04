@@ -2,12 +2,12 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>Jeonlado_Liberation_V_0.946M</Original>
-            <Korean>전라도_리버레이션_V_0.946M</Korean>
+            <Original>Jeonlado_Liberation_V_0.950M</Original>
+            <Korean>전라도_리버레이션_V_0.950M</Korean>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.946M</Original>
-            <Korean>v0.946M</Korean>
+            <Original>v0.950M</Original>
+            <Korean>v0.950M</Korean>
         </Key>
         <Key ID="STR_MISSION_DESCRIPTION">
             <Original>With the power of Freedom and Democracy and a little international support you shall Liberate Tanoa from Syndikat and CSAT oppression.</Original>
@@ -2799,276 +2799,68 @@
 				<Original>Vehicle Appearance Manager</Original>
 				<Korean>차량 형상 관리자</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_OPTIONS">
-				<Original>Options</Original>
-				<Korean>옵션</Korean>
+			<Key ID="STR_VAM_RESET_VEHICLE">
+				<Original>Reset</Original>
+				<Korean>초기화</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_CHANGE_CAMOUFLAGE">
-				<Original>Change camouflage</Original>
-				<Korean>위장 변경</Korean>
+			<Key ID="STR_VAM_CONFIRM_MENU">
+				<Original>Confirm</Original>
+				<Korean>확인</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_CHANGE_COMPONENT">
-				<Original>Change component</Original>
-				<Korean>구성품 변경</Korean>
-			</Key>
-			<Key ID="STR_VAM_SUB_RESET_VEHICLE">
-				<Original>Reset Vehicle</Original>
-				<Korean>차량 초기화</Korean>
-			</Key>
-			<Key ID="STR_VAM_SUB_BACK">
-				<Original>Back</Original>
-				<Korean>뒤로</Korean>
-			</Key>
-			<Key ID="STR_VAM_CLOSE_MENU">
-				<Original>Close menu</Original>
-				<Korean>메뉴 닫기</Korean>
+			<Key ID="STR_VAM_CURRENT_VEHICLE">
+				<Original>Current Vehicle :</Original>
+				<Korean>현  재    차  량 :</Korean>
 			</Key>
 			<Key ID="STR_VAM_FOB_CONDITION_CHECK_FAILED">
 				<Original>You should be in %1m from FOB.)</Original>
 				<Korean>FOB에서 %1m 안에 있어야 합니다.</Korean>
 			</Key>
-			<Key ID="STR_VAM_NOT_DRIVER_CAMOUFLAGE">
-				<Original>To change camouflage, you must be on driver seat.</Original>
-				<Korean>위장을 변경하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
-			</Key>
-			<Key ID="STR_VAM_NOT_DRIVER_COMPONENT">
-				<Original>To change component, you must be on driver seat.</Original>
-				<Korean>구성품을 변경하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
-			</Key>
-			<Key ID="STR_VAM_NOT_DRIVER_RESET">
-				<Original>To reset vehicle appearance, you must be on driver seat.</Original>
-				<Korean>차량을 초기화하려면 조종수/운전수석에\n 탑승해야 합니다.</Korean>
-			</Key>
 			<Key ID="STR_VAM_COMPLETE_RESET">
 				<Original>Reset complete</Original>
 				<Korean>초기화 완료</Korean>
 			</Key>
-			<Key ID="STR_VAM_NOT_SUPPPORT_OR_NO_OPTION_CAMOUFLAGE">
-				<Original>This vehicle is not supported.\nOR\nThere is no camouflage option\nfor this vehicle.</Original>
-				<Korean>이 차량은 지원하지 않습니다.\n또는\n변경할 위장이 없습니다.</Korean>
-			</Key>
-			<Key ID="STR_VAM_NOT_SUPPPORT_OR_NO_OPTION_COMPONENT">
-				<Original>This vehicle is not supported.\nOR\nThere is no component option\nfor this vehicle.</Original>
-				<Korean>이 차량은 지원하지 않습니다.\n또는\n변경할 구성품이 없습니다.</Korean>
-			</Key>
-			<Key ID="STR_VAM_SUB_CAMOUFLAGE">
+			<Key ID="STR_VAM_CAMOUFLAGE">
 				<Original>Camoufluge</Original>
 				<Korean>위장</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_COMPONENT">
+			<Key ID="STR_VAM_COMPONENT">
 				<Original>Component</Original>
 				<Korean>구성품</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_CAMOUFLAGE_APPLIED">
-				<Original>Camouflage applied</Original>
-				<Korean>위장 적용됨</Korean>
+			<Key ID="STR_VAM_NO_CAMOUFLAGE">
+				<Original>There is no camouflage.</Original>
+				<Korean>위장이 없습니다.</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_COMPONENT_APPLIED">
-				<Original>Component applied</Original>
-				<Korean>구성품 적용됨</Korean>
+			<Key ID="STR_VAM_NO_COMPONENT">
+				<Original>There is no component.</Original>
+				<Korean>구성품이 없습니다.</Korean>
 			</Key>
-			<Key ID="STR_VAM_SUB_COMPONENT_APPLIED_WARNING">
-				<Original>Component applied\n But using old Marid isn't recommended.\n Please contact with your server admin.</Original>
-				<Korean>구성품 적용됨\n 예전 마리드를 사용하는 것은 권장되지 않습니다.\n 해당 서버 관리자와 연락하길 바랍니다.</Korean>
+			<Key ID="STR_VAM_MARID_V1_NOTICE">
+				<Original>Your Marid is outdated one.\nVehicle component setup may not be loaded next time.\nPlease contact with your server admin.</Original>
+				<Korean>당신의 마리드는 오래된 것입니다.\n다음 번에 차량 구성품 설정을 불러올 수 없을 것입니다.\n해당 서버 관리자와 연락을 취해보십시오.</Korean>
 			</Key>
 <!-- Camouflage/위장 -->
-			<Key ID="STR_VAM_AAF_CAMO">
-				<Original>AAF</Original>
-				<Korean>AAF</Korean>
-			</Key>
-			<Key ID="STR_VAM_AAF_JUNGLE_CAMONET_CAMO">
-				<Original>AAF (Jungle Camo Net)</Original>
-				<Korean>AAF (정글 위장망)</Korean>
-			</Key>
-			<Key ID="STR_VAM_AAF_DESERT_CAMONET_CAMO">
-				<Original>AAF (Desert Camo Net)</Original>
-				<Korean>AAF (사막 위장망)</Korean>
-			</Key>
-			<Key ID="STR_VAM_GUERILLA_OLIVE_WHITE_CAMO">
-				<Original>Guerilla (Olive, White Stripe)</Original>
-				<Korean>게릴라 (올리브색, 하얀 무늬)</Korean>
-			</Key>
-			<Key ID="STR_VAM_GUERILLA_GREEN_BLACK_CAMO">
-				<Original>Guerilla (Green, Black Stripe)</Original>
-				<Korean>게릴라 (녹색, 검은 무늬)</Korean>
-			</Key>
-			<Key ID="STR_VAM_GUERILLA_DESERT_CAMO">
-				<Original>Guerilla (Desert)</Original>
-				<Korean>게릴라 (사막색)</Korean>
-			</Key>
-			<Key ID="STR_VAM_HEX_ARID_CAMO">
-				<Original>Hex</Original>
-				<Korean>육각</Korean>
-			</Key>
-			<Key ID="STR_VAM_GREEN_HEX_CAMO">
-				<Original>Green Hex</Original>
-				<Korean>녹색 육각</Korean>
-			</Key>
-			<Key ID="STR_VAM_SAND_CAMO">
-				<Original>Sand</Original>
-				<Korean>모래색</Korean>
-			</Key>
-			<Key ID="STR_VAM_OLIVE_CAMO">
-				<Original>Olive</Original>
-				<Korean>올리브색</Korean>
-			</Key>
-			<Key ID="STR_VAM_DAZZLE_CAMO">
-				<Original>Dazzle</Original>
-				<Korean>위장 도장</Korean>
-			</Key>
-			<Key ID="STR_VAM_BLACK_CAMO">
-				<Original>Black</Original>
-				<Korean>검정색</Korean>
-			</Key>
-			<Key ID="STR_VAM_GREY_CAMO">
-				<Original>Grey</Original>
-				<Korean>회색</Korean>
+			<Key ID="STR_VAM_BLUFOR_CAMO">
+				<Original>BLUFOR</Original>
+				<Korean>청군</Korean>
 			</Key>
 			<Key ID="STR_VAM_GREEN_CAMO">
 				<Original>Green</Original>
 				<Korean>녹색</Korean>
 			</Key>
-			<Key ID="STR_VAM_JUNGLE_CAMO">
-				<Original>Jungle</Original>
-				<Korean>정글</Korean>
+			<Key ID="STR_VAM_BLACK_CAMO">
+				<Original>Black</Original>
+				<Korean>검정색</Korean>
 			</Key>
-			<Key ID="STR_VAM_BLUFOR_CAMO">
-				<Original>BLUFOR (Sand)</Original>
-				<Korean>청군 (모래색)</Korean>
-			</Key>
-			<Key ID="STR_VAM_OPFOR_CAMO">
-				<Original>OPFOR (Hex)</Original>
-				<Korean>적군 (육각)</Korean>
-			</Key>
-			<Key ID="STR_VAM_DIGI_GREEN_CAMO">
-				<Original>Digital Green</Original>
-				<Korean>디지털 녹색</Korean>
-			</Key>
-			<Key ID="STR_VAM_DIGI_GREY_CAMO">
-				<Original>Digital Grey</Original>
-				<Korean>디지털 회색</Korean>
-			</Key>
-			<Key ID="STR_VAM_IDAP_CAMO">
-				<Original>IDAP</Original>
-				<Korean>IDAP</Korean>
-			</Key>
-			<Key ID="STR_VAM_ION_CAMO">
-				<Original>ION</Original>
-				<Korean>ION</Korean>
-			</Key>
-			<Key ID="STR_VAM_DAHOMAN_CAMO">
-				<Original>Dahoman</Original>
-				<Korean>Dahoman</Korean>
-			</Key>
-			<Key ID="STR_VAM_BLACK_CUSTOM_CAMO">
-				<Original>Black Custom</Original>
-				<Korean>검정 특별도장</Korean>
-			</Key>
-			<Key ID="STR_VAM_BLUE_CAMO">
-				<Original>Blue</Original>
-				<Korean>파란색</Korean>
-			</Key>
-			<Key ID="STR_VAM_DARK_GREY_CAMO">
-				<Original>Dark Grey</Original>
-				<Korean>어두운 회색</Korean>
-			</Key>
-			<Key ID="STR_VAM_DARK_GREY_C_CAMO">
-				<Original>Dark Grey [Camo]</Original>
-				<Korean>어두운 회색 [위장]</Korean>
+			<Key ID="STR_VAM_AAF_CAMO">
+				<Original>AAF</Original>
+				<Korean>AAF</Korean>
 			</Key>
 			<Key ID="STR_VAM_DARK_GREEN_CAMO">
 				<Original>Dark Green</Original>
 				<Korean>어두운 녹색</Korean>
 			</Key>
-<!-- Component/구성품 -->
-			<Key ID="STR_VAM_NONE_COMP">
-				<Original>None</Original>
-				<Korean>전체 해제</Korean>
-			</Key>
-			<Key ID="STR_VAM_CAMONET_HULL_COMP">
-				<Original>Camouflage Net (Hull)</Original>
-				<Korean>위장망 (차체)</Korean>
-			</Key>
-			<Key ID="STR_VAM_CAMONET_TURRET_COMP">
-				<Original>Camouflage Net (Turret)</Original>
-				<Korean>위장망 (포탑)</Korean>
-			</Key>
-			<Key ID="STR_VAM_EXTERNAL_BAG_1_COMP">
-				<Original>External Bags 1</Original>
-				<Korean>외부 군장 1</Korean>
-			</Key>
-			<Key ID="STR_VAM_EXTERNAL_BAG_2_COMP">
-				<Original>External Bags 2</Original>
-				<Korean>외부 군장 2</Korean>
-			</Key>
-			<Key ID="STR_VAM_CANVAS_COVER_COMP">
-				<Original>Canvas Cover (Hull)</Original>
-				<Korean>캔버스 커버 (차체)</Korean>
-			</Key>
-			<Key ID="STR_VAM_AMMO_BOXES_COMP">
-				<Original>Ammo Boxes</Original>
-				<Korean>탄통</Korean>
-			</Key>
-			<Key ID="STR_VAM_CANISTERS_COMP">
-				<Original>Canisters</Original>
-				<Korean>유관</Korean>
-			</Key>
-			<Key ID="STR_VAM_EXTRA_TRACK_COMP">
-				<Original>Extra Tracks, Road Wheel</Original>
-				<Korean>예비 궤도, 보기륜</Korean>
-			</Key>
-			<Key ID="STR_VAM_EXTRA_WHEELS_COMP">
-				<Original>Extra Road Wheels</Original>
-				<Korean>예비 보기륜</Korean>
-			</Key>
-			<Key ID="STR_VAM_TOOLS_COMP">
-				<Original>Tools</Original>
-				<Korean>외부 공구</Korean>
-			</Key>
-			<Key ID="STR_VAM_WOOD_LOG_COMP">
-				<Original>Wood Log</Original>
-				<Korean>통나무</Korean>
-			</Key>
-			<Key ID="STR_VAM_DOOR_1_COMP">
-				<Original>Door 1</Original>
-				<Korean>문 1번</Korean>
-			</Key>
-			<Key ID="STR_VAM_DOOR_2_COMP">
-				<Original>Door 2</Original>
-				<Korean>문 2번</Korean>
-			</Key>
-			<Key ID="STR_VAM_DOOR_3_COMP">
-				<Original>Door 3</Original>
-				<Korean>문 3번</Korean>
-			</Key>
-			<Key ID="STR_VAM_DOOR_4_COMP">
-				<Original>Door 4</Original>
-				<Korean>문 4번</Korean>
-			</Key>
-			<Key ID="STR_VAM_DOOR_COMP">
-				<Original>Door</Original>
-				<Korean>문</Korean>
-			</Key>
-			<Key ID="STR_VAM_ADD_ARMOR_HULL_COMP">
-				<Original>Additonal Armor (Hull)</Original>
-				<Korean>추가 장갑 (차체)</Korean>
-			</Key>
-			<Key ID="STR_VAM_ADD_ARMOR_TURRET_COMP">
-				<Original>Additonal Armor (Turret)</Original>
-				<Korean>추가 장갑 (포탑)</Korean>
-			</Key>
-			<Key ID="STR_VAM_SLAT_ARMOR_HULL_COMP">
-				<Original>Slat Armor (Hull)</Original>
-				<Korean>슬랫 아머 (차체)</Korean>
-			</Key>
-			<Key ID="STR_VAM_SLAT_ARMOR_TURRET_COMP">
-				<Original>Slat Armor (Turret)</Original>
-				<Korean>슬랫 아머 (포탑)</Korean>
-			</Key>
-			<Key ID="STR_VAM_EVERYTHING_COMP">
-				<Original>Apply everyting</Original>
-				<Korean>모두 적용</Korean>
-			</Key>
 <!-- VAM LINE END -->
 	</Package>
 </Project>
+
