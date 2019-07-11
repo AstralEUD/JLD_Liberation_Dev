@@ -10,25 +10,25 @@ class Params
 		title = $STR_PARAMS_UNITCAP;
 		values[] = {0.5,0.75,1,1.25,1.5,2};
 		texts[] = {$STR_PARAMS_UNITCAP1,$STR_PARAMS_UNITCAP2,$STR_PARAMS_UNITCAP3,$STR_PARAMS_UNITCAP4,$STR_PARAMS_UNITCAP5,$STR_PARAMS_UNITCAP6};
-		default = 1.25;
+		default = 0.75;
 	};
 	class Difficulty {
 		title = $STR_PARAMS_DIFFICULTY;
 		values[] = { 0.5, 0.75, 1, 1.25, 1.5, 2, 4, 10 };
 		texts[] = { $STR_PARAMS_DIFFICULTY1, $STR_PARAMS_DIFFICULTY2, $STR_PARAMS_DIFFICULTY3, $STR_PARAMS_DIFFICULTY4, $STR_PARAMS_DIFFICULTY5, $STR_PARAMS_DIFFICULTY6, $STR_PARAMS_DIFFICULTY7, $STR_PARAMS_DIFFICULTY8 };
-		default = 1;
+		default = 1.25;
 	};
 	class Aggressivity{
 		title = $STR_AGGRESSIVITY_PARAM;
 		values[] = {0.25,0.5,1,2,4};
 		texts[] = {$STR_AGGRESSIVITY_PARAM0, $STR_AGGRESSIVITY_PARAM1,$STR_AGGRESSIVITY_PARAM2,$STR_AGGRESSIVITY_PARAM3,$STR_AGGRESSIVITY_PARAM4};
-		default = 1.25;
+		default = 2;
 	};
 	class AdaptToPlayercount{
 		title = $STR_PARAM_ADAPT_TO_PLAYERCOUNT;
 		values[] = {1,0};
 		texts[] = {$STR_PARAMS_ENABLED,$STR_PARAMS_DISABLED};
-		default = 0;
+		default = 1;
 	};
 	class DayDuration {
 		title = $STR_PARAMS_DAYDURATION;
@@ -40,7 +40,7 @@ class Params
 		title = $STR_SHORTER_NIGHTS_PARAM;
 		values[] = {1,0};
 		texts[] = { $STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED };
-		default = 1;
+		default = 0;
 	};
 	class Weather {
 		title = $STR_WEATHER_PARAM;
@@ -124,13 +124,13 @@ class Params
 		title = $STR_PARAM_FOBS_COUNT;
 		values[] = {3,5,7,10,15,20,26};
 		texts[] = {3,5,7,10,15,20,26};
-		default = 5;
+		default = 3;
 	};
 	class MaxSquadSize{
 		title = $STR_PARAM_SQUAD_SIZE;
 		values[] = {0,1,2,4,6,8,10,12,16,20,24,30,36};
 		texts[] = {0,1,2,4,6,8,10,12,16,20,24,30,36};
-		default = 3;
+		default = 0;
 	};
 	class Space2 {
 		title = "";

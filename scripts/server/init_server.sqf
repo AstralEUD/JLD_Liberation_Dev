@@ -85,3 +85,10 @@ wait_to_spawn_sector = compileFinal preprocessFileLineNumbers "scripts\server\se
 		setDate [2035,7,9,12,00];
 	};
 };
+
+[] spawn {
+	while{true}do{
+		sleep 300;
+		{if(count units _x==0)then{deleteGroup _x};}forEach allGroups;
+	};
+};

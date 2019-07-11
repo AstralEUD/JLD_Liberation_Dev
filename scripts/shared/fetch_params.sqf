@@ -1,12 +1,14 @@
 if ( isMultiplayer ) then {
-	GRLIB_difficulty_modifier = ["Difficulty",1] call bis_fnc_getParamValue;
+	//GRLIB_difficulty_modifier = ["Difficulty",1.25] call bis_fnc_getParamValue;
+	GRLIB_difficulty_modifier = 1.25;
 	GRLIB_time_factor = ["DayDuration",12] call bis_fnc_getParamValue;
 	GRLIB_resources_multiplier = ["ResourcesMultiplier",1] call bis_fnc_getParamValue;
 	GRLIB_fatigue = ["Fatigue",1] call bis_fnc_getParamValue;
 	GRLIB_revive = ["Revive",3] call bis_fnc_getParamValue;
 	GRLIB_introduction = ["Introduction",1] call bis_fnc_getParamValue;
 	GRLIB_deployment_cinematic = ["DeploymentCinematic",1] call bis_fnc_getParamValue;
-	GRLIB_unitcap = ["Unitcap",1] call bis_fnc_getParamValue;
+	//GRLIB_unitcap = ["Unitcap",0.75] call bis_fnc_getParamValue;
+	GRLIB_unitcap = 0.75;
 	GRLIB_adaptive_opfor = ["AdaptToPlayercount",1] call bis_fnc_getParamValue;
 	GRLIB_civilian_activity = ["civilians",1] call bis_fnc_getParamValue;
 	GRLIB_teamkill_penalty = ["TeamkillPenalty",0] call bis_fnc_getParamValue;
@@ -29,7 +31,7 @@ if ( isMultiplayer ) then {
 	GRLIB_maximum_fobs = [ "MaximumFobs",26] call bis_fnc_getParamValue;
 	GRLIB_max_squad_size = ["MaxSquadSize",10] call bis_fnc_getParamValue;
 } else {
-	GRLIB_difficulty_modifier = 1;
+	GRLIB_difficulty_modifier = 1.25;
 	GRLIB_time_factor = 12;
 	GRLIB_resources_multiplier = 1;
 	GRLIB_fatigue = 1;
@@ -37,7 +39,7 @@ if ( isMultiplayer ) then {
 	GRLIB_introduction = 0;
 	GRLIB_deployment_cinematic = 0;
 	GRLIB_adaptive_opfor = 1;
-	GRLIB_unitcap = 1;
+	GRLIB_unitcap = 0.75;
 	GRLIB_civilian_activity = 1;
 	GRLIB_teamkill_penalty = 0;
 	GRLIB_build_first_fob = 0;

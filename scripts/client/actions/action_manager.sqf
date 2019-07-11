@@ -56,7 +56,7 @@ do {
 		};
 	};
 
-	if (((player distance lhd) < 200 || (player distance huronspawn) < 200) && alive player && vehicle player == player)
+	if ((_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
 	then {
 		if (_idact_tutorial == -1)
 		then {
@@ -86,7 +86,7 @@ do {
 		};
 	};
 
-	if ((_fobdistance < _distredeploy || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
+	if ((player call groupType != -1) && (_fobdistance < _distredeploy || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
 	then {
 		if (_idact_redeploy == -1)
 		then {
@@ -101,7 +101,7 @@ do {
 		};
 	};
 
-	if ((_fobdistance < _distredeploy || count _neararsenal != 0 || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
+	if ((player call groupType != -1) && (_fobdistance < _distredeploy || count _neararsenal != 0 || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
 	then {
 		if (_idact_arsenal == -1)
 		then {

@@ -1,6 +1,6 @@
 SeatSwitching = false;
 
-groupTags = ["[보병]", "[차량화]", "[기계화]", "[특수]", "[기갑]", "[포병]", "[해상]", "[전투]", "[기동]"];
+groupTags = ["[보병]", "[차량화1]", "[기계화1]", "[특수]", "[기갑]", "[포병1]", "[해상1]", "[전투]", "[기동]"];
 
 groupType = {
 	params ["_player"];
@@ -30,8 +30,8 @@ allowedVehicles = [
 [], //3특수
 [], //4기갑
 ["MBT_01_mlrs_base_F", "MBT_01_arty_base_F", "Truck_02_MRL_base_F", "MBT_02_arty_base_F"], //5포병 - 사라짐
-[], //6해상
-[], //7전투
+[], //6해상 X
+[], //7전투 
 []//8기동
 ];
 
@@ -44,7 +44,7 @@ isAllowedGetIn = {
 		switch (_groupType)
 		do {
 		case 0: {
-				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "Wheeled_APC_F"))
+				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "Wheeled_APC_F") || _vehicle isKindOf "Ship")
 				then {
 					_isAllowedGetIn = true;
 				};
@@ -60,7 +60,7 @@ isAllowedGetIn = {
 				then {
 					_isAllowedGetIn = true;
 				};
-			}; //2기계화
+			}; //2기계화 사라짐
 		case 3: {
 				if (_vehicle isKindOf "StaticWeapon")
 				then {
@@ -68,7 +68,7 @@ isAllowedGetIn = {
 				};
 			}; //3특수
 		case 4: {
-				if (_vehicle isKindOf "Tank" || _vehicle isKindOf "Truck_02_MRL_base_F")
+				if (_vehicle isKindOf "Tank" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "Wheeled_APC_F")
 				then {
 					_isAllowedGetIn = true;
 				};
@@ -84,7 +84,7 @@ isAllowedGetIn = {
 				then {
 					_isAllowedGetIn = true;
 				};
-			}; //6해상
+			}; //6해상 사라짐
 		case 7: {
 				if (_vehicle isKindOf "Air" || _vehicle isKindOf "Truck_F" || ( typeOf _vehicle == "B_APC_Tracked_01_CRV_F"))
 				then {
@@ -118,14 +118,15 @@ player addEventHandler["GetInMan", {
 				then {
 					moveOut _unit;
 					unassignVehicle player;
-					hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하시기 바랍니다.";
+					hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하기 바랍니다.";
 				}
 				else {
 					if (!([_unit call groupType, _vehicle] call isAllowedGetIn))
 					then {
 						moveOut _unit;
 						unassignVehicle player;
-						hintSilent "가입하신 분대에서 사용할 수 없는 장비입니다. 서버 규정을 확인하시기 바랍니다.";
+						hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용하기 바랍니다."; 
+						["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용하기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
 					};
 				};
 			};
@@ -159,7 +160,8 @@ isSwitchAllowed = {
 		}else{	
 			inGameUISetEventHandler ["Action", "
 	if (_this select 3 in ['MoveToCommander','MoveToDriver','MoveToGunner','MoveToPilot','MoveToTurret']) then {
-		hintSilent '적절한 분대태그를 사용하지 않아 해당 좌석을 이용할 수 없습니다.'; 
+		systemChat '현재 분대태그로는 탑승할 수 없는 좌석입니다. 객석으로 돌아갑니다.'; 
+		[""<t color='#ff0000' size = '0.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. 객석으로 돌아갑니다.</t>""] spawn BIS_fnc_dynamicText;
 		true
 	}"];
 		};
@@ -167,8 +169,14 @@ isSwitchAllowed = {
 	};
 };
 
-
-
+[] spawn {
+	while{true}do{
+		sleep 10;
+		if(player call groupType == -1) then {
+			["<t color='#ff0000' size = '0.55' >적절한 분대태그를 사용하지 않아 모든 기능이 제한됩니다.<br/>U키를 눌러 적절한 분대태그를 가진 분대에 가입하거나 생성하십시오.</t>",-1,-1,5] spawn BIS_fnc_dynamicText;
+		};
+	};
+};
 
 /*
 player addEventHandler["SeatSwitchedMan", {
@@ -211,7 +219,12 @@ PilotRestriction = {
 		sleep 1; 
 		if(call groundSquads < _minSquads)then{
 			if(vehicle player == player) then {
-				//hint formatText ["현재 지상분대수가 부족하여 하차후에 자동으로 로비로 나갑니다. 지상군으로 플레이 해주시기 바랍니다. 이 슬롯으로 플레이하기 위해선 최소 %1개의 지상분대가 있어야 합니다. 현재 지상분대 수는 %2분대입니다.",_minSquads,call groundSquads];
+				"No more pilots!" hintC [
+				str formatText ["이 슬롯으로 플레이하기 위해선 최소 %1개의 지상분대가 있어야 합니다.",_minSquads,call groundSquads],
+				str formatText ["현재 지상분대 수는 %2분대로, 최소 필요 분대수를 충족하지 못해 대기실로 돌아갑니다.",_minSquads,call groundSquads],
+				"지상분대로 플레이해주시면 감사드리겠습니다.",
+				"ESC를 눌러 이 창을 닫고 대기실로 돌아갑니다."
+				];
 				endMission "End3";
 			}else{
 				hint formatText ["이 슬롯으로 플레이하기 위해선 최소 %1분대의 지상분대가 있어야 합니다.현재 지상분대 수는 %2분대입니다.하차후에 자동으로 로비로 돌아갑니다.",_minSquads,call groundSquads];
@@ -221,6 +234,13 @@ PilotRestriction = {
 };
 
 
-if(typeOf player == "B_Pilot_F") then {_null = [{typeOf _x == "B_Pilot_F"} count allPlayers] spawn pilotRestriction;};
+if(typeOf player == "B_Pilot_F") then {
+	waitUntil{!isNull findDisplay 46};
+	uiSleep 3;
+	systemChat str formatText ["지상분대가 %1분대 미만이 되면 자동으로 대기실로 이동합니다. 현재 지상분대 수는 %2분대입니다.",{typeOf _x == "B_Pilot_F"} count allPlayers,call groundSquads,lineBreak];
+	_null = [{typeOf _x == "B_Pilot_F"} count allPlayers] spawn pilotRestriction;
+};
+
+
 
 systemChat "분대별 장비잠금 스크립트 활성화";

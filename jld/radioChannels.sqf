@@ -35,3 +35,4 @@ if(hasInterface)then{
 	waitUntil{!isNil "channelID"};
 	while{true}do{[] spawn radio_join; sleep 0.1;};
 };
+

@@ -1,4 +1,4 @@
-﻿sleep 0.5;//서버 시작후 몇초뒤에 실행될지 결정
+﻿sleep 5;//서버 시작후 몇초뒤에 실행될지 결정
 "Welcome to Jeonlado Vanilla Server!" hintC [
     parseText 
 	"

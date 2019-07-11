@@ -223,7 +223,8 @@ else {
 
 buildings = [
 ["Windsock_01_F",0,0,0],
-["PortableHelipadLight_01_blue_F",0,0,0],
+["Land_FieldToilet_F",0,0,0],
+["PortableHelipadLight_01_red_F",0,10,0],
 ["MapBoard_altis_F",0,0,0],
 ["Land_Workbench_01_F",0,0,0],
 ["Land_WeldingTrolley_01_F",0,0,0],
@@ -232,8 +233,9 @@ buildings = [
 ["Land_WaterBarrel_F",0,0,0],
 ["Land_ToolTrolley_02_F",0,0,0],
 ["Land_Razorwire_F",0,0,0],
-["Land_PortableLight_single_F",0,0,0],
-["Land_PlasticNetFence_01_long_F",0,0,0],
+["Land_PortableLight_single_F",0,10,0],
+["Land_PortableLight_double_F",0,20,0],
+["Land_LampAirport_F",0,200,0],
 ["Land_PaperBox_open_full_F",0,0,0],
 ["Land_Pallet_MilBoxes_F",0,0,0],
 ["Land_Missle_Trolley_02_F",0,0,0],
@@ -257,10 +259,11 @@ buildings = [
 ["Land_Cargo_Patrol_V1_F",0,0,0],
 ["Land_Cargo_House_V1_F",0,0,0],
 ["Land_CanvasCover_02_F",0,0,0],
-["Land_CampingTable_F",0,0,0],
-["Land_CampingChair_V2_F",0,0,0],
-["Land_CampingChair_V1_F",0,0,0],
+["Land_CampingTable_F",0,5,0],
+["Land_CampingChair_V2_F",0,5,0],
+["Land_CampingChair_V1_F",0,5,0],
 ["Land_BarGate_F",0,0,0],
+["Land_ConcreteWall_01_l_gate_F",0,0,0],
 ["Land_BagFence_Round_F",0,0,0],
 ["Land_BagBunker_Tower_F",0,0,0],
 ["Land_BagBunker_Small_F",0,0,0],
@@ -389,25 +392,25 @@ then {
 	elite_vehicles_extension = []
 };
 elite_vehicles = [] + elite_vehicles_extension + [
-"B_Boat_Armed_01_minigun_F",
-"B_AFV_Wheeled_01_cannon_F",
-"B_AFV_Wheeled_01_up_cannon_F",
-"B_APC_Tracked_01_AA_F",
-"B_MBT_01_TUSK_F",
-"B_Heli_Attack_01_F",
-"O_Heli_Attack_02_black_F",
-"I_Plane_Fighter_03_CAS_F",
-"I_Plane_Fighter_03_Cluster_F",
-"I_Plane_Fighter_04_Cluster_F",
-"B_Plane_CAS_01_F",
-"B_Plane_CAS_01_Cluster_F",
-"B_Plane_Fighter_01_F",
-"B_Plane_Fighter_01_Cluster_F",
-"B_T_VTOL_01_armed_F",
-"B_UAV_05_F",
-"B_T_UAV_03_F",
-"B_Radar_System_01_F",
-"B_SAM_System_03_F"
+// "B_Boat_Armed_01_minigun_F",
+// "B_AFV_Wheeled_01_cannon_F",
+// "B_AFV_Wheeled_01_up_cannon_F",
+// "B_APC_Tracked_01_AA_F",
+ "B_MBT_01_TUSK_F",
+// "B_Heli_Attack_01_F",
+ "O_Heli_Attack_02_black_F",
+// "I_Plane_Fighter_03_CAS_F",
+// "I_Plane_Fighter_03_Cluster_F",
+// "I_Plane_Fighter_04_Cluster_F",
+ "B_Plane_CAS_01_F",
+ "B_Plane_CAS_01_Cluster_F",
+ "B_Plane_Fighter_01_F",
+ "B_Plane_Fighter_01_Cluster_F"
+// "B_T_VTOL_01_armed_F",
+// "B_UAV_05_F",
+// "B_T_UAV_03_F",
+// "B_Radar_System_01_F",
+// "B_SAM_System_03_F"
 ];
 if (isNil "ai_resupply_sources_extension")
 then {
@@ -442,12 +445,12 @@ vehicle_refuel_sources = [] + vehicle_refuel_sources_extension + [
 
 ];
 squads = [
-[blufor_squad_inf_light, 20, 0, 0],
-[blufor_squad_inf, 30, 0, 0],
-[blufor_squad_at, 20, 25, 0],
-[blufor_squad_aa, 20, 25, 0],
-[blufor_squad_recon, 25, 0, 0],
-[blufor_squad_para, 20, 0, 0]
+//[blufor_squad_inf_light, 20, 0, 0],
+//[blufor_squad_inf, 30, 0, 0],
+//[blufor_squad_at, 20, 25, 0],
+//[blufor_squad_aa, 20, 25, 0],
+//[blufor_squad_recon, 25, 0, 0],
+//[blufor_squad_para, 20, 0, 0]
 ];
 
 if (isNil "opfor_sentry")

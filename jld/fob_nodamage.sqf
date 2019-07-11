@@ -5,10 +5,8 @@ waitUntil{!isNil "GRLIB_all_fobs"};
 
 while{true}do{
 	{ 
-		_pos = _x; 
-		{ 
-			if(typeOf _x in _nodamage)then{_x allowDamage false;}; 
-		}forEach (_pos nearObjects ["All",125]); 
+		{if(typeOf _x in _nodamage)then{_x allowDamage false};}forEach (_x nearObjects ["All",GRLIB_fob_range]); 
+		{deleteVehicle _x} forEach nearestObjects [_x, ["WeaponHolder","GroundWeaponHolder"], GRLIB_fob_range];		
 	}forEach GRLIB_all_fobs; 
-	sleep 10;
+	sleep 60;
 };

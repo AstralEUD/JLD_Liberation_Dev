@@ -30,7 +30,7 @@ if (!isDedicated && hasInterface) then {
 	waitUntil { alive player };
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
-	setViewDistance 1300;
+	setViewDistance 1500;
 };
 
 //ADV_zeus(zeus moddule name = adminZeus)
@@ -81,7 +81,8 @@ if(hasInterface)then{
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
-	[] execVM "jld\tankboy.sqf";
+	[] execVM "jld\tankboy.sqf";	
+	radio_joined = false;
 }];
 
 //FFE

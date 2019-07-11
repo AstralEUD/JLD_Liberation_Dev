@@ -49,9 +49,9 @@ class CfgDebriefing
 	};
 	class End3
 	{
-		title =	"인원 부족";
-		subtitle = "조종사 인원이 초과하였습니다.";
-		description = "최대 항공장비 조작인원수는 지상분대 수의 합을 넘을 수 없습니다.";
+		title =	"조종사 인원 초과";
+		subtitle = "조종사 인원이 지상분대수를 초과하였습니다.";
+		description = "TIP:장비에 탑승하고 있는 동안은 인원이 초과된 경우에도 지속적으로 게임을 플레이 할 수 있습니다.";
 		pictureBackground = "jld.paa";
 	};
 };

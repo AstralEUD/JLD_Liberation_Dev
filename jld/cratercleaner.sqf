@@ -38,7 +38,7 @@ Lala_fnc_Dead_Vehicle_Check = {
 
 	if !(_veh isKindOf "B_APC_Tracked_01_CRV_F") exitWith {false;};
 
-	_nearvehicles = nearestObjects [_veh,["LandVehicle","Air","ReammoBox_F"],20];
+	_nearvehicles = nearestObjects [_veh,["LandVehicle","Air","ReammoBox_F","Man"],20];
 	_nearvehicles = _nearvehicles - [_veh];
 	_nearestvehicle = _nearvehicles select 0;
 
@@ -76,7 +76,7 @@ Lala_fnc_Dead_Vehicle_Remover = {
 
 	if (_veh == _unit) exitWith {hint "Get into a Bobcat!";};
 
-	_nearvehicles = nearestObjects [_veh,["LandVehicle","Air","ReammoBox_F"],20];
+	_nearvehicles = nearestObjects [_veh,["LandVehicle","Air","ReammoBox_F","Man"],20];
 	_nearvehicles = _nearvehicles - [_veh];
 	_nearestvehicle = _nearvehicles select 0;
 
