@@ -61,7 +61,7 @@ do {
 									};
 								if (_x in sectors_military)
 									then {
-										_chkInc = _chkInc + 3;
+										_chkInc = _chkInc + 5;
 									};
 								if (_x in sectors_bigtown)
 									then {
@@ -69,7 +69,8 @@ do {
 									};
 							}
 							foreach blufor_sectors;
-							_chkInc = _chkInc + count GRLIB_all_fobs * -20;
+							
+							_chkInc = _chkInc - round(combat_readiness/2);
 
 							if (_chkInc < 0 && (resources_ammo + _chkInc < 150))
 								then {

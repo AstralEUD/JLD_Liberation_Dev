@@ -2,25 +2,20 @@
 waitUntil { !isNil "chosen_weather" };
 waitUntil { !isNil "chosen_fog" };
 
-	if(hasInterface)then{
-		1800 setOvercast chosen_weather;
-		500 setWaves (0.66*chosen_rain+0.8*chosen_weather);
-	};
-	if(isServer)then{
-		1800 setRain chosen_rain;
-		1800 setFog [chosen_fog#0,chosen_fog#1,chosen_fog#2];
-	};
-	
-forceWeatherChange;
+10 setOvercast chosen_weather;
+10 setWaves (0.66*chosen_rain+0.8*chosen_weather);
+if(isServer)then{
+	10 setRain chosen_rain;
+	10 setFog [chosen_fog#0,chosen_fog#1,chosen_fog#2];
+	forceWeatherChange;
+};
 
 while { true } do {
-	if(hasInterface)then{
-		1800 setOvercast chosen_weather;
-		500 setWaves (0.66*chosen_rain+0.8*chosen_weather);
-	};
+	(2000 * timeMultiplier) setOvercast chosen_weather;
+	(2000 * timeMultiplier) setWaves (0.66*chosen_rain+0.8*chosen_weather);
 	if(isServer)then{
-		1800 setRain chosen_rain;
-		1800 setFog [chosen_fog#0,chosen_fog#1,chosen_fog#2];
+		5 setRain chosen_rain;
+		(2000 * timeMultiplier) setFog [chosen_fog#0,chosen_fog#1,chosen_fog#2];
 	};
 	/*
 	if ( overcast < 0.75 ) then { 2 setRain 0 };

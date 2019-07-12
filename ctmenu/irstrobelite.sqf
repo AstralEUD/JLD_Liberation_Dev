@@ -49,6 +49,12 @@ LALA_fnc_IRchemOff1 =
 	{deleteVehicle _x;}forEach chems;
 };
 
+player addEventHandler ["GetInMan", {
+	params ["_unit", "_role", "_vehicle", "_turret"];
+	[] call LALA_fnc_IRStrobeOff;
+	[] call LALA_fnc_IRchemOff1;	
+}];
+
 LALA_fnc_IRStrobeOn =
 {
 	[] call LALA_fnc_IRStrobeOff;

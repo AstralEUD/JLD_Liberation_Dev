@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8687.502,221.98857,4014.5417};
-		dir[]={-0.28902185,-0.42293984,-0.85883862};
-		up[]={-0.13489674,0.90615737,-0.40085083};
-		aside[]={-0.94777751,2.4959445e-007,0.31895313};
+		pos[]={8974.4063,129.65501,532.50928};
+		dir[]={0.70422226,-0.6525476,0.27991346};
+		up[]={0.60642689,0.75773388,0.24104239};
+		aside[]={0.36939001,2.9266812e-007,-0.92932564};
 	};
 };
 binarizationWanted=0;
@@ -9066,7 +9066,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [""날씨확인"",{" \n """Weathers Information System"" hintC [" \n "str formatText [""현재 구름량:%1%%"",overcast*100]," \n "str formatText [""예상 구름량:%1%%"",overcastForecast*100]," \n "str formatText [""현재 강우량:%1%%"",rain*100]," \n "str formatText [""현재 안개량:%1%%"",fog*100]," \n "str formatText [""예상 안개량:%1%%"",(chosen_fog#0)*100]," \n "str formatText [""현재 파도:%1%%"",waves*100]" \n "];" \n "}];";
+				init="this addAction [""날씨확인"",{  " \n " ""Weathers Information System"" hintC [  " \n " str formatText [""현재 구름량:%1%%"",overcast*100],  " \n " str formatText [""예상 구름량:%1%%"",overcastForecast*100],  " \n " str formatText [""현재 강우량:%1%%"",rain*100],  " \n " str formatText [""현재 안개량:%1%%"",fog*100],  " \n " str formatText [""예상 안개량:%1%%"",fogForecast*100],  " \n " str formatText [""현재 파도:%1%%"",waves*100]  " \n " ];  " \n " hintC_arr_EH = findDisplay 72 displayAddEventHandler [""unload"", { " \n "  0 = _this spawn { " \n "   _this select 0 displayRemoveEventHandler [""unload"", hintC_arr_EH]; " \n "   hintSilent """"; " \n "  }; " \n " }]; " \n "}];";
 				disableSimulation=1;
 			};
 			id=1474;
@@ -9089,7 +9089,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="\a3\missions_f_epa\data\img\whiteboards\mapboard_altis_c_in1_co.paa";
+							value="\a3\missions_f_epa\data\img\papermaps\papermap_briefing_b_m03_co.paa";
 						};
 					};
 				};
@@ -9487,13 +9487,13 @@ class Mission
 		class Item363
 		{
 			dataType="Marker";
-			position[]={5632,-3.9476089,-1791.9998};
+			position[]={5632,-3.948,-1792};
 			name="marker_32";
-			text="전술통신망은 무전기칸에 무전기를 장착하면 개통됩니다.";
+			text="전술통신망은 무전기슬롯에 무전기를 장착하면 연결되고 무전기를 조끼나 가방에 넣으면 해제됩니다.";
 			type="mil_dot";
-			colorName="ColorWhite";
+			colorName="ColorYellow";
 			id=1513;
-			atlOffset=72.104393;
+			atlOffset=72.104004;
 		};
 	};
 	class Connections

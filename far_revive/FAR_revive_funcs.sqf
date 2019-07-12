@@ -8,10 +8,10 @@ FAR_Player_Actions =
 	if (alive player && player isKindOf "Man") then
 	{
 		// addAction args: title, filename, (arguments, priority, showWindow, hideOnUse, shortcut, condition, positionInModel, radius, radiusView, showIn3D, available, textDefault, textToolTip)
-		player addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",1];
-		player addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",1];
-		player addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",1];
-		player addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",1];
+		player addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",2];
+		player addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",2];
+		player addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",2];
+		player addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",2];
 	};
 };
 

@@ -48,6 +48,7 @@ class ctMe{
 			{
 				"gesture",
 				"entry1",
+				"holster",
 				"earplug"
 			};
 			class Separator
@@ -180,6 +181,12 @@ class ctMe{
 				text = "이어플러그 착용/해제";
 				action = "call Test_Earplug";
 				picture = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_orange_F_CA.paa";
+				conditionShow="1";
+			};			
+			class holster
+			{
+				text = "무기 집어넣기";
+				action = "call CRS_Holster";
 				conditionShow="1";
 			};				
 			
