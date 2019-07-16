@@ -77,6 +77,7 @@ if(hasInterface)then{
 	[] execVM "jld\tankboy.sqf";
 };
 [] execVM "jld\radioChannels.sqf";
+[] execVM "jld\rtbReward.sqf";
 
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];

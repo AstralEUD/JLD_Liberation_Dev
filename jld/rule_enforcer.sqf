@@ -173,7 +173,7 @@ isSwitchAllowed = {
 	while{true}do{
 		sleep 10;
 		if(player call groupType == -1) then {
-			["<t color='#ff0000' size = '0.55' >적절한 분대태그를 사용하지 않아 모든 기능이 제한됩니다.<br/>U키를 눌러 적절한 분대태그를 가진 분대에 가입하거나 생성하십시오.</t>",-1,-1,5] spawn BIS_fnc_dynamicText;
+			["<t color='#ff0000' size = '0.55' >적절한 분대태그를 사용하지 않아 모든 기능이 제한됩니다.<br/>U키를 눌러 적절한 분대태그를 가진 분대에 가입하거나 생성하십시오.<br/>자세한 정보는 지도 하단을 참조하시기 바랍니다.</t>",-1,-1,7] spawn BIS_fnc_dynamicText;
 		};
 	};
 };
@@ -215,6 +215,17 @@ player addEventHandler["SeatSwitchedMan", {
 
 PilotRestriction = { 	
 	params ["_minSquads"];
+	sleep 1;
+	"=PILOT RULES=" hintC [
+	str formatText ["조종사 슬롯으로 접속하였습니다. [전투], [기동]분대에 가입하여 항공기를 사용할 수 있습니다."],	
+	str formatText ["이 슬롯으로 플레이하기 위해선 최소 %1개의 지상분대가 있어야 합니다.",_minSquads,call groundSquads],
+	str formatText ["현재 지상분대 수는 %2분대로, 지상분대 수가 %1분대 아래로 떨어지는 경우 자동으로 로비로 돌아갑니다.",_minSquads,call groundSquads],
+	str formatText ["지나친 자원 낭비나 무단 CAS등은 서버룰에 의거하여 킥, 밴 조치될 수 있으니 책임감있는 플레이 부탁드립니다."],	
+	str formatText ["조종사 보직으로 플레이 하는 동안은 항상 전술통신망을 유지하고 점검할 의무가 있습니다. (무전기 슬롯에 무전기를 장착하면 자동 가입됩니다.)"],	
+	str formatText ["아울러 조종사 보직을 유지한 상태에서 지상분대 플레이를 엄격하게 금지합니다. 반드시 소총수, 공병, 전투의무병 보직으로 전환 후 플레이 하시기 바랍니다."],
+	str formatText ["조종사는 관련된 규정을 모두 숙지하고, 서버룰을 위반한 것이 적발되는 경우 처벌될 수 있다는 것에 동의한 것으로 간주됩니다. 이에 동의하지 않는 경우 다른 보직으로 플레이 해주시기 바랍니다."]
+	];
+	
 	while{true}do{
 		sleep 1; 
 		if(call groundSquads < _minSquads)then{
@@ -236,9 +247,9 @@ PilotRestriction = {
 
 if(typeOf player == "B_Pilot_F") then {
 	waitUntil{!isNull findDisplay 46};
-	uiSleep 3;
-	systemChat str formatText ["지상분대가 %1분대 미만이 되면 자동으로 대기실로 이동합니다. 현재 지상분대 수는 %2분대입니다.",{typeOf _x == "B_Pilot_F"} count allPlayers,call groundSquads,lineBreak];
-	_null = [{typeOf _x == "B_Pilot_F"} count allPlayers] spawn pilotRestriction;
+	sleep 3;
+	systemChat str formatText ["지상분대가 %1분대 미만이 되면 자동으로 대기실로 이동합니다. 현재 지상분대 수는 %2분대입니다.",({typeOf _x == "B_Pilot_F"} count allPlayers)-1,call groundSquads,lineBreak];
+	_null = [({typeOf _x == "B_Pilot_F"} count allPlayers)-1] spawn pilotRestriction;
 };
 
 

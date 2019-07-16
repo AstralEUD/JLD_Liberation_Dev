@@ -25,3 +25,13 @@ remote_call_incoming = compileFinal preprocessFileLineNumbers "scripts\client\re
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\scan_skill.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\diagnostics.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\shared\manage_weather.sqf";
+
+[] spawn {
+	while{true}do{
+		sleep 15;
+		{
+			if(!isGroupDeletedWhenEmpty  _x)then{_x deleteGroupWhenEmpty true};
+			if(count units _x==0)then{deleteGroup _x};
+		}forEach allGroups;
+	};
+};

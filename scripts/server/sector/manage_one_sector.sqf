@@ -209,6 +209,7 @@ if ( (!(_sector in blufor_sectors)) &&  ( ( [ getmarkerpos _sector , [ _opforcou
 
 			if (isServer) then {
 				[ _sector ] spawn sector_liberated_remote_call;
+				remoteExec ["SAKY_RTBReward_IncreaseReward", [_sector] call SAKY_RTBReward_CheckLiberators];	//RTB Bonus
 			} else {
 				[ [ _sector ] , "sector_liberated_remote_call" ] call BIS_fnc_MP;
 			};

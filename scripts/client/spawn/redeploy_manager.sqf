@@ -166,6 +166,8 @@ while { true } do {
 				player setpos [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),0];
 			};
 		};
+		
+		call SAKY_RTBReward_RemoveReward;
 
 		if ( (lbCurSel 203) > 0 ) then {
 			[ player, [ profileNamespace, _loadouts_data select ((lbCurSel 203) - 1) ] ] call bis_fnc_loadInventory;
