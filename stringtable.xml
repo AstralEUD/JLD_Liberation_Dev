@@ -2,12 +2,12 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>Jeonlado_Liberation_V_0.951M</Original>
-            <Korean>전라도_리버레이션_V_0.951M</Korean>
+            <Original>Jeonlado_Liberation_V_0.955M</Original>
+            <Korean>전라도_리버레이션_V_0.955M</Korean>
         </Key>
         <Key ID="STR_MISSION_VERSION">
-            <Original>v0.951M</Original>
-            <Korean>v0.951M</Korean>
+            <Original>v0.955M</Original>
+            <Korean>v0.955M</Korean>
         </Key>
         <Key ID="STR_MISSION_DESCRIPTION">
             <Original>With the power of Freedom and Democracy and a little international support you shall Liberate Tanoa from Syndikat and CSAT oppression.</Original>

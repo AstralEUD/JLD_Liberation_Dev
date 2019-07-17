@@ -649,8 +649,8 @@ opfor_vehicles = [
 "O_MBT_04_cannon_F",
 "O_MBT_04_command_F",
 "O_Radar_System_02_F",
-"O_SAM_System_04_F",
 "O_SAM_System_04_F"
+//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_vehicles_extension")
 then {
@@ -717,10 +717,9 @@ opfor_battlegroup_vehicles = [
 "O_T_MBT_04_cannon_F",
 "O_MBT_04_command_F",
 "O_Radar_System_02_F",
-"O_SAM_System_04_F",
-"O_SAM_System_04_F",
 "O_SAM_System_04_F"
-
+//"O_SAM_System_04_F",
+//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_extension")
 then {
@@ -753,9 +752,9 @@ opfor_battlegroup_vehicles_low_intensity = [
 "O_APC_Wheeled_02_rcws_F",
 "O_T_LSV_02_armed_F",
 "O_T_LSV_02_AT_F",
-"O_Radar_System_02_F",
-"O_SAM_System_04_F",
+//"O_Radar_System_02_F",
 "O_SAM_System_04_F"
+//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_low_intensity_extension")
 then {

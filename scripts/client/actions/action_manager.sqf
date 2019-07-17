@@ -71,7 +71,7 @@ do {
 		};
 	};
 
-	if ((_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && GRLIB_halo_param > 0 && resources_ammo > 50 && !(player call groupType in [-1,3]))
+	if ((_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && GRLIB_halo_param > 0 )
 	then {
 		if (_idact_halo == -1)
 		then {
@@ -86,7 +86,7 @@ do {
 		};
 	};
 
-	if ((player call groupType != -1) && (_fobdistance < _distredeploy || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
+	if ( (_fobdistance < _distredeploy || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
 	then {
 		if (_idact_redeploy == -1)
 		then {
@@ -101,7 +101,7 @@ do {
 		};
 	};
 
-	if ((player call groupType != -1) && (_fobdistance < _distredeploy || count _neararsenal != 0 || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
+	if ( (_fobdistance < _distredeploy || count _neararsenal != 0 || count _nearspawn != 0 || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player)
 	then {
 		if (_idact_arsenal == -1)
 		then {
@@ -191,13 +191,13 @@ do {
 		};
 	};
 
-if ((player call groupType == 3) && (count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && (([player, 5]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
-then {
-	if (_idact_secondary == -1)
+	if ((player call groupType == 3) && (count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && (([player, 5]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
 	then {
-		_idact_secondary = player addAction["<t color='#FFFF00'>" + localize "STR_SECONDARY_OBJECTIVES" + "</t>", "scripts\client\ui\secondary_ui.sqf", "", -993, false, true, "", "build_confirmed == 0"];
-	};
-}
+		if (_idact_secondary == -1)
+		then {
+			_idact_secondary = player addAction["<t color='#FFFF00'>" + localize "STR_SECONDARY_OBJECTIVES" + "</t>", "scripts\client\ui\secondary_ui.sqf", "", -993, false, true, "", "build_confirmed == 0"];
+		};
+	}
 	else {
 		if (_idact_secondary != -1)
 		then {
