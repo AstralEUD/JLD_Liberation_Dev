@@ -1,4 +1,4 @@
-﻿player createDiarySubject ["rules","서버 규정"];
+player createDiarySubject ["rules","서버 규정"];
 
 player createDiaryRecord ["rules", ["항공장비 사용분대", format ["<font size='15'>
 <font color='#00CCCC' size='20'>항공분대</font><br/>
