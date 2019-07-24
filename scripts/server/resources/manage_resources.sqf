@@ -70,15 +70,15 @@ do {
 							}
 							foreach blufor_sectors;
 							
-							_chkInc = _chkInc - round(combat_readiness/2);
+							_chkInc = round(_chkInc - combat_readiness*2);
 
 							if (_chkInc < 0 && (resources_ammo + _chkInc < 150))
 								then {
-									[[west, "Base"], format["자원이 150미만이어서 차감되지 않았습니다. 다음 자원은 %1분 후에 추가됩니다.", round (_base_tick_period / 60)]]remoteExec["sideChat"];
+									[gamelogic, format["자원이 150미만이어서 차감되지 않았습니다. 다음 자원은 %1분 후에 추가됩니다.", round (_base_tick_period / 60)]]remoteExec["globalChat"];
 								}
 							else {
 								Resources_ammo = Resources_ammo + _chkInc;
-								[[west, "Base"], format["%1의 자원이 추가되었습니다. 다음 자원은 %2분 후에 추가됩니다.", _chkInc, round (_base_tick_period / 60)]]remoteExec["sideChat"];
+								[gamelogic, format["%1의 자원이 추가되었습니다. 다음 자원은 %2분 후에 추가됩니다.", _chkInc, round (_base_tick_period / 60)]]remoteExec["globalChat"];
 							};
 						}
 					else {

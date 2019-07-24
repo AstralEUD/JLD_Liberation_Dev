@@ -73,7 +73,6 @@ _vehicleManager =
 
 _lastPos = [0,0,0];
 
-systemChat "FPS고정 스크립트 활성화";
 while {true} do
 {
 	_camPos = positionCameraToWorld [0,0,0];

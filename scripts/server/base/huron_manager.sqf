@@ -21,7 +21,7 @@ while { true } do {
 			huron enableSimulationGlobal false;
 			huron allowdamage false;
 			huron setDir 90;
-			huron setposasl [9199.95,526.555,24];
+			huron setposasl [890.039,16213,24];
 		} else {
 			huron = huron_typename createVehicle ( getpos huronspawn );
 			huron allowdamage false;
@@ -58,7 +58,7 @@ while { true } do {
 		resources_ammo = resources_ammo - 50;
 		[ ["", GRLIB_civ_killing_penalty, "" ] , "remote_call_civ_penalty" ] call BIS_fnc_MP;
 		//jld editted
-		sleep 15;
+		sleep 30;
 
 	};
 
