@@ -40,6 +40,12 @@ while { true } do {
 					_marked_vehicles pushbackUnique (vehicle _x);
 				};
 			 } foreach _playableunits;
+			 
+			 {
+				if ( side _x == west ) then {
+					_marked_vehicles pushbackUnique (vehicle _x);
+				};
+			 } foreach allUnitsUav;
 
 			{
 				if ( alive _x && !(isPlayer _x) ) then {
@@ -147,10 +153,14 @@ while { true } do {
 					if( (_datcrew find _x) != ((count _datcrew) - 1) ) then {
 						_vehiclename = _vehiclename + ",";
 					};
-					_vehiclename = _vehiclename + " ";
+					_vehiclename = _vehiclename + " ";					
+										
 				} foreach  _datcrew;
 
-				_vehiclename = _vehiclename + "(" + getText (_cfg >> typeOf _nextvehicle >> "displayName") + ")";
+				if(unitIsUAV _nextvehicle && isUAVConnected _nextvehicle)then{_vehiclename = name ((UAVControl _nextvehicle)#0)};
+				
+				_vehiclename = _vehiclename + "(" + getText (_cfg >> typeOf _nextvehicle >> "displayName") + ")";				
+				
 				_marker setMarkerTextLocal _vehiclename;
 			} foreach _marked_vehicles;
 		};

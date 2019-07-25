@@ -33,6 +33,7 @@ while { true } do {
 	firstloop = false;
 
 	huron AnimateDoor ["Door_rear_source", 1, true];
+	[huron,["AAF",1],nil,nil] call BIS_fnc_initVehicle;
 	publicVariable "huron";
 	clearWeaponCargoGlobal huron;
 	clearMagazineCargoGlobal huron;

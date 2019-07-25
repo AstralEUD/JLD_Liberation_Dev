@@ -662,7 +662,7 @@ class GREUH_Menu {
 		idc = 812;
 		x = 0.15 * safezoneW + safezoneX;
 		text = "매우 낮음";
-		action = "setTerrainGrid 50; hint 'Terrain details set to Very Low'";
+		action = "setTerrainGrid 48; hint 'Terrain details set to Very Low'";
 	};
 	class GREUH_ButtonWorldLow : GREUH_ButtonWorld {
 		idc = 813;

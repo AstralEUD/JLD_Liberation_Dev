@@ -21,7 +21,11 @@ Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp"
 };
 
 Test_Earplug = {
-	if(soundVolume!=( desired_vehvolume / 100.0 ))then{1 fadeSound ( desired_vehvolume / 100.0 );systemChat "귀마개를 착용하였습니다!";}else{1 fadeSound 1;systemChat "귀마개를 해제하였습니다!";};
+	if(soundVolume!=( desired_vehvolume / 100.0 ))then{1 fadeSound ( desired_vehvolume / 100.0 );hint "귀마개를 착용하였습니다!";}else{1 fadeSound 1;hint "귀마개를 해제하였습니다!";};
+	if(desired_vehvolume>90)then{
+		hint "귀마개 볼륨이 90%이상입니다. 추가설정메뉴 최하단에서 귀마개 볼륨을 설정할 수 있습니다!";
+		systemChat "귀마개 볼륨이 90%이상입니다. 추가설정메뉴 최하단에서 귀마개 볼륨을 설정할 수 있습니다!";
+		};
 };
 
 Test_PlayAnim = {

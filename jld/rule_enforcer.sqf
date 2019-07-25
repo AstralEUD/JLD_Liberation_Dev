@@ -155,6 +155,21 @@ isSwitchAllowed = {
 
 [] spawn {
 	while{true}do{
+		if( (player call groupType != 3) && (!isNull getConnectedUAV player) ) then {
+			player connectTerminalToUAV objNull;		
+			["<t color='#ff0000' size = '0.55' >무인기는 [특수]분대만 사용 가능합니다. 연결이 해제되었습니다.</t>"] spawn BIS_fnc_dynamicText;
+		};
+		
+		if( (player call groupType in [7,8]) && (typeOf player != "B_Pilot_F") ) then {
+			[player] join grpNull;
+			["<t color='#ff0000' size = '0.55' >[전투], [기동]분대에 가입하기 위해서는 조종사로 접속해야 합니다.</t>"] spawn BIS_fnc_dynamicText;
+		};
+		
+		if( (player call groupType in [0,1,2,3,4,5,6]) && (typeOf player == "B_Pilot_F") ) then {
+			[player] join grpNull;
+			["<t color='#ff0000' size = '0.55' >조종사는 [전투], [기동]분대에만 가입가능합니다.</t>"] spawn BIS_fnc_dynamicText;
+		};
+		
 		if(call isSwitchAllowed)then{
 			inGameUISetEventHandler ["Action", ""];	
 		}else{	
@@ -173,7 +188,7 @@ isSwitchAllowed = {
 	while{true}do{
 		sleep 10;
 		if(player call groupType == -1) then {
-			["<t color='#ff0000' size = '0.55' >적절한 분대태그를 사용하지 않아 모든 기능이 제한됩니다.<br/>U키를 눌러 적절한 분대태그를 가진 분대에 가입하거나 생성하십시오.<br/>자세한 정보는 지도 하단을 참조하시기 바랍니다.</t>",-1,-1,7] spawn BIS_fnc_dynamicText;
+			["<t color='#ff0000' size = '0.55' >적절한 분대태그를 사용하지 않아 모든 기능이 제한됩니다.<br/>U키를 눌러 적절한 분대태그를 가진 분대에 가입하거나 생성하십시오.<br/>자세한 정보는 M키를 눌러 화면 좌측상단의 서버 규정을 참조하시기 바랍니다.</t>",-1,-1,7] spawn BIS_fnc_dynamicText;
 		};
 	};
 };

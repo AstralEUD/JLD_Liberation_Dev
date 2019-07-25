@@ -45,11 +45,10 @@ SAKY_RTBReward_RemoveReward = {
 	};
 };
 
-if(hasInterface)then{
-	
+if(hasInterface)then{		
 	[] spawn {
 		while{true}do{
-			sleep 10;
+			waitUntil{sleep 10; count GRLIB_all_fobs > 1};
 			call SAKY_RTBReward_GiveReward;
 		};
 	};

@@ -89,3 +89,13 @@ player addEventHandler ["Respawn", {
 
 //FFE
 nul = [] execVM "RYD_FFE\FFE.sqf";
+
+[] spawn {
+	sleep 15;
+	{
+		(vehicle _x) setVehicleReportRemoteTargets true;
+		(vehicle _x) setVehicleReportOwnPosition true;
+		(vehicle _x) setVehicleReceiveRemoteTargets true;
+		(vehicle _x) setVehicleRadar 1;
+	}forEach allUnits;	
+};

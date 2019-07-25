@@ -48,6 +48,7 @@ class ctMe{
 			{
 				"gesture",
 				"entry1",
+				"radioToggle",
 				"holster",
 				"earplug"
 			};
@@ -175,7 +176,14 @@ class ctMe{
 				text = "정지 수신호";
 				action = "[""Acts_JetsMarshallingEmergencyStop_loop""] spawn Test_PlayAnim;";
 				conditionShow="1";
-			};		
+			};				
+			class radioToggle
+			{
+				text = "전술통신망 토글";
+				action = "[] spawn radio_join;";
+				picture = "\a3\weapons_f\data\ui\gear_item_radio_ca.paa";				
+				conditionShow="1";
+			};
 			class earplug
 			{
 				text = "이어플러그 착용/해제";
@@ -187,6 +195,7 @@ class ctMe{
 			{
 				text = "무기 집어넣기";
 				action = "call CRS_Holster";
+				picture = "\a3\weapons_f\pistols\p07\data\ui\gear_p07_x_ca.paa";
 				conditionShow="1";
 			};				
 			

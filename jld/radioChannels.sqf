@@ -5,20 +5,16 @@ radio_joined = false;
 2 enableChannel [false, false];
 
 radio_join = {	
-	if("ItemRadio" in assignedItems player)then{
-		if(!radio_joined)then{
-			[channelID, [player]] remoteExec ["radioChannelAdd"];
-			[player, [channelID, "전술통신망 개통되었음!"]] remoteExec ["customChat",-2];
-			setCurrentChannel (channelID+5);
-			radio_joined = true;
-		};
-	}else{
-		if(radio_joined)then{			
-			[[player, channelID],{params ["_player", "_channelID"];_player customChat [_channelID, "수신 종료!"];}] remoteExecCall ["call"];
-			[[player, channelID],{params ["_player", "_channelID"];sleep 0.1;_channelID radioChannelRemove [_player];}] remoteExecCall ["spawn"];
-			setCurrentChannel 3;
-			radio_joined = false;
-		};
+	if(!radio_joined)then{
+		[channelID, [player]] remoteExec ["radioChannelAdd"];
+		[player, [channelID, "전술통신망 개통되었음!"]] remoteExec ["customChat",-2];
+		setCurrentChannel (channelID+5);
+		radio_joined = true;
+	}else{				
+		[[player, channelID],{params ["_player", "_channelID"];_player customChat [_channelID, "수신 종료!"];}] remoteExecCall ["call"];
+		[[player, channelID],{params ["_player", "_channelID"];sleep 0.1;_channelID radioChannelRemove [_player];}] remoteExecCall ["spawn"];
+		setCurrentChannel 3;
+		radio_joined = false;
 	};
 };
 
@@ -30,9 +26,3 @@ if (isServer) then
 	publicVariable "channelID";
 	//[_channelID, {_this radioChannelAdd [player]}] remoteExec ["call", [0, -2] select isDedicated, _channelName];
 };
-
-if(hasInterface)then{
-	waitUntil{!isNil "channelID"};
-	while{true}do{[] spawn radio_join; sleep 0.1;};
-};
-
