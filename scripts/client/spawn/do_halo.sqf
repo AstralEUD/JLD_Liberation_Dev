@@ -72,6 +72,10 @@ if ( dojump > 0 ) then {
 
 	sleep 4;
 	halojumping = false;
+	
+	waitUntil { (ASLToAGL getPosASL player#2) < 250 };
+	player action ["OpenParachute", player];
+	
 	waitUntil { !alive player || isTouchingGround player };
 	if ( _backpack != "" && _backpack != "B_Parachute" ) then {
 		sleep 2;

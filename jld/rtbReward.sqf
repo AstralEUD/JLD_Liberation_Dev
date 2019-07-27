@@ -48,8 +48,8 @@ SAKY_RTBReward_RemoveReward = {
 if(hasInterface)then{		
 	[] spawn {
 		while{true}do{
-			waitUntil{sleep 10; count GRLIB_all_fobs > 1};
-			call SAKY_RTBReward_GiveReward;
+			waitUntil{sleep 10; count GRLIB_all_fobs > 0};
+			call SAKY_RTBReward_GiveReward;			
 		};
 	};
 

@@ -662,25 +662,25 @@ class GREUH_Menu {
 		idc = 812;
 		x = 0.15 * safezoneW + safezoneX;
 		text = "매우 낮음";
-		action = "setTerrainGrid 48; hint 'Terrain details set to Very Low'";
+		action = "setTerrainGrid 48; hint '지형디테일을 매우 낮게 설정했습니다. 먼곳의 물체가 땅에 묻히거나 떠있는 경우 지형디테일을 높이세요.'";
 	};
 	class GREUH_ButtonWorldLow : GREUH_ButtonWorld {
 		idc = 813;
 		x = (0.15 * safezoneW + safezoneX) + (((0.2 * safezoneW) / 4) * 1);
 		text = "낮음";
-		action = "setTerrainGrid 25; hint 'Terrain details set to Low'";
+		action = "setTerrainGrid 25; hint '지형디테일을 낮게 설정했습니다. 먼곳의 물체가 땅에 묻히거나 떠있는 경우 지형디테일을 높이세요.'";
 	};
 	class GREUH_ButtonWorldNormal : GREUH_ButtonWorld {
 		idc = 814;
 		x = (0.15 * safezoneW + safezoneX) + (((0.2 * safezoneW) / 4) * 2);
 		text = "보통";
-		action = "setTerrainGrid 12.5; hint 'Terrain details set to Normal'";
+		action = "setTerrainGrid 12.5; hint '지형디테일을 보통으로 설정했습니다. 프레임이 떨어지는경우 지형디테일을 낮추세요.'";
 	};
 	class GREUH_ButtonWorldHigh : GREUH_ButtonWorld {
 		idc = 815;
 		x = (0.15 * safezoneW + safezoneX) + (((0.2 * safezoneW) / 4) * 3);
 		text = "높음";
-		action = "setTerrainGrid 3.125; hint 'Terrain details set to High'";
+		action = "setTerrainGrid 3.125; hint '지형디테일을 높게 설정했습니다. 프레임이 떨어지는경우 지형디테일을 낮추세요.'";
 	};
 	class GREUH_MarkersZone : GREUH_DefaultZone {
 		idc = 901;

@@ -12,7 +12,7 @@ if(isClass(configFile>>"CfgWeapons">>"gm_g3a3_oli"))then{endMission "End2";};
 
 if ( GRLIB_revive > 0 ) then {
 	[] execVM "FAR_revive\FAR_revive_init.sqf";
-};
+	};
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
 
 [] call compileFinal preprocessfilelinenumbers "scripts\shared\init_shared.sqf";
@@ -83,7 +83,8 @@ if(hasInterface)then{
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
-	[] execVM "jld\tankboy.sqf";	
+	[] execVM "jld\tankboy.sqf";		
+	call SAKY_WEATHERCHECK_ADDACTION;
 	radio_joined = false;
 }];
 

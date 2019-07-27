@@ -261,7 +261,19 @@ while { true } do {
 				_vehicle setDamage 0;
 				
 				if(buildtype == 6) then {
-					_vehicle allowDamage false;
+					_vehicle allowDamage false;			
+					[_vehicle] spawn {		
+						params ["_vehicle"];			
+						sleep 0.3;
+						if(!(typeOf _vehicle in simulated_buildings))then{
+							waitUntil{
+								sleep 1;
+								(speed _vehicle < 0.001)
+							};
+							_vehicle enableSimulation false;
+							[_vehicle, false] remoteExec ["enableSimulationGlobal",2];
+						};					
+					};
 				};
 
 				if(buildtype == 99) then {

@@ -9,16 +9,18 @@ private _consecutive_fps_too_fast = 0;
 private _smoothing_margin = 0.08;
 
 while { true } do {
+	
+	_desired_fps = 35 max desired_fps;
 
 	_corrected_increment = _base_increment * GREUH_view_distance_factor;
 
-	if ( (diag_fps * ( 1 - _smoothing_margin )) < desired_fps ) then {
-		_consecutive_fps_too_low = _consecutive_fps_too_low + (desired_fps-diag_fps)*0.6;
+	if ( (diag_fps * ( 1 - _smoothing_margin )) < _desired_fps ) then {
+		_consecutive_fps_too_low = _consecutive_fps_too_low + (_desired_fps-diag_fps)*0.6;
 		_consecutive_fps_too_fast = 0;
 	};
 
-	if ( (diag_fps * ( 1 + _smoothing_margin )) > desired_fps ) then {
-		_consecutive_fps_too_fast = _consecutive_fps_too_fast + (diag_fps-desired_fps)*0.6;
+	if ( (diag_fps * ( 1 + _smoothing_margin )) > _desired_fps ) then {
+		_consecutive_fps_too_fast = _consecutive_fps_too_fast + (diag_fps-_desired_fps)*0.6;
 		_consecutive_fps_too_low = 0;
 	};
 

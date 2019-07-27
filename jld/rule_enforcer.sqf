@@ -39,7 +39,7 @@ isAllowedGetIn = {
 	params ["_groupType", "_vehicle"];
 	_isAllowedGetIn = false;
 
-	if ((leader group player == player) && (count units player > 2)) then {	_isAllowedGetIn = true;
+	if ((leader group player == player) && (count units player > 4)) then {	_isAllowedGetIn = true;
 	} else {
 		switch (_groupType)
 		do {
@@ -106,7 +106,8 @@ isAllowedGetIn = {
 };
 
 player addEventHandler["GetInMan", {
-	params["_unit", "_role", "_vehicle", "_turret"];
+	params["_unit", "_role", "_vehicle", "_turret"];	
+
 	if(!SeatSwitching)then{
 		if (!(_vehicle isKindOf "ParachuteBase"))
 		then {
@@ -122,11 +123,27 @@ player addEventHandler["GetInMan", {
 				}
 				else {
 					if (!([_unit call groupType, _vehicle] call isAllowedGetIn))
-					then {
-						moveOut _unit;
-						unassignVehicle player;
-						hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용하기 바랍니다."; 
-						["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용하기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
+					then {						
+						if ((leader group _unit == _unit) && (count units _unit > 3)) then {							
+							[_unit] spawn {								
+								params["_unit"];
+								_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."]
+								,"임시 장비사용 권한"
+								,"동의합니다."
+								,"동의하지 않습니다."] call BIS_fnc_guiMessage;
+								if(!_result)then{
+									moveOut _unit;
+									unassignVehicle player;
+									hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다."; 
+									["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
+								};
+							};		
+						}else{		
+							moveOut _unit;
+							unassignVehicle player;
+							hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다."; 
+							["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
+						};
 					};
 				};
 			};
@@ -158,18 +175,18 @@ isSwitchAllowed = {
 		if( (player call groupType != 3) && (!isNull getConnectedUAV player) ) then {
 			player connectTerminalToUAV objNull;		
 			["<t color='#ff0000' size = '0.55' >무인기는 [특수]분대만 사용 가능합니다. 연결이 해제되었습니다.</t>"] spawn BIS_fnc_dynamicText;
-		};
-		
+			systemChat "무인기는 [특수]분대만 사용 가능합니다. 연결이 해제되었습니다.";
+		};		
 		if( (player call groupType in [7,8]) && (typeOf player != "B_Pilot_F") ) then {
 			[player] join grpNull;
-			["<t color='#ff0000' size = '0.55' >[전투], [기동]분대에 가입하기 위해서는 조종사로 접속해야 합니다.</t>"] spawn BIS_fnc_dynamicText;
-		};
-		
+			["<t color='#ff0000' size = '0.55' >[전투], [기동]분대에 가입하기 위해서는 조종사로 접속해야 합니다.</t>"] spawn BIS_fnc_dynamicText;			
+			systemChat "[전투], [기동]분대에 가입하기 위해서는 조종사로 접속해야 합니다.";
+		};		
 		if( (player call groupType in [0,1,2,3,4,5,6]) && (typeOf player == "B_Pilot_F") ) then {
 			[player] join grpNull;
 			["<t color='#ff0000' size = '0.55' >조종사는 [전투], [기동]분대에만 가입가능합니다.</t>"] spawn BIS_fnc_dynamicText;
-		};
-		
+			systemChat "조종사는 [전투], [기동]분대에만 가입가능합니다.";
+		};		
 		if(call isSwitchAllowed)then{
 			inGameUISetEventHandler ["Action", ""];	
 		}else{	
@@ -193,53 +210,41 @@ isSwitchAllowed = {
 	};
 };
 
-/*
-player addEventHandler["SeatSwitchedMan", {
-	params["_unit1", "_unit2", "_vehicle"];
-	if (!(_vehicle isKindOf "ParachuteBase"))
-	then {	
-		_cargos = [];
-		{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
-		if (!(player in _cargos))
-		then {
-			SeatSwitching = true;
-			if ((_unit1 call groupType == -1))
-			then {
-				moveOut _unit1;
-				_unit1 assignAsCargo _vehicle;
-				//_unit1 moveInCargo _vehicle;				
-				[[_unit1, _vehicle],{params ["_unit1", "_vehicle"];_unit1 moveInCargo _vehicle;}] remoteExec ["call", _vehicle];				
-				hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하시기 바랍니다.";
-			}
-			else {
-				if (!([_unit1 call groupType, _vehicle] call isAllowedGetIn))
-				then {
-					moveOut _unit1;
-					_unit1 assignAsCargo _vehicle;
-					[[_unit1, _vehicle],{params ["_unit1", "_vehicle"];_unit1 moveInCargo _vehicle;}] remoteExec ["call", _vehicle];
-					hintSilent "가입하신 분대에서 사용할 수 없는 장비입니다. 서버 규정을 확인하시기 바랍니다.";
-				};
-			};
-			SeatSwitching = false;
-		};
-	};
-}
-];
-*/
-
-
 PilotRestriction = { 	
-	params ["_minSquads"];
-	sleep 1;
+	params ["_minSquads"];	
+	
+	waitUntil{!isNull findDisplay 46};
+	waitUntil{!isNil "welcomeFinished"};	
+	waitUntil{welcomeFinished};	
+	
+	[_minSquads] spawn {	
+		params ["_minSquads"];	
+		_result = [format["
+	조종사 슬롯으로 접속하였습니다. <br/>
+	[전투], [기동]분대에 가입하여 항공기를 사용할 수 있습니다.<br/><br/>	
+	현재 지상분대 수는 %2분대로, 지상분대 수가 %1분대 아래로 떨어지는 경우 자동으로 로비로 돌아갑니다.<br/><br/>	
+	-지나친 자원 낭비나 무단 CAS등은 서버룰에 의거하여 킥, 밴 조치될 수 있으니 책임감있는 플레이 부탁드립니다.<br/>
+	-조종사 보직으로 플레이 하는 동안 다른 사유가 없을경우 수송 업무를 최우선으로 수행해야 합니다. <br/>(제공권확보가 우선되어야 하는 경우 제외)<br/>
+	-아울러 조종사 보직을 유지한 상태에서 지상분대 플레이를 엄격하게 금지합니다. 반드시 소총수, 공병, 전투의무병 보직으로 전환 후 플레이 하시기 바랍니다.<br/><br/>	
+	-조종사는 관련된 규정을 모두 숙지하고, 서버룰을 위반한 것이 적발되는 경우 처벌될 수 있다는 것에 동의한 것으로 간주됩니다. 이에 동의하지 않는 경우 다른 보직으로 플레이 해주시기 바랍니다.
+	",_minSquads,call groundSquads]
+		,"조종사 플레이 규정"
+		,"동의합니다."
+		,"동의하지 않습니다."] call BIS_fnc_guiMessage;
+		if(!_result)then{endMission "End4"};
+	};
+	
+	/*
 	"=PILOT RULES=" hintC [
 	str formatText ["조종사 슬롯으로 접속하였습니다. [전투], [기동]분대에 가입하여 항공기를 사용할 수 있습니다."],	
 	str formatText ["이 슬롯으로 플레이하기 위해선 최소 %1개의 지상분대가 있어야 합니다.",_minSquads,call groundSquads],
 	str formatText ["현재 지상분대 수는 %2분대로, 지상분대 수가 %1분대 아래로 떨어지는 경우 자동으로 로비로 돌아갑니다.",_minSquads,call groundSquads],
 	str formatText ["지나친 자원 낭비나 무단 CAS등은 서버룰에 의거하여 킥, 밴 조치될 수 있으니 책임감있는 플레이 부탁드립니다."],	
-	str formatText ["조종사 보직으로 플레이 하는 동안은 항상 전술통신망을 유지하고 점검할 의무가 있습니다. (무전기 슬롯에 무전기를 장착하면 자동 가입됩니다.)"],	
+	str formatText ["조종사 보직으로 플레이 하는 동안 다른 사유가 없을경우 수송 업무를 최우선으로 수행해야 합니다. (제공권확보가 우선되어야 하는 경우 제외)"],	
 	str formatText ["아울러 조종사 보직을 유지한 상태에서 지상분대 플레이를 엄격하게 금지합니다. 반드시 소총수, 공병, 전투의무병 보직으로 전환 후 플레이 하시기 바랍니다."],
 	str formatText ["조종사는 관련된 규정을 모두 숙지하고, 서버룰을 위반한 것이 적발되는 경우 처벌될 수 있다는 것에 동의한 것으로 간주됩니다. 이에 동의하지 않는 경우 다른 보직으로 플레이 해주시기 바랍니다."]
 	];
+	*/
 	
 	while{true}do{
 		sleep 1; 
@@ -259,7 +264,6 @@ PilotRestriction = {
 	};
 };
 
-
 if(typeOf player == "B_Pilot_F") then {
 	waitUntil{!isNull findDisplay 46};
 	sleep 3;
@@ -267,6 +271,4 @@ if(typeOf player == "B_Pilot_F") then {
 	_null = [({typeOf _x == "B_Pilot_F"} count allPlayers)-1] spawn pilotRestriction;
 };
 
-
-
-systemChat "분대별 장비잠금 스크립트 활성화";
+systemChat "분대태그 시스템 활성화";

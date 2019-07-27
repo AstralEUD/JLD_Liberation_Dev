@@ -45,8 +45,39 @@ Test_PlayAnim = {
 		};		
 		(findDisplay 46) displayremoveEventHandler ["KeyDown", _animEH];
 		[player, ""] remoteExec ["switchMove", 0];
-	};
+		};
 };
+
+SAKY_WEATHERCHECK_ADDACTION = {
+	player addAction  
+	[ 
+	"기상정보 확인",  
+	{   
+		"Weathers Information System" hintC [   
+		str formatText ["현재 구름량:%1%%",overcast*100],   
+		str formatText ["현재 강우량:시간당 %1mm",rain*100],   
+		str formatText ["현재 안개량:%1%%",fog*100],  
+		str formatText ["현재 풍속:%1m/s",vectorMagnitude wind],  
+		str formatText ["현재 파도:%1m",waves*10],   
+		str formatText ["예상 구름량:%1%%",overcastForecast*100],    
+		str formatText ["예상 안개량:%1%%",fogForecast*100] 
+		];   
+		hintC_arr_EH = findDisplay 72 displayAddEventHandler ["unload", {  
+			0 = _this spawn {  
+				_this select 0 displayRemoveEventHandler ["unload", hintC_arr_EH];  
+				hintSilent "";  
+			};  
+		}]; 
+	}, 
+	[], 
+	1.5,  
+	true,  
+	true,  
+	"", 
+	"(getPos player nearObjects 3) findIf {typeOf _x find 'PortableWeatherStation' > -1}>-1"
+	];
+};
+call SAKY_WEATHERCHECK_ADDACTION;
 
 waitUntil{!isNull findDisplay 46};
 

@@ -54,4 +54,11 @@ class CfgDebriefing
 		description = "TIP:장비에 탑승하고 있는 동안은 인원이 초과된 경우에도 지속적으로 게임을 플레이 할 수 있습니다.";
 		pictureBackground = "jld.paa";
 	};
+	class End4
+	{
+		title =	"조종사 플레이 규정 미동의";
+		subtitle = "조종사 플레이 규정에 동의하지 않았습니다.";
+		description = "ESC버튼을 누르면 조종사 플레이 규정에 동의하지 않는것으로 인정됩니다. [동의합니다] 버튼을 클릭하시기 바랍니다.";
+		pictureBackground = "jld.paa";
+	};
 };

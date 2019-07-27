@@ -129,9 +129,7 @@ heavy_vehicles = [
 ["I_MBT_03_cannon_F", 150, 180, 0],
 ["B_MBT_01_cannon_F", 150, 180, 0],
 ["B_MBT_01_TUSK_F", 150, 200, 0],
-["O_MBT_02_cannon_F", 150, 300, 0],
 ["O_MBT_04_cannon_F", 180, 400, 0],
-["O_MBT_04_command_F", 180, 450, 0],
 ["I_Truck_02_MRL_F", 150, 500, 0],
 ["B_MBT_01_arty_F", 150, 500, 0]
 ];
@@ -177,13 +175,11 @@ air_vehicles = [
 ["B_Plane_Fighter_01_Stealth_F", 0, 150, 250],
 ["B_Plane_Fighter_01_Cluster_F", 0, 250, 250],
 ["B_Plane_Fighter_01_F", 0, 300, 250],
-["O_Plane_Fighter_02_F", 0, 500, 250],
 ["O_Plane_Fighter_02_Stealth_F", 0, 400, 250],
-["O_Plane_Fighter_02_Cluster_F", 0, 400, 250],
 ["B_T_VTOL_01_infantry_F", 0, 30, 300],
 ["B_T_VTOL_01_vehicle_F", 0, 30, 300],
 ["B_T_VTOL_01_armed_F", 0, 500, 300],
-["O_T_VTOL_02_infantry_F", 0, 400, 450],
+["O_T_VTOL_02_vehicle_F", 0, 400, 450],
 ["B_UAV_06_F", 200, 10, 10],
 ["B_UAV_01_F", 200, 50, 20],
 ["B_UAV_02_F", 200, 100, 30],
@@ -253,11 +249,11 @@ buildings = [
 ["Land_BagFence_Long_F",0,5,0],
 ["Land_BagFence_Short_F",0,5,0],
 ["Land_BagFence_Round_F",0,5,0],
-["Land_Shoot_House_Corner_F",0,5,0],
-["Land_Shoot_House_Corner_F",0,5,0],
-["Land_Shoot_House_Corner_F",0,5,0],
-["Land_Shoot_House_Wall_F",0,5,0],
-["Land_Shoot_House_Wall_F",0,5,0],
+["Land_Shoot_House_Corner_Stand_F",0,5,0],
+["Land_Shoot_House_Corner_Crouch_F",0,5,0],
+["Land_Shoot_House_Corner_Prone_F",0,5,0],
+["Land_Shoot_House_Wall_Stand_F",0,5,0],
+["Land_Shoot_House_Wall_Crouch_F",0,5,0],
 ["Land_BarGate_F",0,5,0],
 ["Land_HelipadCivil_F",0,50,0],
 ["Land_HelipadCircle_F",0,50,0],
@@ -269,7 +265,6 @@ buildings = [
 ["Land_PortableWeatherStation_01_sand_F",0,20,0],
 ["Land_TripodScreen_01_large_F",0,20,0],
 ["Land_SatelliteAntenna_01_F",0,20,0],
-["DeconShower_01_F",0,20,0],
 ["Land_Missle_Trolley_02_F",0,20,0],
 ["Land_Bomb_Trolley_01_F",0,20,0],
 ["Land_PowerGenerator_F",0,20,0],
@@ -324,6 +319,23 @@ buildings = [
 ["Land_LampStreet_small_F",0,300,0],
 ["Land_LampHalogen_F",0,1000,0]
 ];
+
+simulated_buildings = [
+"Windsock_01_F",
+"Flag_NATO_F",
+"Flag_UNO_F",
+"Flag_US_F",
+"Flag_UK_F",
+"PortableHelipadLight_01_red_F",
+"Land_PortableLight_02_double_yellow_F",
+"Land_PortableLight_02_quad_yellow_F",
+"Land_TentLamp_01_standing_F",
+"Land_TentLamp_01_standing_red_F",
+"Land_PortableLight_double_F",
+"Land_LampStreet_small_F",
+"Land_LampHalogen_F"
+];
+
 if (isNil "buildings_extension")
 then {
 	buildings_extension = []
@@ -342,8 +354,8 @@ else {
 
 support_vehicles = [
 [Arsenal_typename, 80, 100, 0],
-[FOB_box_typename, 0, 500, 0],
-[FOB_truck_typename, 50, 500, 0],
+[FOB_box_typename, 0, 2000, 0],
+[FOB_truck_typename, 50, 2000, 0],
 [Respawn_truck_typename, 100, 200, 50],
 ["B_APC_Tracked_01_CRV_F", 150, 500, 0],
 ["B_Slingload_01_Medevac_F", 50, 100, 50],
@@ -448,7 +460,6 @@ elite_vehicles = [] + elite_vehicles_extension + [
 "B_AFV_Wheeled_01_up_cannon_F",
 "B_MBT_01_TUSK_F",
 "O_MBT_04_cannon_F",
-"O_MBT_04_command_F",
 "I_Truck_02_MRL_F",
 "B_MBT_01_arty_F",
 "B_Heli_Attack_01_F",
@@ -458,10 +469,9 @@ elite_vehicles = [] + elite_vehicles_extension + [
 "B_Plane_CAS_01_F",
 "B_Plane_CAS_01_Cluster_F",
 "B_Plane_Fighter_01_F",
-"O_Plane_Fighter_02_F",
-"O_Plane_Fighter_02_Cluster_F",
-"O_T_VTOL_02_infantry_F",
+"O_T_VTOL_02_vehicle_F",
 "B_Radar_System_01_F",
+"O_Plane_Fighter_02_Stealth_F",
 "B_APC_Tracked_01_CRV_F"
 ];
 if (isNil "ai_resupply_sources_extension")
@@ -698,11 +708,10 @@ opfor_vehicles = [
 "O_T_LSV_02_armed_F",
 "O_T_LSV_02_unarmed_F",
 "O_T_LSV_02_AT_F",
-"O_MBT_04_cannon_F",
 "O_MBT_04_command_F",
 "O_Radar_System_02_F",
+"O_SAM_System_04_F",
 "O_SAM_System_04_F"
-//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_vehicles_extension")
 then {
@@ -753,9 +762,7 @@ else {
 };
 
 opfor_battlegroup_vehicles = [
-"O_T_VTOL_02_vehicle_F",
-"O_Mortar_01_F",
-"O_Mortar_01_F",
+"O_T_VTOL_02_infantry_F",
 "O_Mortar_01_F",
 "O_APC_Tracked_02_cannon_F",
 "O_APC_Tracked_02_AA_F",
@@ -766,11 +773,11 @@ opfor_battlegroup_vehicles = [
 "O_Heli_Transport_04_covered_F",
 "O_T_MRAP_02_hmg_ghex_F",
 "O_T_MRAP_02_gmg_ghex_F",
-"O_T_MBT_04_cannon_F",
+"O_MBT_04_command_F",
 "O_MBT_04_command_F",
 "O_Radar_System_02_F",
+"O_SAM_System_04_F",
 "O_SAM_System_04_F"
-//"O_SAM_System_04_F",
 //"O_SAM_System_04_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_extension")
@@ -804,9 +811,7 @@ opfor_battlegroup_vehicles_low_intensity = [
 "O_APC_Wheeled_02_rcws_F",
 "O_T_LSV_02_armed_F",
 "O_T_LSV_02_AT_F",
-//"O_Radar_System_02_F",
 "O_SAM_System_04_F"
-//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_low_intensity_extension")
 then {
@@ -834,7 +839,7 @@ opfor_troup_transports = [
 "O_Heli_Attack_02_F",
 "O_Heli_Attack_02_F",
 "O_Heli_Transport_04_covered_F",
-"O_T_VTOL_02_vehicle_F"
+"O_T_VTOL_02_infantry_F"
 ];
 if (isNil "opfor_troup_transports_extension")
 then {
@@ -884,8 +889,7 @@ opfor_air = [
 "O_Plane_CAS_02_Cluster_F",
 "O_Plane_Fighter_02_F",
 "O_Plane_Fighter_02_F",
-"O_Plane_Fighter_02_Stealth_F",
-"O_Plane_Fighter_02_Stealth_F",
+"O_Plane_Fighter_02_F",
 "O_Plane_Fighter_02_Cluster_F",
 "O_T_VTOL_02_infantry_F",
 "O_UAV_02_F"
