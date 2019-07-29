@@ -55,7 +55,8 @@ if ( dojump > 0 ) then {
 	halo_position = [ halo_position select 0, halo_position select 1, GRLIB_halo_altitude + (random 200) ];
 	halojumping = true;
 	[[],"jumpcost_remote_call"] call BIS_fnc_MP;
-	hint "자원 10을 소모하여 공수강하합니다.!";
+	[gamelogic, str formatText["%1님이 %2의 자원을 사용하여 공수강하 하였습니다.",name player, 30]] remoteExec ["globalChat"];
+	hint "자원 30을 소모하여 공수강하합니다.!";
 	sleep 0.1;
 	cutRsc ["fasttravel", "PLAIN", 1];
 	playSound "parasound";
@@ -73,7 +74,7 @@ if ( dojump > 0 ) then {
 	sleep 4;
 	halojumping = false;
 	
-	waitUntil { (ASLToAGL getPosASL player#2) < 250 };
+	waitUntil { (ASLToAGL getPosASL player#2) < 200 };
 	player action ["OpenParachute", player];
 	
 	waitUntil { !alive player || isTouchingGround player };

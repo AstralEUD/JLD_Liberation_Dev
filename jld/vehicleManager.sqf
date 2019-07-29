@@ -50,8 +50,8 @@ _vehicleManager =
 				};
 			};
 			
-			if (_tryEnable && {!simulationEnabled _vehicle}) then
-			{
+			if (_tryEnable && {!simulationEnabled _vehicle} && (!typeOf _vehicle in (buildings - simulated_buildings))) then
+			{				
 				_vehicle enableSimulation true;
 			};
 

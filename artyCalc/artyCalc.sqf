@@ -92,13 +92,6 @@ BTCS_load={
 	};
 };
 
-
-btcsId = 0;
-player addEventHandler ["GetOutMan", {player removeAction btcsId;}];
-player addEventHandler ["GetInMan", {
-	if(getNumber(configfile >> "CfgVehicles" >> typeOf (_this#2) >> "artilleryScanner")==1)then{
-		btcsId = player addAction ["<t color='#00FF00'>BTCS실행</t>", {0 = createDialog "BTCS_Control";}];
-	};
-}];
+player addAction ["<t color='#00FF00'>BTCS실행</t>", {0 = createDialog "BTCS_Control";},[],1.5,true,true,"","getNumber(configfile >> 'CfgVehicles' >> typeOf vehicle player >> 'artilleryScanner')==1"];
 
 systemChat "반자동 포병컴퓨터 활성화";

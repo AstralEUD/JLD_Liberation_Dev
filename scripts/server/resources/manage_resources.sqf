@@ -70,7 +70,7 @@ do {
 							}
 							foreach blufor_sectors;
 							
-							_chkInc = round(_chkInc - combat_readiness*5*_base_tick_period/3600);
+							_chkInc = round(_chkInc - combat_readiness*15*_base_tick_period/3600);
 
 							if (_chkInc < 0 && (resources_ammo + _chkInc < 150))
 								then {

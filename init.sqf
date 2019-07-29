@@ -84,8 +84,10 @@ player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
 	[] execVM "jld\tankboy.sqf";		
-	call SAKY_WEATHERCHECK_ADDACTION;
-	radio_joined = false;
+	call SAKY_WEATHERCHECK_ADDACTION;	
+	call SAKY_MANUAL_HALO;
+	radio_joined = !radio_joined;		
+	[] spawn radio_join;
 }];
 
 //FFE
@@ -98,5 +100,5 @@ nul = [] execVM "RYD_FFE\FFE.sqf";
 		(vehicle _x) setVehicleReportOwnPosition true;
 		(vehicle _x) setVehicleReceiveRemoteTargets true;
 		(vehicle _x) setVehicleRadar 1;
-	}forEach allUnits;	
+	}forEach (allUnits+allUnitsUAV);	
 };

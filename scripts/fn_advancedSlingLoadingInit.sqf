@@ -943,6 +943,7 @@ ASL_Can_Pickup_Ropes = {
 
 ASL_SUPPORTED_VEHICLES = [
 	"Helicopter",
+	"B_APC_Tracked_01_base_F",
 	"VTOL_Base_F"
 ];
 
@@ -969,7 +970,7 @@ ASL_Is_Supported_Cargo = {
 	_canSling = false;
 	if(not isNull _vehicle && not isNull _cargo) then {
 		{
-			if(_vehicle isKindOf (_x select 0)) then {
+			if(_vehicle isKindOf (_x select 0) || _vehicle isKindOf "B_APC_Tracked_01_base_F") then {
 				if(_cargo isKindOf (_x select 2)) then {
 					if( (toUpper (_x select 1)) == "CAN_SLING" ) then {
 						_canSling = true;
@@ -1032,27 +1033,26 @@ ASL_Find_Nearby_Vehicles = {
 	_nearVehiclesWithRopes;
 };
 
-ASL_Add_Player_Actions = {
-
+ASL_Add_Player_Actions = {	
 	player addAction ["화물용 밧줄 늘리기", { 
 		[] call ASL_Extend_Ropes_Action;
-	}, nil, 0, false, true, "", "call ASL_Extend_Ropes_Action_Check"];
+	}, nil, 0, false, true, "", "call ASL_Extend_Ropes_Action_Check && (driver vehicle player == player)"];
 	
 	player addAction ["화물용 밧줄 줄이기", { 
 		[] call ASL_Shorten_Ropes_Action;
-	}, nil, 0, false, true, "", "call ASL_Shorten_Ropes_Action_Check"];
+	}, nil, 0, false, true, "", "call ASL_Shorten_Ropes_Action_Check && (driver vehicle player == player)"];
 		
 	player addAction ["화물용 밧줄 자르기", { 
 		[] call ASL_Release_Cargo_Action;
-	}, nil, 0, false, true, "", "call ASL_Release_Cargo_Action_Check"];
+	}, nil, 0, false, true, "", "call ASL_Release_Cargo_Action_Check && (driver vehicle player == player)"];
 		
 	player addAction ["화물용 밧줄 회수", { 
 		[] call ASL_Retract_Ropes_Action;
-	}, nil, 0, false, true, "", "call ASL_Retract_Ropes_Action_Check"];
+	}, nil, 0, false, true, "", "call ASL_Retract_Ropes_Action_Check && (driver vehicle player == player) && (vehicle player != player)"];
 	
 	player addAction ["화물용 밧줄 배치", { 
 		[] call ASL_Deploy_Ropes_Action;
-	}, nil, 0, false, true, "", "call ASL_Deploy_Ropes_Action_Check"];
+	}, nil, 0, false, true, "", "call ASL_Deploy_Ropes_Action_Check && (driver vehicle player == player) && (vehicle player != player)"];
 
 	player addAction ["화물용 밧줄 걸기", { 
 		[] call ASL_Attach_Ropes_Action;
@@ -1065,11 +1065,10 @@ ASL_Add_Player_Actions = {
 	player addAction ["화물용 밧줄 집기", { 
 		[] call ASL_Pickup_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Pickup_Ropes_Action_Check"];
-
+	
 	player addEventHandler ["Respawn", {
 		player setVariable ["ASL_Actions_Loaded",false];
-	}];
-	
+	}];	
 };
 
 if(!isDedicated) then {

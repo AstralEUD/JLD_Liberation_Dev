@@ -179,7 +179,8 @@ while { true } do {
 						_vehicle setpos _truepos;
 					};
 					if ( buildtype == 6 || buildtype == 99 ) then {
-						_vehicle setVectorUp [0,0,1];
+						//_vehicle setVectorUp [0,0,1];						
+						_vehicle setVectorUp surfaceNormal position _vehicle;
 					} else {
 						_vehicle setVectorUp surfaceNormal position _vehicle;
 					};
@@ -244,7 +245,8 @@ while { true } do {
 				clearItemCargoGlobal _vehicle;
 				clearBackpackCargoGlobal _vehicle;
 				if ( buildtype == 6 || buildtype == 99 ) then {
-					_vehicle setVectorUp [0,0,1];
+					//_vehicle setVectorUp [0,0,1];					
+					_vehicle setVectorUp surfaceNormal position _vehicle;
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};

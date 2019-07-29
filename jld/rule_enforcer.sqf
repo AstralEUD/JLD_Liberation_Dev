@@ -127,10 +127,7 @@ player addEventHandler["GetInMan", {
 						if ((leader group _unit == _unit) && (count units _unit > 3)) then {							
 							[_unit] spawn {								
 								params["_unit"];
-								_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."]
-								,"임시 장비사용 권한"
-								,"동의합니다."
-								,"동의하지 않습니다."] call BIS_fnc_guiMessage;
+								_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."],"임시 장비사용 권한","동의합니다.","동의하지 않습니다."] call BIS_fnc_guiMessage;
 								if(!_result)then{
 									moveOut _unit;
 									unassignVehicle player;
@@ -224,7 +221,8 @@ PilotRestriction = {
 	[전투], [기동]분대에 가입하여 항공기를 사용할 수 있습니다.<br/><br/>	
 	현재 지상분대 수는 %2분대로, 지상분대 수가 %1분대 아래로 떨어지는 경우 자동으로 로비로 돌아갑니다.<br/><br/>	
 	-지나친 자원 낭비나 무단 CAS등은 서버룰에 의거하여 킥, 밴 조치될 수 있으니 책임감있는 플레이 부탁드립니다.<br/>
-	-조종사 보직으로 플레이 하는 동안 다른 사유가 없을경우 수송 업무를 최우선으로 수행해야 합니다. <br/>(제공권확보가 우선되어야 하는 경우 제외)<br/>
+	-조종사 보직으로 플레이 하는 동안 다른 사유가 없을경우 수송 업무를 최우선으로 수행해야 합니다. <br/>(예:제공권확보가 우선되어야 하는 경우 제외)<br/>
+	-조종사는 지상분대 없이 점령임무를 단독으로 수행할 수 없습니다. '방어임무'나 '초계비행'은 단독으로 수행할 수 있습니다.<br/>
 	-아울러 조종사 보직을 유지한 상태에서 지상분대 플레이를 엄격하게 금지합니다. 반드시 소총수, 공병, 전투의무병 보직으로 전환 후 플레이 하시기 바랍니다.<br/><br/>	
 	-조종사는 관련된 규정을 모두 숙지하고, 서버룰을 위반한 것이 적발되는 경우 처벌될 수 있다는 것에 동의한 것으로 간주됩니다. 이에 동의하지 않는 경우 다른 보직으로 플레이 해주시기 바랍니다.
 	",_minSquads,call groundSquads]
@@ -269,6 +267,13 @@ if(typeOf player == "B_Pilot_F") then {
 	sleep 3;
 	systemChat str formatText ["지상분대가 %1분대 미만이 되면 자동으로 대기실로 이동합니다. 현재 지상분대 수는 %2분대입니다.",({typeOf _x == "B_Pilot_F"} count allPlayers)-1,call groundSquads,lineBreak];
 	_null = [({typeOf _x == "B_Pilot_F"} count allPlayers)-1] spawn pilotRestriction;
+	
+	player addEventHandler ["Respawn", {
+		params ["_unit", "_corpse"];
+		radio_joined = false;
+		[] spawn radio_join;
+	}];
+	
 };
 
 systemChat "분대태그 시스템 활성화";

@@ -1,5 +1,5 @@
 if (!isServer) exitWith {};
 
-resources_ammo = resources_ammo - 10;
+resources_ammo = resources_ammo - 30;
 
 please_recalculate = true;

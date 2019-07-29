@@ -13,8 +13,9 @@ radio_join = {
 	}else{			
 		if( (typeOf player == "B_Pilot_F") ) then {	
 			radio_joined = false;				
-			["<t color='#ff0000' size = '0.55' >조종사는 전술통신망을 해제할 수 없습니다.<br/>연결이 해제된 경우 토글버튼을 다시 누르세요.</t>"] spawn BIS_fnc_dynamicText;
-			systemChat "조종사는 전술통신망을 해제할 수 없습니다. 연결이 해제된 경우 토글버튼을 다시 누르세요.";
+			["<t color='#ff0000' size = '0.55' >조종사는 전술통신망을 해제할 수 없습니다.</t>"] spawn BIS_fnc_dynamicText;
+			systemChat "조종사는 전술통신망을 해제할 수 없습니다.";
+			[] spawn radio_join;
 		} else {
 			[[player, channelID],{params ["_player", "_channelID"];_player customChat [_channelID, "수신 종료!"];}] remoteExecCall ["call"];
 			[[player, channelID],{params ["_player", "_channelID"];sleep 0.1;_channelID radioChannelRemove [_player];}] remoteExecCall ["spawn"];

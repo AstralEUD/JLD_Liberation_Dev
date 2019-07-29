@@ -29,6 +29,7 @@ waitUntil{!isNull findDisplay 46};
 	<t size='0.8'><t align='left'> 서버안내문 도움 - BWB Gaming Group </a><br/>
 	<t size='1'><a color='#ff0000'>(서버 공지사항 끄기 ‡ESC‡ 혹은 확인버튼 클릭)</a></t></t><br/>"
 	,"전라도 바닐라서버에 오신것을 환영합니다!"] call BIS_fnc_guiMessage;
+	welcomeFinished = true;
 };
 
 /*
