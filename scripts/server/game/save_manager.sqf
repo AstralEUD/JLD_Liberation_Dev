@@ -168,11 +168,25 @@ if ( !isNil "greuh_liberation_savegame" ) then {
 			if ( count _x > 3 ) then {
 				_hascrew = _x select 3;
 			};
-			_nextbuilding = _nextclass createVehicle _nextpos;
+			
+			private ["_nextbuilding"];
+			
+			if(_nextclass in (building_classnames-simulated_buildings))then{			
+				_nextbuilding = createSimpleObject [_nextclass, _nextpos];		
+				_nextbuilding setPosASL _nextpos;
+			}else{
+				_nextbuilding = _nextclass createVehicle _nextpos;
+				_nextbuilding setPosATL _nextpos;
+			};	
+			
 			_nextbuilding setVectorUp [0,0,1];
-			_nextbuilding setPosATL _nextpos;
 			_nextbuilding setdir _nextdir;
-			_nextbuilding setdamage 0;
+			_nextbuilding setdamage 0;			
+			
+			if(_nextclass in building_classnames) then {
+				_nextbuilding allowDamage false;
+			};	
+			
 
 			if ( _nextclass in _building_classnames ) then {
 				_nextbuilding setVariable [ "GRLIB_saved_pos", _nextpos, false ];
@@ -268,7 +282,7 @@ while { true } do {
 				( isNull  attachedTo _x ) &&
 				(((getpos _x) select 2) < 10 ) &&
 				( getObjectType _x >= 8 )
- 				} ] call BIS_fnc_conditionalSelect;
+			} ] call BIS_fnc_conditionalSelect;
 
 			_all_buildings = _all_buildings + _nextbuildings;
 
@@ -306,6 +320,8 @@ while { true } do {
 			} else {
 				_savedpos = getposATL _x;
 			};
+			
+			if (isSimpleObject _x) then {_savedpos set [2,(getPosASL _x)#2]};
 
 			private _nextclass = typeof _x;
 			private _nextdir = getdir _x;
@@ -315,8 +331,8 @@ while { true } do {
 					_hascrew = true;
 				};
 			};
-			buildings_to_save pushback [ _nextclass,_savedpos,_nextdir,_hascrew ];
-		} foreach _all_buildings;
+			buildings_to_save pushbackunique [ _nextclass,_savedpos,_nextdir,_hascrew ];
+		} foreach (_all_buildings+allSimpleObjects []);
 
 		time_of_day = date select 3;
 

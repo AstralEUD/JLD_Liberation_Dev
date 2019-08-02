@@ -1,4 +1,5 @@
-_nodamage = []; 
+/*
+	_nodamage = []; 
 {_nodamage pushBack (_x select 0);}forEach buildings;
 
 waitUntil{!isNil "GRLIB_all_fobs"};
@@ -21,3 +22,4 @@ while{true}do{
 	}forEach GRLIB_all_fobs; 
 	sleep 30;
 };
+*/

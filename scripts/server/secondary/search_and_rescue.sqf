@@ -1,8 +1,8 @@
-private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
+﻿private _spawn_marker = [ 3000, 999999, false ] call F_findOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { 
 diag_log "Could not find position for search and rescue mission"; 
 combat_readiness = round (combat_readiness * 0.95);
-[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 5% 감소하였습니다."]] remoteExec ["globalChat"];
+[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 5%% 감소하였습니다."]] remoteExec ["globalChat"];
 };
 used_positions pushbackUnique _spawn_marker;
 

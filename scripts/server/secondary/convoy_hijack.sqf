@@ -1,4 +1,4 @@
-private _convoy_destinations_markers = [];
+﻿private _convoy_destinations_markers = [];
 private _load_box_fnc = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\do_load_box.sqf";
 
 while { count _convoy_destinations_markers < 3 } do { _convoy_destinations_markers pushback ([2000,999999,false] call F_findOpforSpawnPoint); };
@@ -8,7 +8,7 @@ private _couldnt_spawn = false;
 if ( _couldnt_spawn ) exitWith { 
 	diag_log "Could not find enough map positions for convoy hijack mission"; 
 combat_readiness = round (combat_readiness * 0.90);
-[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 10% 감소하였습니다."]] remoteExec ["globalChat"];
+[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 10%% 감소하였습니다."]] remoteExec ["globalChat"];
 };
 
 private _convoy_destinations = [];

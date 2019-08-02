@@ -20,7 +20,7 @@ while { true } do {
 	_cam camSetTarget _camobj;
 
 	_dialog = createDialog "blackscreen";
-	0 fadesound 0;
+	0 fadesound 0.1;
 
 	[] spawn {
 		sleep 3.5;

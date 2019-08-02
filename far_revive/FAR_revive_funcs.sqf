@@ -55,6 +55,7 @@ FAR_Player_Unconscious =
 	if (isPlayer _unit) then
 	{
 		disableUserInput true;
+		playSound "combat_deafness";
 	};
 
 	_unit setVariable ["GREUH_isUnconscious", 1, true];

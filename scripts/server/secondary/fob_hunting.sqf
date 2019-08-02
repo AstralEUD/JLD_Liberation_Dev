@@ -12,8 +12,8 @@ _fob_templates = [
 
 _spawn_marker = [2000,999999,false] call F_findOpforSpawnPoint;
 if ( _spawn_marker == "" ) exitWith { diag_log "Could not find position for fob hunting mission"; 
-combat_readiness = round (combat_readiness * 0.80);
-[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 20% 감소하였습니다."]] remoteExec ["globalChat"];};
+combat_readiness = round (combat_readiness * 0.85);
+[gamelogic, str formatText["특수임무를 생성가능한 지점이 없습니다. 첩보활동으로 적의 위협도가 15%% 감소하였습니다."]] remoteExec ["globalChat"];
 };
 
 used_positions = used_positions + [ _spawn_marker ];

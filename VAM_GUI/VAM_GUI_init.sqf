@@ -46,4 +46,4 @@ fnc_VAM_Orca_camo_check = compileFinal preprocessFileLineNumbers "VAM_GUI\vehicl
 if (VAM_check_fob_on) then {[] spawn fnc_VAM_fob_check;};
 [] spawn fnc_VAM_action;
 
-systemchat localize "STR_VAM_INITIALIZED";
+//systemchat localize "STR_VAM_INITIALIZED";

@@ -82,7 +82,9 @@ call SAKY_WEATHERCHECK_ADDACTION;
 SAKY_MANUAL_HALO_Condition = {
 	_cargos = [];
 	{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
-	((ASLToAGL getPosASL vehicle player#2) > 300) && (player in _cargos)
+	_isFFV = false;
+	if(vehicle player != player)then{_isFFV=((fullCrew vehicle player)#((fullCrew vehicle player) findIf {_x#0==player})#4)};
+	((ASLToAGL getPosASL vehicle player#2) > 300) && ((player in _cargos) || _isFFV)
 };
 
 SAKY_MANUAL_HALO = {  

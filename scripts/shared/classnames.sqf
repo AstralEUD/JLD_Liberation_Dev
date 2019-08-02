@@ -301,11 +301,11 @@ buildings = [
 ["Land_GarageOffice_01_F",0,10000,0],
 ["Land_MedicalTent_01_wdl_generic_open_F",0,150,0],
 ["Land_Cargo_House_V1_F",0,200,0],
+["Land_Cargo_Patrol_V1_F",0,300,0],
 ["Land_RepairDepot_01_green_F",0,150,0],
 ["Land_ConnectorTent_01_wdl_open_F",0,50,0],
 ["Land_WaterTower_01_F",0,200,0],
 ["Land_WaterTank_02_F",0,100,0],
-["CamoNet_BLUFOR_Big_F",0,300,0],
 ["CamoNet_BLUFOR_open_F",0,200,0],
 ["CamoNet_BLUFOR_F",0,200,0],
 ["Land_CanvasCover_01_F",0,300,0],
@@ -320,8 +320,22 @@ buildings = [
 ["Land_LampHalogen_F",0,1000,0]
 ];
 
+building_classnames=[];
+{
+	building_classnames pushBack (_x#0);
+	}foreach buildings;
+
 simulated_buildings = [
+"Land_Sawmill_01_illuminati_tower_F",
+"Land_DeerStand_01_F",
+"Land_GarageOffice_01_F",
+"Land_Cargo_House_V1_F",
+"Land_Cargo_Patrol_V1_F",
+"Land_WaterTower_01_F",
+"CamoNet_BLUFOR_open_F",
+"CamoNet_BLUFOR_F",
 "Windsock_01_F",
+"Land_BarGate_F",
 "Flag_NATO_F",
 "Flag_UNO_F",
 "Flag_US_F",
@@ -698,6 +712,7 @@ opfor_vehicles = [
 "O_APC_Tracked_02_AA_F",
 "O_MBT_02_cannon_F",
 "O_MRAP_02_hmg_F",
+"O_MRAP_02_gmg_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",
@@ -763,7 +778,6 @@ else {
 
 opfor_battlegroup_vehicles = [
 "O_T_VTOL_02_infantry_F",
-"O_Mortar_01_F",
 "O_APC_Tracked_02_cannon_F",
 "O_APC_Tracked_02_AA_F",
 "O_MBT_02_cannon_F",
@@ -776,9 +790,7 @@ opfor_battlegroup_vehicles = [
 "O_MBT_04_command_F",
 "O_MBT_04_command_F",
 "O_Radar_System_02_F",
-"O_SAM_System_04_F",
 "O_SAM_System_04_F"
-//"O_SAM_System_04_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_extension")
 then {
@@ -805,13 +817,10 @@ opfor_battlegroup_vehicles_low_intensity = [
 "O_G_Offroad_01_AT_F",
 "O_static_AA_F",
 "O_Mortar_01_F",
-"O_Mortar_01_F",
-"O_Mortar_01_F",
 "O_APC_Wheeled_02_rcws_F",
 "O_APC_Wheeled_02_rcws_F",
 "O_T_LSV_02_armed_F",
-"O_T_LSV_02_AT_F",
-"O_SAM_System_04_F"
+"O_T_LSV_02_AT_F"
 ];
 if (isNil "opfor_battlegroup_vehicles_low_intensity_extension")
 then {

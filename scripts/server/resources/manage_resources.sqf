@@ -49,19 +49,19 @@ do {
 								//마을 하나당 5, 공장 하나당 10, 밀베 하나당 20, 대도시당 20, FOB하나당 -150
 								if (_x in sectors_capture)
 									then {
-										_chkInc = _chkInc + 3;
+										_chkInc = _chkInc + 2;
 									};
 								if (_x in sectors_tower)
 									then {
-										_chkInc = _chkInc + 2;
+										_chkInc = _chkInc + 1;
 									};
 								if (_x in sectors_factory)
 									then {
-										_chkInc = _chkInc + 3;
+										_chkInc = _chkInc + 2;
 									};
 								if (_x in sectors_military)
 									then {
-										_chkInc = _chkInc + 5;
+										_chkInc = _chkInc + 3;
 									};
 								if (_x in sectors_bigtown)
 									then {
@@ -70,7 +70,7 @@ do {
 							}
 							foreach blufor_sectors;
 							
-							_chkInc = round(_chkInc - combat_readiness*15*_base_tick_period/3600);
+							_chkInc = round(_chkInc*1.3 - combat_readiness*_chkInc/100);
 
 							if (_chkInc < 0 && (resources_ammo + _chkInc < 150))
 								then {

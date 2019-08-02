@@ -29,9 +29,9 @@ while { true } do {
 		_marker setMarkerColorLocal GRLIB_color_enemy_bright;
 		_marker setMarkerTypeLocal "mil_dot";
 		_marker setMarkerSizeLocal [ 0.7, 0.7 ];
-		_marker setMarkerPosLocal ( [ getpos (leader _x), random 100, random 360 ] call BIS_fnc_relPos );
+		_marker setMarkerPosLocal ( [ getpos (leader _x), random 200, random 360 ] call BIS_fnc_relPos );
 		_hostile_markers pushback _marker;
 	} foreach _hostile_groups;
 
-	sleep 30;
+	sleep 60;
 };

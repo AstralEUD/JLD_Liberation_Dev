@@ -179,8 +179,7 @@ while { true } do {
 						_vehicle setpos _truepos;
 					};
 					if ( buildtype == 6 || buildtype == 99 ) then {
-						//_vehicle setVectorUp [0,0,1];						
-						_vehicle setVectorUp surfaceNormal position _vehicle;
+						_vehicle setVectorUp [0,0,1];
 					} else {
 						_vehicle setVectorUp surfaceNormal position _vehicle;
 					};
@@ -228,25 +227,29 @@ while { true } do {
 
 			if ( build_confirmed == 2 ) then {
 				_vehpos = getpos _vehicle;
+				_vehposASL = getposASL _vehicle;				
 				_vehdir = getdir _vehicle;
 				deleteVehicle _vehicle;
 				sleep 0.1;
-				_vehicle = _classname createVehicle _truepos;				
 				
-				_vehiclename =  getText ( configFile >> "cfgVehicles" >> _classname >> "displayName" );	
-				_builder = name player;				
-				format [ "%2님이 %1을 건설하였습니다.", _vehiclename, _builder ] remoteExec ["systemChat"]; 
+				if(_classname in (building_classnames-simulated_buildings))then{			
+					_vehicle = createSimpleObject [_classname, _truepos];		
+					_vehicle setPosASL _vehposASL;
+				}else{
+					_vehicle = _classname createVehicle _vehpos;
+					_vehicle setpos _truepos;					
+				};	
+				
+				//_vehicle = _classname createVehicle _truepos;				
 				
 				_vehicle allowDamage false;
 				_vehicle setdir _vehdir;
-				_vehicle setpos _truepos;
 				clearWeaponCargoGlobal _vehicle;
 				clearMagazineCargoGlobal _vehicle;
 				clearItemCargoGlobal _vehicle;
 				clearBackpackCargoGlobal _vehicle;
 				if ( buildtype == 6 || buildtype == 99 ) then {
-					//_vehicle setVectorUp [0,0,1];					
-					_vehicle setVectorUp surfaceNormal position _vehicle;
+					_vehicle setVectorUp [0,0,1];
 				} else {
 					_vehicle setVectorUp surfaceNormal position _vehicle;
 				};
@@ -257,26 +260,10 @@ while { true } do {
 				if ( _classname == FOB_box_typename ) then {
 					[ [_vehicle, 3000 ] , "F_setMass" ] call BIS_fnc_MP;
 				};
-
+				
 				sleep 0.3;
 				_vehicle allowDamage true;
 				_vehicle setDamage 0;
-				
-				if(buildtype == 6) then {
-					_vehicle allowDamage false;			
-					[_vehicle] spawn {		
-						params ["_vehicle"];			
-						sleep 0.3;
-						if(!(typeOf _vehicle in simulated_buildings))then{
-							waitUntil{
-								sleep 1;
-								(speed _vehicle < 0.001)
-							};
-							_vehicle enableSimulation false;
-							[_vehicle, false] remoteExec ["enableSimulationGlobal",2];
-						};					
-					};
-				};
 
 				if(buildtype == 99) then {
 					_vehicle addEventHandler ["HandleDamage", { 0 }];
@@ -285,8 +272,11 @@ while { true } do {
 				if(buildtype != 6) then {
 					_vehicle addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 					{ _x addMPEventHandler ["MPKilled", {_this spawn kill_manager}]; } foreach (crew _vehicle);
-
-				};
+				}else{_vehicle allowDamage false;};				
+				
+				_vehiclename =  getText ( configFile >> "cfgVehicles" >> _classname >> "displayName" );	
+				_builder = name player;				
+				format [ "%2님이 %1을 건설하였습니다.", _vehiclename, _builder ] remoteExec ["systemChat"]; 
 			};
 
 			if ( _idactcancel != -1 ) then {

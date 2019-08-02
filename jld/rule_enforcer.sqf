@@ -108,41 +108,39 @@ isAllowedGetIn = {
 player addEventHandler["GetInMan", {
 	params["_unit", "_role", "_vehicle", "_turret"];	
 
-	if(!SeatSwitching)then{
-		if (!(_vehicle isKindOf "ParachuteBase"))
+	if ( !((_vehicle isKindOf "ParachuteBase") || ((fullCrew vehicle player)#((fullCrew vehicle player) findIf {_x#0==player})#4)) )
+	then {
+		_cargos = [];
+		{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
+		if (!(player in _cargos))
 		then {
-			_cargos = [];
-			{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
-			if (!(player in _cargos))
-			then {
-				if (_unit call groupType == -1)
-				then {
-					moveOut _unit;
-					unassignVehicle player;
-					hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하기 바랍니다.";
-				}
-				else {
-					if (!([_unit call groupType, _vehicle] call isAllowedGetIn))
-					then {						
-						if ((leader group _unit == _unit) && (count units _unit > 3)) then {							
-							[_unit] spawn {								
-								params["_unit"];
-								_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."],"임시 장비사용 권한","동의합니다.","동의하지 않습니다."] call BIS_fnc_guiMessage;
-								if(!_result)then{
-									moveOut _unit;
-									unassignVehicle player;
-									hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다."; 
-									["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
-								};
-							};		
-						}else{		
+			if (_unit call groupType == -1)	then {
+				moveOut _unit;
+				unassignVehicle player;
+				hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하기 바랍니다.";
+			} else {
+				if ((leader group _unit == _unit) && (count units _unit > 3)) then {	
+					[_unit] spawn {								
+						params["_unit"];
+						_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."]
+						,"임시 장비사용 권한"
+						,"동의합니다."
+						,"동의하지 않습니다."] call BIS_fnc_guiMessage;
+						if(!_result)then{
 							moveOut _unit;
 							unassignVehicle player;
 							hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다."; 
 							["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
 						};
+					};		
+				}else{						
+					if (!([_unit call groupType, _vehicle] call isAllowedGetIn)) then {										
+						moveOut _unit;
+						unassignVehicle player;
+						hintSilent "현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다."; 
+						["<t color='#ff0000' size = '.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. ""뒤에 탑승"" 버튼을 이용해 객석에 탑승하시기 바랍니다.</t>"] spawn BIS_fnc_dynamicText;
 					};
-				};
+				};	
 			};
 		};
 	};
@@ -189,8 +187,8 @@ isSwitchAllowed = {
 		}else{	
 			inGameUISetEventHandler ["Action", "
 	if (_this select 3 in ['MoveToCommander','MoveToDriver','MoveToGunner','MoveToPilot','MoveToTurret']) then {
-		systemChat '현재 분대태그로는 탑승할 수 없는 좌석입니다. 객석으로 돌아갑니다.'; 
-		[""<t color='#ff0000' size = '0.55' >현재 분대태그로는 탑승할 수 없는 좌석입니다. 객석으로 돌아갑니다.</t>""] spawn BIS_fnc_dynamicText;
+		systemChat '분대태그가 일치하지 않는 장비내애서의 이동은 불가능합니다.'; 
+		[""<t color='#ff0000' size = '0.55' >분대태그가 일치하지 않는 장비내애서의 이동은 불가능합니다.</t>""] spawn BIS_fnc_dynamicText;
 		true
 	}"];
 		};
@@ -266,14 +264,7 @@ if(typeOf player == "B_Pilot_F") then {
 	waitUntil{!isNull findDisplay 46};
 	sleep 3;
 	systemChat str formatText ["지상분대가 %1분대 미만이 되면 자동으로 대기실로 이동합니다. 현재 지상분대 수는 %2분대입니다.",({typeOf _x == "B_Pilot_F"} count allPlayers)-1,call groundSquads,lineBreak];
-	_null = [({typeOf _x == "B_Pilot_F"} count allPlayers)-1] spawn pilotRestriction;
-	
-	player addEventHandler ["Respawn", {
-		params ["_unit", "_corpse"];
-		radio_joined = false;
-		[] spawn radio_join;
-	}];
-	
+	_null = [({typeOf _x == "B_Pilot_F"} count allPlayers)-1] spawn pilotRestriction;	
 };
 
 systemChat "분대태그 시스템 활성화";
