@@ -4,7 +4,8 @@ class ctMe{
 	{
 		CTMENU
 	};
-	class ContextMenu;
+	class ContextMenu;	
+
 	class CTMENU:ContextMenu
 	{
 		idc=1100;

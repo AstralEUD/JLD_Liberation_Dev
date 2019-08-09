@@ -90,10 +90,10 @@ light_vehicles = [
 ["B_Truck_01_flatbed_F", 50, 10, 0],
 ["B_Truck_01_cargo_F", 50, 10, 0],
 ["I_Truck_02_transport_F", 40, 10, 0],
-["B_UGV_02_Science_F", 200, 10, 0],
-["B_UGV_02_Demining_F", 200, 10, 0],
-["B_UGV_01_F", 200, 10, 0],
-["B_UGV_01_rcws_F", 200, 50, 0],
+["B_UGV_02_Science_F", 100, 50, 0],
+["B_UGV_02_Demining_F", 100, 50, 0],
+["B_UGV_01_F", 200, 50, 0],
+["B_UGV_01_rcws_F", 200, 100, 0],
 ["B_SDV_01_F", 50, 10, 0],
 ["B_Boat_Transport_01_F", 30, 10, 0],
 ["B_G_Boat_Transport_02_F", 70, 10, 0],
@@ -152,40 +152,34 @@ else {
 air_vehicles = [
 ["B_Heli_Light_01_F", 0, 20, 30],
 ["I_Heli_light_03_unarmed_F", 0, 30, 40],
-["B_Heli_Transport_01_F", 0, 30, 50],
-["I_Heli_Transport_02_F", 0, 30, 50],
-["O_Heli_Light_02_unarmed_F", 0, 30, 50],
-["B_Heli_Transport_03_unarmed_F", 0, 30, 100],
-["O_Heli_Transport_04_black_F", 0, 30, 100],
-["O_Heli_Transport_04_covered_black_F", 0, 30, 100],
-["O_Heli_Transport_04_medevac_black_F", 0, 30, 100],
-["B_Heli_Light_01_armed_F", 0, 70, 50],
-["I_Heli_light_03_F", 0, 90, 50],
-["O_Heli_Light_02_F", 0, 150, 100],
-["B_Heli_Attack_01_F", 0, 200, 100],
-["O_Heli_Attack_02_black_F", 0, 250, 150],
+["B_Heli_Transport_01_F", 0, 50, 50],
+["I_Heli_Transport_02_F", 0, 70, 50],
+["O_Heli_Light_02_unarmed_F", 0, 50, 50],
+["B_Heli_Transport_03_unarmed_F", 0, 80, 100],
+["O_Heli_Transport_04_black_F", 0, 50, 100],
+["O_Heli_Transport_04_covered_black_F", 0, 80, 100],
+["O_Heli_Transport_04_medevac_black_F", 0, 50, 100],
+["B_Heli_Light_01_dynamicLoadout_F", 0, 100, 50],
+["I_Heli_light_03_dynamicLoadout_F", 0, 150, 50],
+["O_Heli_Light_02_dynamicLoadout_F", 0, 150, 100],
+["B_Heli_Attack_01_dynamicLoadout_F", 0, 200, 100],
+["O_Heli_Attack_02_dynamicLoadout_black_F", 0, 350, 250],
 ["C_Plane_Civil_01_racing_F", 0, 30, 100],
-["I_Plane_Fighter_03_AA_F", 0, 50, 150],
-["I_Plane_Fighter_03_Cluster_F", 0, 150, 150],
-["I_Plane_Fighter_03_CAS_F", 0, 150, 150],
-["I_Plane_Fighter_04_Cluster_F", 0, 100, 200],
-["I_Plane_Fighter_04_F", 0, 150, 200],
-["B_Plane_CAS_01_F", 0, 250, 250],
-["B_Plane_CAS_01_Cluster_F", 0, 250, 250],
-["B_Plane_Fighter_01_Stealth_F", 0, 150, 250],
-["B_Plane_Fighter_01_Cluster_F", 0, 250, 250],
-["B_Plane_Fighter_01_F", 0, 300, 250],
-["O_Plane_Fighter_02_Stealth_F", 0, 400, 250],
-["B_T_VTOL_01_infantry_F", 0, 30, 300],
-["B_T_VTOL_01_vehicle_F", 0, 30, 300],
+["I_Plane_Fighter_03_dynamicLoadout_F", 0, 150, 150],
+["I_Plane_Fighter_04_F", 0, 250, 200],
+["B_Plane_CAS_01_dynamicLoadout_F", 0, 400, 250],
+["B_Plane_Fighter_01_Stealth_F", 0, 300, 250],
+["B_Plane_Fighter_01_F", 0, 450, 250],
+["O_Plane_Fighter_02_Stealth_F", 0, 500, 350],
+["B_T_VTOL_01_infantry_F", 0, 100, 300],
+["B_T_VTOL_01_vehicle_F", 0, 100, 300],
 ["B_T_VTOL_01_armed_F", 0, 500, 300],
-["O_T_VTOL_02_vehicle_F", 0, 400, 450],
-["B_UAV_06_F", 200, 10, 10],
-["B_UAV_01_F", 200, 50, 20],
-["B_UAV_02_F", 200, 100, 30],
-["B_UAV_02_CAS_F", 200, 150, 30],
-["B_UAV_05_F", 200, 100, 150],
-["B_T_UAV_03_F", 200, 200, 100]
+["O_T_VTOL_02_vehicle_F", 0, 550, 450],
+["B_UAV_06_F", 100, 50, 50],
+["B_UAV_01_F", 100, 50, 50],
+["B_UAV_02_dynamicLoadout_F", 200, 250, 120],
+["B_UAV_05_F", 200, 300, 150],
+["B_T_UAV_03_dynamicLoadout_F", 200, 300, 100]
 ];
 if (isNil "air_vehicles_extension")
 then {
@@ -295,27 +289,27 @@ buildings = [
 ["Flag_UK_F",0,20,0],
 ["Land_Loudspeakers_F",0,20,0],
 ["Land_Sawmill_01_illuminati_tower_F",0,3000,0],
-["Land_DeerStand_01_F",0,300,0],
-["Land_HBarrierTower_F",0,500,0],
-["Land_BagBunker_Small_F",0,100,0],
+["Land_DeerStand_01_F",0,500,0],
+["Land_HBarrierTower_F",0,800,0],
+["Land_BagBunker_Small_F",0,200,0],
 ["Land_GarageOffice_01_F",0,10000,0],
-["Land_MedicalTent_01_wdl_generic_open_F",0,150,0],
-["Land_Cargo_House_V1_F",0,200,0],
-["Land_Cargo_Patrol_V1_F",0,300,0],
+["Land_MedicalTent_01_wdl_generic_open_F",0,1000,0],
+["Land_Cargo_House_V1_F",0,500,0],
+["Land_Cargo_Patrol_V1_F",0,700,0],
 ["Land_RepairDepot_01_green_F",0,150,0],
-["Land_ConnectorTent_01_wdl_open_F",0,50,0],
+["Land_ConnectorTent_01_wdl_open_F",0,200,0],
 ["Land_WaterTower_01_F",0,200,0],
 ["Land_WaterTank_02_F",0,100,0],
 ["CamoNet_BLUFOR_open_F",0,200,0],
 ["CamoNet_BLUFOR_F",0,200,0],
 ["Land_CanvasCover_01_F",0,300,0],
 ["Land_CanvasCover_02_F",0,200,0],
-["PortableHelipadLight_01_red_F",0,20,0],
-["Land_PortableLight_02_double_yellow_F",0,30,0],
-["Land_PortableLight_02_quad_yellow_F",0,50,0],
-["Land_TentLamp_01_standing_F",0,40,0],
-["Land_TentLamp_01_standing_red_F",0,40,0],
-["Land_PortableLight_double_F",0,50,0],
+["PortableHelipadLight_01_red_F",0,50,0],
+["Land_PortableLight_02_double_yellow_F",0,50,0],
+["Land_PortableLight_02_quad_yellow_F",0,100,0],
+["Land_TentLamp_01_standing_F",0,50,0],
+["Land_TentLamp_01_standing_red_F",0,50,0],
+["Land_PortableLight_double_F",0,80,0],
 ["Land_LampStreet_small_F",0,300,0],
 ["Land_LampHalogen_F",0,1000,0]
 ];
@@ -368,9 +362,9 @@ else {
 
 support_vehicles = [
 [Arsenal_typename, 80, 100, 0],
-[FOB_box_typename, 0, 2000, 0],
-[FOB_truck_typename, 50, 2000, 0],
-[Respawn_truck_typename, 100, 200, 50],
+[FOB_box_typename, 0, 3000, 0],
+[FOB_truck_typename, 50, 3000, 0],
+[Respawn_truck_typename, 100, 300, 50],
 ["B_APC_Tracked_01_CRV_F", 150, 500, 0],
 ["B_Slingload_01_Medevac_F", 50, 100, 50],
 ["B_Slingload_01_Repair_F", 50, 100, 50],
@@ -463,7 +457,7 @@ if (isNil "uavs")
 then {
 	uavs = []
 };
-uavs = [] + uavs + ["B_UGV_02_Demining_F", "B_UGV_02_Science_F", "B_UAV_01_F", "B_UAV_02_F", "B_UAV_02_CAS_F", "B_UGV_01_F", "B_UGV_01_rcws_F", "B_T_UAV_03_F", "B_AAA_System_01_F", "B_SAM_System_01_F", "B_SAM_System_02_F", "B_UAV_05_F","B_UAV_06_F", "O_T_UAV_04_CAS_F", "O_UAV_02_CAS_F", "O_UAV_02_F", "B_Radar_System_01_F", "B_SAM_System_03_F", "B_Ship_Gun_01_F", "B_Ship_MRLS_01_F"];
+uavs = [] + uavs + ["B_UGV_02_Demining_F", "B_UGV_02_Science_F", "B_UAV_01_F", "B_UAV_02_dynamicLoadout_F", "B_UGV_01_F", "B_UGV_01_rcws_F", "B_T_UAV_03_dynamicLoadout_F", "B_AAA_System_01_F", "B_SAM_System_01_F", "B_SAM_System_02_F", "B_UAV_05_F","B_UAV_06_F", "O_T_UAV_04_CAS_F", "O_UAV_02_CAS_F", "O_UAV_02_F", "B_Radar_System_01_F", "B_SAM_System_03_F", "B_Ship_Gun_01_F", "B_Ship_MRLS_01_F"];
 if (isNil "elite_vehicles_extension")
 then {
 	elite_vehicles_extension = []
@@ -844,7 +838,7 @@ opfor_troup_transports = [
 "O_Truck_02_transport_F",
 "O_Truck_03_transport_F",
 "O_G_Van_02_transport_F",
-"O_Heli_Light_02_dynamicLoadout_F",
+"O_Heli_Light_02_F",
 "O_Heli_Attack_02_F",
 "O_Heli_Attack_02_F",
 "O_Heli_Transport_04_covered_F",
@@ -867,8 +861,8 @@ else {
 };
 
 opfor_choppers = [
-"O_Heli_Light_02_dynamicLoadout_F",
-"O_Heli_Light_02_dynamicLoadout_F",
+"O_Heli_Light_02_F",
+"O_Heli_Light_02_F",
 "O_Heli_Attack_02_F",
 "O_Heli_Attack_02_F",
 "O_Heli_Attack_02_F",
@@ -895,11 +889,9 @@ opfor_air = [
 "O_Plane_CAS_02_F",
 "O_Plane_CAS_02_F",
 "O_Plane_CAS_02_F",
-"O_Plane_CAS_02_Cluster_F",
 "O_Plane_Fighter_02_F",
 "O_Plane_Fighter_02_F",
 "O_Plane_Fighter_02_F",
-"O_Plane_Fighter_02_Cluster_F",
 "O_T_VTOL_02_infantry_F",
 "O_UAV_02_F"
 ];
@@ -1196,7 +1188,9 @@ GRLIB_ignore_colisions_when_building = [
 "Land_HelipadSquare_F",
 "Sign_Sphere100cm_F",
 "TMR_Autorest_Georef",
-"Land_ClutterCutter_large_F"
+"Land_ClutterCutter_large_F",
+"Land_TentLamp_01_standing_F",
+"Land_TentLamp_01_standing_red_F"
 ];
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";

@@ -6,7 +6,7 @@ RFSCAN_ygrid = 8;
 //VARIABLES
 RFSCAN_infantry = 5; 	//[W] 
 RFSCAN_car = 10; 		//[W] 
-RFSCAN_tanks = 20; 		//[W] 
+RFSCAN_tanks = 25; 		//[W] 
 RFSCAN_tower = 1500;  //[W]  
 RFSCAN_gain = 35;   //[dBi] 
 
@@ -33,7 +33,7 @@ RFSCAN_SCANENEMY = {
 	if(typeOf vehicle player == Respawn_truck_typename)then{
 		RFSCAN_gain_adjusted = RFSCAN_gain;
 	}else{
-		if (backpack player find "RadioBag" > 0) then {RFSCAN_gain_adjusted = RFSCAN_gain*0.9;}; 
+		if (backpack player find "RadioBag" > 0) then {RFSCAN_gain_adjusted = RFSCAN_gain*0.85;}; 
 	};
 	
 	RFSCAN_acoef = ((2.56 - 1.56*count (player nearObjects ["House_Small_F", 50])/10) max 1); 
@@ -82,7 +82,7 @@ RFSCAN_SCANENEMY = {
 				_signal set [floor(_dir*RFSCAN_devide/360),100 min ((_signal#_dir) + sqrt(RFSCAN_acoef * RFSCAN_tanks * 377 * 10^(RFSCAN_gain_adjusted/10) / (4*PI*_range^2)))]; 
 			}; 
 		};   
-	}forEach ((player nearObjects ["Wheeled_APC_F", 2000]) + (player nearObjects ["Tank_F", 2000]) + (player nearObjects ["Air", 3000]));  
+	}forEach ((player nearObjects ["Wheeled_APC_F", 2000]) + (player nearObjects ["Tank_F", 2000]) + (player nearObjects ["Air", 2000]));  
 	
 	RFSCAN_lastScan = _signal; 
 	_signal 
@@ -97,6 +97,14 @@ RFSCAN_SHOWRESULT = {
 		disableSerialization; 
 
 		_display = findDisplay 46 createDisplay "RscDisplayEmpty"; 
+		
+		showHUD false;
+		_display_close_EH = _display displayAddEventHandler ["Unload", {
+			showHUD true;
+			_display displayRemoveEventHandler ["Unload", _display_close_EH];
+			playsound "zoomout";
+		}];		
+		
 
 		_bg = _display ctrlCreate ["RscBackground", -1];  
 		_bg ctrlSetPosition [0,-0.01,1,0.71]; 
@@ -164,12 +172,6 @@ RFSCAN_SHOWRESULT = {
 			_lines ctrlCommit 0; 
 		};  
 		
-		showHUD false;
-		_display_close_EH = _display displayAddEventHandler ["Unload", {
-			showHUD true;
-			_display displayRemoveEventHandler ["Unload", _display_close_EH];
-			playsound "zoomout";
-		}];
 		
 	}; 
 }; 
@@ -195,7 +197,7 @@ RFSCAN_ADDACTION = {
 	},      //codeCompleted 
 	{  },    //codeInterrupted 
 	[],           //arguments 
-	0.5,           //duration 
+	1.5,           //duration 
 	-1.1,          //priority 
 	false,          //removeCompleted 
 	false          //showUnconscious 

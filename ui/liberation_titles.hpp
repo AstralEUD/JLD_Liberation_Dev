@@ -144,7 +144,7 @@ class RscTitles
 	  PictureFuelShadow,PictureCapShadow,PictureManpower,PictureAmmo,PictureFuel,PictureCap,PictureCombatReadinessShadow,PictureCombatReadiness,
 	  PictureIntelShadow, PictureIntel, LabelIntel,
 	  BGPictureSector,CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint, LabelCombatReadiness, CentralShadow, CentralLabel, ActiveSectors,
-	  AlertBGPicture, AlertLabel, AlertTimer };
+	  AlertBGPicture, AlertLabel, AlertTimer };	  
 	  class BGPicture {
 	  	idc = -1;
 		type =  CT_STATIC;
@@ -316,7 +316,7 @@ class RscTitles
 		w = 0.085 * safezoneW;
 		y = 0.358 * safezoneH + safezoneY;
 		h = 0.012 * safezoneH;
-	};
+	};	
 	class CaptureFrame_OPFOR : CaptureFrameStandard{
 		idc = 203;
 		style = ST_STATIC;

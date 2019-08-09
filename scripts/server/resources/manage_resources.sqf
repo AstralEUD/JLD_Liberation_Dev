@@ -18,7 +18,7 @@ while {
 }
 do {
 
-	_base_tick_period = 3600;
+	_base_tick_period = 1800;
 
 	if (count allPlayers > 0)
 		then {
@@ -27,7 +27,7 @@ do {
 				if (_x in sectors_military)
 					then {
 						_blufor_mil_sectors pushback _x;
-						_base_tick_period = _base_tick_period * 0.9;
+						_base_tick_period = _base_tick_period * 0.911;
 					};
 			}
 			foreach blufor_sectors;
@@ -70,11 +70,11 @@ do {
 							}
 							foreach blufor_sectors;
 							
-							_chkInc = round(_chkInc*1.3 - combat_readiness*_chkInc/100);
+							_chkInc = round( _chkInc * (1.1 - combat_readiness / 100) );
 
-							if (_chkInc < 0 && (resources_ammo + _chkInc < 150))
+							if (resources_ammo > 10000)
 								then {
-									[gamelogic, format["자원이 150미만이어서 차감되지 않았습니다. 다음 자원은 %1분 후에 추가됩니다.", round (_base_tick_period / 60)]]remoteExec["globalChat"];
+									[gamelogic, format["자원이 10000을 초과하여 더이상 지급되지 않습니다."]]remoteExec["globalChat"];
 								}
 							else {
 								Resources_ammo = Resources_ammo + _chkInc;

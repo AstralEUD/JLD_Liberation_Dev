@@ -28,7 +28,7 @@ FAR_HandleDamage_EH =
 
 	if (alive _unit && _amountOfDamage >= 1.0 && _isUnconscious == 0 && (_selectionName in ["","head","face_hub","neck","spine1","spine2","spine3","pelvis","body"] )) then
 	{
-		_unit setDamage 0.6;
+		_unit setDamage 0.75;
 		_unit allowDamage false;
 		_amountOfDamage = 0;
 		[_unit, _killer] spawn FAR_Player_Unconscious;
@@ -96,13 +96,15 @@ FAR_Player_Unconscious =
 		};
 		public_medic_message = [_unit,_medic_message]; publicVariable "public_medic_message";
 
-		_unit setDamage 0.6;
+		_unit setDamage 0.7;
 		_unit setVelocity [0,0,0];
 		_unit allowDamage false;
 		_unit setCaptive true;
 		_unit playMove "AinjPpneMstpSnonWrflDnon_rolltoback";
 
-		sleep 4;
+		sleep 4;		
+		
+		_unit allowDamage true;
 
 		if (isPlayer _unit) then
 		{

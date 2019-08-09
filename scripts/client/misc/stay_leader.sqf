@@ -4,7 +4,9 @@ if ( !GRLIB_teamkill_penalty ) then {
 			sleep 1;
 			!(isPlayer (leader (group player))) && (local (group player))
 		};
-
-		(group player) selectLeader player;
+		
+		if(leader group player != landLeader)then{
+			(group player) selectLeader player;
+		};
 	};
 };

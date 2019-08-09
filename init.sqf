@@ -12,7 +12,7 @@ if(isClass(configFile>>"CfgWeapons">>"gm_g3a3_oli"))then{endMission "End2";};
 
 if ( GRLIB_revive > 0 ) then {
 	[] execVM "FAR_revive\FAR_revive_init.sqf";
-	};
+};
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
 
 [] call compileFinal preprocessfilelinenumbers "scripts\shared\init_shared.sqf";
@@ -77,6 +77,7 @@ if(hasInterface)then{
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
 	[] execVM "jld\scanEnemy.sqf";
+	[] execVM "PPAP\PPAP_init.sqf";
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
@@ -95,11 +96,11 @@ player addEventHandler ["Respawn", {
 nul = [] execVM "RYD_FFE\FFE.sqf";
 
 [] spawn {
-	sleep 15;
+	sleep 20;
 	{
 		(vehicle _x) setVehicleReportRemoteTargets true;
 		(vehicle _x) setVehicleReportOwnPosition true;
 		(vehicle _x) setVehicleReceiveRemoteTargets true;
 		(vehicle _x) setVehicleRadar 1;
-	}forEach (allUnits+allUnitsUAV);	
+	}forEach (allUnits + allUnitsUAV);	
 };

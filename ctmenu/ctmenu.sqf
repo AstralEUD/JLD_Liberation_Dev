@@ -1,18 +1,42 @@
 
 [] execVM "ctmenu\irstrobelite.sqf";
 
-Test_Menu_Add = {
-	_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyDown", {
-		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
-		if(_key==0xDB) then {
-			if(isNull(findDisplay 100))then{
-				if(!visibleMap)then{setMousePosition [0.5,0.5]};
-				createDialog "Ctme";
-			};
-		}
-	}
-	];
-};
+Test_Menu_Add = {   
+	_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyDown", {   
+		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];   
+		if(_key==0xDB) then {   
+			if(isNull(findDisplay 100))then{   
+				if(!visibleMap)then{setMousePosition [0.5,0.5]};   
+				createDialog "Ctme";   
+				with uiNamespace do {     
+					hp = round(100*(1-getDammage player));
+					
+					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+					bar ctrlSetPosition [0.009 * safezoneW + safezoneX,0.979 * safezoneH + safezoneY,0.092 * safezoneW,0.0075 * safezoneH];    
+					bar ctrlSetTextColor [0, 0, 0, 0.8];   
+					bar ctrlSetTooltip str formatText["%1%%",hp];
+					bar ctrlCommit 0;   
+					bar progressSetPosition 1;    
+
+					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+					bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
+					bar ctrlSetTextColor [1, 0, 0, 0.6];   
+					bar ctrlSetTooltip str formatText["%1%%",hp];
+					bar ctrlCommit 0;   
+					bar progressSetPosition 1;         
+
+					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+					bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
+					bar ctrlSetTextColor [0.65 min 20*(getDammage player)^3, 0.6, 0, 1];   
+					bar ctrlSetTooltip str formatText["%1%%",hp];
+					bar ctrlCommit 0;   
+					bar progressSetPosition (1 - getDammage player);       
+				};   
+			};   
+		}   
+	}   
+	];   
+}; 
 
 Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp",{
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];

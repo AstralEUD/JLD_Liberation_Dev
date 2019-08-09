@@ -23,13 +23,15 @@ class Header
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
-//#include "jld\squadInfo.ext"
 #include "VAM_GUI\defines.hpp"
 #include "VAM_GUI\VAM_GUI_controls.hpp"
 #include "VAM_GUI\VAM_GUI_classes.hpp"
 #include "artyCalc\defines.hpp"
 #include "artyCalc\dialog.hpp"
 #include "ctmenu\dialogs.hpp"
+#include "PPAP\defines.hpp"
+#include "PPAP\PPAP_GUI_controls.hpp"
+#include "PPAP\PPAP_GUI_classes.hpp"
 
 class CfgDebriefing
 {

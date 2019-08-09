@@ -38,7 +38,7 @@ while { dialog && alive player } do {
 	_nearby_ais = [ units group player, { !(isPlayer _x) && (_x distance player < 100) } ] call BIS_fnc_conditionalSelect;
 	if ( count _nearby_ais > 0 ) then {
 		_nearby_ai = ( [ _nearby_ais , [] , { _x distance player } , 'ASCEND' ] call BIS_fnc_sortBy ) select 0;
-		((findDisplay 5566) displayCtrl 678) ctrlEnable true;
+		((findDisplay 5566) displayCtrl 678) ctrlEnable false; //SAKY
 		((findDisplay 5566) displayCtrl 678) ctrlShow true;
 
 		if ( replace_ai > 0 && (alive _nearby_ai) ) then {
