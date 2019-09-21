@@ -106,8 +106,19 @@ player createDiaryRecord ["rules", ["처벌 규정", format ["<font size='15'>
 
 
 
+
+
+
 player createDiarySubject ["updates","서버 업데이트 내역"];
 
+player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.965", format ["<font size='15'>
+서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
+
+1.PPAP 스크립트가 업데이트 되었습니다.<br/>
+-밥캣에서도 무장변경 기능을 사용할 수 있습니다.<br/><br/>
+
+2.공수강하 비용이 10으로 감소하였고 최소 자원량도 100으로 감소하였습니다.</font>
+"]]];
 
 player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.964", format ["<font size='15'>
 서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>

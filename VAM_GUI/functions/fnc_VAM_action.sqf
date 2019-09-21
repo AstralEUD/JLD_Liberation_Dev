@@ -4,7 +4,7 @@ VAM_conditioncheck1 = true;
 VAM_action = player addAction 
 [
 //Action title
-	"VAM",
+	"차량 외형 변경",
 //Code
 	{0 = createDialog "VAM_GUI";},
 	[], 0, true, true, "", //Misc values

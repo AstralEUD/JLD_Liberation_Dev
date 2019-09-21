@@ -8,7 +8,7 @@ class PPAP_GUI
 	OnLoad = "[] spawn fnc_PPAP_setup;";
 	onUnload = "[] spawn fnc_PPAP_variable_cleaner;";
 	movingEnable = false;
-	controls[] = {"PPAP_BG", "PPAP_Title", "PPAP_Text_Preset" , "PPAP_Confirm", "PPAP_List_Preset", "PPAP_Apply", "PPAP_Current_Vehicle_1", "PPAP_Current_Vehicle_2", "PPAP_ControlsGroup_Right"};
+	controls[] = {"PPAP_BG", "PPAP_Title", "PPAP_Text_Preset" , "PPAP_Close", "PPAP_List_Preset", "PPAP_Apply", "PPAP_Current_Vehicle_1", "PPAP_Current_Vehicle_2", "PPAP_ControlsGroup_Right"};
 	objects[] = {};
 
 	class PPAP_BG: PPAP_IGUIBack
@@ -47,10 +47,10 @@ class PPAP_GUI
 		w = 0.150937 * safezoneW;
 		h = 0.224 * safezoneH;
 	};
-	class PPAP_Confirm: PPAP_RscButton
+	class PPAP_Close: PPAP_RscButton
 	{
-		idc = 8930;
-		text = $STR_PPAP_CONFIRM_MENU;
+		idc = -1;
+		text = $STR_PPAP_CLOSE_MENU;
 		action = "closeDialog 0;";
 		x = 0.611562 * safezoneW + safezoneX;
 		y = 0.332 * safezoneH + safezoneY;
