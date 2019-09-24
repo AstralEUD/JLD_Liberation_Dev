@@ -44,7 +44,7 @@ isAllowedGetIn = {
 		switch (_groupType)
 		do {
 		case 0: {
-				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "Wheeled_APC_F") || _vehicle isKindOf "Ship" && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
+				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "C_Heli_Light_01_civil_F" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "Wheeled_APC_F") || _vehicle isKindOf "Ship" && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
 				then {
 					_isAllowedGetIn = true;
 				};
@@ -62,7 +62,7 @@ isAllowedGetIn = {
 				};
 			}; //2기계화 사라짐
 		case 3: {
-				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
+				if (_vehicle isKindOf "StaticWeapon" || _vehicle isKindOf "C_Heli_Light_01_civil_F" || _vehicle isKindOf "Car" && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
 				then {
 					_isAllowedGetIn = true;
 				};

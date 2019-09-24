@@ -191,15 +191,14 @@ class ctMe{
 				action = "call Test_Earplug";
 				picture = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_orange_F_CA.paa";
 				conditionShow="1";
-			};			
+			};									
 			class holster
 			{
 				text = "무기 집어넣기";
 				action = "call CRS_Holster";
 				picture = "\a3\weapons_f\pistols\p07\data\ui\gear_p07_x_ca.paa";
 				conditionShow="1";
-			};				
-			
+			};
 			class Default
 			{
 				text="";

@@ -52,6 +52,10 @@ if (isNil "pilot_classname")
 then {
 	pilot_classname = "B_Helipilot_F"
 };
+if (isNil "INF_Helicopter")
+then {
+	INF_Helicopter = "C_Heli_Light_01_civil_F"
+};
 
 infantry_units = [
 ["B_Soldier_unarmed_F", 200, 100, 0]
@@ -130,8 +134,8 @@ heavy_vehicles = [
 ["B_MBT_01_cannon_F", 150, 180, 0],
 ["B_MBT_01_TUSK_F", 150, 200, 0],
 ["O_MBT_04_cannon_F", 180, 400, 0],
-["I_Truck_02_MRL_F", 150, 500, 0],
-["B_MBT_01_arty_F", 150, 500, 0]
+["I_Truck_02_MRL_F", 1500, 10000, 1500],
+["B_MBT_01_arty_F", 1500, 10000, 1500]
 ];
 if (isNil "heavy_vehicles_extension")
 then {
@@ -150,6 +154,7 @@ else {
 };
 
 air_vehicles = [
+[INF_Helicopter, 200, 300, 200],
 ["B_Heli_Light_01_F", 0, 20, 30],
 ["I_Heli_light_03_unarmed_F", 0, 30, 40],
 ["B_Heli_Transport_01_F", 0, 50, 50],
@@ -311,7 +316,8 @@ buildings = [
 ["Land_TentLamp_01_standing_red_F",0,50,0],
 ["Land_PortableLight_double_F",0,80,0],
 ["Land_LampStreet_small_F",0,300,0],
-["Land_LampHalogen_F",0,1000,0]
+["Land_LampHalogen_F",0,1000,0],
+["Land_Money_F",0,1000,0]
 ];
 
 building_classnames=[];

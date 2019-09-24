@@ -18,7 +18,7 @@ _weathertime = 1000;
 while { GRLIB_endgame == 0 } do {
 	chosen_weather = _weathers call BIS_fnc_selectRandom;
 	chosen_rain = _rains call BIS_fnc_selectRandom;	
-	chosen_fog = [random [0,4,20]/100,random [-5,17,30]/1000,random [0,50,300]];
+	chosen_fog = [random [0,5,20]/100,random [-5,17,30]/1000,random [0,50,300]];
 
 	publicVariable "chosen_weather";
 	publicVariable "chosen_rain";

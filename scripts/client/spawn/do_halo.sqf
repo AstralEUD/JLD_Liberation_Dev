@@ -20,7 +20,7 @@ waitUntil { dialog };
 while { dialog && alive player && dojump == 0 } do {
 	"spawn_marker" setMarkerPosLocal halo_position;
 
-	if ( (resources_ammo >= 300) && (player call groupType != -1) ) then {
+	if ( (resources_ammo >= 100) && (player call groupType != -1) ) then {
 		if(isNil "GRLIB_secondary_in_progress")then{
 			ctrlEnable [ 202, true ];
 		} else {
@@ -32,7 +32,7 @@ while { dialog && alive player && dojump == 0 } do {
 			};
 		};
 	} else {
-		hintSilent "자원이 300미만이거나 혹은 분대태그를 사용하지 않은 경우 공수강하가 제한됩니다.";
+		hintSilent "자원이 100미만이거나 혹은 분대태그를 사용하지 않은 경우 공수강하가 제한됩니다.";
 		ctrlEnable [ 202, false ];
 	};
 
@@ -55,8 +55,8 @@ if ( dojump > 0 ) then {
 	halo_position = [ halo_position select 0, halo_position select 1, GRLIB_halo_altitude + (random 200) ];
 	halojumping = true;
 	[[],"jumpcost_remote_call"] call BIS_fnc_MP;
-	[gamelogic, str formatText["%1님이 %2의 자원을 사용하여 공수강하 하였습니다.",name player, 50]] remoteExec ["globalChat"];
-	hint "자원 30을 소모하여 공수강하합니다.!";
+	[gamelogic, str formatText["%1님이 %2의 자원을 사용하여 공수강하 하였습니다.",name player, 10]] remoteExec ["globalChat"];
+	hint "자원 10을 소모하여 공수강하합니다.!";
 	sleep 0.1;
 	cutRsc ["fasttravel", "PLAIN", 1];
 	playSound "parasound";
@@ -74,7 +74,7 @@ if ( dojump > 0 ) then {
 	sleep 4;
 	halojumping = false;
 	
-	waitUntil { (ASLToAGL getPosASL player#2) < 200 };
+	waitUntil { (ASLToAGL getPosASL player#2) < 150 };
 	player action ["OpenParachute", player];
 	
 	waitUntil { !alive player || isTouchingGround player };

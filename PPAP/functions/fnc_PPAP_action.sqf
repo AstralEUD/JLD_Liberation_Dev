@@ -14,7 +14,7 @@ PPAP_check_locality = compileFinal "
 PPAP_action = compileFinal "
 	player addAction
 	[
-		'PPAP',
+		'항공기 무장 변경',
 		{
 			if (PPAP_cursor_condition) then {
 				PPAP_targetvehicle = cursorObject;
@@ -40,7 +40,7 @@ private _vehiclefaction = "";
 private _targetvehicle = "";
 
 while {true} do {
-	if (player isEqualTo vehicle player && cursorObject isKindOf "Air" && !(isEngineOn cursorObject) && player distance cursorObject < 10 && (crew cursorObject isEqualTo []) || (unitIsUAV cursorObject && !(isUAVConnected cursorObject))) then {
+	if (player isEqualTo vehicle player && cursorObject isKindOf "Air" && !(isEngineOn cursorObject) && player distance cursorObject < 10 && (crew cursorObject isEqualTo [] || (unitIsUAV cursorObject && !(isUAVConnected cursorObject)))) then {
 		_vehicleclass = typeof cursorObject;
 		_vehiclefaction = faction cursorObject;
 		_targetvehicle = cursorObject;
@@ -51,7 +51,7 @@ while {true} do {
 		_targetvehicle = vehicle player;
 		PPAP_cursor_condition = false;
 	};
-	if (PPAP_cursor_condition || (!(player isEqualTo _targetvehicle) && (player isEqualTo driver _targetvehicle) && !(isEngineOn _targetvehicle))) then {
+	if (PPAP_cursor_condition || (!(player isEqualTo _targetvehicle) && player isEqualTo driver _targetvehicle && !(isEngineOn _targetvehicle) && crew vehicle player isEqualTo [player])) then {
 		_dl_check = configName (configfile >> "CfgVehicles" >> _vehicleclass >> "Components" >> "TransportPylonsComponent");
 		if (_dl_check isEqualTo "TransportPylonsComponent") then {
 			PPAP_vehicle_condition_1 = true;

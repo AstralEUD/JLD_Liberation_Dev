@@ -24,7 +24,8 @@ PPAP_ammo_vehicle_list = [
 	"Box_IND_AmmoVeh_F",
 	"Box_East_AmmoVeh_F",
 	"Box_EAF_AmmoVeh_F",
-	"Box_EAF_AmmoVeh_F"
+	"Box_EAF_AmmoVeh_F",
+	"B_APC_Tracked_01_CRV_F"
 ];
 /*
 Custom preset

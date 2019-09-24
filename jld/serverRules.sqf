@@ -106,8 +106,39 @@ player createDiaryRecord ["rules", ["처벌 규정", format ["<font size='15'>
 
 
 
+
+
+
 player createDiarySubject ["updates","서버 업데이트 내역"];
 
+player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.966", format ["<font size='15'>
+서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
+
+1.베이스 주변에 버려진 아이템이 자동으로 회수되지 않는 오류를 수정하였습니다.<br/><br/>
+
+2.공수강하시 낙하산 자동전개 고도가 150m로 축소되었습니다.<br/><br/>
+
+3.항공모함의 치료 컨테이너에서 치료가 안되는 문제를 수정하였습니다.<br/><br/>
+
+4.기존엔 서버에 30개 이상의 지뢰를 설치하지 못하던 것을 100개로 늘렸습니다.<br/><br/>
+
+5.자주포와 MLRS의 건설비용을 대폭 늘렸습니다.<br/><br/>
+
+6.최소 프레임을 35에서 20으로 낮추어 프레임을 타협하여 더 먼 곳까지 볼 수 있도록 수정하였습니다. 
+</font>
+"]]];
+
+player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.965", format ["<font size='15'>
+서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
+
+1.PPAP 스크립트가 업데이트 되었습니다.<br/>
+-밥캣에서도 무장변경 기능을 사용할 수 있습니다.<br/><br/>
+
+2.공수강하 비용이 10으로 감소하였고 최소 자원량도 100으로 감소하였습니다.<br/><br/>
+
+3.보병분대에서도 조종가능한 헬기로 M-900을 추가하였습니다.<br/>
+-항공모함의 허밍버드가 M-900으로 변경되었습니다.</font>
+"]]];
 
 player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.964", format ["<font size='15'>
 서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>

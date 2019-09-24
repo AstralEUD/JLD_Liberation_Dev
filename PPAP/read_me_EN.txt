@@ -29,6 +29,13 @@ Action mechanism changed
 Minor change
 1.12
 Locality problem fixed, some activation conditions has been changed.
+1.13
+Minor change
+1.14
+Bug fix. Due to locaility issue, to change pylon inside of vehicle, everyone inside vehicle except driver(pilot) should get out.
+1.15
+Bug fix, minor change. stringtable content has been changed.
 
 Special Thanks
-DCinside ARMA Minor Gallery for testing
+DCinside ARMA Minor Gallery for helping so many test and server test
+JLD server for helping server test

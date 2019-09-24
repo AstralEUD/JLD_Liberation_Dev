@@ -10,7 +10,7 @@ private _smoothing_margin = 0.08;
 
 while { true } do {
 	
-	_desired_fps = 35 max desired_fps;
+	_desired_fps = 20 max desired_fps;
 
 	_corrected_increment = _base_increment * GREUH_view_distance_factor;
 
