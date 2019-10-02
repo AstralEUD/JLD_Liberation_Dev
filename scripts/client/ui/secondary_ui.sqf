@@ -67,6 +67,7 @@ while { dialog && alive player && dostartsecondary == 0 } do {
 
 if ( dostartsecondary == 1 ) then {
 	[ [ lbCurSel 101 ], "start_secondary_remote_call" ] call BIS_fnc_MP;
+	[gamelogic, str formatText["%1님이 특수임무를 시작하였습니다.",name player]] remoteExec ["globalChat"];
 };
 
 if ( dialog ) then {

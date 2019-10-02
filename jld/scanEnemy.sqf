@@ -4,8 +4,8 @@ RFSCAN_xgrid = 12;
 RFSCAN_ygrid = 8; 
 
 //VARIABLES
-RFSCAN_infantry = 5; 	//[W] 
-RFSCAN_car = 10; 		//[W] 
+RFSCAN_infantry = 10; 	//[W] 
+RFSCAN_car = 15; 		//[W] 
 RFSCAN_tanks = 25; 		//[W] 
 RFSCAN_tower = 1500;  //[W]  
 RFSCAN_gain = 35;   //[dBi] 

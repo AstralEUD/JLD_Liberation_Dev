@@ -147,6 +147,12 @@ player addEventHandler["GetInMan", {
 }
 ];
 
+player addEventHandler ["Fired", { 
+	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+	if((_this#1)=="Put")then{
+		[player, str formatText["폭발물 설치 완료!",name (_this#6)]] remoteExec ["sideChat"];
+		};
+}];
 
 isSwitchAllowed = {				
 	_isSwitchAllowed = true;	
@@ -167,7 +173,7 @@ isSwitchAllowed = {
 
 [] spawn {
 	while{true}do{
-	_groupType = (player call groupType);
+		_groupType = (player call groupType);
 		if( (_groupType != 3) && (!isNull getConnectedUAV player) ) then {
 			player connectTerminalToUAV objNull;		
 			["<t color='#ff0000' size = '0.55' >무인기는 [특수]분대만 사용 가능합니다. 연결이 해제되었습니다.</t>"] spawn BIS_fnc_dynamicText;
