@@ -170,6 +170,9 @@ while { true } do {
 			private _nextunit = _x;
 			private _marker = _nextunit getVariable [ "spotmarker", "" ];
 			if ( _marker != "" ) then {
+				_radioJoined = false;
+				{if(_x in Radio_Members)then{_radioJoined = true;};}foreach (crew vehicle _x);			
+				if(_radioJoined)then{_marker setMarkerColorLocal "ColorOrange";}else{_marker setMarkerColorLocal _color;};				
 				_marker setMarkerPosLocal (getPos _nextunit);
 				private _mrkdir = getDir _nextunit;
 				if ( isPlayer _nextunit ) then {

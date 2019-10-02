@@ -87,9 +87,7 @@ player addEventHandler ["Respawn", {
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
 	[] execVM "jld\tankboy.sqf";		
 	call SAKY_WEATHERCHECK_ADDACTION;	
-	call SAKY_MANUAL_HALO;
-	radio_joined = !radio_joined;		
-	[] spawn radio_join;
+	call SAKY_MANUAL_HALO;	
 }];
 
 //FFE

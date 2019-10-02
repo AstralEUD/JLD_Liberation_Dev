@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=32;
+		nextID=33;
 	};
 	class Camera
 	{
@@ -14272,7 +14272,7 @@ class Mission
 			};
 			id=2202;
 			type="C_Heli_Light_01_civil_F";
-			atlOffset=2.9705582;
+			atlOffset=2.9705505;
 		};
 		class Item547
 		{
@@ -17950,7 +17950,7 @@ class Mission
 			};
 			id=2222;
 			type="C_Heli_Light_01_civil_F";
-			atlOffset=2.328743;
+			atlOffset=2.3287354;
 		};
 		class Item564
 		{
@@ -18686,7 +18686,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8461.2939,103.32307,25171.994};
-				angles[]={-0,1.245429,0};
+				angles[]={0,1.245429,0};
 			};
 			side="Empty";
 			flags=4;
@@ -18721,7 +18721,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8395.0176,104.32601,25172.865};
-				angles[]={-0,1.245429,0};
+				angles[]={0,1.245429,0};
 			};
 			side="Empty";
 			flags=4;
@@ -18739,7 +18739,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8420.8789,104.32601,25179.529};
-				angles[]={-0,1.245429,0};
+				angles[]={0,1.245429,0};
 			};
 			side="Empty";
 			flags=4;

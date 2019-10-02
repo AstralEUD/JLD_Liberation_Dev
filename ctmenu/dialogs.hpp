@@ -181,7 +181,7 @@ class ctMe{
 			class radioToggle
 			{
 				text = "전술통신망 토글";
-				action = "[] spawn radio_join;";
+				action = "call Radio_Toggle;";
 				picture = "\a3\weapons_f\data\ui\gear_item_radio_ca.paa";				
 				conditionShow="1";
 			};
