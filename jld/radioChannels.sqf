@@ -40,12 +40,14 @@ Radio_Server_Join={
 
 Radio_After_Join={		
 	[player, [Radio_Channel, "전술통신망 개통되었음!"]] remoteExec ["customChat"];
+	setCurrentChannel (Radio_Channel+5);
 	Radio_Joined = true;
 };
 
 Radio_Request_Quit={	
 	[player, [Radio_Channel, "수신종료!"]] remoteExec ["customChat"];
-	[player, Radio_Channel] remoteExec ["Radio_Server_Quit", 2];
+	[player, Radio_Channel] remoteExec ["Radio_Server_Quit", 2];	
+	setCurrentChannel (3);
 	Radio_Members deleteAt (Radio_Members find player);
 	publicVariable "Radio_Members";	
 	Radio_Joined = false;
