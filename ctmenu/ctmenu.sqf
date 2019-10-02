@@ -7,36 +7,70 @@ Test_Menu_Add = {
 		if(_key==0xDB) then {   
 			if(isNull(findDisplay 100))then{   
 				if(!visibleMap)then{setMousePosition [0.5,0.5]};   
-				createDialog "Ctme";   
-				with uiNamespace do {     
-					hp = round(100*(1-getDammage player));
-					
-					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
-					bar ctrlSetPosition [0.009 * safezoneW + safezoneX,0.979 * safezoneH + safezoneY,0.092 * safezoneW,0.0075 * safezoneH];    
-					bar ctrlSetTextColor [0, 0, 0, 0.8];   
-					bar ctrlSetTooltip str formatText["%1%%",hp];
-					bar ctrlCommit 0;   
-					bar progressSetPosition 1;    
+				createDialog "Ctme";      
+				hp = round(100*(1-getDammage player));
+				
+				bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+				bar ctrlSetPosition [0.009 * safezoneW + safezoneX,0.979 * safezoneH + safezoneY,0.092 * safezoneW,0.0075 * safezoneH];    
+				bar ctrlSetTextColor [0, 0, 0, 0.8];   
+				bar ctrlSetTooltip str formatText["%1%%",hp];
+				bar ctrlCommit 0;   
+				bar progressSetPosition 1;    
 
-					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
-					bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
-					bar ctrlSetTextColor [1, 0, 0, 0.6];   
-					bar ctrlSetTooltip str formatText["%1%%",hp];
-					bar ctrlCommit 0;   
-					bar progressSetPosition 1;         
+				bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+				bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
+				bar ctrlSetTextColor [1, 0, 0, 0.6];   
+				bar ctrlSetTooltip str formatText["%1%%",hp];
+				bar ctrlCommit 0;   
+				bar progressSetPosition 1;         
 
-					bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
-					bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
-					bar ctrlSetTextColor [0.65 min 20*(getDammage player)^3, 0.6, 0, 1];   
-					bar ctrlSetTooltip str formatText["%1%%",hp];
-					bar ctrlCommit 0;   
-					bar progressSetPosition (1 - getDammage player);       
-				};   
+				bar = findDisplay 100 ctrlCreate ["RscProgress", -1];    
+				bar ctrlSetPosition [0.01 * safezoneW + safezoneX,0.98 * safezoneH + safezoneY,0.09 * safezoneW,0.0055 * safezoneH];    
+				bar ctrlSetTextColor [0.65 min 20*(getDammage player)^3, 0.6, 0, 1];   
+				bar ctrlSetTooltip str formatText["%1%%",hp];
+				bar ctrlCommit 0;   
+				bar progressSetPosition (1 - getDammage player);  					
+				
+				bar = findDisplay 100 ctrlCreate ["RscText", -1];
+				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.93 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
+				if(SAKY_Reward>0)then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
+				bar ctrlSetText "점령보너스 획득";
+				bar ctrlSetScale 0.8;
+				bar ctrlCommit 0;  
+				
+				bar = findDisplay 100 ctrlCreate ["RscText", -1];
+				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.945 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
+				if(soundVolume==( desired_vehvolume / 100.0 ))then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
+				bar ctrlSetText "이어플러그 착용";
+				bar ctrlSetScale 0.8;
+				bar ctrlCommit 0;  
+				
+				bar = findDisplay 100 ctrlCreate ["RscText", -1];
+				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.96 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
+				if(Radio_Joined)then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
+				bar ctrlSetText "전술통신망 연결";
+				bar ctrlSetScale 0.8;
+				bar ctrlCommit 0;  
+				
+				
 			};   
-		}   
+			
+		};   
 	}   
 	];   
 }; 
+
+SAKY_Gesture_Text={
+	params ["_unit","_string"];
+	[format ["<t size = '.5'>%1<br/>""%2""</t>",name _unit,_string],-1,1,1.5,0.3,0,789] spawn BIS_fnc_dynamicText;
+};
+
+SAKY_Gesture_Send={
+	params ["_string"];
+	_arounds = [];
+	_arounds = player nearEntities ["Man", 20];
+	[player,_string] remoteExec ["SAKY_Gesture_Text", _arounds];
+};
 
 Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp",{
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
@@ -108,7 +142,7 @@ SAKY_MANUAL_HALO_Condition = {
 	{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
 	_isFFV = false;
 	if(vehicle player != player)then{_isFFV=((fullCrew vehicle player)#((fullCrew vehicle player) findIf {_x#0==player})#4)};
-	((ASLToAGL getPosASL vehicle player#2) > 300) && ((player in _cargos) || _isFFV)
+	((ASLToAGL getPosASL vehicle player#2) > 150) && ((player in _cargos) || _isFFV)
 };
 
 SAKY_MANUAL_HALO = {  

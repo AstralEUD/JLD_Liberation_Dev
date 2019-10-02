@@ -133,31 +133,31 @@ class ctMe{
 			class gesture1
 			{
 				text = "진격하라";
-				action = "player playAction ""gestureAdvance""";
+				action = "player playAction ""gestureAdvance"";""앞으로 진격!"" call SAKY_Gesture_Send;";
 				conditionShow="1";
 			};		
 			class gesture3
 			{
 				text = "사격중지";
-				action = "player playAction ""gestureCeaseFire""";
+				action = "player playAction ""gestureCeaseFire"";""사격중지! 사격중지!!"" call SAKY_Gesture_Send;";
 				conditionShow="1";
 			};		
 			class gesture4
 			{
 				text = "사격개시";
-				action = "player playAction ""gestureCover""";
+				action = "player playAction ""gestureCover"";""사격 개시!"" call SAKY_Gesture_Send;";
 				conditionShow="1";
 			};		
 			class gesture5
 			{
 				text = "따라와라";
-				action = "player playAction ""gestureFollow""";
+				action = "player playAction ""gestureFollow"";""따라와!"" call SAKY_Gesture_Send;";
 				conditionShow="1";
 			};	
 			class gesture6
 			{
 				text = "멈춰라";
-				action = "player playAction ""gestureFreeze""";
+				action = "player playAction ""gestureFreeze"";""정지!"" call SAKY_Gesture_Send;";
 				conditionShow="1";
 			};	
 			class gesture7
