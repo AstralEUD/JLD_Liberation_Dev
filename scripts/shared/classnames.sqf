@@ -154,7 +154,6 @@ else {
 };
 
 air_vehicles = [
-[INF_Helicopter, 200, 300, 200],
 ["B_Heli_Light_01_F", 0, 20, 30],
 ["I_Heli_light_03_unarmed_F", 0, 30, 40],
 ["B_Heli_Transport_01_F", 0, 50, 50],
@@ -172,10 +171,10 @@ air_vehicles = [
 ["C_Plane_Civil_01_racing_F", 0, 30, 100],
 ["I_Plane_Fighter_03_dynamicLoadout_F", 0, 150, 150],
 ["I_Plane_Fighter_04_F", 0, 250, 200],
-["B_Plane_CAS_01_dynamicLoadout_F", 0, 400, 250],
-["B_Plane_Fighter_01_Stealth_F", 0, 300, 250],
-["B_Plane_Fighter_01_F", 0, 450, 250],
-["O_Plane_Fighter_02_Stealth_F", 0, 500, 350],
+["B_Plane_CAS_01_dynamicLoadout_F", 0, 400, 350],
+["B_Plane_Fighter_01_Stealth_F", 0, 300, 400],
+["B_Plane_Fighter_01_F", 0, 450, 500],
+["O_Plane_Fighter_02_Stealth_F", 0, 500, 550],
 ["B_T_VTOL_01_infantry_F", 0, 100, 300],
 ["B_T_VTOL_01_vehicle_F", 0, 100, 300],
 ["B_T_VTOL_01_armed_F", 0, 500, 300],
