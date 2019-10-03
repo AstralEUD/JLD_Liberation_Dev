@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2251;
+		nextID=2254;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=36;
 	};
 	class Camera
 	{
-		pos[]={684.2627,94.385284,16307.089};
-		dir[]={0.58696091,-0.27234805,-0.76247209};
-		up[]={0.16614546,0.96219349,-0.21582529};
-		aside[]={-0.79242074,-3.2561366e-007,-0.61001575};
+		pos[]={14302.707,108.56535,5882.4263};
+		dir[]={-0.7356751,-0.22131544,0.64016408};
+		up[]={-0.16696107,0.97520083,0.14528441};
+		aside[]={0.65644193,5.3003896e-007,0.75438261};
 	};
 };
 binarizationWanted=0;
@@ -60,7 +60,8 @@ addons[]=
 	"A3_Weapons_F_Items",
 	"A3_Air_F_Heli_Light_01",
 	"A3_Supplies_F_Heli_Slingload",
-	"A3_Structures_F_Enoch_Military_Camps"
+	"A3_Structures_F_Enoch_Military_Camps",
+	"A3_Modules_F_Curator_Effects"
 };
 class AddonsMetaData
 {
@@ -334,7 +335,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=573;
+		items=574;
 		class Item0
 		{
 			dataType="Marker";
@@ -921,12 +922,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14494.048,10.584459,5901.0337};
+				position[]={14494.048,10.584324,5901.0342};
+				angles[]={0,6.2234249,0};
 			};
-			name="commandantZeus";
+			name="commandantZeus1";
 			id=971;
 			type="ModuleCurator_F";
-			atlOffset=2.7375121;
+			atlOffset=2.7376204;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1013,11 +1015,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.847,11.881519,5904.5024};
+				position[]={14489.847,11.881436,5904.502};
 			};
 			id=972;
 			type="ModuleCuratorSetAttributesObject_F";
-			atlOffset=6.0600762;
+			atlOffset=6.0600004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1218,11 +1220,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14490.005,12.280585,5908.4829};
+				position[]={14490.005,12.280863,5908.4829};
 			};
 			id=973;
 			type="ModuleCuratorSetAttributesGroup_F";
-			atlOffset=6.3837228;
+			atlOffset=6.3840003;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1385,11 +1387,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.95,13.124904,5911.9849};
+				position[]={14489.95,13.125118,5911.9849};
 			};
 			id=974;
 			type="ModuleCuratorSetAttributesPlayer_F";
-			atlOffset=6.9217858;
+			atlOffset=6.9220004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1602,11 +1604,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.972,11.830737,5901.0278};
+				position[]={14488.417,11.828014,5901.8789};
 			};
 			id=976;
 			type="ModuleCuratorSetDefaultCosts_F";
-			atlOffset=5.7691159;
+			atlOffset=5.7690005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1636,12 +1638,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14494.155,10.750402,5896.9009};
+				position[]={14494.155,10.749914,5896.9009};
 			};
 			name="adminZeus";
 			id=977;
 			type="ModuleCurator_F";
-			atlOffset=3.4884887;
+			atlOffset=3.4880004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1728,11 +1730,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.79,13.912919,5888.9536};
+				position[]={14489.733,13.694221,5889.9912};
 			};
 			id=1051;
 			type="ModuleCuratorSetAttributesObject_F";
-			atlOffset=5.3640366;
+			atlOffset=5.3649988;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1933,11 +1935,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.948,12.949966,5892.9341};
+				position[]={14488.695,13.410799,5892.4429};
 			};
 			id=1052;
 			type="ModuleCuratorSetAttributesGroup_F";
-			atlOffset=5.3475156;
+			atlOffset=5.3480005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2100,11 +2102,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14489.894,12.660254,5896.436};
+				position[]={14488.612,12.936209,5895.9839};
 			};
 			id=1053;
 			type="ModuleCuratorSetAttributesPlayer_F";
-			atlOffset=4.5657873;
+			atlOffset=4.8883696;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5274,8 +5276,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14508.356,6.7604361,5912.2241};
-						angles[]={0.013332055,5.3542337,6.1993828};
+						position[]={14508.356,6.7604456,5912.2236};
+						angles[]={0.013334315,5.3542337,6.1993747};
 					};
 					side="West";
 					flags=6;
@@ -5291,7 +5293,6 @@ class Mission
 					};
 					id=1380;
 					type="B_officer_F";
-					atlOffset=2.8610229e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5340,7 +5341,6 @@ class Mission
 			{
 			};
 			id=1379;
-			atlOffset=2.8610229e-006;
 		};
 		class Item47
 		{
@@ -18863,6 +18863,60 @@ class Mission
 								};
 							};
 							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item573
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14496.218,8.7397451,5889.1372};
+				angles[]={0.153451,0,0.1141679};
+			};
+			id=2253;
+			type="ModulePostprocess_F";
+			atlOffset=-2.8610229e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModulePostprocess_F_CommitTime";
+					expression="_this setVariable ['CommitTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModulePostprocess_F_Template";
+					expression="_this setVariable ['Template',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Mediterranean";
 						};
 					};
 				};

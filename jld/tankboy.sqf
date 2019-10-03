@@ -9,6 +9,7 @@ player addAction
 		_agent = createAgent ["B_crew_F", [0,0,0], [], 0, "FORM"];
 		_agent moveInTurret [vehicle player, _x];
 		_agent allowDamage false;
+		_agent disableAI "MOVE";
 		Created_Crew pushBackUnique _agent;
 	}forEach ((vehicle player) call BIS_fnc_vehicleCrewTurrets);	
 	vehicle player vehicleChat "승무원 탑승완료!";	
