@@ -22,6 +22,21 @@ true,
 "(driver vehicle player == player) && (count ((vehicle player) call BIS_fnc_vehicleCrewTurrets) > 0) && ((vehicle player isKindOf ""Air"") || (vehicle player isKindOf ""Tank"") || (vehicle player isKindOf ""Wheeled_APC_F""))" // _target, _this, _originalTarget
 ];
 
+player addAction 
+[
+"승무원 제거", 
+{
+	{deleteVehicle _x}forEach ([(crew vehicle player), {!isPlayer _x}] call BIS_fnc_conditionalSelect);
+	vehicle player vehicleChat "승무원 하차완료!";	
+},
+[],
+15, 
+true, 
+true, 
+"",
+"(driver vehicle player == player) && (count ([(crew vehicle player), {!isPlayer _x}] call BIS_fnc_conditionalSelect) > 0) && ((vehicle player isKindOf ""Air"") || (vehicle player isKindOf ""Tank"") || (vehicle player isKindOf ""Wheeled_APC_F""))" // _target, _this, _originalTarget
+];
+
 player addEventHandler ["SeatSwitchedMan",{
 	params ["_unit1", "_unit2", "_vehicle"];
 	call DeleteAllCrew;
@@ -36,6 +51,7 @@ player addEventHandler ["Killed",{
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 	call DeleteAllCrew;
 }];	
+
 
 DeleteAllCrew = {
 	{deleteVehicle _x;}forEach Created_Crew;

@@ -5,14 +5,6 @@ Radio_Members = [];
 1 enableChannel [true, false];
 2 enableChannel [false, false];
 
-if (isServer) then
-{
-	private _channelName = "전술통신망";
-	Radio_Channel = radioChannelCreate [[1, 0.2, 0.2, 0.9], _channelName, "%UNIT_NAME", []];
-	if (Radio_Channel == 0) exitWith {diag_log format ["Custom channel '%1' creation failed!", _channelName]};
-	publicVariable "Radio_Channel";
-};
-
 Radio_Toggle = {
 	if(!Radio_Joined)then{
 		call Radio_Request_Join;
@@ -26,15 +18,32 @@ Radio_Toggle = {
 	};
 };
 
+if (isServer) then
+{
+	private _channelName = "전술통신망";
+	Radio_Channel = radioChannelCreate [[1, 0.2, 0.2, 0.9], _channelName, "%UNIT_NAME", []];
+	if (Radio_Channel == 0) exitWith {diag_log format ["Custom channel '%1' creation failed!", _channelName]};
+	publicVariable "Radio_Channel";
+	[] spawn {
+		while {true} do{	
+			{ 
+				if(!isPlayer _x)then{Radio_Members deleteAt _forEachIndex;}; 
+			}forEach Radio_Members; 
+			publicVariable "Radio_Members";
+			sleep 5;
+		};
+	};
+};
+
 Radio_Request_Join={	
 	[player, Radio_Channel] remoteExec ["Radio_Server_Join", 2];
-	Radio_Members pushBackUnique player;
-	publicVariable "Radio_Members";
 };
 
 Radio_Server_Join={
 	params["_unit", "_index"];
 	_index radioChannelAdd [_unit];	
+	Radio_Members pushBackUnique _unit;
+	publicVariable "Radio_Members";
 	[] remoteExec ["Radio_After_Join", _unit];
 };
 
@@ -48,14 +57,14 @@ Radio_Request_Quit={
 	[player, [Radio_Channel, "수신종료!"]] remoteExec ["customChat"];
 	[player, Radio_Channel] remoteExec ["Radio_Server_Quit", 2];	
 	setCurrentChannel (3);
-	Radio_Members deleteAt (Radio_Members find player);
-	publicVariable "Radio_Members";	
 	Radio_Joined = false;
 };
 
 Radio_Server_Quit={
 	params["_unit", "_index"];	
-	_index radioChannelRemove [_unit];			
+	_index radioChannelRemove [_unit];		
+	Radio_Members deleteAt (Radio_Members find _unit);
+	publicVariable "Radio_Members";		
 };
 
 if( (typeOf player == "B_Pilot_F") ) then {		

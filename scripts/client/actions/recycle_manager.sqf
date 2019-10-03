@@ -12,7 +12,7 @@ _building_classnames = [];
 {
 	_building_classnames pushBack ( _x select 0 );
 } foreach (buildings);
-_building_classnames = _building_classnames + [ "CamoNet_BLUFOR_Big_F", "B_CargoNet_01_ammo_F", "B_supplyCrate_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F", "B_Slingload_01_Medevac_F", ammobox_b_typename, ammobox_o_typename , "Land_HelipadCivil_F", "Land_HelipadCircle_F", "Land_HelipadSquare_F"];
+_building_classnames = _building_classnames + [ "C_IDAP_supplyCrate_F", "CamoNet_BLUFOR_Big_F", "B_CargoNet_01_ammo_F", "B_supplyCrate_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F", "B_Slingload_01_Medevac_F", ammobox_b_typename, ammobox_o_typename , "Land_HelipadCivil_F", "Land_HelipadCircle_F", "Land_HelipadSquare_F"];
 
 waitUntil { sleep 1; !isNil "GRLIB_all_fobs" };
 
