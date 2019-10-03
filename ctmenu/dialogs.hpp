@@ -198,6 +198,12 @@ class ctMe{
 				action = "call CRS_Holster";
 				picture = "\a3\weapons_f\pistols\p07\data\ui\gear_p07_x_ca.paa";
 				conditionShow="1";
+			};								
+			class extmenu
+			{
+				text = "추가설정메뉴";
+				action = "execVM ""GREUH\scripts\GREUH_dialog.sqf""";
+				conditionShow="1";
 			};
 			class Default
 			{

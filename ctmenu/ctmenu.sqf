@@ -35,6 +35,7 @@ Test_Menu_Add = {
 				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.93 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
 				if(SAKY_Reward>0)then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
 				bar ctrlSetText "점령보너스 획득";
+				bar ctrlSetTooltip "적 지역을 점령하면 점령보너스를 획득합니다. 사망이나 재배치 없이 FOB로 복귀하면 획득한 점령보너스를 받을 수 있습니다.";
 				bar ctrlSetScale 0.8;
 				bar ctrlCommit 0;  
 				
@@ -42,6 +43,7 @@ Test_Menu_Add = {
 				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.945 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
 				if(soundVolume==( desired_vehvolume / 100.0 ))then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
 				bar ctrlSetText "이어플러그 착용";
+				bar ctrlSetTooltip "휠을 굴려 =추가설정메뉴=에 들어가 맨 아래의 슬라이더를 조절해 이어플러그 볼륨을 조절할 수 있습니다.";
 				bar ctrlSetScale 0.8;
 				bar ctrlCommit 0;  
 				
@@ -49,10 +51,9 @@ Test_Menu_Add = {
 				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.96 * safezoneH + safezoneY,0.06 * safezoneW,0.012 * safezoneH];
 				if(Radio_Joined)then{bar ctrlSettextColor [0.5,0.8,0,0.9];}else{bar ctrlSettextColor [0.9,0.2,0,0.9];};					 
 				bar ctrlSetText "전술통신망 연결";
+				bar ctrlSetTooltip "전술통신망을 연결하여 다른 분대와 통신할 수 있습니다. 조종사는 필수로 연결되어있습니다.";
 				bar ctrlSetScale 0.8;
 				bar ctrlCommit 0;  
-				
-				
 			};   
 			
 		};   
@@ -62,7 +63,7 @@ Test_Menu_Add = {
 
 SAKY_Gesture_Text={
 	params ["_unit","_string"];
-	[format ["<t size = '.5'>%1<br/>""%2""</t>",name _unit,_string],-1,1,1.5,0.3,0,789] spawn BIS_fnc_dynamicText;
+	[format ["<t size = '.5'>%1<br/>""%2""</t>",name _unit,_string],-1,1,2,0.3,0,700+round(random 100)] spawn BIS_fnc_dynamicText;
 };
 
 SAKY_Gesture_Send={
