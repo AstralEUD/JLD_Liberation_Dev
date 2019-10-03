@@ -131,6 +131,7 @@ class ctMe{
 					"gesture6",
 					"Separator",
 					"gesture7",
+					"gesture71",
 					"gesture8",
 					"gesture9"
 				};
@@ -167,8 +168,14 @@ class ctMe{
 			};	
 			class gesture7
 			{
-				text = "발진 수신호";
-			action = "if(vehicle player == player)then {[player, ""Acts_JetsShooterShootingLaunch_in_m""] remoteExec [""switchMove"", 0]};";
+				text = "이륙 수신호";
+				action = "[""Acts_JetsShooterShootingLaunch_loop_m""] spawn Test_PlayAnim;";				
+				conditionShow="1";
+			};	
+			class gesture71
+			{
+				text = "유도 수신호";
+				action = "[""Acts_JetsShooterNavigate_loop""] spawn Test_PlayAnim;";				
 				conditionShow="1";
 			};	
 			class gesture8
@@ -207,7 +214,7 @@ class ctMe{
 			class extmenu
 			{
 				text = "추가설정메뉴";
-				action = "(findDisplay 100) closeDisplay 1; execVM ""GREUH\scripts\GREUH_dialog.sqf""";
+				action = "[] spawn GRLIB_ExtMenu;";
 				conditionShow="1";
 			};
 			class Default

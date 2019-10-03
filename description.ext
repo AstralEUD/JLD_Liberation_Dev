@@ -63,4 +63,11 @@ class CfgDebriefing
 		description = "ESC버튼을 누르면 조종사 플레이 규정에 동의하지 않는것으로 인정됩니다. [동의합니다] 버튼을 클릭하시기 바랍니다.";
 		pictureBackground = "jld.paa";
 	};
+	class End5
+	{
+		title =	"조종자격 증명 실패";
+		subtitle = "조종사로 플레이하기 위한 자격증명에 실패하였습니다.";
+		description = "본 서버에서 조종사로 플레이하기 위해서는 UAV, 공격헬기, 고정익, 회전익 쇼케이스를 모두 완수해야 합니다.";
+		pictureBackground = "jld.paa";
+	};
 };

@@ -77,6 +77,7 @@ if(hasInterface)then{
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
 	[] execVM "jld\scanEnemy.sqf";
+	[] execVM "jld\pilotLicense.sqf";
 	[] execVM "PPAP\PPAP_init.sqf";
 };
 [] execVM "jld\radioChannels.sqf";

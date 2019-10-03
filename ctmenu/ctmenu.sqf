@@ -69,9 +69,20 @@ SAKY_Gesture_Text={
 
 SAKY_Gesture_Send={
 	params ["_string"];
-	_arounds = [];
-	_arounds = player nearEntities ["Man", 30];
-	[player,_string] remoteExec ["SAKY_Gesture_Text", _arounds];
+	_targets = [];
+	{
+		{
+			_targets pushBackUnique _x;
+		}foreach crew _x;
+	}foreach (player nearEntities 30);
+	[player,_string] remoteExec ["SAKY_Gesture_Text", _targets];
+};
+
+GRLIB_ExtMenu = {
+	(findDisplay 100) closeDisplay 1; 	
+	waitUntil{ sleep 0.3; alive player };
+	execVM "GREUH\scripts\GREUH_dialog.sqf";
+	waitUntil{ sleep 0.3; alive player };
 };
 
 Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp",{
@@ -92,7 +103,8 @@ Test_PlayAnim = {
 	params ["_animeMain"];
 	AnimdoLoop = false;
 	_delay = 1/(getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _animeMain >> "speed"));
-	if(vehicle player == player)then {
+	_isUnconscious = player getVariable "FAR_isUnconscious";
+	if(vehicle player == player && (_isUnconscious==0))then {
 		player action ["SwitchWeapon", player, player, -1];	
 		uiSleep 1;	
 		_animEH = (findDisplay 46) displayaddEventHandler [ "KeyDown", {
