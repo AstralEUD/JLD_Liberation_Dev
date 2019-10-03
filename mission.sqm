@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14302.707,108.56535,5882.4263};
-		dir[]={-0.7356751,-0.22131544,0.64016408};
-		up[]={-0.16696107,0.97520083,0.14528441};
-		aside[]={0.65644193,5.3003896e-007,0.75438261};
+		pos[]={14494.014,21.577639,5861.1621};
+		dir[]={-0.41895813,-0.12768604,0.89898741};
+		up[]={-0.053937584,0.99181372,0.1157377};
+		aside[]={0.90640581,1.3271347e-008,0.42241561};
 	};
 };
 binarizationWanted=0;
@@ -18874,12 +18874,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14496.218,8.7397451,5889.1372};
-				angles[]={0.153451,0,0.1141679};
+				position[]={14474.741,12.70897,5877.3281};
+				angles[]={0.042641956,0,6.111557};
 			};
 			id=2253;
 			type="ModulePostprocess_F";
-			atlOffset=-2.8610229e-005;
+			atlOffset=0.00023460388;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18916,7 +18916,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Mediterranean";
+							value="Survive";
 						};
 					};
 				};
