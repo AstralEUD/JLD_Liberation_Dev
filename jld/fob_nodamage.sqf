@@ -3,7 +3,7 @@
 {_nodamage pushBack (_x select 0);}forEach buildings;
 
 */
-	
+
 waitUntil{!isNil "GRLIB_all_fobs"};
 
 while{true}do{
@@ -24,5 +24,5 @@ while{true}do{
 		
 		{deleteVehicle _x} forEach nearestObjects [_x, ["WeaponHolder","GroundWeaponHolder"], GRLIB_fob_range];		
 	}forEach GRLIB_all_fobs; 
-	sleep 30;
+	sleep 300;
 };

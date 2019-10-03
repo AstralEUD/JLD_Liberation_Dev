@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=36;
+		nextID=42;
 	};
 	class Camera
 	{
-		pos[]={8265.458,927.88464,18545.814};
+		pos[]={8255.3984,928.73785,18359.061};
 		dir[]={-0.53396744,-0.26914361,-0.80153841};
 		up[]={-0.14922228,0.96310055,-0.22399764};
 		aside[]={-0.8322497,2.1420419e-007,0.5544247};
@@ -1734,7 +1734,7 @@ class Mission
 			};
 			id=1051;
 			type="ModuleCuratorSetAttributesObject_F";
-			atlOffset=5.3649988;
+			atlOffset=5.3649979;
 			class CustomAttributes
 			{
 				class Attribute0

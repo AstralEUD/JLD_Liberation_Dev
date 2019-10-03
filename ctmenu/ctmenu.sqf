@@ -1,4 +1,4 @@
-
+Gesture_ctrl = 1;
 [] execVM "ctmenu\irstrobelite.sqf";
 
 Test_Menu_Add = {   
@@ -63,19 +63,20 @@ Test_Menu_Add = {
 
 SAKY_Gesture_Text={
 	params ["_unit","_string"];
-	[format ["<t size = '.5'>%1<br/>""%2""</t>",name _unit,_string],-1,1,2,0.3,0,700+round(random 100)] spawn BIS_fnc_dynamicText;
+	[format ["<t size = '.5'>%1<br/>""%2""</t>",name _unit,_string],-1,1,1.5,0.3,0,700+(Gesture_ctrl%5)] spawn BIS_fnc_dynamicText;
+	Gesture_ctrl=Gesture_ctrl+1;
 };
 
 SAKY_Gesture_Send={
 	params ["_string"];
 	_arounds = [];
-	_arounds = player nearEntities ["Man", 20];
+	_arounds = player nearEntities ["Man", 30];
 	[player,_string] remoteExec ["SAKY_Gesture_Text", _arounds];
 };
 
 Test_Menu_RClose = {_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyUp",{
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
-		if(_key==0xDB) then {closeDialog 100;};	
+		if(_key==0xDB) then {(findDisplay 100) closeDisplay 1;};	
 	}]
 };
 

@@ -49,9 +49,12 @@ class ctMe{
 			{
 				"gesture",
 				"entry1",
+				"Separator",
 				"radioToggle",
 				"holster",
-				"earplug"
+				"earplug",
+				"Separator",
+				"extmenu"
 			};
 			class Separator
 			{
@@ -69,6 +72,7 @@ class ctMe{
 					"entry4",
 					"entry5",
 					"entry6",
+					"Separator",
 					"entry7"
 				};
 			};
@@ -125,6 +129,7 @@ class ctMe{
 					"gesture4",
 					"gesture5",
 					"gesture6",
+					"Separator",
 					"gesture7",
 					"gesture8",
 					"gesture9"
@@ -202,7 +207,7 @@ class ctMe{
 			class extmenu
 			{
 				text = "추가설정메뉴";
-				action = "execVM ""GREUH\scripts\GREUH_dialog.sqf""";
+				action = "(findDisplay 100) closeDisplay 1; execVM ""GREUH\scripts\GREUH_dialog.sqf""";
 				conditionShow="1";
 			};
 			class Default
