@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2254;
+		nextID=2257;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8325.5264,1001.4377,18445.865};
-		dir[]={-0.53396744,-0.26914361,-0.80153841};
-		up[]={-0.14922228,0.96310055,-0.22399764};
-		aside[]={-0.8322497,2.1420419e-007,0.5544247};
+		pos[]={717.83588,89.046814,15926.751};
+		dir[]={0.34762153,-0.24116082,0.90609193};
+		up[]={0.086382568,0.97048444,0.22516018};
+		aside[]={0.93364835,1.618173e-008,-0.35819343};
 	};
 };
 binarizationWanted=0;
@@ -5441,7 +5441,7 @@ class Mission
 					dataType="Marker";
 					position[]={960,0,-3832};
 					name="marker_24";
-					text="[기갑] - 기갑장비와 Zamak MRL을 사용가능합니다.";
+					text="[기갑] - 기갑 및 포병장비를 사용가능합니다.";
 					type="b_armor";
 					colorName="ColorWhite";
 					id=1505;
@@ -5496,9 +5496,9 @@ class Mission
 				class Item7
 				{
 					dataType="Marker";
-					position[]={12992,-2.2460022,-1832};
+					position[]={12992,-2.2460001,-1832};
 					name="marker_29";
-					text="항공기를 이용해 아군 지상군이 작전중인 지역 인근을 공격하기 전에 반드시 허가를 받아야 합니다.";
+					text="아군 인근에서 작전을 수행하거나, 지원하기전에 반드시 허가를 받아야 합니다.";
 					type="mil_dot";
 					colorName="ColorWhite";
 					id=1510;
@@ -5531,7 +5531,7 @@ class Mission
 					dataType="Marker";
 					position[]={12992,0,-4832};
 					name="marker_32";
-					text="전술통신망은 윈도우키를 눌러 나오는 메뉴에서 토글가능합니다.";
+					text="윈도우키를 눌러 전술통신망, 이어플러그, 추가메뉴를 사용할 수 있습니다.";
 					type="mil_dot";
 					colorName="ColorYellow";
 					id=1513;
