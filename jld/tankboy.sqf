@@ -6,7 +6,7 @@ player addAction
 {
 	params ["_target", "_caller", "_actionId", "_arguments", "_agent"];	
 	{
-		_agent = createAgent ["B_crew_F", [0,0,0], [], 0, "FORM"];
+		_agent = createAgent ["B_T_crew_F", [0,0,0], [], 0, "FORM"];
 		_agent moveInTurret [vehicle player, _x];
 		_agent allowDamage false;
 		_agent disableAI "MOVE";
