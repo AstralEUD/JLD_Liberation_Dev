@@ -99,7 +99,7 @@ FAR_Player_Unconscious =
 		_unit setDamage 0.7;
 		_unit setVelocity [0,0,0];
 		_unit allowDamage false;
-		_unit setCaptive true;
+		//_unit setCaptive true;
 		_unit playMove "AinjPpneMstpSnonWrflDnon_rolltoback";
 
 		sleep 4;		
