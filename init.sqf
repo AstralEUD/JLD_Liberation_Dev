@@ -19,7 +19,6 @@ if ( GRLIB_revive > 0 ) then {
 
 if (isServer) then {
 	[] call compileFinal preprocessFileLineNumbers "scripts\server\init_server.sqf";
-	[] execVM "jld\fob_nodamage.sqf";
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
@@ -30,14 +29,11 @@ if (!isDedicated && hasInterface) then {
 	waitUntil { alive player };
 	[] call compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 } else {
-	setViewDistance 1500;
+	setViewDistance 2500;
 };
 
 //ADV_zeus(zeus moddule name = adminZeus)
 if (isServer) then {[adminZeus,true] execVM "ADV_zeus.sqf";};
-
-//earplug
-//[] execVM "jld\NRE_earplugs.sqf";
 
 //daymessages
 [] execVM "jld\daymessages.sqf";
@@ -51,55 +47,36 @@ if (isServer) then {[adminZeus,true] execVM "ADV_zeus.sqf";};
 //fast rope
 [] execVM "jld\SHK_Fastrope.sqf";
 
-//irstrobe
-//[] execVM "jld\irstrobelite.sqf";
-
 //compass
 [] execVM "jld\fn_voyagerCompass.sqf";
 
 //server rule
 [] execVM "jld\s_Welcome_Rule.sqf";
 
-//real
+//realism scripts
 null=[]execVM"CRS\init.sqf";
 
 //lgi load
 [] execVM "IgiLoad\IgiLoadInit.sqf";
 
+//FFE
+nul = [] execVM "RYD_FFE\FFE.sqf";
+
 //Saky scripts
 if(hasInterface)then{
-	[] execVM "jld\itemblackList.sqf";	
-	[] execVM "jld\rule_enforcer.sqf";
-	[] execVM "jld\loadMortar.sqf";
 	[] execVM "ctmenu\ctmenu.sqf";
-	[] execVM "artyCalc\artyCalc.sqf";
-	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
+	[] execVM "jld\rule_enforcer.sqf";
+	[] execVM "jld\itemblackList.sqf";	
+	[] execVM "jld\loadMortar.sqf";
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
 	[] execVM "jld\scanEnemy.sqf";
 	[] execVM "jld\pilotLicense.sqf";
+	[] execVM "jld\SAKY_Repack.sqf";
+	[] execVM "artyCalc\artyCalc.sqf";
+	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
 	[] execVM "PPAP\PPAP_init.sqf";
+	
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
-
-player addEventHandler ["Respawn", {
-	params ["_unit", "_corpse"];
-	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
-	[] execVM "jld\tankboy.sqf";		
-	call SAKY_WEATHERCHECK_ADDACTION;	
-	call SAKY_MANUAL_HALO;	
-}];
-
-//FFE
-nul = [] execVM "RYD_FFE\FFE.sqf";
-
-[] spawn {
-	sleep 20;
-	{
-		(vehicle _x) setVehicleReportRemoteTargets true;
-		(vehicle _x) setVehicleReportOwnPosition true;
-		(vehicle _x) setVehicleReceiveRemoteTargets true;
-		(vehicle _x) setVehicleRadar 1;
-	}forEach (allUnits + allUnitsUAV);	
-};

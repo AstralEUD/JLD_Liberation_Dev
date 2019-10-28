@@ -4,38 +4,6 @@
 
 if (isDedicated) exitWith {};
 waitUntil {!isNull player};
-/*
-LALA_fnc_StrobeChem_addActions =
-{
-	player setVariable ["strobeplayer","none",true];
-	IRstrobeOn = player addAction ["피아식별장치 <img size='1' image='a3\weapons_f_epb\Ammo\Data\UI\gear_B_IRstrobe_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRStrobeOn;},"",-98,false,true,"",'typeName (_target getVariable "strobeplayer") != "OBJECT" && (_target == _this) && (daytime > 18.7 OR daytime < 5.3)'];
-	
-	IRstrobeOff = player addAction ["피아식별장치 <img size='1' image='a3\weapons_f_epb\Ammo\Data\UI\gear_B_IRstrobe_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRStrobeOff;},"",-98,false,true,"",'typeName (_target getVariable "strobeplayer") == "OBJECT" && ( _target == _this)'];
-	
-	player setVariable ["chemplayer","none",true];
-	IRchemOn = player addAction ["야광봉 녹색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_green_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOn1;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") != "OBJECT" && (_target == _this) && (daytime > 18.7 OR daytime < 5.3)'];
-	
-	IRchemOff = player addAction ["야광봉 녹색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_green_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOff1;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") == "OBJECT" && ( _target == _this)'];
-
-	player setVariable ["chemplayer","none",true];
-	IRchemOn = player addAction ["야광봉 황색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_yellow_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOn2;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") != "OBJECT" && (_target == _this) && (daytime > 18.7 OR daytime < 5.3)'];
-	
-	IRchemOff = player addAction ["야광봉 황색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_yellow_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOff2;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") == "OBJECT" && ( _target == _this)'];
-
-	player setVariable ["chemplayer","none",true];
-	IRchemOn = player addAction ["야광봉 청색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_blue_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOn3;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") != "OBJECT" && (_target == _this) && (daytime > 18.7 OR daytime < 5.3)'];
-	
-	IRchemOff = player addAction ["야광봉 청색 <img size='1' image='a3\weapons_f\Data\UI\M_chemlight_blue_CA.paa'/>",
-	{(_this select 0) spawn LALA_fnc_IRchemOff3;},"",-99,false,true,"",'typeName (_target getVariable "chemplayer") == "OBJECT" && ( _target == _this)'];
-};*/
-
 strobes = [];
 chems = [];
 
