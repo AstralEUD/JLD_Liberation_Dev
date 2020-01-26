@@ -46,12 +46,12 @@ player addEventHandler ["GetOutMan",{
 	params ["_unit", "_role", "_vehicle", "_turret"];
 	call DeleteAllCrew;
 }];	
-
+/*
 player addEventHandler ["Killed",{
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 	call DeleteAllCrew;
 }];	
-
+*/
 
 DeleteAllCrew = {
 	{deleteVehicle _x;}forEach Created_Crew;

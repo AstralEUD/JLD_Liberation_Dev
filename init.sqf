@@ -65,22 +65,20 @@ nul = [] execVM "RYD_FFE\FFE.sqf";
 //Saky scripts
 if(hasInterface)then{
 	[] execVM "ctmenu\ctmenu.sqf";
-	[] execVM "jld\rule_enforcer.sqf";
+	//[] execVM "jld\rule_enforcer.sqf";
 	[] execVM "jld\itemblackList.sqf";	
 	[] execVM "jld\loadMortar.sqf";
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
 	[] execVM "jld\scanEnemy.sqf";
-	[] execVM "jld\pilotLicense.sqf";
+	//[] execVM "jld\pilotLicense.sqf";
 	[] execVM "jld\SAKY_MAGAZINE_REPACK.sqf";
 	[] execVM "artyCalc\artyCalc.sqf";
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
-	[] execVM "PPAP\PPAP_init.sqf";
-	
+	[] execVM "PPAP\PPAP_init.sqf";	
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
-
 
 while {true} do {
 	_current_viewDistance = viewDistance;
@@ -103,3 +101,5 @@ while {true} do {
 	setViewDistance _current_viewDistance;
 	uisleep 0.1;
 };
+
+

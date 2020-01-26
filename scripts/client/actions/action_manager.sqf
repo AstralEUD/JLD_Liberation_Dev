@@ -116,7 +116,7 @@ do {
 		};
 	};
 
-	if ((player call groupType != -1) && _fobdistance < _distfob && alive player && vehicle player == player && (([player, 3]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
+	if (_fobdistance < _distfob && alive player && vehicle player == player && (([player, 3]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
 	then {
 		if (_idact_build == -1)
 		then {
@@ -191,7 +191,7 @@ do {
 		};
 	};
 
-	if ((player call groupType == 3) && (count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && (([player, 5]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
+	if ((count GRLIB_all_fobs > 0) && (GRLIB_endgame == 0) && (_fobdistance < _distredeploy || ((player distance lhd) < 200) || (player distance huronspawn) < 200) && alive player && vehicle player == player && (([player, 5]call F_fetchPermission) || (player == ([]call F_getCommander) || []call F_isAdmin)))
 	then {
 		if (_idact_secondary == -1)
 		then {
