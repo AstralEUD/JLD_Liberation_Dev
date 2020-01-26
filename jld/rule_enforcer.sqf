@@ -89,12 +89,19 @@ isAllowedGetIn = {
 				if (_vehicle isKindOf "Air" || _vehicle isKindOf "Truck_F" || ( typeOf _vehicle == "B_APC_Tracked_01_CRV_F") && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
 				then {
 					if(typeOf player == "B_Pilot_F")then{_isAllowedGetIn = true}else{systemChat "항공장비를 조작하기 위해서는 조종사 슬롯으로 접속해야 합니다."};
+					_num = [air_vehicles,typeOf _vehicle] call BIS_fnc_findNestedElement;
+					_score = (air_vehicles#(_num#0))#2;
+					
+					hint str formatText["이 장비를 탑승하기 위해서는 %1점이 필요합니다. 현재 점수는 %2점입니다.",_score,score player];
 				};
 			}; //7전투
 		case 8: {
 				if (_vehicle isKindOf "Air" || _vehicle isKindOf "Truck_F" || ( typeOf _vehicle == "B_APC_Tracked_01_CRV_F") && !(_vehicle isKindOf "MBT_01_mlrs_base_F" || _vehicle isKindOf "MBT_01_arty_base_F" || _vehicle isKindOf "Truck_02_MRL_base_F" || _vehicle isKindOf "MBT_02_arty_base_F"))
 				then {
 					if(typeOf player == "B_Pilot_F")then{_isAllowedGetIn = true}else{systemChat "항공장비를 조작하기 위해서는 조종사 슬롯으로 접속해야 합니다."};
+					_num = [air_vehicles,typeOf _vehicle] call BIS_fnc_findNestedElement;
+					_score = (air_vehicles#(_num#0))#2;
+					systemChat str formatText["이 장비를 탑승하기 위해서는 %1점이 필요합니다. 현재 점수는 %2점입니다.",_score,score player];
 				};
 			}; //8기동
 			default {
@@ -119,7 +126,7 @@ player addEventHandler["GetInMan", {
 				unassignVehicle player;
 				hintSilent "장비를 조작하기 위해서는 적절한 분대태그를 가진 그룹에 가입해야 합니다. U키를 눌러 적절한 분대에 가입하기 바랍니다.";
 			} else {
-				if ((leader group _unit == _unit) && (count units _unit > 3)) then {	
+				if ((leader group _unit == _unit) && (count units _unit > 3) && (!([_unit call groupType, _vehicle] call isAllowedGetIn))) then {	
 					[_unit] spawn {								
 						params["_unit"];
 						_result = [format["4인이상 분대장은 분대태그를 수정하지 않고 장비탑승이 가능합니다. 이 기능은 불가피한 상황에서 임시로 장비를 운용해야 하는 경우에만 사용하시기 바랍니다.<br/><br/>분대원은 여전히 현재 장비의 객석 외에는 탑승이 불가능할 수 있습니다.<br/><br/>지속적으로 분대유형을 무시한 장비 운용시 킥, 밴될 수 있습니다."]
