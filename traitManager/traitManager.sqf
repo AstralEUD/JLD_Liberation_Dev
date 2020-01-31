@@ -6,7 +6,8 @@ TM_LandVehicles = [];
 TM_AirVehicles = [];
 TM_ServiceVehicles = [
 "C_Heli_Light_01_civil_F",
-"SUV_01_base_grey_F"
+"SUV_01_base_grey_F",
+"C_IDAP_Heli_Transport_02_F"
 ];
 {
 	{
@@ -130,28 +131,33 @@ TM_SetTraits =  {
 }; 
 
 TM_Refresh =  {
-	_trait = player getVariable["Trait", 0]; 
-	_traitSelected = lbCurSel TM_GUI_LIST; 
-	_cost = (TM_Traits# _traitSelected #1) - (TM_Traits# _trait #1); 
-	while { ! isNull _display }
-	do {
-		TM_GUI_SCORE ctrlSetText format["경험치 : %1", score player];  {
+	while { ! isNull _display }	do {
+		TM_GUI_SCORE ctrlSetText format["경험치 : %1", score player];  
+
+		{
 			TM_GUI_LIST lbSetColor[_forEachIndex, [1, 1, 1, 0.8]]; 
-		}
-		forEach TM_Traits; 
+		} forEach TM_Traits; 
+
 		_trait = player getVariable["Trait", 0]; 
 		_traitSelected = lbCurSel TM_GUI_LIST; 
 		TM_GUI_LIST lbSetColor[_trait, [0, 1, 0, 0.8]]; 
+
 		TM_GUI_TITLE ctrlSetText format["보직 선택 (현재:%1)", TM_Traits# _trait #0]; 		
 		TM_GUI_COST ctrlSetText format["비용 : %1 ( - %2 )", TM_Traits# _traitSelected #1, TM_Traits#(player getVariable["Trait", 0])#1]; 
-		if (_traitSelected > -1 && (_traitSelected != _trait))then {
-			if (score player + _cost > 0) then {
-				TM_GUI_OK ctrlEnable true; 
+		
+		_cost = (TM_Traits# _traitSelected #1) - (TM_Traits# _trait #1); 
+
+		if (_trait != _traitSelected) then {
+			if (score player - _cost >= 0) then {
+				TM_GUI_OK ctrlEnable true;
+			}else{				
+				TM_GUI_OK ctrlEnable false;
 			};
-		}else {
-			TM_GUI_OK ctrlEnable false; 
-		}; 
-		uiSleep 0.1; 
+		}else{
+			TM_GUI_OK ctrlEnable false;
+		};
+
+		Sleep 0.1; 
 	}; 
 }; 
 
@@ -191,7 +197,7 @@ TM_initGUI =  {
 
 	TM_GUI_OK = _display ctrlCreate["RscButton", 8604]; 
 	TM_GUI_OK ctrlSetPosition[0.572187 * safezoneW + safezoneX, 0.599 * safezoneH + safezoneY, 0.0721875 * safezoneW, 0.066 * safezoneH]; 
-	TM_GUI_OK ctrlSetText "OK"; 
+	TM_GUI_OK ctrlSetText "보직변경"; 
 	TM_GUI_OK ctrlEnable false; 
 
 	TM_GUI_BG ctrlCommit 0; 

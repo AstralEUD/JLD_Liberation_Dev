@@ -20,7 +20,7 @@ waitUntil { dialog };
 while { dialog && alive player && dojump == 0 } do {
 	"spawn_marker" setMarkerPosLocal halo_position;
 
-	if ( (resources_ammo >= 100) && (player call groupType != -1) ) then {
+	if ( (resources_ammo >= 100) ) then {
 		if(isNil "GRLIB_secondary_in_progress")then{
 			ctrlEnable [ 202, true ];
 		} else {

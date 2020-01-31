@@ -94,8 +94,6 @@ light_vehicles = [
 ["B_Truck_01_flatbed_F", 50, 10, 0],
 ["B_Truck_01_cargo_F", 50, 10, 0],
 ["I_Truck_02_transport_F", 40, 10, 0],
-["B_UGV_02_Science_F", 100, 50, 100],
-["B_UGV_02_Demining_F", 100, 50, 100],
 ["B_UGV_01_F", 300, 50, 300],
 ["B_UGV_01_rcws_F", 300, 100, 300],
 ["B_SDV_01_F", 50, 10, 0],
@@ -179,8 +177,6 @@ air_vehicles = [
 ["B_T_VTOL_01_vehicle_F", 0, 100, 300],
 ["B_T_VTOL_01_armed_F", 0, 500, 300],
 ["O_T_VTOL_02_vehicle_F", 0, 550, 450],
-["B_UAV_06_F", 200, 50, 200],
-["B_UAV_01_F", 200, 50, 200],
 ["B_UAV_02_dynamicLoadout_F", 300, 250, 300],
 ["B_UAV_05_F", 500, 300, 500],
 ["B_T_UAV_03_dynamicLoadout_F", 400, 300, 400]
