@@ -22,7 +22,10 @@ truck_Mortar = {
 
 while{true}do{
 	while{true}do{
-		(vehicle player) enableWeaponDisassembly false;
+		
+		{
+			_x enableWeaponDisassembly false;
+		}forEach (player nearEntities ["StaticWeapon", 10]);
 		
 		_mortar = nearestObject [player, "StaticWeapon"];
 		_truck = (nearestObjects [player, ["Truck_F","Car_F"],10]-nearestObjects [player, ["Wheeled_APC_F"],10])#0;	

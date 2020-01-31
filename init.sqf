@@ -76,6 +76,7 @@ if(hasInterface)then{
 	[] execVM "artyCalc\artyCalc.sqf";
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
 	[] execVM "PPAP\PPAP_init.sqf";	
+	[] execVM "traitManager\traitManager.sqf";	
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";

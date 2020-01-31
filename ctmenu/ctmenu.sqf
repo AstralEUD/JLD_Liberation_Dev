@@ -1,6 +1,17 @@
 Gesture_ctrl = 1;
 [] execVM "ctmenu\irstrobelite.sqf";
 
+TM_Icons = [
+	"\A3\ui_f\data\map\markers\nato\o_inf.paa",
+	"\A3\ui_f\data\map\markers\nato\o_med.paa",
+	"\a3\UI_F_Orange\Data\CfgMarkers\o_Ordnance_ca.paa",
+	"\A3\ui_f\data\map\markers\nato\o_recon.paa",
+	"\A3\ui_f\data\map\markers\nato\o_maint.paa",
+	"\A3\ui_f\data\map\markers\nato\o_armor.paa",
+	"\A3\ui_f\data\map\markers\nato\o_plane.paa"
+];
+TM_Roles = ["소총수","전투의무병","중화기병","지정사수","공병/UAV운용병","지상장비 운용병","항공장비 운용병"];
+
 Test_Menu_Add = {   
 	_keyInputEH = findDisplay 46 displayaddEventHandler ["KeyDown", {   
 		params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];   
@@ -53,6 +64,17 @@ Test_Menu_Add = {
 				bar ctrlSetText "전술통신망 연결";
 				bar ctrlSetTooltip "전술통신망을 연결하여 다른 분대와 통신할 수 있습니다. 조종사는 필수로 연결되어있습니다.";
 				bar ctrlSetScale 0.8;
+				bar ctrlCommit 0;  
+
+				bar = findDisplay 100 ctrlCreate ["RscPictureKeepAspect", -1];
+				bar ctrlSetPosition [0.006 * safezoneW + safezoneX,0.883 * safezoneH + safezoneY,0.0257812 * safezoneW,0.044 * safezoneH];
+				bar ctrlSetText TM_Icons#(player getVariable ["Trait", 0 ]);	
+				bar ctrlCommit 0;  
+
+				bar = findDisplay 100 ctrlCreate ["RscText", -1];
+				bar ctrlSetPosition [0.03 * safezoneW + safezoneX,0.86 * safezoneH + safezoneY,0.149531 * safezoneW,0.044 * safezoneH];
+				bar ctrlSetText TM_Roles#(player getVariable ["Trait", 0 ]);
+				bar ctrlSetScale 2;
 				bar ctrlCommit 0;  
 			};   
 			

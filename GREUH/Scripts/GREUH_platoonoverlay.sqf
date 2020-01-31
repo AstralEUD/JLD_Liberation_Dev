@@ -6,6 +6,16 @@ commander_icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 group_leader_icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
 wounded_icon = "\A3\ui_f\data\map\vehicleicons\pictureHeal_ca.paa";
 
+TM_Icons = [
+	"\A3\ui_f\data\map\markers\nato\o_inf.paa",
+	"\A3\ui_f\data\map\markers\nato\o_med.paa",
+	"\a3\UI_F_Orange\Data\CfgMarkers\o_Ordnance_ca.paa",
+	"\A3\ui_f\data\map\markers\nato\o_recon.paa",
+	"\A3\ui_f\data\map\markers\nato\o_maint.paa",
+	"\A3\ui_f\data\map\markers\nato\o_armor.paa",
+	"\A3\ui_f\data\map\markers\nato\o_plane.paa"
+];
+
 nametags_distance = 32.0;
 
 private [ "_groups", "_unitstocount", "_totalx", "_totaly", "_totalz", "_alpha", "_textalpha", "_size", "_screenpos", "_grouppos", "_distlabel", "_dist", "_nextunit", "_color", "_drawicon", "_displayname", "_iconpos" ];
@@ -105,20 +115,22 @@ waitUntil { !isNil "GRLIB_nametag_units" };
 			};
 
 			_drawicon = soldier_icon;
+			_role = _nextunit getVariable ["Trait", 0];
 			if ( _nextunit getVariable [ "FAR_isUnconscious", 0 ] == 1 ) then {
 				_drawicon = wounded_icon;
 			} else {
-				if ( _nextunit == [] call F_getCommander ) then {
-					_drawicon = commander_icon;
-				} else {
-					if ( _nextunit == (leader group _nextunit) && (count (units group _nextunit) > 1 ) ) then {
-						_drawicon = group_leader_icon;
-					} else {
-						if ( ( isFormationLeader _nextunit ) && ( count formationMembers _nextunit > 1 ) ) then {
-							_drawicon = formation_leader_icon;
-						};
-					};
-				};
+				_drawicon = TM_Icons#_role;
+				// if ( _nextunit == [] call F_getCommander ) then {
+				// 	_drawicon = commander_icon;
+				// } else {
+				// 	if ( _nextunit == (leader group _nextunit) && (count (units group _nextunit) > 1 ) ) then {
+				// 		_drawicon = group_leader_icon;
+				// 	} else {
+				// 		if ( ( isFormationLeader _nextunit ) && ( count formationMembers _nextunit > 1 ) ) then {
+				// 			_drawicon = formation_leader_icon;
+				// 		};
+				// 	};
+				// };
 			};
 
 			_displayname = "";
