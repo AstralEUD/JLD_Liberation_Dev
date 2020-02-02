@@ -78,12 +78,13 @@ else {
 
 light_vehicles = [
 ["SUV_01_base_grey_F", 15, 10, 0],
-["C_Tractor_01_F", 15, 10, 0],
 ["B_GEN_Offroad_01_gen_F", 15, 10, 0],
 ["C_Offroad_02_unarmed_green_F", 15, 10, 0],
 ["B_G_Van_01_transport_F", 20, 10, 0],
 ["B_G_Van_02_transport_F", 20, 10, 0],
 ["B_LSV_01_unarmed_F", 20, 10, 0],
+["B_LSV_01_armed_F", 20, 20, 0],
+["B_LSV_01_AT_F", 20, 30, 0],
 ["B_MRAP_01_F", 30, 10, 0],
 ["B_MRAP_01_hmg_F", 30, 20, 0],
 ["B_MRAP_01_gmg_F", 30, 30, 0],
@@ -465,7 +466,6 @@ then {
 	elite_vehicles_extension = []
 };
 elite_vehicles = [] + elite_vehicles_extension + [
-"C_Tractor_01_F",
 "B_AFV_Wheeled_01_cannon_F",
 "B_AFV_Wheeled_01_up_cannon_F",
 "B_MBT_01_TUSK_F",
@@ -637,6 +637,8 @@ militia_squad = [
 "O_G_medic_F",
 "O_G_engineer_F",
 "O_Soldier_AA_F",
+"O_Soldier_AA_F",
+"O_Soldier_AA_F",
 "O_Soldier_AAR_F",
 "O_Soldier_AAT_F",
 "O_Soldier_AAA_F",
@@ -651,12 +653,11 @@ militia_squad = [
 "O_G_Soldier_LAT_F",
 "O_G_Soldier_lite_F",
 "O_G_Sharpshooter_F",
+"O_G_Sharpshooter_F",
+"O_G_Sharpshooter_F",
 "O_V_Soldier_LAT_hex_F",
 "O_V_Soldier_TL_hex_F",
-"O_V_Soldier_Exp_hex_F",
 "O_V_Soldier_M_hex_F",
-"O_V_Soldier_JTAC_hex_F",
-"O_V_Soldier_hex_F",
 "O_G_Soldier_TL_F",
 "O_Soldier_AHAT_F",
 "O_Soldier_HAT_F",

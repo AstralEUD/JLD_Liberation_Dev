@@ -1,17 +1,20 @@
 Radio_Joined = false;
 Radio_Members = [];
+Radio_PChannel = 0;
+Radio_IsDead = false;
 
 0 enableChannel [false, false];
 1 enableChannel [true, false];
 2 enableChannel [false, false];
 
 Radio_Toggle = {
+	_role = player getVariable ["Trait", 0];
 	if(!Radio_Joined)then{
 		call Radio_Request_Join;
 	}else{
-		if(typeOf player == "B_Pilot_F")then{
-			["<t color='#ff0000' size = '0.55' >조종사는 전술통신망을 해제할 수 없습니다!</t>"] spawn BIS_fnc_dynamicText;
-			systemChat "조종사는 전술통신망을 해제할 수 없습니다!";			
+		if(_role>4)then{
+			["<t color='#ff0000' size = '0.55' >장비 운용병은 전술통신망을 해제할 수 없습니다!</t>"] spawn BIS_fnc_dynamicText;
+			systemChat "장비 운용병은 전술통신망을 해제할 수 없습니다!";			
 		}else{
 			call Radio_Request_Quit;
 		};		
@@ -49,7 +52,12 @@ Radio_Server_Join={
 
 Radio_After_Join={		
 	[player, [Radio_Channel, "전술통신망 개통되었음!"]] remoteExec ["customChat"];
-	setCurrentChannel (Radio_Channel+5);
+	if (!Radio_IsDead) then {
+		setCurrentChannel (Radio_Channel+5);
+	}else{		
+		setCurrentChannel Radio_PChannel;
+		Radio_IsDead = false;
+	};
 	Radio_Joined = true;
 };
 
@@ -67,12 +75,14 @@ Radio_Server_Quit={
 	publicVariable "Radio_Members";		
 };
 
-if( (typeOf player == "B_Pilot_F") ) then {		
-	call Radio_Toggle;
-};
+// if( (typeOf player == "B_Pilot_F") ) then {		
+// 	call Radio_Toggle;
+// };
 
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
+	Radio_PChannel = currentChannel;
+	Radio_IsDead = true;
 	Radio_Joined = !Radio_Joined;		
 	call Radio_Toggle;
 }];

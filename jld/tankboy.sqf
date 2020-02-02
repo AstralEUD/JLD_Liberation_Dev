@@ -1,5 +1,4 @@
 Created_Crew=[];
-
 player addAction 
 [
 "승무원 추가", 

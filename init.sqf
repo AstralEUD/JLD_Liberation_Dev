@@ -63,44 +63,27 @@ null=[]execVM"CRS\init.sqf";
 nul = [] execVM "RYD_FFE\FFE.sqf";
 
 //Saky scripts
-if(hasInterface)then{
+if(!isDedicated && hasInterface)then{
 	[] execVM "ctmenu\ctmenu.sqf";
-	//[] execVM "jld\rule_enforcer.sqf";
 	[] execVM "jld\itemblackList.sqf";	
 	[] execVM "jld\loadMortar.sqf";
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
 	[] execVM "jld\scanEnemy.sqf";
-	//[] execVM "jld\pilotLicense.sqf";
 	[] execVM "jld\SAKY_MAGAZINE_REPACK.sqf";
 	[] execVM "artyCalc\artyCalc.sqf";
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";//VAM	
 	[] execVM "PPAP\PPAP_init.sqf";	
 	[] execVM "traitManager\traitManager.sqf";	
+	[] execVM "jld\nerf.sqf";	
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
 
-while {true} do {
-	_current_viewDistance = viewDistance;
-	if (player == vehicle player) then {
-		while {currentVisionMode player == 2} do {
-			if ((cameraView == "GUNNER") && (currentMuzzle player splitString "_" select 0) != "launch") then {
-				player action ["nvGogglesOff", player];
-				if (currentVisionMode player == 2) then {
-					setViewDistance 600;
-				};
-			};
-			if ((cameraView == "GUNNER") && (currentMuzzle player splitString "_" select 0) == "launch") then {
-				setViewDistance _current_viewDistance;
-			};
-			if (cameraView != "GUNNER") then {
-				setViewDistance 300;
-			};
-		};
-	};
-	setViewDistance _current_viewDistance;
-	uisleep 0.1;
-};
-
+player addEventHandler ["Respawn", {
+[] execVM "jld\Auto_running.sqf";
+[] execVM "VAM_GUI\VAM_GUI_init.sqf";
+[] execVM "jld\tankboy.sqf";
+call SAKY_MANUAL_HALO;	
+}];
 

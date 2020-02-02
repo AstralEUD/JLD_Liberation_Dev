@@ -33,6 +33,7 @@ SAKY_RTBReward_GiveReward = {
 			_increase = SAKY_Reward;
 			[gamelogic, str formatText["%1님이 FOB복귀에 성공해 %2의 자원을 추가로 획득하였습니다.",name _player, _increase*100]] remoteExec ["globalChat"];
 			[_increase] remoteExec ["SAKY_RTBReward_SERVERAMMO",2];
+			[player, _increase*20] remoteExec ["addScore", 2]; 		
 			SAKY_Reward = 0;
 		};
 	};
