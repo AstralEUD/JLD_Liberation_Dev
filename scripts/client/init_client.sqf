@@ -53,51 +53,6 @@ do_load_box = compileFinal preprocessFileLineNumbers "scripts\client\ammoboxes\d
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 
-SAKY_MANUAL_HALO_Condition = {
-	_cargos = [];
-	{_cargos pushback _x#0}forEach fullCrew [vehicle player, "cargo"];
-	_isFFV = false;
-	if(vehicle player != player)then{_isFFV=((fullCrew vehicle player)#((fullCrew vehicle player) findIf {_x#0==player})#4)};
-	((ASLToAGL getPosASL vehicle player#2) > 150) && ((player in _cargos) || _isFFV)
-};
-
-SAKY_MANUAL_HALO = {  
-	player addAction   
-	[  
-	"<t color='#00FF00'>공수 강하</t>",   
-	{    
-		_backpackcontents = [];
-		moveOut player; 
-		sleep 2; 
-		_backpack = backpack player; 
-		if ( _backpack != "" && _backpack != "B_Parachute" ) then { 
-			_backpackcontents = backpackItems player; 
-			removeBackpack player; 
-			sleep 0.1; 
-		}; 
-		player addBackpack "B_Parachute"; 
-		sleep 4;   
-		waitUntil { (ASLToAGL getPosASL player#2) < 90 }; 
-		player action ["OpenParachute", player];   
-		waitUntil { !alive player || isTouchingGround player }; 
-		if ( _backpack != "" && _backpack != "B_Parachute" ) then { 
-			sleep 2; 
-			player addBackpack _backpack; 
-			clearAllItemsFromBackpack player; 
-			{ player addItemToBackpack _x } foreach _backpackcontents; 
-		};   
-	},  
-	[],  
-	15,   
-	true,   
-	true,   
-	"",  
-	"call SAKY_MANUAL_HALO_Condition" 
-	]; 
-}; 
-
-call SAKY_MANUAL_HALO;
-
 {
 	[_x] call BIS_fnc_drawCuratorLocations;
 } foreach allCurators;
