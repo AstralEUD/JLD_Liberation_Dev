@@ -104,8 +104,12 @@ FAR_Player_Unconscious =
 
 		sleep 3;		
 		
-		_unit setCaptive false;
 		_unit allowDamage true;
+
+		[] spawn {
+			sleep 30;
+			player setCaptive false;
+		};
 
 		if (isPlayer _unit) then
 		{

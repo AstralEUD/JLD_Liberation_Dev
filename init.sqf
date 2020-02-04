@@ -85,4 +85,3 @@ player addEventHandler ["Respawn", {
 [] execVM "jld\Auto_running.sqf";
 [] execVM "VAM_GUI\VAM_GUI_init.sqf";
 }];
-

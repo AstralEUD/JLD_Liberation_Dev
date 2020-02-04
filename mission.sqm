@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=66;
+		nextID=70;
 	};
 	class Camera
 	{
@@ -978,7 +978,7 @@ class Mission
 			name="commandantZeus1";
 			id=971;
 			type="ModuleCurator_F";
-			atlOffset=2.7376204;
+			atlOffset=3.8280005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2156,7 +2156,7 @@ class Mission
 			};
 			id=1053;
 			type="ModuleCuratorSetAttributesPlayer_F";
-			atlOffset=4.8883696;
+			atlOffset=5.7840004;
 			class CustomAttributes
 			{
 				class Attribute0
