@@ -45,7 +45,7 @@ if ( GRLIB_endgame == 0 ) then {
 	if ( _attacktime <= 1 && ( [ _thispos ] call F_sectorOwnership == GRLIB_side_enemy ) ) then {
 		[ [ _thispos , 2 ] , "remote_call_fob" ] call BIS_fnc_MP;
 		_fobname = [ _thispos ] call F_getFobName;
-		["alarmLost",[["FOB ",_fobname] joinstring "",resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
+		// ["alarmLost",[["FOB ",_fobname] joinstring "",resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
 		sleep 3;
 		GRLIB_all_fobs = GRLIB_all_fobs - [_thispos];
 		publicVariable "GRLIB_all_fobs";

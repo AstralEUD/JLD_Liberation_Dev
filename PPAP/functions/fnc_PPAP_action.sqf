@@ -14,7 +14,7 @@ PPAP_check_locality = compileFinal "
 PPAP_action = compileFinal "
 	player addAction
 	[
-		'항공기 무장 변경',
+		'<t color=''#FFFF80''>항공기 무장 변경',
 		{
 			if (PPAP_cursor_condition) then {
 				PPAP_targetvehicle = cursorObject;
