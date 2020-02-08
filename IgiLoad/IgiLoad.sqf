@@ -69,9 +69,9 @@ if (isnil "IL_Variables") then
 	IL_Num_Slots_C17 = -22;
 	
 	//Player addScore after loading and unloading
-	IL_Load_Score = 20;
+	IL_Load_Score = 0;
 	//Para unload score = 2 * IL_Unload_Score
-	IL_Unload_Score = 10;
+	IL_Unload_Score = 0;
 	
 	//The minimum altitude for the drop with parachute
 	IL_Para_Drop_ATL = 50;

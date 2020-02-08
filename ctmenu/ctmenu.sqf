@@ -1,3 +1,5 @@
+disableSerialization;
+
 Gesture_ctrl = 1;
 [] execVM "ctmenu\irstrobelite.sqf";
 

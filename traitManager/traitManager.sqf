@@ -1,5 +1,8 @@
+disableSerialization;
+
 TM = true;
 TM_Lock = false;
+TM_MEM = false;
 TM_Action = -1;
 
 player setVariable["Trait", 0, true]; 
@@ -130,7 +133,7 @@ TM_addAction = compileFinal "
 	while{TM}do{ 
 		call TM_addAction;	//액션추가
 		call TM_Loop;	//TM동작루프
-		sleep 0.05;
+		sleep 0.1;
 	}; 
 };
 
@@ -138,7 +141,10 @@ TM_addAction = compileFinal "
 	while{TM}do{
 		_drv = currentPilot vehicle player;
 		if (TM_Lock && (_drv == player)) then {
-			if (fuel vehicle player > 0) then {
+			if (fuel vehicle player == 0) then {
+				sleep 0.1;
+			}else{				
+				private "_gas";
 				_veh = vehicle player; 		
 				_gas = fuel _veh; 
 				_veh setFuel 0; 
@@ -147,7 +153,7 @@ TM_addAction = compileFinal "
 			};
 			hintSilent "장비 운용병 보직이 아닌경우 장비 운용이 불가능합니다. 민수용 장비를 사용하거나 보직을 변경하십시오.";
 		}else{
-			sleep 0.03;
+			sleep 0.1;
 		};
 	};
 };
@@ -167,7 +173,7 @@ TM_SetTraits =  {
 }; 
 
 TM_Refresh =  {
-	while { ! isNull _display }	do {
+	while { ! isNull TM_Display }	do {
 		TM_GUI_SCORE ctrlSetText format["경험치 : %1", score player];  
 
 		{
@@ -199,44 +205,70 @@ TM_Refresh =  {
 
 TM_Reset =  {
 	player addEventHandler["Respawn",  {
-		player setVariable["Trait", 0, true]; 
-		[[false, false, false, false, false, false, false, false]] call TM_SetTraits;
+		_trait = player getVariable["Trait", 0]; 
+		_score = score player;
+		_cost = TM_Traits#_trait#1;
+		if(TM_MEM)then{
+			if(_score - _cost > 0)then{
+				[player, -1 * _cost] remoteExec ["addScore", 2]; 		
+				player setVariable ["Trait", _trait, true]; 
+				[TM_Traits#_trait#3] call TM_SetTraits; 						
+			}else{
+				player setVariable["Trait", 0, true]; 
+				[[false, false, false, false, false, false, false, false]] call TM_SetTraits;
+				systemChat "점수가 부족하여 리스폰보직이 적용되지 않았습니다.";
+			};
+		}else{
+			player setVariable["Trait", 0, true]; 
+			[[false, false, false, false, false, false, false, false]] call TM_SetTraits;
+		};
 	}]; 
 }; 
 call TM_Reset; 
 
 TM_initGUI =  {
-	disableSerialization;
-	_display = findDisplay 46 createDisplay "RscDisplayEmpty"; 
+	TM_Display = findDisplay 46 createDisplay "RscDisplayEmpty"; 
 
-	TM_GUI_BG = _display ctrlCreate["RscText", -1]; 
+	TM_GUI_BG = TM_Display ctrlCreate["RscText", -1]; 
 	TM_GUI_BG ctrlSetPosition[0.345312 * safezoneW + safezoneX, 0.335 * safezoneH + safezoneY, 0.309375 * safezoneW, 0.352 * safezoneH]; 
 	TM_GUI_BG ctrlSetBackgroundColor[0.1, 0.1, 0.1, 0.8]; 
 
-	TM_GUI_TITLE = _display ctrlCreate["RscText", -1]; 
+	TM_GUI_TITLE = TM_Display ctrlCreate["RscText", -1]; 
 	TM_GUI_TITLE ctrlSetPosition[0.345312 * safezoneW + safezoneX, 0.335 * safezoneH + safezoneY, 0.309375 * safezoneW, 0.022 * safezoneH]; 
 	TM_GUI_TITLE ctrlSetBackgroundColor[0.3, 0.3, 0.3, 0.8]; 
 	TM_GUI_TITLE ctrlSetText "ROLE SELECT"; 
 
-	TM_GUI_LIST = _display ctrlCreate["RscListBox", 8600]; 
+	TM_GUI_LIST = TM_Display ctrlCreate["RscListBox", 8600]; 
 	TM_GUI_LIST ctrlSetPosition[0.355625 * safezoneW + safezoneX, 0.379 * safezoneH + safezoneY, 0.12375 * safezoneW, 0.286 * safezoneH]; 
 
-	TM_GUI_DESCRIPTION = _display ctrlCreate["RscStructuredText", 8601]; 
+	TM_GUI_DESCRIPTION = TM_Display ctrlCreate["RscStructuredText", 8601]; 
 	TM_GUI_DESCRIPTION ctrlSetPosition[0.489687 * safezoneW + safezoneX, 0.379 * safezoneH + safezoneY, 0.154687 * safezoneW, 0.209 * safezoneH]; 
 	TM_GUI_DESCRIPTION ctrlSetBackgroundColor[0.3, 0.3, 0.3, 0.8]; 
 
-	TM_GUI_COST = _display ctrlCreate["RscText", 8602]; 
+	TM_GUI_COST = TM_Display ctrlCreate["RscText", 8602]; 
 	TM_GUI_COST ctrlSetPosition[0.489687 * safezoneW + safezoneX, 0.599 * safezoneH + safezoneY, 0.12375 * safezoneW, 0.033 * safezoneH]; 
 	TM_GUI_COST ctrlSetText "비용:Loading"; 
 
-	TM_GUI_SCORE = _display ctrlCreate["RscText", 8603]; 
+	TM_GUI_SCORE = TM_Display ctrlCreate["RscText", 8603]; 
 	TM_GUI_SCORE ctrlSetPosition[0.489687 * safezoneW + safezoneX, 0.632 * safezoneH + safezoneY, 0.12375 * safezoneW, 0.033 * safezoneH]; 
 	TM_GUI_SCORE ctrlSetText "자원:Loading"; 
 
-	TM_GUI_OK = _display ctrlCreate["RscButton", 8604]; 
-	TM_GUI_OK ctrlSetPosition[0.572187 * safezoneW + safezoneX, 0.599 * safezoneH + safezoneY, 0.0721875 * safezoneW, 0.066 * safezoneH]; 
+	TM_GUI_OK = TM_Display ctrlCreate["RscButton", 8604]; 
+	TM_GUI_OK ctrlSetPosition[0.572187 * safezoneW + safezoneX,0.599 * safezoneH + safezoneY,0.0721875 * safezoneW,0.044 * safezoneH]; 
 	TM_GUI_OK ctrlSetText "보직변경"; 
 	TM_GUI_OK ctrlEnable false; 
+
+	TM_GUI_MEM = TM_Display ctrlCreate["RscCheckBox", 8605]; 
+	TM_GUI_MEM ctrlSetPosition[0.572187 * safezoneW + safezoneX,0.643 * safezoneH + safezoneY,0.011 * safezoneW,0.022 * safezoneH]; 
+	TM_GUI_MEM cbSetChecked TM_MEM;
+	
+	TM_GUI_MEMText = TM_Display ctrlCreate["RscStructuredText", 8606]; 
+	TM_GUI_MEMText ctrlSetPosition[0.5825 * safezoneW + safezoneX,0.643 * safezoneH + safezoneY,0.07 * safezoneW,0.022 * safezoneH]; 
+	TM_GUI_MEMText ctrlSetStructuredText parseText "<t size='0.8' valign='middle'>리스폰 보직 저장</t>"; 
+	
+	TM_GUI_CLS = TM_Display ctrlCreate["RscButton", 8607]; 
+	TM_GUI_CLS ctrlSetPosition[0.613437 * safezoneW + safezoneX,0.335 * safezoneH + safezoneY,0.04125 * safezoneW,0.022 * safezoneH]; 
+	TM_GUI_CLS ctrlSetText "CLOSE"; 
 
 	TM_GUI_BG ctrlCommit 0; 
 	TM_GUI_TITLE ctrlCommit 0; 
@@ -245,10 +277,23 @@ TM_initGUI =  {
 	TM_GUI_COST ctrlCommit 0; 
 	TM_GUI_SCORE ctrlCommit 0; 
 	TM_GUI_OK ctrlCommit 0; 
+	TM_GUI_MEM ctrlCommit 0; 
+	TM_GUI_MEMText ctrlCommit 0; 
+	TM_GUI_CLS ctrlCommit 0; 
 
 	lbClear TM_GUI_LIST;  {
 		_i = TM_GUI_LIST lbAdd _x #0; 
 	}forEach TM_Traits; 	
+
+	TM_GUI_MEM ctrlAddEventHandler ["CheckedChanged",  {
+		params ["_control", "_checked"];
+		if (_checked == 0) then {TM_MEM = false} else {TM_MEM = true};
+	}]; 
+
+	TM_GUI_CLS ctrlAddEventHandler ["ButtonClick",  {
+		params ["_control", "_selectedIndex"]; 
+		TM_Display closeDisplay 2;
+	}]; 
 
 	TM_GUI_LIST ctrlAddEventHandler ["LBSelChanged",  {
 		params ["_control", "_selectedIndex"]; 
@@ -279,3 +324,20 @@ player addEventHandler ["Fired", {
 //this addAction["<t color='#ffff00'>보직 변경", {[] spawn TM_initGUI;}];
 
 systemChat "보직 변경 스크립트 초기화";
+
+/* #Nasiro
+$[
+	1.063,
+	["TM",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1600,"",[2,"",["5 * GUI_GRID_W + GUI_GRID_X","5 * GUI_GRID_H + GUI_GRID_Y","30 * GUI_GRID_W","16 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"",[2,"",["5 * GUI_GRID_W + GUI_GRID_X","5 * GUI_GRID_H + GUI_GRID_Y","30 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1602,"",[2,"",["6 * GUI_GRID_W + GUI_GRID_X","7 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","13 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1603,"",[2,"",["19 * GUI_GRID_W + GUI_GRID_X","7 * GUI_GRID_H + GUI_GRID_Y","15 * GUI_GRID_W","9.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1604,"",[1,"",["0.572187 * safezoneW + safezoneX","0.599 * safezoneH + safezoneY","0.0721875 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1000,"",[2,"asfasfasfsaf",["19 * GUI_GRID_W + GUI_GRID_X","18.5 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"",[2,"asfasfasfasf",["19 * GUI_GRID_W + GUI_GRID_X","17 * GUI_GRID_H + GUI_GRID_Y","12 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1605,"",[1,"CLOSE",["0.613437 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.04125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2800,"",[1,"",["0.572187 * safezoneW + safezoneX","0.643 * safezoneH + safezoneY","0.0103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1002,"",[1,"由ъ뒪?곗떆 蹂댁쭅 ?먮룞?곸슜",["0.5825 * safezoneW + safezoneX","0.643 * safezoneH + safezoneY","0.061875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.8"],[]]
+]
+*/

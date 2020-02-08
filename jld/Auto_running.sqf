@@ -2,7 +2,6 @@
 waitUntil {!isNull player};
 waitUntil {!isNull (findDisplay 46)};
 sleep 1;
-systemChat "=키를 눌러 자동달리기를 활성화합니다.";
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
 	params ["_control", "_dikCode", "_shift", "_ctrl", "_alt"];

@@ -31,6 +31,8 @@
 	JLD Server Discord - https://discord.gg/9NgM26P call admin SAKY
 */
 
+disableSerialization;
+
 player addEventHandler ["InventoryOpened", {
 	[] spawn {
 		waitUntil{!isNull (findDisplay 602)};

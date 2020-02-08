@@ -72,7 +72,7 @@ if(!isDedicated && hasInterface)then{
 	[] execVM "jld\scanEnemy.sqf";
 	[] execVM "jld\SAKY_MAGAZINE_REPACK.sqf";
 	[] execVM "artyCalc\artyCalc.sqf";
-	[] execVM "VAM_GUI\VAM_GUI_init.sqf";
+	[] execVM "VAM\VAM_init.sqf";
 	[] execVM "PPAP\PPAP_init.sqf";	
 	[] execVM "traitManager\traitManager.sqf";	
 	[] execVM "jld\nerf.sqf";	
@@ -82,6 +82,5 @@ if(!isDedicated && hasInterface)then{
 [] execVM "jld\rtbReward.sqf";
 
 player addEventHandler ["Respawn", {
-[] execVM "jld\Auto_running.sqf";
-[] execVM "VAM_GUI\VAM_GUI_init.sqf";
+	[] execVM "jld\Auto_running.sqf";
 }];
