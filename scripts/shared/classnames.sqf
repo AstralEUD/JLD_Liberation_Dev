@@ -58,7 +58,9 @@ then {
 };
 
 infantry_units = [
-["B_Soldier_unarmed_F", 200, 100, 0]
+["B_Soldier_F", 0, 0, 0],
+["B_soldier_LAT_F", 0, 0, 0],
+["B_soldier_AA_F", 0, 0, 0]
 ];
 if (isNil "infantry_units_extension")
 then {
