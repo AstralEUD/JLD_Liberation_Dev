@@ -113,6 +113,26 @@ player createDiaryRecord ["rules", ["처벌 규정", format ["<font size='15'>
 
 player createDiarySubject ["updates","서버 업데이트 내역"];
 
+player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.971", format ["<font size='15'>
+서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
+
+1.아르마 클라이언트 1.98업데이트에 대응한 업데이트가 진행되었습니다.<br/><br/>
+
+2.항공기의 부조종석에서 항공기를 조종할 수 없도록 수정하였습니다.<br/><br/>
+
+3.보직목록에서 더블클릭을 사용해서 보직을 변경할 수 있도록 추가하였습니다.<br/><br/>
+
+4.재배치시 시네마틱 카메라의 지속시간을 단축하였습니다.<br/><br/>
+
+5.이제 장비에서 AI를 소환하는 경우 AI가 하차하거나 인질이 사라지지 않습니다. <br/><br/>
+
+6.열상 거리 단축 스크립트가 최적화되었습니다.<br/><br/>
+
+7.적군 추적 스크립트가 변경되었습니다. 이제 무전가방과 무전차량 대신 스펙트럼기기를 이용해 적군을 추적할 수 있습니다.<br/><br/>
+
+8.기타 다양한 오류를 수정하였습니다.
+</font>"]]];
+
 player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.970", format ["<font size='15'>
 서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
 

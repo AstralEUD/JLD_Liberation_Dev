@@ -69,7 +69,8 @@ if(!isDedicated && hasInterface)then{
 	[] execVM "jld\loadMortar.sqf";
 	[] execVM "jld\tankboy.sqf";
 	[] execVM "jld\serverRules.sqf";
-	[] execVM "jld\scanEnemy.sqf";
+	//[] execVM "jld\scanEnemy.sqf";
+	[] execVM "EM_DEVICE\EM_Init.sqf";
 	[] execVM "jld\SAKY_MAGAZINE_REPACK.sqf";
 	[] execVM "artyCalc\artyCalc.sqf";
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";

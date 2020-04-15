@@ -201,6 +201,8 @@ else {
 };
 
 static_vehicles = [
+["B_HMG_02_F", 20, 20, 0],
+["B_HMG_02_high_F", 20, 20, 0],
 ["B_HMG_01_F", 20, 20, 0],
 ["B_HMG_01_high_F", 20, 20, 0],
 ["B_GMG_01_F", 20, 20, 0],
@@ -682,7 +684,9 @@ else {
 };
 
 militia_vehicles = [
-"O_HMG_01_high_F",
+"O_HMG_02_high_F",
+"O_HMG_02_high_F",
+"O_HMG_02_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",
@@ -707,6 +711,8 @@ else {
 };
 
 opfor_vehicles = [
+"O_HMG_02_high_F",
+"O_HMG_02_high_F",
 "O_APC_Tracked_02_cannon_F",
 "O_APC_Tracked_02_AA_F",
 "O_MBT_02_cannon_F",
@@ -749,7 +755,8 @@ opfor_vehicles_low_intensity = [
 "O_MRAP_02_F",
 "O_MRAP_02_hmg_F",
 "O_MRAP_02_gmg_F",
-"O_Mortar_01_F",
+"O_HMG_02_high_F",
+"O_HMG_02_high_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",
 "O_Mortar_01_F",

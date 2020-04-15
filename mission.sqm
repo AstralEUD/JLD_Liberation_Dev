@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=80;
+		nextID=82;
 	};
 	class Camera
 	{
@@ -9466,13 +9466,13 @@ class Mission
 		class Item407
 		{
 			dataType="Marker";
-			position[]={2696.0088,-9.1248779,11487.716};
+			position[]={2696.009,-9.125,11487.716};
 			name="capture_3";
-			text="Kavala Pier";
+			text="Cape Drakontas";
 			type="n_art";
 			colorName="ColorEAST";
 			id=1865;
-			atlOffset=-38.676964;
+			atlOffset=-38.677055;
 		};
 		class Item408
 		{
