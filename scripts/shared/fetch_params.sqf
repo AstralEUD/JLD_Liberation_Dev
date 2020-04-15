@@ -1,12 +1,14 @@
 if ( isMultiplayer ) then {
-	GRLIB_difficulty_modifier = ["Difficulty",1.25] call bis_fnc_getParamValue;
+	//GRLIB_difficulty_modifier = ["Difficulty",1.25] call bis_fnc_getParamValue;
+	GRLIB_difficulty_modifier = 0.5;
 	GRLIB_time_factor = ["DayDuration",12] call bis_fnc_getParamValue;
 	GRLIB_resources_multiplier = ["ResourcesMultiplier",1] call bis_fnc_getParamValue;
 	GRLIB_fatigue = ["Fatigue",1] call bis_fnc_getParamValue;
 	GRLIB_revive = ["Revive",3] call bis_fnc_getParamValue;
 	GRLIB_introduction = ["Introduction",1] call bis_fnc_getParamValue;
 	GRLIB_deployment_cinematic = ["DeploymentCinematic",1] call bis_fnc_getParamValue;
-	GRLIB_unitcap = ["Unitcap",0.75] call bis_fnc_getParamValue;
+	//GRLIB_unitcap = ["Unitcap",0.75] call bis_fnc_getParamValue;
+	GRLIB_unitcap = 1.25;
 	GRLIB_adaptive_opfor = ["AdaptToPlayercount",1] call bis_fnc_getParamValue;
 	GRLIB_civilian_activity = ["civilians",1] call bis_fnc_getParamValue;
 	GRLIB_teamkill_penalty = ["TeamkillPenalty",0] call bis_fnc_getParamValue;
@@ -18,7 +20,8 @@ if ( isMultiplayer ) then {
 	GRLIB_halo_param = ["HaloJump",1] call bis_fnc_getParamValue;
 	GRLIB_use_whitelist = ["Whitelist",0] call bis_fnc_getParamValue;
 	GRLIB_cleanup_vehicles = ["CleanupVehicles",2] call bis_fnc_getParamValue;
-	GRLIB_csat_aggressivity = ["Aggressivity",1] call bis_fnc_getParamValue;
+	//GRLIB_csat_aggressivity = ["Aggressivity",1] call bis_fnc_getParamValue;
+	GRLIB_csat_aggressivity = 0.5;
 	GRLIB_weather_param = ["Weather",3] call bis_fnc_getParamValue;
 	GRLIB_shorter_nights = ["ShorterNights",0] call bis_fnc_getParamValue;
 	GRLIB_ammo_bounties = [ "AmmoBounties",0] call bis_fnc_getParamValue;
