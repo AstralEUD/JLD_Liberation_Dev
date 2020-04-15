@@ -137,24 +137,25 @@ TM_addAction = compileFinal "
 	}; 
 };
 
+//연료 관리 파트
 [] spawn {
 	while{TM}do{
-		_drv = currentPilot vehicle player;
-		if (TM_Lock && (_drv == player)) then {
-			if (fuel vehicle player == 0) then {
-				sleep 0.1;
-			}else{				
+		vehicle player enableCopilot false;
+		if (currentPilot vehicle player == player) then {
+			if (TM_Lock) then {					
+				hintSilent "장비 운용병 보직이 아닌경우 장비 운용이 불가능합니다. 민수용 장비를 사용하거나 보직을 변경하십시오.";
 				private "_gas";
 				_veh = vehicle player; 		
 				_gas = fuel _veh; 
 				_veh setFuel 0; 
 				sleep 0.01;  
 				_veh setFuel _gas; 
+			}else{
+				sleep 0.01;
 			};
-			hintSilent "장비 운용병 보직이 아닌경우 장비 운용이 불가능합니다. 민수용 장비를 사용하거나 보직을 변경하십시오.";
-		}else{
-			sleep 0.1;
-		};
+		}else{			
+			sleep 0.01;
+		};		
 	};
 };
 
@@ -209,7 +210,7 @@ TM_Reset =  {
 		_score = score player;
 		_cost = TM_Traits#_trait#1;
 		if(TM_MEM)then{
-			if(_score - _cost > 0)then{
+			if(_score - _cost >= 0 || _cost == 0)then{
 				[player, -1 * _cost] remoteExec ["addScore", 2]; 		
 				player setVariable ["Trait", _trait, true]; 
 				[TM_Traits#_trait#3] call TM_SetTraits; 						
@@ -300,6 +301,18 @@ TM_initGUI =  {
 		_traitSelected = lbCurSel TM_GUI_LIST; 
 		TM_GUI_DESCRIPTION ctrlSetStructuredText parseText(TM_Traits# _traitSelected #2); 
 	}]; 
+	
+	TM_GUI_LIST ctrlAddEventHandler ["LBDblClick",  {
+		_score = score player;
+		_trait = player getVariable["Trait", 0]; 
+		_traitSelected = lbCurSel TM_GUI_LIST; 
+		_cost = (TM_Traits# _traitSelected #1) - (TM_Traits# _trait #1); 
+		if (_score - _cost >= 0) then {
+			[player, -1 * _cost] remoteExec ["addScore", 2]; 		
+			player setVariable ["Trait", _traitSelected, true]; 
+			[TM_Traits#_traitSelected#3] call TM_SetTraits; 
+		};	
+	}]; 
 
 	TM_GUI_OK ctrlAddEventHandler ["ButtonClick",  {		
 		_trait = player getVariable["Trait", 0]; 
@@ -309,6 +322,8 @@ TM_initGUI =  {
 		player setVariable ["Trait", _traitSelected, true]; 
 		[TM_Traits#_traitSelected#3] call TM_SetTraits; 		
 	}]; 
+
+
 	TM_GUI_LIST lbSetCurSel 0; 
 	call TM_Refresh; 
 }; 

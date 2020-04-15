@@ -8,9 +8,8 @@ Tankboy_Init = {
 		params ["_target", "_caller", "_actionId", "_arguments", "_agent"];	
 		{
 			_agent = createAgent ["B_T_crew_F", [0,0,0], [], 0, "FORM"];
+			_agent assignAsTurret [vehicle player, _x];
 			_agent moveInTurret [vehicle player, _x];
-			_agent allowDamage false;
-			_agent disableAI "MOVE";
 			Created_Crew pushBackUnique _agent;
 		}forEach ((vehicle player) call BIS_fnc_vehicleCrewTurrets);	
 		vehicle player vehicleChat "승무원 탑승완료!";	
@@ -25,10 +24,17 @@ Tankboy_Init = {
 
 	player addAction 
 	[
-	"승무원 제거", 
+	"승무원 하차", 
 	{
-		{deleteVehicle _x}forEach ([(crew vehicle player), {!isPlayer _x}] call BIS_fnc_conditionalSelect);
-		vehicle player vehicleChat "승무원 하차완료!";	
+		// {deleteVehicle _x}forEach ([(crew vehicle player), {!isPlayer _x}] call BIS_fnc_conditionalSelect);
+		call DeleteAllCrew;
+		{
+			if (isTouchingGround vehicle player) then {
+				unassignVehicle _x;
+				doGetOut _x;
+			};		
+		}forEach ([(crew vehicle player), {!isPlayer _x}] call BIS_fnc_conditionalSelect);
+		vehicle player vehicleChat "승무원 하차!";	
 	},
 	[],
 	15, 

@@ -23,6 +23,8 @@ while{true}do{
 		}forEach (_x nearObjects ["All",GRLIB_fob_range]);  */
 		
 		{deleteVehicle _x} forEach nearestObjects [_x, ["WeaponHolder","GroundWeaponHolder"], GRLIB_fob_range];		
-	}forEach GRLIB_all_fobs; 
-	sleep 300;
+	}forEach GRLIB_all_fobs; 	
+	{deleteVehicle _x} forEach nearestObjects [landLeader, ["WeaponHolder","GroundWeaponHolder"], GRLIB_fob_range];	
+	{deleteVehicle _x} forEach nearestObjects [chimeraofficer, ["WeaponHolder","GroundWeaponHolder"], GRLIB_fob_range];	
+	sleep 100;
 };

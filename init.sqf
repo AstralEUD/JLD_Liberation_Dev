@@ -75,8 +75,8 @@ if(!isDedicated && hasInterface)then{
 	[] execVM "VAM_GUI\VAM_GUI_init.sqf";
 	[] execVM "PPAP\PPAP_init.sqf";	
 	[] execVM "traitManager\traitManager.sqf";	
-	[] execVM "jld\nerf.sqf";	
 	[] execVM "jld\Auto_running.sqf";
+	[] execVM "NERF\NERF.sqf";
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";

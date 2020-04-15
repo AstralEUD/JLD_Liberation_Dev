@@ -8,22 +8,22 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2515;
+		nextID=2518;
 	};
 	class MarkerIDProvider
 	{
-		nextID=34;
+		nextID=51;
 	};
 	class LayerIndexProvider
 	{
-		nextID=78;
+		nextID=80;
 	};
 	class Camera
 	{
-		pos[]={2583.0117,135.37657,11390.63};
-		dir[]={0.55413884,-0.53770804,0.63545585};
-		up[]={0.35340276,0.84313071,0.40526289};
-		aside[]={0.75368482,-4.5401976e-009,-0.65723789};
+		pos[]={8498.6299,350.16931,24884.656};
+		dir[]={-0.35052541,-0.75683135,0.55166918};
+		up[]={-0.4058817,0.65360945,0.63879073};
+		aside[]={0.8440333,-2.8405339e-008,0.53629071};
 	};
 };
 binarizationWanted=0;
@@ -205,7 +205,7 @@ class AddonsMetaData
 		class Item14
 		{
 			className="A3_Characters_F_Enoch";
-			name="Arma 3 Enoch - Characters and Clothing";
+			name="Arma 3 Contact Platform - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -247,21 +247,21 @@ class AddonsMetaData
 		class Item20
 		{
 			className="A3_Structures_F_Enoch_Military";
-			name="Arma 3 Enoch - Military Buildings and Structures";
+			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item21
 		{
 			className="A3_Structures_F_Enoch_Civilian";
-			name="Arma 3 Enoch - Civilian Buildings";
+			name="Arma 3 Contact Platform - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item22
 		{
 			className="A3_Structures_F_Enoch_Industrial";
-			name="Arma 3 Enoch - Industrial Structures";
+			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -324,7 +324,7 @@ class AddonsMetaData
 		class Item31
 		{
 			className="A3_Structures_F_Enoch";
-			name="Arma 3 Enoch - Buildings and Structures";
+			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -476,7 +476,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=651;
+		items=653;
 		class Item0
 		{
 			dataType="Marker";
@@ -952,7 +952,7 @@ class Mission
 		class Item15
 		{
 			dataType="Trigger";
-			position[]={14511.757,6.8058786,5920.7002};
+			position[]={14507.059,7.8186035,5894.709};
 			class Attributes
 			{
 				condition="!(player in thislist)";
@@ -966,6 +966,7 @@ class Mission
 			};
 			id=969;
 			type="EmptyDetector";
+			atlOffset=0.00035619736;
 		};
 		class Item16
 		{
@@ -992,7 +993,7 @@ class Mission
 			name="commandantZeus1";
 			id=971;
 			type="ModuleCurator_F";
-			atlOffset=3.8280005;
+			atlOffset=2.7376204;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2170,7 +2171,7 @@ class Mission
 			};
 			id=1053;
 			type="ModuleCuratorSetAttributesPlayer_F";
-			atlOffset=5.7840004;
+			atlOffset=4.8883696;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5324,17 +5325,17 @@ class Mission
 			name="층 1";
 			class Entities
 			{
-				items=6;
+				items=5;
 				class Item0
 				{
 					dataType="Marker";
-					position[]={15360,0,-2880};
+					position[]={15360,0,-2287.9312};
 					name="marker_23";
 					markerType="RECTANGLE";
 					type="rectangle";
 					colorName="ColorGrey";
-					a=15445.914;
-					b=2616.3579;
+					a=15368.34;
+					b=2155.1218;
 					id=1486;
 					atlOffset=185.97;
 				};
@@ -5376,18 +5377,7 @@ class Mission
 				class Item4
 				{
 					dataType="Marker";
-					position[]={767.28882,-2.8880157,-3831.9927};
-					name="marker_31";
-					text="항공기를 조작하는 인원은 반드시 '전술통신망을 개통'해야 합니다. ";
-					type="mil_dot";
-					colorName="ColorWhite";
-					id=1512;
-					atlOffset=183.08199;
-				};
-				class Item5
-				{
-					dataType="Marker";
-					position[]={767.28882,-1.5258789e-005,-4831.9927};
+					position[]={767.28882,-1.5258789e-005,-3869.1069};
 					name="marker_32";
 					text="윈도우키를 눌러 전술통신망, 이어플러그, 추가메뉴를 사용할 수 있습니다.";
 					type="mil_dot";
@@ -5397,7 +5387,7 @@ class Mission
 				};
 			};
 			id=1546;
-			atlOffset=183.49603;
+			atlOffset=182.46606;
 		};
 		class Item43
 		{
@@ -20464,6 +20454,32 @@ class Mission
 			id=2176;
 			type="ProtectionZone_Invisible_F";
 			atlOffset=0.057098389;
+		};
+		class Item651
+		{
+			dataType="Marker";
+			position[]={14508.424,-5.6820002,5899.4854};
+			name="marker_48";
+			text="접근금지(시스템구역)";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorGrey";
+			fillName="SolidFull";
+			a=200;
+			b=200;
+			id=2515;
+			atlOffset=-12.993285;
+		};
+		class Item652
+		{
+			dataType="Marker";
+			position[]={14800,0,5900};
+			name="marker_50";
+			text="스폰구역 접근금지";
+			type="mil_warning";
+			colorName="ColorRed";
+			id=2517;
+			atlOffset=48.653683;
 		};
 	};
 	class Connections

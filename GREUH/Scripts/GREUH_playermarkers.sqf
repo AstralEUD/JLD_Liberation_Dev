@@ -6,6 +6,9 @@ private _color = "";
 private _ticks = 0;
 private _cfg = configFile >> "cfgVehicles";
 
+
+waitUntil { !isNil "Radio_Members" };
+
 if ( side player == GRLIB_side_friendly ) then {
 	_color = GRLIB_color_friendly;
 } else {
