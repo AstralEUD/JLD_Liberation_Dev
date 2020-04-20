@@ -235,7 +235,7 @@ FAR_HandleRevive =
 		player playMove "AinvPknlMstpSlayWrflDnon_medic";
 
 		if (!("Medikit" in (items player)) ) then {
-			player removeItem "FirstAidKit";
+			//player removeItem "FirstAidKit";
 		};
 
 		_target setVariable ["FAR_isUnconscious", 0, true];
@@ -271,7 +271,7 @@ FAR_HandleStabilize =
 		player playMove "AinvPknlMstpSlayWrflDnon_medic";
 
 		if (!("Medikit" in (items player)) ) then {
-			player removeItem "FirstAidKit";
+			//player removeItem "FirstAidKit";
 		};
 
 		_target setVariable ["FAR_isStabilized", 1, true];
@@ -386,8 +386,18 @@ FAR_Check_Revive =
 	_isTargetUnconscious = _target getVariable "FAR_isUnconscious";
 	_isDragged = _target getVariable "FAR_isDragged";
 
-	// Make sure target is unconscious and player is a medic
-	if (_isTargetUnconscious == 1 && _isDragged == 0 && (_isMedic == 1 || FAR_ReviveMode > 0) && ( ("FirstAidKit" in (items player)) || ("Medikit" in (items player)) ) ) then
+	// Make sure target is unconscious and player is a medic (SAKY)
+	// if (_isTargetUnconscious == 1 && _isDragged == 0 && (_isMedic == 1 || FAR_ReviveMode > 0) && ( ("FirstAidKit" in (items player)) || ("Medikit" in (items player)) ) ) then
+	// {
+	// 	_return = true;
+
+	// 	// [ReviveMode] Check if player has a Medikit
+	// 	if ( FAR_ReviveMode == 2 && !("Medikit" in (items player)) ) then
+	// 	{
+	// 		_return = false;
+	// 	};
+	// };	
+	if (_isTargetUnconscious == 1 && _isDragged == 0 && (_isMedic == 1 || FAR_ReviveMode > 0) ) then
 	{
 		_return = true;
 

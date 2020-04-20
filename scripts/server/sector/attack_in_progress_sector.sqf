@@ -51,7 +51,7 @@ if ( GRLIB_endgame == 0 ) then {
 		blufor_sectors = blufor_sectors - [ _sector ];
 		publicVariable "blufor_sectors";
 		[ [ _sector, 2 ] , "remote_call_sector" ] call BIS_fnc_MP;
-		// ["alarmLost",[markerText _sector,resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
+		["alarmLost",[markerText _sector,resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
 		reset_battlegroups_ai = true;
 		trigger_server_save = true;
 		[] call recalculate_caps;

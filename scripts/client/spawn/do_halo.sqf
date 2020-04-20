@@ -25,8 +25,8 @@ while { dialog && alive player && dojump == 0 } do {
 			ctrlEnable [ 202, true ];
 		} else {
 			if(GRLIB_secondary_in_progress >= 0)then{				
-				hintSilent "특수임무가 진행중인 경우 공수강하가 제한됩니다.";
-				ctrlEnable [ 202, false ];
+				//hintSilent "특수임무가 진행중인 경우 공수강하가 제한됩니다.";
+				//ctrlEnable [ 202, false ];
 			}else{
 				ctrlEnable [ 202, true ];
 			};

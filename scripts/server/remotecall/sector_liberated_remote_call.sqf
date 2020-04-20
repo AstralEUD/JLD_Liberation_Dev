@@ -51,7 +51,7 @@ if (isServer) then {
 
 	trigger_server_save = true;
 	
-	// ["alarmCapture",[markerText _liberated_sector,resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
+	["alarmCapture",[markerText _liberated_sector,resources_infantry,infantry_cap,resources_ammo,resources_fuel,fuel_cap,count blufor_sectors,count sectors_allSectors,count allPlayers]] call DiscordEmbedBuilder_fnc_buildCfg;
 
 	sleep 45;
 

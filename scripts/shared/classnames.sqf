@@ -135,8 +135,8 @@ heavy_vehicles = [
 ["B_MBT_01_cannon_F", 150, 180, 0],
 ["B_MBT_01_TUSK_F", 150, 200, 0],
 ["O_MBT_04_cannon_F", 180, 400, 0],
-["I_Truck_02_MRL_F", 1500, 10000, 1500],
-["B_MBT_01_arty_F", 1500, 10000, 1500]
+["I_Truck_02_MRL_F", 300, 10000, 300],
+["B_MBT_01_arty_F", 300, 10000, 300]
 ];
 if (isNil "heavy_vehicles_extension")
 then {
@@ -245,6 +245,7 @@ buildings = [
 ["Land_CncBarrierMedium4_F",0,5,0],
 ["Land_CncBarrier_stripes_F",0,5,0],
 ["Land_New_WiredFence_5m_F",0,5,0],
+["Land_Razorwire_F",0,5,0],
 ["Land_BagFence_Long_F",0,5,0],
 ["Land_BagFence_Short_F",0,5,0],
 ["Land_BagFence_Round_F",0,5,0],
@@ -292,6 +293,7 @@ buildings = [
 ["Flag_UNO_F",0,20,0],
 ["Flag_US_F",0,20,0],
 ["Flag_UK_F",0,20,0],
+["Flag_UK_F",0,20,0],
 ["Land_Loudspeakers_F",0,20,0],
 ["Land_Sawmill_01_illuminati_tower_F",0,3000,0],
 ["Land_DeerStand_01_F",0,500,0],
@@ -317,6 +319,8 @@ buildings = [
 ["Land_PortableLight_double_F",0,80,0],
 ["Land_LampStreet_small_F",0,300,0],
 ["Land_LampHalogen_F",0,1000,0],
+["Land_MobilePhone_smart_F",0,3000,0],
+["Land_Camera_01_F",0,2000,0],
 ["Land_Money_F",0,1000,0]
 ];
 
@@ -691,6 +695,7 @@ militia_vehicles = [
 "O_Mortar_01_F",
 "O_Mortar_01_F",
 "O_G_Offroad_01_armed_F",
+"O_G_Offroad_01_AT_F",
 "O_static_AA_F",
 "O_LSV_02_armed_F"
 ];
@@ -1060,7 +1065,7 @@ GRLIB_blacklisted_from_arsenal = [
 "O_UAV_06_backpack_F",
 "O_UAV_06_medical_backpack_F",
 "O_UavTerminal",
-"TrainingMine_Mag",
+//"TrainingMine_Mag",
 "U_B_Soldier_VR",
 "U_C_Soldier_VR",
 "U_I_Soldier_VR",
@@ -1077,7 +1082,25 @@ GRLIB_blacklisted_from_arsenal = [
 "B_Static_Designator_01_weapon_F",
 "B_W_Static_Designator_01_weapon_F",
 "UAV_06_backpack_F",
-"UAV_06_medical_backpack_F"
+"UAV_06_medical_backpack_F",
+
+"I_HMG_02_high_weapon_F",
+"I_G_HMG_02_high_weapon_F",
+"I_E_HMG_02_high_weapon_F",
+"I_C_HMG_02_high_weapon_F",
+"I_HMG_02_weapon_F",
+"I_G_HMG_02_weapon_F",
+"I_E_HMG_02_weapon_F",
+"I_C_HMG_02_weapon_F",
+"I_HMG_02_support_F",
+"I_G_HMG_02_support_F",
+"I_E_HMG_02_support_F",
+"I_C_HMG_02_support_F",
+"I_HMG_02_support_high_F",
+"I_G_HMG_02_support_high_F",
+"I_E_HMG_02_support_high_F",
+"I_C_HMG_02_support_high_F"
+
 ];
 if (isNil "blacklisted_from_arsenal_extension")
 then {
