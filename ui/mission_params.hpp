@@ -172,7 +172,7 @@ class Params
 		title = $STR_PARAMS_FIRSTFOB;
 		values[] = { 1, 0 };
 		texts[] = { $STR_YES, $STR_NO };
-		default = 1;
+		default = 0;
 	};
 	class Whitelist {
 		title = $STR_WHITELIST_PARAM;

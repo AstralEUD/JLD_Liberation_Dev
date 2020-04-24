@@ -78,6 +78,7 @@ if(!isDedicated && hasInterface)then{
 	[] execVM "traitManager\traitManager.sqf";	
 	[] execVM "jld\Auto_running.sqf";
 	[] execVM "NERF\NERF.sqf";
+	[] execVM "rokaUniform\rokaUniform.sqf";
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";

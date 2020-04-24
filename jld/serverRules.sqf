@@ -113,6 +113,17 @@ player createDiaryRecord ["rules", ["처벌 규정", format ["<font size='15'>
 
 player createDiarySubject ["updates","서버 업데이트 내역"];
 
+player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.973", format ["<font size='15'>
+서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>
+
+1.기본 FOB설치에 오류가 발견되어 해당 내용을 롤백하였습니다..<br/><br/>
+
+2.외국인 플레이어의 요청으로 ASL스크립트의 일부 액션에 한국어와 영어를 병기하였습니다.<br/>
+-Some scripts of ASL has been translated and written side-by-side.<br/><br/>
+
+3.전투병 전투복[AAF]를 착용하면 자동으로 한국군 위장이 적용되도록 추가되었습니다.<br/>
+-헬멧과 조끼는 스크립트 한계상 텍스쳐 적용이 불가능합니다.
+</font>"]]];
 
 player createDiaryRecord ["updates", ["Jeonlado_Liberation_0.972", format ["<font size='15'>
 서버가 업데이트 되었습니다. 업데이트 내용은 아래와 같습니다.<br/><br/>

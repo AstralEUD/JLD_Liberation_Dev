@@ -1034,35 +1034,35 @@ ASL_Find_Nearby_Vehicles = {
 };
 
 ASL_Add_Player_Actions = {	
-	player addAction ["화물용 밧줄 늘리기", { 
+	player addAction ["<t color='#00FFFF'>로프 늘리기[Extend]", { 
 		[] call ASL_Extend_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Extend_Ropes_Action_Check && (driver vehicle player == player)"];
 	
-	player addAction ["화물용 밧줄 줄이기", { 
+	player addAction ["<t color='#00FFFF'>로프 줄이기[Shorten]", { 
 		[] call ASL_Shorten_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Shorten_Ropes_Action_Check && (driver vehicle player == player)"];
 		
-	player addAction ["화물용 밧줄 자르기", { 
+	player addAction ["<t color='#00FFFF'>로프 자르기[Cut]", { 
 		[] call ASL_Release_Cargo_Action;
 	}, nil, 0, false, true, "", "call ASL_Release_Cargo_Action_Check && (driver vehicle player == player)"];
 		
-	player addAction ["화물용 밧줄 회수", { 
+	player addAction ["<t color='#00FFFF'>로프 집어넣기[Retract]", { 
 		[] call ASL_Retract_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Retract_Ropes_Action_Check && (driver vehicle player == player) && (vehicle player != player)"];
 	
-	player addAction ["화물용 밧줄 배치", { 
+	player addAction ["<t color='#00FFFF'>로프 꺼내기[Deploy]", { 
 		[] call ASL_Deploy_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Deploy_Ropes_Action_Check && (driver vehicle player == player) && (vehicle player != player)"];
 
-	player addAction ["화물용 밧줄 걸기", { 
+	player addAction ["<t color='#00FFFF'>로프 걸기[Attach]", { 
 		[] call ASL_Attach_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Attach_Ropes_Action_Check"];
 
-	player addAction ["화물용 밧줄 내리기", { 
+	player addAction ["<t color='#00FFFF'>로프 놓기[Drop]", { 
 		[] call ASL_Drop_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Drop_Ropes_Action_Check"];
 
-	player addAction ["화물용 밧줄 집기", { 
+	player addAction ["<t color='#00FFFF'>로프 집기[Pickup]", { 
 		[] call ASL_Pickup_Ropes_Action;
 	}, nil, 0, false, true, "", "call ASL_Pickup_Ropes_Action_Check"];
 	

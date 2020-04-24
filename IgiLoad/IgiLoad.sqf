@@ -97,8 +97,8 @@ if (isnil "IL_Variables") then
 	IL_Para_Light_Veh = "Chemlight_blue";
 
 	//This allows for loading or unloading, if a player is in the area of loading or copilot
-	IL_Can_Inside = true;
-	IL_Can_CoPilot = true;
+	IL_Can_Inside = false;
+	IL_Can_CoPilot = false;
 	IL_Can_Outside = true;
 
 	//
@@ -111,7 +111,7 @@ if (isnil "IL_Variables") then
 	//Load and unload (not para) max height in m
 	IL_LU_Alt = 3;
 	//Enable or disable usable cargo ramp in CH-49
-	IL_Ramp = true;
+	IL_Ramp = false;
 	
 	//Enable change of vehicle mass
 	IL_Mass = true;
