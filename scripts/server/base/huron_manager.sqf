@@ -21,7 +21,7 @@ while { true } do {
 			huron enableSimulationGlobal false;
 			huron allowdamage false;
 			huron setDir 90;
-			huron setposasl [890.039,16213,24];
+			huron setposasl [13389.3,5336.64,29.8325];
 		} else {
 			huron = huron_typename createVehicle ( getpos huronspawn );
 			huron allowdamage false;
