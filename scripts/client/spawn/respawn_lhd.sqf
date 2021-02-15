@@ -14,7 +14,7 @@ if ( GRLIB_isAtlasPresent ) then {
 	_posy = (getposasl lhd select 1) + _lhd_y;
 	_posx = (_posx + (random _spread)) - (_spread / 2);
 	_posy = (_posy + (random _spread)) - (_spread / 2);
-	player setposasl [759.407, 16216.7, _lhd_z ];
+	player setposasl [836.91,9580.14, _lhd_z ];
 	player setDir 180;
 
 } else {*/
