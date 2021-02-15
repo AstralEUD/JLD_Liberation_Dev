@@ -32,6 +32,7 @@ class Header
 #include "PPAP\defines.hpp"
 #include "PPAP\PPAP_GUI_controls.hpp"
 #include "PPAP\PPAP_GUI_classes.hpp"
+#include "support\communication_menu.hpp"
 
 class CfgDebriefing
 {
