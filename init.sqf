@@ -9,6 +9,7 @@ if(isClass(configFile>>"CfgWeapons">>"gm_g3a3_oli"))then{endMission "End2";};
 [] call compileFinal preprocessFileLineNUmbers "gameplay_constants.sqf";
 [] call compileFinal preprocessFileLineNUmbers "classnames_extension.sqf";
 [] call compileFinal preprocessFileLineNUmbers "scripts\shared\classnames.sqf";
+[] call compileFinal preprocessFileLineNUmbers "support\init_support.sqf";
 
 if ( GRLIB_revive > 0 ) then {
 	[] execVM "FAR_revive\FAR_revive_init.sqf";
