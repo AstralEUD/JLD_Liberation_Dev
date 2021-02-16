@@ -7,7 +7,14 @@ TM_Action = -1;
 
 player setVariable["Trait", 0, true]; 
 
-TM_LandVehicles = [];
+TM_LandVehicles = [
+"B_MRAP_01_F",
+"B_MRAP_01_gmg_f",
+"B_MRAP_01_hmg_f",
+"B_T_MRAP_01_F",
+"B_T_MRAP_01_gmg_F",
+"B_T_MRAP_01_hmg_F"
+];
 TM_HeavyVehicles = [];
 TM_AirVehicles = [];
 TM_ServiceVehicles = [
@@ -18,13 +25,7 @@ TM_ServiceVehicles = [
 "B_G_Van_02_transport_F",
 "C_Heli_Light_01_civil_F",
 "C_IDAP_Heli_Transport_02_F",
-"B_Parachute",
-"B_MRAP_01_F",
-"B_MRAP_01_gmg_f",
-"B_MRAP_01_hmg_f",
-"B_T_MRAP_01_F",
-"B_T_MRAP_01_gmg_F",
-"B_T_MRAP_01_hmg_F"
+"B_Parachute"
 ];
 
 {

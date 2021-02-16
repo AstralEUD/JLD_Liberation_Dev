@@ -50,6 +50,7 @@ class ctMe{
 				"gesture",
 				"entry1",
 				"Separator",
+				"AIreviverequest",
 				"radioToggle",
 				"holster",
 				"earplug",
@@ -189,7 +190,13 @@ class ctMe{
 				text = "정지 수신호";
 				action = "[""Acts_JetsMarshallingEmergencyStop_loop""] spawn Test_PlayAnim;";
 				conditionShow="1";
-			};				
+			};	
+			class AIreviverequest
+			{
+				text = "AI에게 소생 요청";
+				action = "call AI_revive_request";
+				picture = "\a3\weapons_f\data\ui\gear_item_radio_ca.paa";				
+				conditionShow="1";			
 			class radioToggle
 			{
 				text = "전술통신망 토글";

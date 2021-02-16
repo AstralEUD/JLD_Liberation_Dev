@@ -144,6 +144,24 @@ Test_PlayAnim = {
 	};
 };
 
+AI_revive_request = {
+	_isUnconscious = player getVariable "FAR_isUnconscious";
+	if (_isUnconscious == 1) then  {
+		_nearlist = player nearObjects 100;
+		_aiunit = _nearlist findif {(!isPlayer) and (alive)} 
+		_aiunit doMove (position player);
+		_aiunit playMove "AinvPknlMstpSlayWrflDnon_medic";
+		sleep 2;
+		player setVariable ["FAR_isUnconscious", 0, true];
+		player setVariable ["FAR_isDragged", 0, true];
+	}; else {
+		hint "다쳐있지 않습니다.";
+	};
+};
+		
+		
+		
+
 /*
 SAKY_WEATHERCHECK_ADDACTION = {
 	player addAction  
