@@ -239,6 +239,14 @@ while { dialog && alive player } do {
 		GRLIB_squadaction = -1;
 
 	};
+	if (GRLIB_squadaction == 4) then {
+		if (isPlayer _selectedmember) exitWith {
+			hint "플레이어는 조종할 수 없습니다.";
+		};
+		closeDialog 0;
+		player remoteControl _selectedmember;
+		_selectedmember switchCamera "Internal";
+	};
 
 	sleep 0.1;
 };
