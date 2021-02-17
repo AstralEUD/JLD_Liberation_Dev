@@ -8,7 +8,7 @@ _side = GRLIB_side_enemy;//side of enemy
 
 _marker = createMarker ["marker", _position_mark];
 _marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [300, 300];
+_marker setMarkerSize [200, 200];
 _marker setMarkerColor GRLIB_color_enemy_bright;
 _marker setMarkerBrush "FDiagonal";
 //create random number
@@ -28,7 +28,7 @@ _leader allowFleeing 0;
 //publicVariable _VarName;
 _veh_name = name _leader;
 
-_allBuildings = nearestObjects [_position_mark, ["House"], 300];
+_allBuildings = nearestObjects [_position_mark, ["House"], 200];
 _enterable = _allBuildings select {nearestBuilding (getPos _x) == _x};
 if ((count _enterable) > 0) then {
 	_building = selectRandom _enterable;
@@ -40,7 +40,7 @@ if ((count _enterable) > 0) then {
 	_spawned pushBack (_eGrp createUnit [opfor_team_leader, selectRandom _positions, [], 1, "NONE"]);
 	{doStop _x} forEach (units _eGrp);
 } else {
-	_dist = random 300;
+	_dist = random 200;
 	_radius = random 360;
 	_pos = [(_position_mark select 0) + (_dist * cos _radius), (_position_mark select 1) + (_dist * sin _radius)];
 	_leader setPos _pos;
@@ -56,8 +56,10 @@ _patrolUnits = ([] call F_getAdaptiveSquadComp);
 	_spawned pushBack _men;
 } forEach _patrolUnits;
 
-_carPos = [_patrolPos, 10, 100, 20] call BIS_fnc_findSafePos;
-_spawned pushBack ([_carPos, random 360, (selectRandom opfor_vehicles_low_intensity), _patrolGroup] call BIS_fnc_spawnVehicle);
+if (random 2 > 1) then {
+	_carPos = [_patrolPos, 10, 100, 20] call BIS_fnc_findSafePos;
+	_spawned pushBack ([_carPos, random 360, (selectRandom opfor_vehicles_low_intensity), _patrolGroup] call BIS_fnc_spawnVehicle);
+};
 
 _patrolcorners = [
 	[ (_pos select 0) - 50, (_pos select 1) - 50, 0 ],
@@ -86,7 +88,49 @@ _waypoint setWaypointType "CYCLE";
 		_leader selectWeapon "LMG_Zafir_F";
 	};
 */
+_fnc_foundIntel = {
+	params ["_caller"];
+	if (random 3 < 3) then {
+		[_caller, "인텔을 발견했습니다."] remoteExec ["sideChat", 0, false];
+		resources_intel = resources_intel + 20; 
+	} else {
+		[_caller, "인텔을 발견하지 못했습니다."] remoteExec ["sideChat", 0, false];
+	};
+		
+};
 
+[
+	_leader,
+	"인텔 찾아보기",
+	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
+	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
+	"_this distance _target < 3",
+	"_caller distance _target < 3",
+	{},
+	{},
+	{
+		params ["_target", "_caller", "_actionId"];
+		[_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0];
+		[_caller] remoteExec [_this select 3 select 0, 2];
+	},
+	{},
+	["_fnc_foundIntel"],
+	4,
+	0,
+	true,
+	false
+] remoteExec ["BIS_fnc_holdActionAdd", 0, false];
+
+if (([800, _pos] call F_getNearestSector) in [sectors_capture + sectors_bigtown]) then {
+	_civCount = 2 + random 6;
+	for [{_i = 0}, {_i < _civCount}, {_i = _i + 1}] do {
+		_civPos = [_pos, random 200, random 360] call BIS_fnc_relPos;
+		_civGroup = createGroup civilian;
+		_man = _civGroup createUnit [selectRandom civilians, _civPos, [], 5, "NONE"];
+		_man addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+		_man pushBack _spawned;
+	};
+};
 //create task
 _tsk = "tsk_Commander" + _rnum + str round(_position_mark select 0);
 //Ghst_Current_tasks = Ghst_Current_tasks + [_tsk];
@@ -119,9 +163,10 @@ if (isNull _leader) then {
 	stats_secondary_objectives = stats_secondary_objectives + 1;
 	trigger_server_save = true;
 	resources_ammo = resources_ammo + 300;
-	resources_intel = resources_intel + 10;
 };
 
 deleteMarker _marker;
 GRLIB_secondary_in_progress = -1;
 publicVariable "GRLIB_secondary_in_progress";
+
+_spawned;

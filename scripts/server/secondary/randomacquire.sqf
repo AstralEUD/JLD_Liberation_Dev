@@ -147,3 +147,5 @@ deleteMarker _marker;
 deleteMarker _marker1;
 GRLIB_secondary_in_progress = -1;
 publicVariable "GRLIB_secondary_in_progress";
+
+_spawned;

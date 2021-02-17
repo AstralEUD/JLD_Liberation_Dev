@@ -134,7 +134,7 @@ publicVariable "GRLIB_secondary_in_progress";
 	
 while {true} do {
 	//if (_tsk call SHK_Taskmaster_isCompleted) exitwith {};
-	if (_tsk call BIS_fnc_taskCompleted) exitwith {stats_secondary_objectives = stats_secondary_objectives + 1; trigger_server_save = true; GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress"; deleteMarker _marker; resources_ammo = resources_ammo + 300; resources_intel = resources_intel + 20;};
-	if (!(_tsk call BIS_fnc_taskCompleted) and ((isnull _terminalobj) || !(alive _terminalobj))) exitwith {[_tsk,"failed"] call BIS_fnc_taskSetState; GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress"; deleteMarker _marker;};
+	if (_tsk call BIS_fnc_taskCompleted) exitwith {stats_secondary_objectives = stats_secondary_objectives + 1; trigger_server_save = true; GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress"; deleteMarker _marker; resources_ammo = resources_ammo + 300; resources_intel = resources_intel + 30; _spawned;};
+	if (!(_tsk call BIS_fnc_taskCompleted) and ((isnull _terminalobj) || !(alive _terminalobj))) exitwith {[_tsk,"failed"] call BIS_fnc_taskSetState; GRLIB_secondary_in_progress = -1; publicVariable "GRLIB_secondary_in_progress"; deleteMarker _marker; _spawned;};
 	sleep 5;
 };
