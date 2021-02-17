@@ -2726,7 +2726,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING4">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 데이터 터미널을 찾아 데이터를 다운로드 받으세요. &lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;데이터 다운로드&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 데이터 터미널을 찾아 데이터를 다운로드 받으세요. &lt;/t&gt;
             </Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION5">
@@ -2734,7 +2734,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING5">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt;적의 보급 상자를 훔쳐서 FOB로 가져오세요.&lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;보급 상자 탈취&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt;적의 보급 상자를 훔쳐서 FOB로 가져오세요.&lt;/t&gt;
             </Original>
         </Key>
         <!-- Added in v0.924 -->
