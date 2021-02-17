@@ -40,7 +40,10 @@ while { true } do {
 		if ( manned ) then {
 			_grp = createGroup GRLIB_side_friendly;
 		};
-		_classname createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]", 0.5, "private"];
+		_man = _grp createUnit [_classname, _pos, [], 1, "NONE"];
+		_man addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
+		[_man] remoteExec ["FAR_Player_Init", 2, false];
+		_man setRank "private";
 		build_confirmed = 0;
 	} else {
 		if ( buildtype == 8 ) then {
