@@ -5,13 +5,14 @@
 ////////////////////////////////////////////////
 FAR_Player_Actions =
 {
-	if (alive player && player isKindOf "Man") then
+	params ["_unit"];
+	if (alive _unit && _unit isKindOf "Man") then
 	{
 		// addAction args: title, filename, (arguments, priority, showWindow, hideOnUse, shortcut, condition, positionInModel, radius, radiusView, showIn3D, available, textDefault, textToolTip)
-		player addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",2];
-		player addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",2];
-		player addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",2];
-		player addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",2];
+		_unit addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",2];
+		_unit addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",2];
+		_unit addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",2];
+		_unit addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",2];
 	};
 };
 
@@ -226,15 +227,13 @@ FAR_Player_Unconscious =
 ////////////////////////////////////////////////
 FAR_HandleRevive =
 {
-	private ["_target"];
-
-	_target = _this select 0;
+	params ["_target", "_healer"];
 
 	if (alive _target) then
 	{
-		player playMove "AinvPknlMstpSlayWrflDnon_medic";
+		_healer playMove "AinvPknlMstpSlayWrflDnon_medic";
 
-		if (!("Medikit" in (items player)) ) then {
+		if (!("Medikit" in (items _healer)) ) then {
 			//player removeItem "FirstAidKit";
 		};
 
@@ -262,13 +261,12 @@ FAR_HandleRevive =
 ////////////////////////////////////////////////
 FAR_HandleStabilize =
 {
-	private ["_target"];
 
-	_target = _this select 0;
+	params ["_target", "_healer"];
 
 	if (alive _target) then
 	{
-		player playMove "AinvPknlMstpSlayWrflDnon_medic";
+		_healer playMove "AinvPknlMstpSlayWrflDnon_medic";
 
 		if (!("Medikit" in (items player)) ) then {
 			//player removeItem "FirstAidKit";
@@ -302,7 +300,7 @@ FAR_Drag =
 	publicVariable "FAR_isDragging_EH";
 
 	// Add release action and save its id so it can be removed
-	_id = player addAction ["<t color=""#C90000"">" + "내려놓기" + "</t>", "FAR_revive\FAR_handleAction.sqf", ["action_release"], 10, true, true, "", "true"];
+	_id = player addAction ["<t color=""#C90000"">" + "내려놓기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleACtion", ["action_release"], 10, true, true, "", "true"];
 
 	hint "움직이지 않는 경우에는 'C'를 누르세요.";
 

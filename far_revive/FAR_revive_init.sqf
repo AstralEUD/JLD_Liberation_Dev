@@ -26,6 +26,7 @@ FAR_ReviveMode = 1;
 //------------------------------------------//
 
 call compile preprocessFile "FAR_revive\FAR_revive_funcs.sqf";
+FAR_handleAction = compileFinal preprocessFileLineNumbers "FAR_revive\FAR_handleAction.sqf";
 
 #define SCRIPT_VERSION "1.5"
 
@@ -47,7 +48,8 @@ if (isDedicated) exitWith {};
 	"FAR_isDragging_EH" addPublicVariableEventHandler FAR_public_EH;
 	"FAR_deathMessage" addPublicVariableEventHandler FAR_public_EH;
 
-	[] spawn FAR_Player_Init;
+	[player] spawn FAR_Player_Init;
+	FAR_PlayerSide = side player;
 
 	if (FAR_MuteACRE) then
 	{
@@ -59,47 +61,51 @@ if (isDedicated) exitWith {};
 	[
 		"Respawn",
 		{
-			[] spawn FAR_Player_Init;
+			[player] spawn FAR_Player_Init;
 		}
 	];
 };
 
 FAR_Player_Init =
 {
+	params ["_unit"];
 	// Cache player's side
-	FAR_PlayerSide = side player;
+	//FAR_PlayerSide = side player;
 
 	// Clear event handler before adding it
-	player removeAllEventHandlers "HandleDamage";
+	_unit removeAllEventHandlers "HandleDamage";
 
-	player addEventHandler ["HandleDamage", FAR_HandleDamage_EH];
-	player addEventHandler
-	[
-		"Killed",
-		{
-			// Remove dead body of player (for missions with respawn enabled)
-			_body = _this select 0;
-
-			[_body] spawn
+	_unit addEventHandler ["HandleDamage", FAR_HandleDamage_EH];
+	if (isPlayer _unit) then {
+		_unit addEventHandler
+		[
+			"Killed",
 			{
-
-				waitUntil { alive player };
+				// Remove dead body of player (for missions with respawn enabled)
 				_body = _this select 0;
-				deleteVehicle _body;
-			}
-		}
-	];
 
-	player setVariable ["GREUH_isUnconscious", 0, true];
-	player setVariable ["FAR_isUnconscious", 0, true];
-	player setVariable ["FAR_isStabilized", 0, true];
-	player setVariable ["FAR_isDragged", 0, true];
-	player setVariable ["ace_sys_wounds_uncon", false];
-	player setCaptive false;
+				[_body] spawn
+				{
+
+					waitUntil { alive player };
+					_body = _this select 0;
+					deleteVehicle _body;
+				}
+			}
+		];
+	};
+	
+
+	_unit setVariable ["GREUH_isUnconscious", 0, true];
+	_unit setVariable ["FAR_isUnconscious", 0, true];
+	_unit setVariable ["FAR_isStabilized", 0, true];
+	_unit setVariable ["FAR_isDragged", 0, true];
+	_unit setVariable ["ace_sys_wounds_uncon", false];
+	_unit setCaptive false;
 
 	FAR_isDragging = false;
 
-	[] spawn FAR_Player_Actions;
+	[_unit] spawn FAR_Player_Actions;
 };
 
 // Drag & Carry animation fix

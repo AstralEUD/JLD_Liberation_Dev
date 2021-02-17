@@ -2718,7 +2718,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING3">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; We have lost contact with a recon helicopter on mission behind the enemy lines. We believe the chopper was shot down by hostile forces.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; The helicopter may have crashlanded anywhere in a large zone around its last known position. Your mission is to retrieve the chopper crew and their precious intel. Hostile forces may have found them first, so you must be quick, careful, as well as ready to engage.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 Intel points (10 for each crew alive).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 적 장교를 찾아 암살하세요. 죽은 장교에게서 인텔을 얻을 수도 있습니다. &lt;/t&gt;
             </Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION4">
@@ -2726,7 +2726,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING4">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;SEARCH AND RESCUE&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; We have lost contact with a recon helicopter on mission behind the enemy lines. We believe the chopper was shot down by hostile forces.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; The helicopter may have crashlanded anywhere in a large zone around its last known position. Your mission is to retrieve the chopper crew and their precious intel. Hostile forces may have found them first, so you must be quick, careful, as well as ready to engage.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 Intel points (10 for each crew alive).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 데이터 터미널을 찾아 데이터를 다운로드 받으세요. &lt;/t&gt;
             </Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION5">
@@ -2734,7 +2734,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING5">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;SEARCH AND RESCUE&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; We have lost contact with a recon helicopter on mission behind the enemy lines. We believe the chopper was shot down by hostile forces.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; The helicopter may have crashlanded anywhere in a large zone around its last known position. Your mission is to retrieve the chopper crew and their precious intel. Hostile forces may have found them first, so you must be quick, careful, as well as ready to engage.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 5&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;Reward: 20 Intel points (10 for each crew alive).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt;적의 보급 상자를 훔쳐서 FOB로 가져오세요.&lt;/t&gt;
             </Original>
         </Key>
         <!-- Added in v0.924 -->

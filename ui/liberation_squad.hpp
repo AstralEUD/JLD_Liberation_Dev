@@ -3,190 +3,292 @@ class liberation_squad {
 	movingEnable = false;
 	controlsBackground[] = {};
 
-	controls[] = {"OuterBG", "RecycleBG","OuterBG_F", "InnerBG", "InnerBG_F", "OuterCenterPanel","Header","SquadList","DeployMap", "ButtonClose",
+	controls[] = {"OuterBG", "RecycleBG","OuterBG_F", "InnerBG", "OuterCenterPanel","Header","SquadList","DeployMap", "ButtonClose",
 		"NameLabel", "ClassLabel", "HealthLabel", "DistanceLabel", "PrimaryLabel", "PrimaryMagsLabel", "SecondaryLabel", "SecondaryMagsLabel", "VehicleLabel",
-		"ResupplyButton", "RemoveButton", "ReplaceButton", "ConfirmButton", "CancelButton", "PiPZone"};
+		"ResupplyButton", "RemoveButton", "ReplaceButton", "ConfirmButton", "CancelButton", "PiPZone", "RemoteControlButton"};
 
 	objects[] = {};
 
-	class RecycleBG : BgPicture {
-		x = (0.2 * safezoneW + safezoneX) - (2 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (3 * BORDERSIZE);
-		w = (0.6 * safezoneW) + (4 * BORDERSIZE);
-		h = (0.6 * safezoneH) + (6 * BORDERSIZE);
-	};
-	class DeployMap : kndr_MapControl {
-		idc = 100;
-		x = (0.32 * safezoneW + safezoneX)  + BORDERSIZE;
-		y = (0.6 * safezoneH + safezoneY);
-		w = (0.12 * safezoneW);
-		h = (0.2 * safezoneH);
-	};
-
-	class OuterBG : StdBG{
-		colorBackground[] = COLOR_BROWN;
-		x = (0.2 * safezoneW + safezoneX) - (2 * BORDERSIZE);
-		y = (0.2 * safezoneH + safezoneY) - (3 * BORDERSIZE);
-		w = (0.6 * safezoneW) + (4 * BORDERSIZE);
-		h = (0.6 * safezoneH) + (6 * BORDERSIZE);
-	};
-	class OuterBG_F : OuterBG {
-		style = ST_FRAME;
-	};
-	class InnerBG : OuterBG {
-		colorBackground[] = COLOR_GREEN;
-		x = (0.2 * safezoneW + safezoneX) - BORDERSIZE;
-		y = (0.25 * safezoneH + safezoneY) - (1.5 * BORDERSIZE);
-		w = (0.6 * safezoneW) + (2 * BORDERSIZE);
-		h = (0.55 * safezoneH) + (3 * BORDERSIZE);
-	};
-	class InnerBG_F : InnerBG {
-		style = ST_FRAME;
-	};
-	class OuterCenterPanel : StdBG {
-		colorBackground[] = COLOR_GREEN;
-		style = ST_FRAME;
-		x = 0.32 * safezoneW + safezoneX + BORDERSIZE;
-		w = 0.12 * safezoneW;
-		y = 0.25 * safezoneH + safezoneY;
-		h = (0.35 * safezoneH) - (1.5 * BORDERSIZE);
-	};
-	class Header : StdHeader{
-		x = 0.2 * safezoneW + safezoneX - (BORDERSIZE);
-		y = 0.19 * safezoneH + safezoneY;
-		w = 0.6 * safezoneW + ( 2 * BORDERSIZE);
-		h = 0.05 * safezoneH - (BORDERSIZE);
-		text = $STR_SQUAD_MANAGEMENT;
-	};
-	class SquadList : StdListBox {
-		idc = 101;
-		x = 0.2 * safezoneW + safezoneX;
-		w = 0.12 * safezoneW;
-		y = 0.25 * safezoneH + safezoneY;
-		h = (0.35 * safezoneH) - (1.5 * BORDERSIZE);
-		shadow = 2;
-		onLBSelChanged="";
-	};
-	class ResupplyButton : StdButton{
-		idc = 210;
-		x = (0.2 * safezoneW + safezoneX);
-		y = (0.6 * safezoneH + safezoneY);
-		w = (0.12 * safezoneW);
-		h = (0.04 * safezoneH);
-		sizeEx = 0.025 * safezoneH;
-		text = $STR_RESUPPLY;
-		tooltip = $STR_RESUPPLY_TOOLTIP;
-		action = "GRLIB_squadaction = 1";
-	};
-	class RemoveButton : StdButton{
-		idc = 211;
-		x = (0.2 * safezoneW + safezoneX);
-		y = (0.65 * safezoneH + safezoneY);
-		w = (0.12 * safezoneW);
-		h = (0.04 * safezoneH);
-		sizeEx = 0.025 * safezoneH;
-		text = $STR_REMOVE_MEMBER;
-		tooltip = $STR_REMOVE_MEMBER_TOOLTIP;
-		action = "GRLIB_squadaction = 2";
-	};
-	class ReplaceButton : StdButton{
-		idc = 212;
-		x = (0.2 * safezoneW + safezoneX);
-		y = (0.7 * safezoneH + safezoneY) ;
-		w = (0.12 * safezoneW);
-		h = (0.04 * safezoneH);
-		sizeEx = 0.025 * safezoneH;
-		text = $STR_DEPLOY_ON_MEMBER;
-		tooltip = $STR_DEPLOY_ON_MEMBER_TOOLTIP;
-		action = "GRLIB_squadaction = 3";
-	};
-	class ConfirmButton : StdButton{
-		idc = 213;
-		x = (0.2 * safezoneW + safezoneX);
-		y = (0.75 * safezoneH + safezoneY) ;
-		w = (0.055 * safezoneW);
-		h = (0.04 * safezoneH);
-		sizeEx = 0.025 * safezoneH;
-		text = $STR_CONFIRM;
-		action = "GRLIB_squadconfirm = 1";
-	};
-	class CancelButton : StdButton{
-		idc = 214;
-		x = (0.265 * safezoneW + safezoneX);
-		y = (0.75 * safezoneH + safezoneY) ;
-		w = (0.055 * safezoneW);
-		h = (0.04 * safezoneH);
-		sizeEx = 0.025 * safezoneH;
-		text = $STR_RECYCLING_CANCEL;
-		action = "GRLIB_squadconfirm = 0";
-	};
-	class ButtonClose : StdButton{
-		x = 0.785 * safezoneW + safezoneX;
-		w = 0.015 * safezoneW;
-		h = 0.02 * safezoneH;
-		y = 0.195 * safezoneH + safezoneY;
-		text = "X";
-		action = "closeDialog 0";
-	};
-	class StdSquadLabel : StdText{
-		x = (0.32 * safezoneW + safezoneX)  + (BORDERSIZE);
+	class StdSquadLabel : StdText {
+		x = (0.32 * safezoneW + safezoneX) + (BORDERSIZE);
 		w = (0.12 * safezoneW) - BORDERSIZE;
 		h = (0.03 * safezoneH);
 		shadow = 2;
 		sizeEx = 0.018 * safezoneH;
 		text = "";
 	};
-	class NameLabel : StdSquadLabel{
+	class RecycleBG : BgPicture
+	{
+		idc = 1000;
+		x = 0.189462 * safezoneW + safezoneX;
+		y = 0.17912 * safezoneH + safezoneY;
+		w = 0.621 * safezoneW;
+		h = 0.642001 * safezoneH;
+	};
+	class DeployMap : kndr_MapControl
+	{
+		idc = 100;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.59996 * safezoneH + safezoneY;
+		w = 0.12 * safezoneW;
+		h = 0.2 * safezoneH;
+	};
+	class OuterBG : StdBG
+	{
+		idc = 1002;
+		x = 0.189462 * safezoneW + safezoneX;
+		y = 0.17912 * safezoneH + safezoneY;
+		w = 0.621 * safezoneW;
+		h = 0.642001 * safezoneH;
+		colorBackground[] = { 0.3,0.25,0.2,0.75 };
+	};
+	class OuterBG_F : OuterBG
+	{
+		style = 64;
+
+		idc = 1003;
+		x = 0.189462 * safezoneW + safezoneX;
+		y = 0.17912 * safezoneH + safezoneY;
+		w = 0.621 * safezoneW;
+		h = 0.642001 * safezoneH;
+		colorBackground[] = { 0.3,0.25,0.2,0.75 };
+	};
+	class InnerBG : OuterBG
+	{
+		idc = 1004;
+		x = 0.194713 * safezoneW + safezoneX;
+		y = 0.2396 * safezoneH + safezoneY;
+		w = 0.6105 * safezoneW;
+		h = 0.571001 * safezoneH;
+		colorBackground[] = { 0.2,0.23,0.18,0.75 };
+	};
+	class OuterCenterPanel : StdBG
+	{
+		style = 64;
+
+		idc = 1006;
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.24996 * safezoneH + safezoneY;
+		w = 0.12 * safezoneW;
+		h = 0.3395 * safezoneH;
+		colorBackground[] = { 0.2,0.23,0.18,0.75 };
+	};
+	class Header : StdHeader
+	{
+		idc = 1007;
+		text = "SQUAD MANAGEMENT"; //--- ToDo: Localize;
+		x = 0.194713 * safezoneW + safezoneX;
+		y = 0.19004 * safezoneH + safezoneY;
+		w = 0.6105 * safezoneW;
+		h = 0.0429999 * safezoneH;
+		colorBackground[] = { 0.6,0.6,0.6,0.8 };
+		sizeEx = 0.03 * safezoneH ;
+	};
+	class SquadList : StdListBox
+	{
+		idc = 101;
+		shadow = 2;
+		onLBSelChanged = "";
+
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.248 * safezoneH + safezoneY;
+		w = 0.118125 * safezoneW;
+		h = 0.266 * safezoneH;
+	};
+	class ResupplyButton : StdButton
+	{
+		idc = 210;
+		action = "GRLIB_squadaction = 1";
+
+		text = "Resupply"; //--- ToDo: Localize;
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.584 * safezoneH + safezoneY;
+		w = 0.118125 * safezoneW;
+		h = 0.042 * safezoneH;
+		tooltip = "If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout."; //--- ToDo: Localize;
+		sizeEx = 0.025 * safezoneH ;
+	};
+	class RemoveButton : StdButton
+	{
+		idc = 211;
+		action = "GRLIB_squadaction = 2";
+
+		text = "Remove"; //--- ToDo: Localize;
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.64 * safezoneH + safezoneY;
+		w = 0.118125 * safezoneW;
+		h = 0.042 * safezoneH;
+		tooltip = "The selected squad member will be deleted."; //--- ToDo: Localize;
+		sizeEx = 0.025 * safezoneH;
+	};
+	class ReplaceButton : StdButton
+	{
+		idc = 212;
+		action = "GRLIB_squadaction = 3";
+
+		text = "Replace"; //--- ToDo: Localize;
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.696 * safezoneH + safezoneY;
+		w = 0.118125 * safezoneW;
+		h = 0.042 * safezoneH;
+		tooltip = "You will deploy on the selected squad member and replace them while keeping your current loadout."; //--- ToDo: Localize;
+		sizeEx = 0.025 * safezoneH;
+	};
+	class ConfirmButton : StdButton
+	{
+		idc = 213;
+		action = "GRLIB_squadconfirm = 1";
+
+		text = "Confirm"; //--- ToDo: Localize;
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.752 * safezoneH + safezoneY;
+		w = 0.0525 * safezoneW;
+		h = 0.042 * safezoneH;
+		sizeEx = 0.025 * safezoneH;
+	};
+	class CancelButton : StdButton
+	{
+		idc = 214;
+		action = "GRLIB_squadconfirm = 0";
+
+		text = "Cancel"; //--- ToDo: Localize;
+		x = 0.270313 * safezoneW + safezoneX;
+		y = 0.752 * safezoneH + safezoneY;
+		w = 0.0525 * safezoneW;
+		h = 0.042 * safezoneH;
+		sizeEx = 0.025 * safezoneH;
+	};
+	class ButtonClose : StdButton
+	{
+		action = "closeDialog 0";
+
+		idc = 1014;
+		text = "X"; //--- ToDo: Localize;
+		x = 0.784944 * safezoneW + safezoneX;
+		y = 0.19508 * safezoneH + safezoneY;
+		w = 0.015 * safezoneW;
+		h = 0.02 * safezoneH;
+	};
+	class NameLabel : StdSquadLabel
+	{
 		idc = 201;
-		style = ST_CENTER;
-		y = 0.25 * safezoneH + safezoneY;
+		style = 2;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.24996 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
 		sizeEx = 0.022 * safezoneH;
 	};
-	class ClassLabel : StdSquadLabel{
+	class ClassLabel : StdSquadLabel
+	{
 		idc = 202;
-		y = 0.3 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.30008 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class HealthLabel : StdSquadLabel{
+	class HealthLabel : StdSquadLabel
+	{
 		idc = 203;
+
+		x = 0.325306 * safezoneW + safezoneX;
 		y = 0.325 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class DistanceLabel : StdSquadLabel{
+	class DistanceLabel : StdSquadLabel
+	{
 		idc = 204;
-		y = 0.35 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.34992 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class PrimaryLabel : StdSquadLabel{
+	class PrimaryLabel : StdSquadLabel
+	{
 		idc = 205;
-		y = 0.4 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.40004 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class PrimaryMagsLabel : StdSquadLabel{
+	class PrimaryMagsLabel : StdSquadLabel
+	{
 		idc = 206;
-		y = 0.425 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.42496 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH ;
 	};
-	class SecondaryLabel : StdSquadLabel{
+	class SecondaryLabel : StdSquadLabel
+	{
 		idc = 207;
-		y = 0.475 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.47508 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class SecondaryMagsLabel : StdSquadLabel{
+	class SecondaryMagsLabel : StdSquadLabel
+	{
 		idc = 208;
+
+		x = 0.325306 * safezoneW + safezoneX;
 		y = 0.5 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class VehicleLabel : StdSquadLabel{
+	class VehicleLabel : StdSquadLabel
+	{
 		idc = 209;
-		y = 0.55 * safezoneH + safezoneY;
+
+		x = 0.325306 * safezoneW + safezoneX;
+		y = 0.55012 * safezoneH + safezoneY;
+		w = 0.11475 * safezoneW;
+		h = 0.03 * safezoneH;
+		sizeEx = 0.018 * safezoneH;
 	};
-	class PiPZone {
+	class PiPZone : RscText
+	{
 		idc = 333;
-		type = CT_STATIC;
-		style = ST_PICTURE;
-		colorText[] = {1,1,1,1};
-        colorBackground[] = {1,1,1,1};
-		font = FontM;
-		sizeEx = 0.023;
-		x = 0.44 * safezoneW + safezoneX + ( 2 * BORDERSIZE);
-		y = (0.25 * safezoneH + safezoneY);
-		w = (0.36 * safezoneW) - ( 2 * BORDERSIZE) ;
-		h = (0.55 * safezoneH);
-		text = "#(argb,512,512,1)r2t(rtt,1.333)";
-		moving = false;
+		type = 0;
+		style = 48;
+		font = "puristaMedium";
+		moving = "false";
+
+		text = "#(argb,512,512,1)r2t(rtt,1.333)"; //--- ToDo: Localize;
+		x = 0.450519 * safezoneW + safezoneX;
+		y = 0.24996 * safezoneH + safezoneY;
+		w = 0.3495 * safezoneW;
+		h = 0.550001 * safezoneH;
+		colorText[] = { 1,1,1,1 };
+		colorBackground[] = { 1,1,1,1 };
 	};
+	class RemoteControlButton : StdButton
+	{
+		idc = 210;
+		action = "GRLIB_squadaction = 4";
+
+		text = "Remote Control"; //--- ToDo: Localize;
+		x = 0.204688 * safezoneW + safezoneX;
+		y = 0.528 * safezoneH + safezoneY;
+		w = 0.118125 * safezoneW;
+		h = 0.042 * safezoneH;
+		tooltip = "Remote Control the AI"; //--- ToDo: Localize;
+		sizeEx = 0.025 * safezoneH;
+	};
+
 };

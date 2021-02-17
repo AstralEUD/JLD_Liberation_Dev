@@ -20,6 +20,7 @@ if ( GRLIB_revive > 0 ) then {
 
 if (isServer) then {
 	[] call compileFinal preprocessFileLineNumbers "scripts\server\init_server.sqf";
+	LULULALA_fnc_clean = compileFinal preprocessFileLineNumbers "jld\clean.sqf";
 };
 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
@@ -83,6 +84,9 @@ if(!isDedicated && hasInterface)then{
 };
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
+
+//Astral / Trait point 
+//[] execVM "ast\start.sqf";
 
 player addEventHandler ["Respawn", {
 	[] execVM "jld\Auto_running.sqf";

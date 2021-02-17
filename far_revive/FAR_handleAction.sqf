@@ -1,20 +1,21 @@
 private ["_params", "_action"];
 
 // Parameters passed by the action
-_params = _this select 3;
-_action = _params select 0;
+_action = _this select 0;
+_target = _this select 1;
+_caller = _this select 2;
 
 ////////////////////////////////////////////////
 // Handle actions
 ////////////////////////////////////////////////
 if (_action == "action_revive") then
 {
-	[cursorTarget] spawn FAR_HandleRevive;
+	[_target, _caller] spawn FAR_HandleRevive;
 };
 
 if (_action == "action_stabilize") then
 {
-	[cursorTarget] spawn FAR_HandleStabilize;
+	[_target, _caller] spawn FAR_HandleStabilize;
 };
 
 if (_action == "action_suicide") then
@@ -24,7 +25,7 @@ if (_action == "action_suicide") then
 
 if (_action == "action_drag") then
 {
-	[cursorTarget] spawn FAR_Drag;
+	[_target, _caller ] spawn FAR_Drag;
 };
 
 if (_action == "action_release") then

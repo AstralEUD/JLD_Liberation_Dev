@@ -144,6 +144,29 @@ Test_PlayAnim = {
 	};
 };
 
+AI_revive_request = {
+	_isUnconscious = player getVariable "FAR_isUnconscious";
+	if (_isUnconscious == 1) then  {
+		_nearUnits = (units (group player)) select {((_x distance player) < 30) && !(isPlayer _x) && (alive _x)};
+		if ((count _nearUnits) == 0) exitWith {};
+		_aiunit = selectRandom _nearUnits;
+		_aiunit doMove (position player);
+		waitUntil {sleep 1; !(alive player) || !(alive _aiunit) || ((_aiunit distance player) < 2) || ((_aiunit distance player) > 60) || (player getVariable ["FAR_isUnconscious", 0] == 0) || (_aiunit getVariable ["FAR_isUnconscious", 0] == 1)};
+		if ((_aiunit distance player) < 2) then {
+			doStop _aiunit;
+			[player, _aiunit] spawn FAR_HandleStabilize;
+			sleep 4;
+			[player, _aiunit] spawn FAR_HandleRevive;
+		};
+
+	} else {
+		hint "다쳐있지 않습니다.";
+	};
+};
+		
+		
+		
+
 /*
 SAKY_WEATHERCHECK_ADDACTION = {
 	player addAction  
