@@ -17,13 +17,6 @@ waitUntil { introDone };
 waitUntil { !isNil "cinematic_camera_stop" };
 waitUntil { cinematic_camera_stop };
 
-_basenamestr = "";
-if ( GRLIB_isAtlasPresent ) then {
-	_basenamestr = "BLUFOR LHD";
-} else {
-	_basenamestr = "BASE CHIMERA";
-};
-
 while { true } do {
 	waitUntil {
 		sleep 0.1;
@@ -78,7 +71,10 @@ while { true } do {
 	lbSetCurSel [ 203, 0 ];
 
 	while { dialog && alive player && deploy == 0} do {
-		choiceslist = [ [ _basenamestr, getpos lhd ], ["BASE CHIMERA",getPos huronspawn] ];
+		choiceslist = [["BASE CHIMERA",getPos huronspawn]];
+		if (!isNil "lhd") then {
+			choiceslist pushBack ["BLUFOR LHD", getPos lhd];
+		};
 
 		for [{_idx=0},{_idx < count GRLIB_all_fobs},{_idx=_idx+1}] do {
 			choiceslist = choiceslist + [[format [ "FOB %1 - %2", (military_alphabet select _idx),mapGridPosition (GRLIB_all_fobs select _idx) ],GRLIB_all_fobs select _idx]];
@@ -155,13 +151,17 @@ while { true } do {
 		_idxchoice = lbCurSel 201;
 		_spawn_str = (choiceslist select _idxchoice) select 0;
 
-		if (((choiceslist select _idxchoice) select 0) == _basenamestr) then {
-			call respawn_lhd;
+		if (((choiceslist select _idxchoice) select 0) == "BLUFOR LHD") then {
+			//LHD
+			//player setPosASL [836.91,9580.14,23.5295];
+			player setPosASL [(getPosASL lhd) select 0, (getPosASL lhd) select 1, (getPosASL lhd) select 2];
 		} else {
 			if (count (choiceslist select _idxchoice) == 3) then {
+				//Moblie HQ
 				_truck = (choiceslist select _idxchoice) select 2;
 				player setpos ([_truck, 5 + (random 3), random 360] call BIS_fnc_relPos)
 			} else {
+				//BASE CHIMERA, FOBs
 				_destpos = ((choiceslist select _idxchoice) select 1);
 				player setpos [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),0];
 			};
