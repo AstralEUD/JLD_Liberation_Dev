@@ -8,13 +8,18 @@ params [ "_mission_index" ];
 
 resources_intel = resources_intel - ( GRLIB_secondary_missions_costs select _mission_index );
 
+_spawned = [];
 switch (_mission_index) do {
 	case 0: {[] call secondary_fob_hunting;};
 	case 1: {[] call secondary_convoy_hijack;};
 	case 2: {[] call secondary_search_and_rescue;};
-	case 3: {[] call secondary_assasinate;};
-	case 4: {[] call secondary_dataterminal;};
-	case 5: {[] call secondary_randomacquire;};
+	case 3: {_spawned = [] call secondary_assasinate;};
+	case 4: {_spawned = [] call secondary_dataterminal;};
+	case 5: {_spawned = [] call secondary_randomacquire;};
 };
 
 GRLIB_secondary_starting = false; publicVariable "GRLIB_secondary_starting";
+
+{
+	[_x, 5, 500] spawn LULULALA_fnc_clean;
+} forEach _spawned;
