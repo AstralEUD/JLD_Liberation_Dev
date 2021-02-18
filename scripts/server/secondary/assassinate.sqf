@@ -21,11 +21,6 @@ _leader = _eGrp createUnit [opfor_officer, _position_mark, [], 0, "NONE"];
 _spawned pushBack _leader;
 _leader setunitpos "UP";
 _leader allowFleeing 0;
-//_VarName = ("ghst_Commander" + _rnum + str round(_pos select 0));
-//_leader setVehicleVarName _VarName;
-//_leader Call Compile Format ["%1=_This ;",_VarName];
-//missionNamespace setVariable [_VarName,_leader];
-//publicVariable _VarName;
 _veh_name = name _leader;
 
 _allBuildings = nearestObjects [_position_mark, ["House"], 200];
@@ -56,9 +51,9 @@ _patrolUnits = ([] call F_getAdaptiveSquadComp);
 	_spawned pushBack _men;
 } forEach _patrolUnits;
 
-if (random 2 > 1) then {
+if (random 2 > 0) then {
 	_carPos = [_patrolPos, 10, 100, 20] call BIS_fnc_findSafePos;
-	_spawned pushBack ([_carPos, random 360, (selectRandom opfor_vehicles_low_intensity), _patrolGroup] call BIS_fnc_spawnVehicle);
+	_spawned pushBack (([_carPos, random 360, (selectRandom opfor_vehicles_low_intensity), _patrolGroup] call BIS_fnc_spawnVehicle) select 0);
 };
 
 _patrolcorners = [
@@ -87,7 +82,7 @@ _waypoint setWaypointType "CYCLE";
 		_leader addWeapon "LMG_Zafir_F";
 		_leader selectWeapon "LMG_Zafir_F";
 	};
-*/
+
 _fnc_foundIntel = {
 	params ["_caller"];
 	if (random 3 < 3) then {
@@ -98,6 +93,7 @@ _fnc_foundIntel = {
 	};
 		
 };
+*/
 
 [
 	_leader,
@@ -111,24 +107,30 @@ _fnc_foundIntel = {
 	{
 		params ["_target", "_caller", "_actionId"];
 		[_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0];
-		[_caller] remoteExec [_this select 3 select 0, 2];
+		if (random 3 < 3) then {
+			[_caller, "인텔을 발견했습니다."] remoteExec ["sideChat", 0, false];
+			resources_intel = resources_intel + 20;
+			publicVariableServer "resources_intel";
+		} else {
+			[_caller, "인텔을 발견하지 못했습니다."] remoteExec ["sideChat", 0, false];
+		};
 	},
 	{},
-	["_fnc_foundIntel"],
+	[],
 	4,
 	0,
 	true,
 	false
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, false];
 
-if (([800, _pos] call F_getNearestSector) in [sectors_capture + sectors_bigtown]) then {
-	_civCount = 2 + random 6;
+if (count ((sectors_bigtown + sectors_capture) select {(getMarkerPos _x) distance _pos < 1000}) > 0) then {
+	_civCount = 2 + random 10;
 	for [{_i = 0}, {_i < _civCount}, {_i = _i + 1}] do {
 		_civPos = [_pos, random 200, random 360] call BIS_fnc_relPos;
 		_civGroup = createGroup civilian;
 		_man = _civGroup createUnit [selectRandom civilians, _civPos, [], 5, "NONE"];
 		_man addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-		_man pushBack _spawned;
+		_spawned pushBack _man;
 	};
 };
 //create task
