@@ -32,7 +32,7 @@ if ( count GRLIB_all_fobs == 0 ) then {
 				_fobbox = FOB_box_typename createVehicle [0,0,50];
 				_fobbox enableSimulationGlobal false;
 				_fobbox allowDamage false;
-				_fobbox setposasl [730.419,16277.3,24];
+				_fobbox setposasl [13380.1,5367.18,25.8795];
 				clearItemCargoGlobal _fobbox;
 				_fobbox setDir 88.685;
 				sleep 1;
