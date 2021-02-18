@@ -51,7 +51,7 @@ _patrolUnits = ([] call F_getAdaptiveSquadComp);
 	_spawned pushBack _men;
 } forEach _patrolUnits;
 
-if (random 2 > 0) then {
+if (random 2 < 1) then {
 	_carPos = [_patrolPos, 10, 100, 20] call BIS_fnc_findSafePos;
 	_spawned pushBack (([_carPos, random 360, (selectRandom opfor_vehicles_low_intensity), _patrolGroup] call BIS_fnc_spawnVehicle) select 0);
 };
@@ -107,7 +107,7 @@ _fnc_foundIntel = {
 	{
 		params ["_target", "_caller", "_actionId"];
 		[_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0];
-		if (random 3 < 3) then {
+		if (random 3 < 2) then {
 			[_caller, "인텔을 발견했습니다."] remoteExec ["sideChat", 0, false];
 			resources_intel = resources_intel + 20;
 			publicVariableServer "resources_intel";
