@@ -83,8 +83,6 @@ if(!isDedicated && hasInterface)then{
 [] execVM "jld\radioChannels.sqf";
 [] execVM "jld\rtbReward.sqf";
 
-//Astral / Trait point 
-[] execVM "ast\start.sqf";
 
 player addEventHandler ["Respawn", {
 	[] execVM "jld\Auto_running.sqf";
