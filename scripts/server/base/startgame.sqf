@@ -28,21 +28,16 @@ if ( count GRLIB_all_fobs == 0 ) then {
 	} else {
 		while { count GRLIB_all_fobs == 0 } do {
 
-			if ( GRLIB_isAtlasPresent ) then {
-				_fobbox = FOB_box_typename createVehicle [0,0,50];
-				_fobbox enableSimulationGlobal false;
-				_fobbox allowDamage false;
-				_fobbox setposasl [730.419,16277.3,24];
-				clearItemCargoGlobal _fobbox;
-				_fobbox setDir 88.685;
-				sleep 1;
-				_fobbox enableSimulationGlobal true;
-				_fobbox allowDamage true;
-			} else {
-				_fobbox = FOB_box_typename createVehicle (getpos base_boxspawn);
-				_fobbox setpos (getpos base_boxspawn);
-				_fobbox setdir 215;
-			};
+			_fobbox = FOB_box_typename createVehicle [0,0,50];
+			_fobbox enableSimulationGlobal false;
+			_fobbox allowDamage false;
+			_fobbox setPosASL [(getPosASL base_boxspawn) select 0, (getPosASL base_boxspawn) select 1, (getPosASL base_boxspawn) select 2];
+			//_fobbox setposasl [730.419,16277.3,24]; For Altis
+			//_fobbox setposasl [13380.1,5367.18,25.8795]; For Tanoa
+			clearItemCargoGlobal _fobbox;
+			sleep 1;
+			_fobbox enableSimulationGlobal true;
+			_fobbox allowDamage true;
 
 			[ [_fobbox, 3000 ] , "F_setMass" ] call BIS_fnc_MP;
 

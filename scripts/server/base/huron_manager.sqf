@@ -16,18 +16,16 @@ while { true } do {
 	if ( firstloop && !isNull _savedhuron ) then {
 		huron = _savedhuron;
 	} else {
-		if ( GRLIB_isAtlasPresent ) then {
-			huron = huron_typename createVehicle (getmarkerpos "ghost_spot");
-			huron enableSimulationGlobal false;
-			huron allowdamage false;
-			huron setDir 90;
-			huron setposasl [890.039,16213,24];
-		} else {
-			huron = huron_typename createVehicle ( getpos huronspawn );
-			huron allowdamage false;
-			huron setpos ( getpos huronspawn );
-			huron setDir 0;
-		};
+		//huron setposasl [13389.3,5336.64,29.8325]; - for Tanoa
+		//huron setposasl [890.039,16213,24]; - for Altis
+		huron = huron_typename createVehicle [0,0,50];
+		huron enableSimulationGlobal false;
+		huron allowDamage false;
+		huron setPosASL [(getPosASL huronspawn) select 0, (getPosASL huronspawn) select 1, (getPosASL huronspawn) select 2];
+		clearItemCargoGlobal huron;
+		sleep 1;
+		huron enableSimulationGlobal true;
+		huron allowDamage true;
 	};
 
 	firstloop = false;
@@ -61,10 +59,6 @@ while { true } do {
 		//jld editted
 		sleep 30;
 
-	};
-
-	if (huron distance lhd < 500) then {
-		deletevehicle huron;
 	};
 	sleep 0.25;
 
