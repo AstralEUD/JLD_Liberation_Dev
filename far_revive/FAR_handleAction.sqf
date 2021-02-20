@@ -30,5 +30,5 @@ if (_action == "action_drag") then
 
 if (_action == "action_release") then
 {
-	[] spawn FAR_Release;
+	[_caller] spawn FAR_Release;
 };

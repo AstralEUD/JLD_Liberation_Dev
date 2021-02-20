@@ -55,13 +55,12 @@ if (isDedicated) exitWith {};
 	{
 		[] spawn FAR_Mute_ACRE;
 	};
-
 	// Event Handlers
 	player addEventHandler
 	[
 		"Respawn",
 		{
-			[player] spawn FAR_Player_Init;
+			[_this select 0] spawn FAR_Player_Init;
 		}
 	];
 };
@@ -104,8 +103,9 @@ FAR_Player_Init =
 	_unit setCaptive false;
 
 	FAR_isDragging = false;
-
-	[_unit] spawn FAR_Player_Actions;
+	if (isPlayer _unit) then {
+		[_unit] spawn FAR_Player_Actions;
+	};
 };
 
 // Drag & Carry animation fix

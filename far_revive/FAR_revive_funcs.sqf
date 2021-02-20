@@ -9,10 +9,10 @@ FAR_Player_Actions =
 	if (alive _unit && _unit isKindOf "Man") then
 	{
 		// addAction args: title, filename, (arguments, priority, showWindow, hideOnUse, shortcut, condition, positionInModel, radius, radiusView, showIn3D, available, textDefault, textToolTip)
-		_unit addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_revive"], 10, true, true, "", "call FAR_Check_Revive",2];
-		_unit addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_stabilize"], 10, true, true, "", "call FAR_Check_Stabilize",2];
-		_unit addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_suicide"], 9, false, true, "", "call FAR_Check_Suicide",2];
-		_unit addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleAction", ["action_drag"], 9, false, true, "", "call FAR_Check_Dragging",2];
+		_unit addAction ["<t color=""#C90000"">" + "되살리기" + "</t>", "[_this select 3 select 0, cursorTarget, _this select 1] spawn FAR_handleAction", ["action_revive"], 10, true, true, "", "([cursorTarget] call FAR_Check_Revive)",2];
+		_unit addAction ["<t color=""#C90000"">" + "심신안정" + "</t>", "[_this select 3 select 0, cursorTarget, _this select 1] spawn FAR_handleAction", ["action_stabilize"], 10, true, true, "", "([cursorTarget] call FAR_Check_Stabilize)",2];
+		_unit addAction ["<t color=""#C90000"">" + "재투입하기" + "</t>", "[_this select 3 select 0, player, player] spawn FAR_handleAction", ["action_suicide"], 9, false, true, "", "([cursorTarget] call FAR_Check_Suicide)",2];
+		_unit addAction ["<t color=""#C90000"">" + "끌어가기" + "</t>", "[_this select 3 select 0, cursorTarget, _this select 1] spawn FAR_handleAction", ["action_drag"], 9, false, true, "", "([cursorTarget] call FAR_Check_Dragging)",2];
 	};
 };
 
@@ -234,7 +234,7 @@ FAR_HandleRevive =
 		_healer playMove "AinvPknlMstpSlayWrflDnon_medic";
 
 		if (!("Medikit" in (items _healer)) ) then {
-			//player removeItem "FirstAidKit";
+			_healer removeItem "FirstAidKit";
 		};
 
 		_target setVariable ["FAR_isUnconscious", 0, true];
@@ -268,12 +268,13 @@ FAR_HandleStabilize =
 	{
 		_healer playMove "AinvPknlMstpSlayWrflDnon_medic";
 
-		if (!("Medikit" in (items player)) ) then {
-			//player removeItem "FirstAidKit";
-		};
+		//if (!("Medikit" in (items _healer)) ) then {
+		//	_healer removeItem "FirstAidKit";
+		//};
 
 		_target setVariable ["FAR_isStabilized", 1, true];
-
+		[name _target] remoteExec ["systemChat", _healer, false];
+		[str (_target getVariable "FAR_isStabilized")] remoteExec ["systemChat", 0, false];
 		sleep 6;
 	};
 };
@@ -288,26 +289,27 @@ FAR_Drag =
 	FAR_isDragging = true;
 
 	_target = _this select 0;
+	_caller = _this select 1;
 
 	_target attachTo [player, [0, 1.1, 0.092]];
 	_target setDir 180;
 	_target setVariable ["FAR_isDragged", 1, true];
 
-	player playMoveNow "AcinPknlMstpSrasWrflDnon";
+	_caller playMoveNow "AcinPknlMstpSrasWrflDnon";
 
 	// Rotation fix
 	FAR_isDragging_EH = _target;
 	publicVariable "FAR_isDragging_EH";
 
 	// Add release action and save its id so it can be removed
-	_id = player addAction ["<t color=""#C90000"">" + "내려놓기" + "</t>", "[_this select 3 select 0, _this select 0, _this select 1] spawn FAR_handleACtion", ["action_release"], 10, true, true, "", "true"];
+	_id = _caller addAction ["<t color=""#C90000"">" + "내려놓기" + "</t>", "[_this select 3 select 0, cursorTarget, _this select 1] spawn FAR_handleACtion", ["action_release"], 10, true, true, "", "true"];
 
 	hint "움직이지 않는 경우에는 'C'를 누르세요.";
 
 	// Wait until release action is used
 	waitUntil
 	{
-		!alive player || player getVariable "FAR_isUnconscious" == 1 || !alive _target || _target getVariable "FAR_isUnconscious" == 0 || !FAR_isDragging || _target getVariable "FAR_isDragged" == 0
+		!alive _caller || _caller getVariable "FAR_isUnconscious" == 1 || !alive _target || _target getVariable "FAR_isUnconscious" == 0 || !FAR_isDragging || _target getVariable "FAR_isDragged" == 0
 	};
 
 	// Handle release action
@@ -320,13 +322,14 @@ FAR_Drag =
 		detach _target;
 	};
 
-	player removeAction _id;
+	_caller removeAction _id;
 };
 
 FAR_Release =
 {
+	params ["_caller"];
 	// Switch back to default animation
-	player playMove "amovpknlmstpsraswrfldnon";
+	_caller playMove "amovpknlmstpsraswrfldnon";
 
 	FAR_isDragging = false;
 };
@@ -373,7 +376,7 @@ FAR_Check_Revive =
 	// Unit that will excute the action
 	_isPlayerUnconscious = player getVariable "FAR_isUnconscious";
 	_isMedic = getNumber (configfile >> "CfgVehicles" >> typeOf player >> "attendant");
-	_target = cursorTarget;
+	_target = _this select 0;
 
 	// Make sure player is alive and target is an injured unit
 	if( !alive player || _isPlayerUnconscious == 1 || FAR_isDragging || isNil "_target" || !alive _target || (!isPlayer _target && !FAR_Debugging) || (_target distance player) > 2 ) exitWith
@@ -420,7 +423,7 @@ FAR_Check_Stabilize =
 
 	// Unit that will excute the action
 	_isPlayerUnconscious = player getVariable "FAR_isUnconscious";
-	_target = cursorTarget;
+	_target = _this select 0;
 
 
 	// Make sure player is alive and target is an injured unit
@@ -466,7 +469,7 @@ FAR_Check_Dragging =
 	private ["_target", "_isPlayerUnconscious", "_isDragged"];
 
 	_return = false;
-	_target = cursorTarget;
+	_target = _this select 0;
 	_isPlayerUnconscious = player getVariable "FAR_isUnconscious";
 
 	if( !alive player || _isPlayerUnconscious == 1 || FAR_isDragging || isNil "_target" || !alive _target || (!isPlayer _target && !FAR_Debugging) || (_target distance player) > 2 ) exitWith
