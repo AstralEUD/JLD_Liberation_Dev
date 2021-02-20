@@ -42,7 +42,7 @@ while { true } do {
 		};
 		_man = _grp createUnit [_classname, _pos, [], 1, "NONE"];
 		_man addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
-		[_man] remoteExec ["FAR_Player_Init", 2, false];
+		[_man] remoteExec ["FAR_Player_Init", 0, false];
 		_man setRank "private";
 		build_confirmed = 0;
 	} else {
