@@ -114,8 +114,7 @@ _isReinforced = false;
     },                                                                                
     {},                                                                                
     {   
-        params [_target, _caller, _actionID];
-        [_target, _caller, _actionID, (_this select 3) select 0]call secondary_fnc_disableterminal;
+        [_this select 0, _this select 1, _this select 2, (_this select 3) select 0] execVM "scripts\client\actions\secondary_disableterminal.sqf";
     },                                              
     {_this select 1 sidechat "Wait one moment";},                                                                               
     [_tsk, _isReinforced, _position_marker],                                                                                
@@ -123,7 +122,7 @@ _isReinforced = false;
     6,                                                                                 
     true,                                                                              
     false                                                                          
-] remoteExec ["BIS_fnc_holdActionAdd",0,_terminalobj];
+] remoteExec ["BIS_fnc_holdActionAdd",0,true];
 
 GRLIB_secondary_in_progress = 0;
 publicVariable "GRLIB_secondary_in_progress";
