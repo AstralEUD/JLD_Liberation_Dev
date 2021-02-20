@@ -244,8 +244,7 @@ while { dialog && alive player } do {
 			hint "플레이어는 조종할 수 없습니다.";
 		};
 		closeDialog 0;
-		player remoteControl _selectedmember;
-		_selectedmember switchCamera "Internal";
+		[_selectedmember] spawn LULULALA_fnc_remote_contorl;
 	};
 
 	sleep 0.1;
