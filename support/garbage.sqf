@@ -16,13 +16,13 @@ private _fnc_distCheck = {
 { deleteVehicle _x } forEach (allMissionObjects "Leaflet_05_F");				// Drone drop leaflets
 { deleteVehicle _x } forEach (allMissionObjects "Ejection_Seat_Base_F");		// All vanilla ejection seats
 
-GlobalChat format ["%1님의 요청으로 작전지 내 불탄 차량, 기타 쓰레기가 제거되었습니다.", name player];
+hint format ["쓰레기 제거 완료."];
 diag_log format ["%1 requested Garbage Cleaner", player];
 
-sleep 600
+sleep 600;
 ASTGarbageCooldown = 1;
-}; else {
-hint "아직 쓰레기 청소기 쿨타임이 지나지 않았습니다. 시간 후에 시도해 주세요.";
+} else {
+hint "Garbage Cleaner Cooldown is not ended yet";
 };
 
 

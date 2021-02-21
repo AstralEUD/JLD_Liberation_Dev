@@ -31,7 +31,7 @@ SAKY_RTBReward_GiveReward = {
 		if(SAKY_Reward>0 && (vehicle player == player))then{
 			_player = player;
 			_increase = SAKY_Reward;
-			_randomfx = random [25,75,150]
+			_randomfx = random [25,75,150];
 			[gamelogic, str formatText["%1님이 FOB복귀에 성공해 %2의 자원을 추가로 획득하였습니다.",name _player, _increase*_randomfx]] remoteExec ["globalChat"];
 			[_randomfx] remoteExec ["SAKY_RTBReward_SERVERAMMO",2];
 			[player, _increase*20] remoteExec ["addScore", 2]; 		
