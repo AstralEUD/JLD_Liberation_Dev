@@ -45,7 +45,7 @@ TM_ServiceVehicles = [
 		TM_AirVehicles pushBack _x#0;
 	}forEach _x;
 }forEach [air_vehicles];
-TM_RoledVehicles = TM_LandVehicles+TM_HeavyVehicles+TM_AirVehicles-TM_ServiceVehicles;
+TM_RoledVehicles = TM_HeavyVehicles+TM_AirVehicles-TM_ServiceVehicles;
 
 TM_Traits = [
 //["TraitName", "Cost", "Description", [ENG,EXP,MED,UAV,DRV,PLT,MIS,SNP]]
