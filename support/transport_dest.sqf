@@ -30,7 +30,6 @@ if (((getPosATL _air) select 2) < 2) then {
 	_wp1 setWaypointType "MOVE";
 	//_wp1 setWaypointStatements ["true", "{deleteVehicleCrew _x} forEach (crew _air); deleteVehicle _air"];
 	_air flyInHeight 800;
-	[_air] spawn LULULALA_fnc_clean;
 };
 deletevehicle _lzpad;
 deletemarker _lzpad_mark;

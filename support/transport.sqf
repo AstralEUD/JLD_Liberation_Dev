@@ -81,8 +81,4 @@ if (!(alive _air) || !(alive (driver _air))) then {
 	[[WEST,"AirBase"], "We lost the transport helicopter."] remoteExec ["sideChat"];
 };
 
-sleep 300;
-if (((crew _air) isEqualTo _air_crew) && (count (waypoints _transportgrp) == 0)) then {
-	{_air deleteVehicleCrew _x} forEach (crew _air);
-	deleteVehicle _air;
-};
+[_air, 1000, 10] spawn LULULALA_fnc_clean;
