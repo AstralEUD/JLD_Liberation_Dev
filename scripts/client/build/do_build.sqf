@@ -41,7 +41,6 @@ while { true } do {
 			_grp = createGroup GRLIB_side_friendly;
 		};
 		_man = _grp createUnit [_classname, _pos, [], 1, "NONE"];
-		[_man, ["Local", {(_this select 0) spawn FAR_Player_Init;}]] remoteExec ["addEventHandler", 0, true];
 		[_man] spawn FAR_Player_Init;
 		_man addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 		_man setRank "private";
