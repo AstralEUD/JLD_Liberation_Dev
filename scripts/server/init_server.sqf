@@ -32,7 +32,6 @@ secondary_convoy_hijack = compileFinal preprocessFileLineNumbers "scripts\server
 secondary_search_and_rescue = compileFinal preprocessFileLineNumbers "scripts\server\secondary\search_and_rescue.sqf";
 secondary_assasinate = compileFinal preprocessFileLineNumbers "scripts\server\secondary\assassinate.sqf";
 secondary_dataterminal = compileFinal preprocessFileLineNumbers "scripts\server\secondary\dataterminal.sqf";
-secondary_fnc_disableterminal = compileFinal preprocessFileLineNumbers "scripts\server\secondary\fnc_disableterminal.sqf";
 secondary_randomacquire = compileFinal preprocessFileLineNumbers "scripts\server\secondary\randomacquire.sqf";
 // Sector
 attack_in_progress_fob = compileFinal preprocessFileLineNumbers "scripts\server\sector\attack_in_progress_fob.sqf";
