@@ -35,8 +35,6 @@ FAR_isDragging_EH = [];
 FAR_deathMessage = [];
 FAR_Debugging = true;
 
-if (isDedicated) exitWith {};
-
 ////////////////////////////////////////////////
 // Player Initialization
 ////////////////////////////////////////////////
@@ -105,6 +103,8 @@ FAR_Player_Init =
 	FAR_isDragging = false;
 	if (isPlayer _unit) then {
 		[_unit] spawn FAR_Player_Actions;
+	} else {
+		
 	};
 };
 

@@ -236,7 +236,7 @@ FAR_HandleRevive =
                 //if (!("Medikit" in (items _healer)) ) then {
                 //_healer removeItem "FirstAidKit"
 
-                _target setVariable ["FAR_isUnconscious", 0, true];
+        _target setVariable ["FAR_isUnconscious", 0, true];
 		_target setVariable ["FAR_isDragged", 0, true];
 
 		sleep 6;
