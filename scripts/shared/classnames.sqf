@@ -1229,3 +1229,7 @@ GRLIB_ignore_colisions_when_building = [
 ];
 GRLIB_sar_wreck = "Land_Wreck_Heli_Attack_01_F";
 GRLIB_sar_fire = "test_EmptyObjectForFireBig";
+
+GRLIB_support_type_transport [
+"B_Heli_Light_01_F"
+];
