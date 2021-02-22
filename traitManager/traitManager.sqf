@@ -7,7 +7,14 @@ TM_Action = -1;
 
 player setVariable["Trait", 0, true]; 
 
-TM_LandVehicles = [];
+TM_LandVehicles = [
+"B_MRAP_01_F",
+"B_MRAP_01_gmg_f",
+"B_MRAP_01_hmg_f",
+"B_T_MRAP_01_F",
+"B_T_MRAP_01_gmg_F",
+"B_T_MRAP_01_hmg_F"
+];
 TM_HeavyVehicles = [];
 TM_AirVehicles = [];
 TM_ServiceVehicles = [
@@ -38,7 +45,7 @@ TM_ServiceVehicles = [
 		TM_AirVehicles pushBack _x#0;
 	}forEach _x;
 }forEach [air_vehicles];
-TM_RoledVehicles = TM_LandVehicles+TM_HeavyVehicles+TM_AirVehicles-TM_ServiceVehicles;
+TM_RoledVehicles = TM_HeavyVehicles+TM_AirVehicles-TM_ServiceVehicles;
 
 TM_Traits = [
 //["TraitName", "Cost", "Description", [ENG,EXP,MED,UAV,DRV,PLT,MIS,SNP]]

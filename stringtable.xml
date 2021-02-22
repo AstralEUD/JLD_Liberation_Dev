@@ -2926,3 +2926,53 @@
 <!-- VAM LINE END -->
 	</Package>
 </Project>
+
+<Project name="JLD1004">
+	<Package name="JLD1004">
+			<Key ID="STR_SQUAD_MANAGE">
+				<Original>SQUAD MANAGEMENT</Original>
+				<Korean>분대 관리</Korean>
+			</Key>
+			<Key ID="STR_SQD_RESUPPLY">
+				<Original>Resupply</Original>
+				<Korean>재보급</Korean>
+			</Key>
+			<Key ID="STR_SQD_RESUPPLY_TOOL">
+				<Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
+				<Korean>만약 선택한 분대원이 모바일 스폰이나 FOB에 가까이 있다면, 분대원은 보급을 얻게 될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOVE">
+				<Original>Remove</Original>
+				<Korean>제거</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOVE_TOOL">
+				<Original>The selected squad member will be deleted.</Original>
+				<Korean>선택된 분대원은 제거될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_REPLACE">
+				<Original>Replace</Original>
+				<Korean>대체</Korean>
+			</Key>
+			<Key ID="STR_SQD_REPLACE_TOOL">
+				<Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
+				<Korean>당신은 선택된 분대원의 위치에 현재의 무장을 유지하면서 대체될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_CONFIRM">
+				<Original>Confirm</Original>
+				<Korean>확인</Korean>
+			</Key>
+			<Key ID="STR_SQD_CANCEL">
+				<Original>Cacnel</Original>
+				<Korean>취소</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOTE">
+				<Original>Remote Control</Original>
+				<Korean>원격 조종</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOTE_TOOL">
+				<Original>Remote control the AI</Original>
+				<Korean>AI를 원격 조종 합니다.</Korean>
+			</Key>
+	</Package>
+</Project>
+
