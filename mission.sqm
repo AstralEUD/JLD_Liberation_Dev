@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2521;
+		nextID=2522;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=90;
+		nextID=104;
 	};
 	class Camera
 	{
-		pos[]={792.1543,32.438183,16214.236};
-		dir[]={-0.56311512,-0.47178367,0.67847753};
-		up[]={-0.30130836,0.88171494,0.36303589};
-		aside[]={0.76949739,3.6787242e-008,0.63865829};
+		pos[]={8449.9141,110.24561,25154.215};
+		dir[]={-0.19873776,-0.39923906,0.89506495};
+		up[]={-0.086540334,0.91684538,0.38975444};
+		aside[]={0.97624201,-2.7832721e-007,0.21676248};
 	};
 };
 binarizationWanted=0;
@@ -513,7 +513,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={786.8866,24.330956,16227.725};
+				position[]={788.22888,24.158058,16225.453};
 				angles[]={0,9.3661249e-005,0};
 			};
 			side="Empty";
@@ -525,7 +525,7 @@ class Mission
 			};
 			id=325;
 			type="Land_ClutterCutter_small_F";
-			atlOffset=0.80290604;
+			atlOffset=0.6300087;
 		};
 		class Item4
 		{
@@ -993,7 +993,7 @@ class Mission
 			name="commandantZeus1";
 			id=971;
 			type="ModuleCurator_F";
-			atlOffset=3.8280005;
+			atlOffset=2.7376204;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2171,7 +2171,7 @@ class Mission
 			};
 			id=1053;
 			type="ModuleCuratorSetAttributesPlayer_F";
-			atlOffset=5.7840004;
+			atlOffset=4.8883696;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4063,7 +4063,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -5424,11 +5424,9 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8452.8516,104.21759,25132.939};
-				angles[]={0.077179179,0,0.033321146};
+				position[]={8457.8115,105.00801,25128.895};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -5437,17 +5435,17 @@ class Mission
 			};
 			id=327;
 			type="Land_HelipadCircle_F";
+			atlOffset=0.35071564;
 		};
 		class Item46
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8423.2422,107.50777,25141.477};
-				angles[]={0.099669173,0.33971095,0.061256282};
+				position[]={8423.2422,111.44489,25141.477};
+				angles[]={0,0.33971095,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -5455,7 +5453,7 @@ class Mission
 			};
 			id=328;
 			type="Land_ClutterCutter_medium_F";
-			atlOffset=-7.6293945e-006;
+			atlOffset=3.9371185;
 		};
 		class Item47
 		{
@@ -5893,8 +5891,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8459.6631,104.12371,25136.5};
-				angles[]={0.11942901,6.1380267,6.2738566};
+				position[]={8460.752,104.2098,25135.982};
+				angles[]={0.11942951,6.1380267,0.034654226};
 			};
 			side="Empty";
 			flags=4;
@@ -5904,15 +5902,15 @@ class Mission
 			};
 			id=353;
 			type="PortableHelipadLight_01_blue_F";
-			atlOffset=-0.00075531006;
+			atlOffset=0.0001449585;
 		};
 		class Item71
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8446.3115,105.31802,25128.432};
-				angles[]={0.13647936,5.5862508,6.1310382};
+				position[]={8451.2715,105.08427,25124.387};
+				angles[]={0.087772869,5.5862508,6.1310382};
 			};
 			side="Empty";
 			flags=4;
@@ -5922,14 +5920,14 @@ class Mission
 			};
 			id=354;
 			type="PortableHelipadLight_01_blue_F";
-			atlOffset=-0.0025100708;
+			atlOffset=-0.00043487549;
 		};
 		class Item72
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8446.583,104.41994,25136.674};
+				position[]={8451.543,104.41656,25132.629};
 				angles[]={0.098347999,1.245429,6.2020307};
 			};
 			side="Empty";
@@ -5940,15 +5938,15 @@ class Mission
 			};
 			id=355;
 			type="PortableHelipadLight_01_blue_F";
-			atlOffset=-0.00094604492;
+			atlOffset=3.0517578e-005;
 		};
 		class Item73
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8460.0283,104.88033,25128.346};
-				angles[]={0.06656827,0.9900074,0.098349214};
+				position[]={8465.0576,105.72234,25123.99};
+				angles[]={0.11942802,0.9900074,0.09834861};
 			};
 			side="Empty";
 			flags=4;
@@ -5958,7 +5956,7 @@ class Mission
 			};
 			id=356;
 			type="PortableHelipadLight_01_blue_F";
-			atlOffset=-0.00079345703;
+			atlOffset=0.00028991699;
 		};
 		class Item74
 		{
@@ -10678,8 +10676,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8464.4717,103.92155,25138.043};
-						angles[]={0.14562827,0.96858072,0.0080009829};
+						position[]={8472.2646,106.37074,25133.121};
+						angles[]={0.14562827,0.96858072,0.34319288};
 					};
 					side="West";
 					flags=4;
@@ -10690,15 +10688,15 @@ class Mission
 					};
 					id=385;
 					type="B_Soldier_lite_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=0.0002822876;
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8466.6162,103.82861,25138.793};
-						angles[]={0.14562827,4.0246243,0.0080009829};
+						position[]={8474.4092,106.9771,25133.871};
+						angles[]={0.21145752,4.0246243,0.28164217};
 					};
 					side="West";
 					flags=4;
@@ -10709,7 +10707,7 @@ class Mission
 					};
 					id=386;
 					type="B_soldier_exp_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=0.00029754639;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10782,7 +10780,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -10964,7 +10962,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -11360,7 +11358,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0.80619878;
+							value=0;
 						};
 					};
 				};
@@ -11379,7 +11377,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0.80805796;
+							value=0;
 						};
 					};
 				};
@@ -11417,7 +11415,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0.14111748;
 						};
 					};
 				};
@@ -11436,7 +11434,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0.99654049;
+							value=0.078153178;
 						};
 					};
 				};

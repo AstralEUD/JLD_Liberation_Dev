@@ -4,7 +4,6 @@
 
 //[] execVM "jld\people.sqf";
 [] execVM "jld\fob_nodamage.sqf";
-ASTGarbageCooldown = 1;
 
 [] spawn {
 	_opos = getPosASL landLeader;

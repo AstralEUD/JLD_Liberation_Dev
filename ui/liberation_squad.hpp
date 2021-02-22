@@ -77,7 +77,7 @@ class liberation_squad {
 	class Header : StdHeader
 	{
 		idc = 1007;
-		text = $STR_SQUAD_MANAGE; //--- ToDo: Localize;
+		text = "SQUAD MANAGEMENT"; //--- ToDo: Localize;
 		x = 0.194713 * safezoneW + safezoneX;
 		y = 0.19004 * safezoneH + safezoneY;
 		w = 0.6105 * safezoneW;
@@ -101,12 +101,12 @@ class liberation_squad {
 		idc = 210;
 		action = "GRLIB_squadaction = 1";
 
-		text = $STR_SQD_RESUPPLY; //--- ToDo: Localize;
+		text = "Resupply"; //--- ToDo: Localize;
 		x = 0.204688 * safezoneW + safezoneX;
 		y = 0.584 * safezoneH + safezoneY;
 		w = 0.118125 * safezoneW;
 		h = 0.042 * safezoneH;
-		tooltip = $STR_SQD_RESUPPLY_TOOL; //--- ToDo: Localize;
+		tooltip = "If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout."; //--- ToDo: Localize;
 		sizeEx = 0.025 * safezoneH ;
 	};
 	class RemoveButton : StdButton
@@ -114,12 +114,12 @@ class liberation_squad {
 		idc = 211;
 		action = "GRLIB_squadaction = 2";
 
-		text = $STR_SQD_REMOVE; //--- ToDo: Localize;
+		text = "Remove"; //--- ToDo: Localize;
 		x = 0.204688 * safezoneW + safezoneX;
 		y = 0.64 * safezoneH + safezoneY;
 		w = 0.118125 * safezoneW;
 		h = 0.042 * safezoneH;
-		tooltip = $STR_SQD_REMOVE_TOOL; //--- ToDo: Localize;
+		tooltip = "The selected squad member will be deleted."; //--- ToDo: Localize;
 		sizeEx = 0.025 * safezoneH;
 	};
 	class ReplaceButton : StdButton
@@ -127,12 +127,12 @@ class liberation_squad {
 		idc = 212;
 		action = "GRLIB_squadaction = 3";
 
-		text = $STR_SQD_REPLACE; //--- ToDo: Localize;
+		text = "Replace"; //--- ToDo: Localize;
 		x = 0.204688 * safezoneW + safezoneX;
 		y = 0.696 * safezoneH + safezoneY;
 		w = 0.118125 * safezoneW;
 		h = 0.042 * safezoneH;
-		tooltip = $STR_SQD_REPLACE_TOOL; //--- ToDo: Localize;
+		tooltip = "You will deploy on the selected squad member and replace them while keeping your current loadout."; //--- ToDo: Localize;
 		sizeEx = 0.025 * safezoneH;
 	};
 	class ConfirmButton : StdButton
@@ -140,7 +140,7 @@ class liberation_squad {
 		idc = 213;
 		action = "GRLIB_squadconfirm = 1";
 
-		text = $STR_SQD_CONFIRM; //--- ToDo: Localize;
+		text = "Confirm"; //--- ToDo: Localize;
 		x = 0.204688 * safezoneW + safezoneX;
 		y = 0.752 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
@@ -152,7 +152,7 @@ class liberation_squad {
 		idc = 214;
 		action = "GRLIB_squadconfirm = 0";
 
-		text = $STR_SQD_CANCEL; //--- ToDo: Localize;
+		text = "Cancel"; //--- ToDo: Localize;
 		x = 0.270313 * safezoneW + safezoneX;
 		y = 0.752 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
@@ -282,12 +282,12 @@ class liberation_squad {
 		idc = 210;
 		action = "GRLIB_squadaction = 4";
 
-		text = $STR_SQD_REMOTE; //--- ToDo: Localize;
+		text = "Remote Control"; //--- ToDo: Localize;
 		x = 0.204688 * safezoneW + safezoneX;
 		y = 0.528 * safezoneH + safezoneY;
 		w = 0.118125 * safezoneW;
 		h = 0.042 * safezoneH;
-		tooltip = $STR_SQD_REMOTE_TOOL; //--- ToDo: Localize;
+		tooltip = "Remote Control the AI"; //--- ToDo: Localize;
 		sizeEx = 0.025 * safezoneH;
 	};
 

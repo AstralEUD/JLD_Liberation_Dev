@@ -35,12 +35,12 @@ if(typeOf player == "B_Pilot_F") then {
 };
 
 while{true}do{
-	/*if((UAVControl (getConnectedUAV player)#1)!="")then{		
+	if((UAVControl (getConnectedUAV player)#1)!="")then{		
 		objNull remoteControl driver (getConnectedUAV player);		// removes the remoteControlling
 		player switchCamera "internal";			// returns to the player		
 		["<t color='#ff0000' size = '0.6' >무인기 직접조종은 금지되어있습니다.</t>"] spawn BIS_fnc_dynamicText;
 		systemChat "무인기 직접조종은 금지되어있습니다.";
-	}; */
+	}; 
 	if( (!isNull getConnectedUAV player) && (((call pilot_license) find false) != -1) ) then {
 		_result = [parseText format["<t align='center'>본 서버에서 무인기를 사용하기 위해서는<br/> 아래의 쇼케이스를 모두 완수해야 합니다.<br/><br/>			
 			<t color='%1'>공격헬기 쇼케이스</t><br/>
