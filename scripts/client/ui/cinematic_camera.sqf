@@ -58,7 +58,7 @@ while { cinematic_camera_started } do {
 		_nearentities = _position nearEntities [ "Man", 100 ];
 		_camtarget = _cinematic_pointer;
 		if ( first_camera_round ) then {
-			if ( GRLIB_isAtlasPresent ) then {
+			if ( !isNil "lhd" ) then {
 				_camtarget = lhdofficer;
 			} else {
 				_camtarget = chimeraofficer;
@@ -256,7 +256,7 @@ while { cinematic_camera_started } do {
 				if ( isPlayer _camtarget ) then { _unitname = name _camtarget };
 				_nearest_sector = "";
 				if ( _position distance lhd < 300 ) then {
-					if ( GRLIB_isAtlasPresent ) then {
+					if ( !isNil "lhd" ) then {
 						_nearest_sector = "BLUFOR LHD";
 					} else {
 						_nearest_sector = "BASE CHIMERA";
