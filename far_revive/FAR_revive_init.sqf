@@ -104,7 +104,7 @@ FAR_Player_Init =
 	if (isPlayer _unit) then {
 		[_unit] spawn FAR_Player_Actions;
 	} else {
-		
+		[_unit, ["Local", {(_this select 0) spawn FAR_Player_Init; (_this select 0) removeEventHandler ["Local", _thisEventHandler];}]] remoteExec ["addEventHandler", 0, true];
 	};
 };
 
