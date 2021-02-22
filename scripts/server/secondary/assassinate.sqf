@@ -109,7 +109,7 @@ _fnc_foundIntel = {
 		[_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0];
 		if (random 3 < 2) then {
 			[_caller, "인텔을 발견했습니다."] remoteExec ["sideChat", 0, false];
-			resources_intel = resources_intel + 20;
+			resources_intel = resources_intel + 30;
 			publicVariableServer "resources_intel";
 		} else {
 			[_caller, "인텔을 발견하지 못했습니다."] remoteExec ["sideChat", 0, false];
@@ -164,7 +164,7 @@ if (isNull _leader) then {
 	[_tsk,"succeeded"] call BIS_fnc_taskSetState;
 	stats_secondary_objectives = stats_secondary_objectives + 1;
 	trigger_server_save = true;
-	resources_ammo = resources_ammo + 300;
+	resources_ammo = resources_ammo + 500;
 };
 
 deleteMarker _marker;

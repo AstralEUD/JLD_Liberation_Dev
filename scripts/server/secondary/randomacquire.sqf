@@ -138,7 +138,12 @@ if (!(alive _veh) || (isNull _veh)) then {
 };
 if (_veh distance ([getPos _veh] call F_getNearestFob) < 100) then {
 	stats_secondary_objectives = stats_secondary_objectives + 1;
-	resources_ammo = resources_ammo + 800;
+	resources_ammo = resources_ammo + 500;
+	if (combat_readiness < 30) then {
+		combat_readiness = 30;
+	} else {
+		combat_readiness = combat_readiness - 30;
+	};
 	trigger_server_save = true;
 	[_tsk,"SUCCEEDED"] call BIS_fnc_taskSetState;
 };
