@@ -2718,7 +2718,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING3">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 적 장교를 찾아 암살하세요. 죽은 장교에게서 인텔을 얻을 수도 있습니다. &lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;장교 암살&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 적 장교를 찾아 암살하세요. 죽은 장교에게서 인텔을 얻을 수도 있습니다. &lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 20&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;보상: 탄약 500 (정보 30).&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;
             </Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION4">
@@ -2726,7 +2726,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING4">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;데이터 다운로드&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 데이터 터미널을 찾아 데이터를 다운로드 받으세요. &lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;데이터 다운로드&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt; 데이터 터미널을 찾아 데이터를 다운로드 받으세요. &lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;보상: 정보 30, 탄약 300.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;
             </Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION5">
@@ -2734,7 +2734,7 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING5">
             <Original>
-                &lt;t size='1.3' color='#ffa000'&gt;보급 상자 탈취&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt;적의 보급 상자를 훔쳐서 FOB로 가져오세요.&lt;/t&gt;
+                &lt;t size='1.3' color='#ffa000'&gt;보급 상자 탈취&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1'&gt;적의 보급 상자를 훔쳐서 FOB로 가져오세요.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt; &lt;br/&gt; &lt;t size='1.15' color='#ffa000'&gt;보상: 탄약 500, 위협도 -30.&lt;/t&gt; &lt;br/&gt;&lt;br/&gt; &lt;t size='10'&gt;
             </Original>
         </Key>
         <!-- Added in v0.924 -->
@@ -2926,3 +2926,53 @@
 <!-- VAM LINE END -->
 	</Package>
 </Project>
+
+<Project name="JLD1004">
+	<Package name="JLD1004">
+			<Key ID="STR_SQUAD_MANAGE">
+				<Original>SQUAD MANAGEMENT</Original>
+				<Korean>분대 관리</Korean>
+			</Key>
+			<Key ID="STR_SQD_RESUPPLY">
+				<Original>Resupply</Original>
+				<Korean>재보급</Korean>
+			</Key>
+			<Key ID="STR_SQD_RESUPPLY_TOOL">
+				<Original>If the selected squad member is close enough from a resupply point (mobile spawn or FOB) they will get a brand new, full loadout.</Original>
+				<Korean>만약 선택한 분대원이 모바일 스폰이나 FOB에 가까이 있다면, 분대원은 보급을 얻게 될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOVE">
+				<Original>Remove</Original>
+				<Korean>제거</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOVE_TOOL">
+				<Original>The selected squad member will be deleted.</Original>
+				<Korean>선택된 분대원은 제거될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_REPLACE">
+				<Original>Replace</Original>
+				<Korean>대체</Korean>
+			</Key>
+			<Key ID="STR_SQD_REPLACE_TOOL">
+				<Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
+				<Korean>당신은 선택된 분대원의 위치에 현재의 무장을 유지하면서 대체될 것입니다.</Korean>
+			</Key>
+			<Key ID="STR_SQD_CONFIRM">
+				<Original>Confirm</Original>
+				<Korean>확인</Korean>
+			</Key>
+			<Key ID="STR_SQD_CANCEL">
+				<Original>Cacnel</Original>
+				<Korean>취소</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOTE">
+				<Original>Remote Control</Original>
+				<Korean>원격 조종</Korean>
+			</Key>
+			<Key ID="STR_SQD_REMOTE_TOOL">
+				<Original>Remote control the AI</Original>
+				<Korean>AI를 원격 조종 합니다.</Korean>
+			</Key>
+	</Package>
+</Project>
+
