@@ -2,7 +2,6 @@ enableSaving [ false, false ];
 
 if(isClass(configFile>>"CfgWeapons">>"gm_g3a3_oli"))then{endMission "End2";};
 
-[] call compileFinal preprocessFileLineNumbers "scripts\shared\atlas_manager.sqf";
 [] call compileFinal preprocessFileLineNUmbers "scripts\shared\liberation_functions.sqf";
 [] call compileFinal preprocessFileLineNUmbers "scripts\shared\init_sectors.sqf";
 [] call compileFinal preprocessFileLineNUmbers "scripts\shared\fetch_params.sqf";
