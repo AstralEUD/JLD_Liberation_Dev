@@ -10,7 +10,9 @@ _caller = _this select 2;
 ////////////////////////////////////////////////
 if (_action == "action_revive") then
 {
-	[_target, _caller] spawn FAR_HandleRevive;
+	_owner = owner _target;
+	[_target, _caller] remoteExec ["FAR_handleRevive", _owner, false];
+	//[_target, _caller] spawn FAR_HandleRevive;
 };
 
 if (_action == "action_stabilize") then

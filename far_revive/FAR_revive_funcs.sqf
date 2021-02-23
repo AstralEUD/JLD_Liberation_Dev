@@ -272,8 +272,8 @@ FAR_HandleStabilize =
 		//};
 
 		_target setVariable ["FAR_isStabilized", 1, true];
-		[name _target] remoteExec ["systemChat", _healer, false];
-		[str (_target getVariable "FAR_isStabilized")] remoteExec ["systemChat", 0, false];
+		//[name _target] remoteExec ["systemChat", _healer, false];
+		//[str (_target getVariable "FAR_isStabilized")] remoteExec ["systemChat", 0, false];
 		sleep 6;
 	};
 };
